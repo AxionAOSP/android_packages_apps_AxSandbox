@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sandbox</string>
+
+    <!-- Common -->
+    <string name="back">पीछे</string>
+    <string name="ok">ठीक है</string>
+    <string name="cancel">रद्द करें</string>
+    <string name="settings">सेटिंग्स</string>
+    <string name="launch">शुरू करें</string>
+    <string name="selected">चुना गया</string>
+    <string name="continue_text">जारी रखें</string>
+    <string name="skip_for_now">अभी छोड़ें</string>
+    <string name="unlock">अनलॉक</string>
+    <string name="hide">छुपाएं</string>
+    <string name="show">दिखाएं</string>
+    <string name="dismiss">हटाएं</string>
+    <string name="open">खोलें</string>
+    <string name="reset">रीसेट</string>
+    <string name="search_apps">ऐप्स खोजें...</string>
+    <string name="version">वर्जन</string>
+    <string name="about">परिचय</string>
+
+    <!-- Navigation Labels -->
+    <string name="apps">ऐप्स</string>
+    <string name="notifications">नोटिफिकेशन</string>
+
+    <!-- Security Setup -->
+    <string name="secure_your_private_apps">अपने निजी ऐप्स को सुरक्षित करें</string>
+    <string name="choose_protection_method">चुनें कि आप अपने छिपे हुए ऐप्स को कैसे सुरक्षित रखना चाहते हैं</string>
+    <string name="pin">पिन</string>
+    <string name="password">पासवर्ड</string>
+    <string name="pattern">पैटर्न</string>
+    <string name="pin_description">4-6 अंकों का कोड</string>
+    <string name="password_description">अक्षर और अंकों वाला पासवर्ड</string>
+    <string name="pattern_description">अनलॉक करने के लिए पैटर्न बनाएं</string>
+
+    <!-- Security Screens -->
+    <string name="create_pin">पिन बनाएं</string>
+    <string name="confirm_pin">पिन कन्फर्म करें</string>
+    <string name="enter_pin">पिन दर्ज करें</string>
+    <string name="choose_pin_prompt">4 अंकों का पिन चुनें</string>
+    <string name="reenter_pin_prompt">अपना पिन दोबारा दर्ज करें</string>
+    <string name="enter_pin_to_unlock">निजी ऐप्स अनलॉक करने के लिए पिन दर्ज करें</string>
+    <string name="pins_mismatched">पिन मेल नहीं खाते। दोबारा कोशिश करें या पीछे जाएं।</string>
+    <string name="incorrect_pin">गलत पिन</string>
+
+    <string name="create_pattern">पैटर्न बनाएं</string>
+    <string name="confirm_pattern">पैटर्न कन्फर्म करें</string>
+    <string name="draw_pattern">पैटर्न बनाएं</string>
+    <string name="patterns_mismatched">पैटर्न मेल नहीं खाते</string>
+    <string name="wrong_pattern">गलत पैटर्न</string>
+    <string name="connect_dots_prompt">कम से कम 4 बिंदुओं को जोड़ें</string>
+    <string name="draw_pattern_again_prompt">अपना पैटर्न दोबारा बनाएं</string>
+    <string name="draw_pattern_to_unlock">निजी ऐप्स अनलॉक करने के लिए पैटर्न बनाएं</string>
+
+    <string name="create_password">पासवर्ड बनाएं</string>
+    <string name="confirm_password">पासवर्ड कन्फर्म करें</string>
+    <string name="set_password">पासवर्ड सेट करें</string>
+    <string name="enter_password">पासवर्ड दर्ज करें</string>
+    <string name="choose_password_prompt">एक सुरक्षित पासवर्ड चुनें</string>
+    <string name="reenter_password_prompt">अपना पासवर्ड दोबारा दर्ज करें</string>
+    <string name="enter_password_to_unlock">निजी ऐप्स अनलॉक करने के लिए पासवर्ड दर्ज करें</string>
+    <string name="passwords_mismatched">पासवर्ड मेल नहीं खाते। दोबारा कोशिश करें या पीछे जाएं।</string>
+    <string name="incorrect_password">गलत पासवर्ड</string>
+    <string name="enter_password_placeholder">पासवर्ड दर्ज करें</string>
+
+    <string name="forgot_password_q">पासवर्ड भूल गए?</string>
+    <string name="biometric_unlock">बायोमेट्रिक अनलॉक</string>
+    <string name="backspace">बैकस्पेस</string>
+
+    <!-- Recovery -->
+    <string name="recovery_option">रिकवरी विकल्प</string>
+    <string name="recovery_setup_description">यदि आप अपना पासवर्ड भूल जाते हैं तो एक सुरक्षा प्रश्न सेट करें</string>
+    <string name="security_question">सुरक्षा प्रश्न</string>
+    <string name="select_a_question">एक प्रश्न चुनें</string>
+    <string name="your_answer">आपका उत्तर</string>
+    <string name="verify_answer">उत्तर सत्यापित करें</string>
+    <string name="forgot_password_title">पासवर्ड भूल गए</string>
+    <string name="reset_password_description">पासवर्ड रीसेट करने के लिए अपने सुरक्षा प्रश्न का उत्तर दें</string>
+    <string name="incorrect_answer">गलत उत्तर। कृपया दोबारा प्रयास करें।</string>
+    <string name="reset_password_dialog_title">पासवर्ड रीसेट करें?</string>
+    <string name="reset_password_dialog_message">इससे आपका वर्तमान पासवर्ड मिट जाएगा और आपको नया पासवर्ड सेट करना होगा। सभी निजी ऐप डेटा सुरक्षित रहेंगे।</string>
+
+    <!-- Settings -->
+    <string name="private_apps_security">निजी ऐप्स सुरक्षा</string>
+    <string name="current_lock_type">वर्तमान लॉक प्रकार</string>
+    <string name="not_set">सेट नहीं है</string>
+    <string name="use_pin">पिन का उपयोग करें</string>
+    <string name="use_password">पासवर्ड का उपयोग करें</string>
+    <string name="use_pattern">पैटर्न का उपयोग करें</string>
+    <string name="biometrics">बायोमेट्रिक्स</string>
+    <string name="unlock_with_biometrics">बायोमेट्रिक्स से अनलॉक करें</string>
+    <string name="biometrics_description">फिंगरप्रिंट या फेस अनलॉक का उपयोग करें</string>
+    <string name="recovery_options">रिकवरी विकल्प</string>
+    <string name="forgot_password_item">पासवर्ड भूल गए</string>
+    <string name="forgot_password_subtitle">सुरक्षा प्रश्न का उपयोग करके पासवर्ड रीसेट करें</string>
+    <string name="setup_security_question">सुरक्षा प्रश्न सेट करें</string>
+    <string name="recovery_required_subtitle">पासवर्ड रिकवरी के लिए आवश्यक</string>
+    
+    <string name="locked_app_behavior">लॉक किए गए ऐप का व्यवहार</string>
+    <string name="locked_app_behavior_description">नियंत्रित करें कि अनलॉक किए गए ऐप्स दोबारा कब लॉक होंगे</string>
+    <string name="relock_on_leave">ऐप छोड़ने पर दोबारा लॉक करें</string>
+    <string name="relock_on_leave_description">अनलॉक किए गए ऐप को छोड़ते ही तुरंत दोबारा लॉक करें</string>
+    <string name="relock_after_timeout">समय सीमा के बाद दोबारा लॉक करें</string>
+    <string name="relock_after_timeout_description">%1$d सेकंड की निष्क्रियता के बाद दोबारा लॉक करें</string>
+    <string name="relock_on_screen_off">स्क्रीन बंद होने पर दोबारा लॉक करें</string>
+    <string name="relock_on_screen_off_description">ऐप्स स्विच करते समय अनलॉक रखें, स्क्रीन बंद होने पर लॉक करें</string>
+    <string name="relock_only_killed">केवल बंद होने पर दोबारा लॉक करें</string>
+    <string name="relock_only_killed_description">जब तक सैंडबॉक्स को जबरन बंद नहीं किया जाता तब तक अनलॉक रखें</string>
+
+    <string name="private_section_behavior">निजी सेक्शन व्यवहार</string>
+    <string name="private_section_behavior_description">नियंत्रित करें कि इस ऐप में निजी ऐप्स सेक्शन कब लॉक होता है</string>
+    <string name="collapse_on_leave">छोड़ने पर बंद करें</string>
+    <string name="collapse_on_leave_description">सैंडबॉक्स ऐप छोड़ने पर बंद करें और लॉक करें</string>
+    <string name="collapse_after_timeout">समय सीमा के बाद बंद करें</string>
+    <string name="collapse_after_timeout_description">ऐप छोड़ने के %1$d सेकंड बाद बंद हुआ</string>
+    <string name="lock_timeout">लॉक टाइमआउट</string>
+    <string name="seconds_format">%1$d सेकंड</string>
+    <string name="minutes_format_singular">%1$d मिनट</string>
+    <string name="minutes_format_plural">%1$d मिनट</string>
+
+    <!-- Sandbox App -->
+    <string name="lock_app">ऐप लॉक करें</string>
+    <string name="lock_app_description">इस ऐप को खोलने के लिए प्रमाणीकरण की आवश्यकता है</string>
+    <string name="hide_app">ऐप छुपाएं</string>
+    <string name="hide_app_description">लांचर और सेटिंग्स से छुपाएं</string>
+    <string name="sandbox">सैंडबॉक्स</string>
+    <string name="sandbox_description">अन्य ऐप्स (बैंकिंग ऐप्स आदि) से छुपाएं</string>
+    <string name="hide_dev_options">डेवलपर विकल्प छुपाएं</string>
+    <string name="hide_dev_options_description">यह ऐप डेवलपर विकल्पों को अक्षम के रूप में देखेगा</string>
+    <string name="no_apps_found">कोई ऐप नहीं मिला</string>
+    <string name="private_apps">निजी ऐप्स</string>
+    <string name="sandboxed_apps">सैंडबॉक्स किए गए ऐप्स</string>
+    <string name="dev_opts_hidden">डेवलपर विकल्प छिपे हैं</string>
+    <string name="all_apps">सभी ऐप्स</string>
+    <string name="setup_private_apps">निजी ऐप्स सेट करें</string>
+    <string name="setup_private_apps_description">ऐप्स को लॉक और छुपाने के लिए पिन, पासवर्ड या पैटर्न बनाएं</string>
+    <string name="collapse">समेटें</string>
+    <string name="expand">विस्तार करें</string>
+    <string name="lock">लॉक</string>
+    <string name="dev_opt">डेव</string>
+    <string name="notifications_locked">नोटिफिकेशन लॉक हैं</string>
+    <string name="unlock_private_area_desc">नोटिफिकेशन देखने के लिए निजी क्षेत्र को अनलॉक करें</string>
+    <string name="no_private_notifications">कोई निजी नोटिफिकेशन नहीं</string>
+    <string name="notifications_empty_desc">छिपे हुए ऐप्स के नोटिफिकेशन यहां दिखाई देंगे</string>
+
+    <!-- Authenticate -->
+    <string name="unlock_app_title">%1$s अनलॉक करें</string>
+    <string name="unlock_private_apps">निजी ऐप्स अनलॉक करें</string>
+    <string name="auth_prompt_format">%1$s को अनलॉक करने के लिए अपना सैंडबॉक्स क्रेडेंशियल दर्ज करें</string>
+    <string name="enter_current_pin_to_change">सुरक्षा बदलने के लिए अपना वर्तमान पिन दर्ज करें</string>
+    <string name="enter_current_password_to_change">सुरक्षा बदलने के लिए अपना वर्तमान पासवर्ड दर्ज करें</string>
+    <string name="draw_current_pattern_to_change">सुरक्षा बदलने के लिए अपना वर्तमान पैटर्न बनाएं</string>
+
+    <!-- Security Questions -->
+    <string name="question_pet_name">आपके पालतू जानवर का नाम क्या है?</string>
+    <string name="question_birth_city">आपका जन्म किस शहर में हुआ था?</string>
+    <string name="question_fav_movie">आपकी पसंदीदा फिल्म कौन सी है?</string>
+    <string name="question_mother_maiden">आपकी माता का विवाह से पूर्व नाम क्या है?</string>
+    <string name="question_first_car">आपकी पहली कार कौन सी थी?</string>
+    <string name="count_format">(%1$d)</string>
+    <string name="badge_count_format">%1$d</string>
+</resources>

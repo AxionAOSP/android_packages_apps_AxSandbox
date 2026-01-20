@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sandbox</string>
+
+    <!-- Common -->
+    <string name="back">پیچھے</string>
+    <string name="ok">ٹھیک ہے</string>
+    <string name="cancel">منسوخ کریں</string>
+    <string name="settings">ترتیبات</string>
+    <string name="launch">شروع کریں</string>
+    <string name="selected">منتخب</string>
+    <string name="continue_text">جاری رکھیں</string>
+    <string name="skip_for_now">ابھی چھوڑیں</string>
+    <string name="unlock">ان لاک</string>
+    <string name="hide">چھپائیں</string>
+    <string name="show">دکھائیں</string>
+    <string name="dismiss">ختم کریں</string>
+    <string name="open">کھولیں</string>
+    <string name="reset">ری سیٹ</string>
+    <string name="search_apps">ایپس تلاش کریں...</string>
+    <string name="version">ورژن</string>
+    <string name="about">تعارف</string>
+
+    <!-- Navigation Labels -->
+    <string name="apps">ایپس</string>
+    <string name="notifications">اطلاعات</string>
+
+    <!-- Security Setup -->
+    <string name="secure_your_private_apps">اپنی نجی ایپس کو محفوظ بنائیں</string>
+    <string name="choose_protection_method">منتخب کریں کہ آپ اپنی چھپی ہوئی ایپس کو کیسے محفوظ کرنا چاہتے ہیں</string>
+    <string name="pin">پن</string>
+    <string name="password">پاس ورڈ</string>
+    <string name="pattern">پیٹرن</string>
+    <string name="pin_description">4-6 ہندسوں کا کوڈ</string>
+    <string name="password_description">حروف اور ہندسوں والا پاس ورڈ</string>
+    <string name="pattern_description">ان لاک کرنے کے لیے پیٹرن بنائیں</string>
+
+    <!-- Security Screens -->
+    <string name="create_pin">پن بنائیں</string>
+    <string name="confirm_pin">پن کی تصدیق کریں</string>
+    <string name="enter_pin">پن درج کریں</string>
+    <string name="choose_pin_prompt">4 ہندسوں والا پن منتخب کریں</string>
+    <string name="reenter_pin_prompt">اپنا پن دوبارہ درج کریں</string>
+    <string name="enter_pin_to_unlock">نجی ایپس کو ان لاک کرنے کے لیے پن درج کریں</string>
+    <string name="pins_mismatched">پن مماثل نہیں ہیں۔ دوبارہ کوشش کریں یا پیچھے جائیں۔</string>
+    <string name="incorrect_pin">غلط پن</string>
+
+    <string name="create_pattern">پیٹرن بنائیں</string>
+    <string name="confirm_pattern">پیٹرن کی تصدیق کریں</string>
+    <string name="draw_pattern">پیٹرن بنائیں</string>
+    <string name="patterns_mismatched">پیٹرن مماثل نہیں ہیں</string>
+    <string name="wrong_pattern">غلط پیٹرن</string>
+    <string name="connect_dots_prompt">کم از کم 4 نکات جوڑیں</string>
+    <string name="draw_pattern_again_prompt">اپنا پیٹرن دوبارہ بنائیں</string>
+    <string name="draw_pattern_to_unlock">نجی ایپس کو ان لاک کرنے کے لیے پیٹرن بنائیں</string>
+
+    <string name="create_password">پاس ورڈ بنائیں</string>
+    <string name="confirm_password">پاس ورڈ کی تصدیق کریں</string>
+    <string name="set_password">پاس ورڈ سیٹ کریں</string>
+    <string name="enter_password">پاس ورڈ درج کریں</string>
+    <string name="choose_password_prompt">ایک محفوظ پاس ورڈ منتخب کریں</string>
+    <string name="reenter_password_prompt">اپنا پاس ورڈ دوبارہ درج کریں</string>
+    <string name="enter_password_to_unlock">نجی ایپس کو ان لاک کرنے کے لیے پاس ورڈ درج کریں</string>
+    <string name="passwords_mismatched">پاس ورڈ مماثل نہیں ہیں۔ دوبارہ کوشش کریں یا پیچھے جائیں۔</string>
+    <string name="incorrect_password">غلط پاس ورڈ</string>
+    <string name="enter_password_placeholder">پاس ورڈ درج کریں</string>
+
+    <string name="forgot_password_q">پاس ورڈ بھول گئے؟</string>
+    <string name="biometric_unlock">بائیو میٹرک ان لاک</string>
+    <string name="backspace">بیک اسپیس</string>
+
+    <!-- Recovery -->
+    <string name="recovery_option">ریکوری کا اختیار</string>
+    <string name="recovery_setup_description">اگر آپ اپنا پاس ورڈ بھول جائیں تو اس کے لیے حفاظتی سوال سیٹ کریں</string>
+    <string name="security_question">حفاظتی سوال</string>
+    <string name="select_a_question">ایک سوال منتخب کریں</string>
+    <string name="your_answer">آپ کا جواب</string>
+    <string name="verify_answer">جواب کی تصدیق کریں</string>
+    <string name="forgot_password_title">پاس ورڈ بھول گئے</string>
+    <string name="reset_password_description">پاس ورڈ ری سیٹ کرنے کے لیے اپنے حفاظتی سوال کا جواب دیں</string>
+    <string name="incorrect_answer">غلط جواب۔ براہ کرم دوبارہ کوشش کریں۔</string>
+    <string name="reset_password_dialog_title">پاس ورڈ ری سیٹ کریں؟</string>
+    <string name="reset_password_dialog_message">اس سے آپ کا موجودہ پاس ورڈ صاف ہو جائے گا اور آپ کو نیا سیٹ کرنا پڑے گا۔ تمام نجی ایپس کا ڈیٹا برقرار رہے گا۔</string>
+
+    <!-- Settings -->
+    <string name="private_apps_security">نجی ایپس کی سیکیورٹی</string>
+    <string name="current_lock_type">موجودہ لاک کی قسم</string>
+    <string name="not_set">سیٹ نہیں ہے</string>
+    <string name="use_pin">پن استعمال کریں</string>
+    <string name="use_password">پاس ورڈ استعمال کریں</string>
+    <string name="use_pattern">پیٹرن استعمال کریں</string>
+    <string name="biometrics">بائیو میٹرکس</string>
+    <string name="unlock_with_biometrics">بائیو میٹرکس سے ان لاک کریں</string>
+    <string name="biometrics_description">فنگر پرنٹ یا چہرے کی شناخت استعمال کریں</string>
+    <string name="recovery_options">ریکوری کے اختیارات</string>
+    <string name="forgot_password_item">پاس ورڈ بھول گئے</string>
+    <string name="forgot_password_subtitle">حفاظتی سوال کا استعمال کرتے ہوئے اپنا پاس ورڈ ری سیٹ کریں</string>
+    <string name="setup_security_question">حفاظتی سوال سیٹ کریں</string>
+    <string name="recovery_required_subtitle">پاس ورڈ ریکوری کے لیے ضروری ہے</string>
+    
+    <string name="locked_app_behavior">لاک شدہ ایپ کا برتاؤ</string>
+    <string name="locked_app_behavior_description">کنٹرول کریں کہ ان لاک شدہ ایپس دوبارہ کب لاک ہوں گی</string>
+    <string name="relock_on_leave">چھوڑنے پر دوبارہ لاک کریں</string>
+    <string name="relock_on_leave_description">ان لاک شدہ ایپ سے نکلتے ہی فوراً دوبارہ لاک کریں</string>
+    <string name="relock_after_timeout">ٹائم آؤٹ کے بعد دوبارہ لاک کریں</string>
+    <string name="relock_after_timeout_description">%1$d سیکنڈ کی غیر فعالیت کے بعد دوبارہ لاک کریں</string>
+    <string name="relock_on_screen_off">اسکرین بند ہونے پر دوبارہ لاک کریں</string>
+    <string name="relock_on_screen_off_description">ایپس تبدیل کرتے وقت ان لاک رکھیں، اسکرین بند ہونے پر لاک کریں</string>
+    <string name="relock_only_killed">صرف بند ہونے پر دوبارہ لاک کریں</string>
+    <string name="relock_only_killed_description">جب تک سینڈ باکس کو زبردستی بند نہیں کیا جاتا تب تک ان لاک رکھیں</string>
+
+    <string name="private_section_behavior">نجی سیکشن کا برتاؤ</string>
+    <string name="private_section_behavior_description">کنٹرول کریں کہ اس ایپ میں نجی ایپس کا سیکشن کب لاک ہوتا ہے</string>
+    <string name="collapse_on_leave">چھوڑنے پر بند کریں</string>
+    <string name="collapse_on_leave_description">سینڈ باکس ایپ چھوڑنے پر بند اور لاک کریں</string>
+    <string name="collapse_after_timeout">ٹائم آؤٹ کے بعد بند کریں</string>
+    <string name="collapse_after_timeout_description">ایپ چھوڑنے کے %1$d سیکنڈ بعد بند ہوا</string>
+    <string name="lock_timeout">لاک ٹائم آؤٹ</string>
+    <string name="seconds_format">%1$d سیکنڈ</string>
+    <string name="minutes_format_singular">%1$d منٹ</string>
+    <string name="minutes_format_plural">%1$d منٹ</string>
+
+    <!-- Sandbox App -->
+    <string name="lock_app">ایپ لاک کریں</string>
+    <string name="lock_app_description">اس ایپ کو کھولنے کے لیے تصدیق کی ضرورت ہے</string>
+    <string name="hide_app">ایپ چھپائیں</string>
+    <string name="hide_app_description">لانچر اور ترتیبات سے چھپائیں</string>
+    <string name="sandbox">سینڈ باکس</string>
+    <string name="sandbox_description">دیگر ایپس (بینکنگ ایپس وغیرہ) سے چھپائیں</string>
+    <string name="hide_dev_options">ڈویلپر کے اختیارات چھپائیں</string>
+    <string name="hide_dev_options_description">یہ ایپ ڈویلپر کے اختیارات کو غیر فعال دیکھے گی</string>
+    <string name="no_apps_found">کوئی ایپ نہیں ملی</string>
+    <string name="private_apps">نجی ایپس</string>
+    <string name="sandboxed_apps">سینڈ باکس شدہ ایپس</string>
+    <string name="dev_opts_hidden">ڈویلپر کے اختیارات چھپے ہیں</string>
+    <string name="all_apps">تمام ایپس</string>
+    <string name="setup_private_apps">نجی ایپس سیٹ کریں</string>
+    <string name="setup_private_apps_description">ایپس کو لاک اور چھپانے کے لیے پن، پاس ورڈ یا پیٹرن بنائیں</string>
+    <string name="collapse">بند کریں</string>
+    <string name="expand">پھیلائیں</string>
+    <string name="lock">لاک</string>
+    <string name="dev_opt">ڈویلپر</string>
+    <string name="notifications_locked">اطلاعات مقفل ہیں</string>
+    <string name="unlock_private_area_desc">اطلاعات دیکھنے کے لیے نجی علاقہ ان لاک کریں</string>
+    <string name="no_private_notifications">کوئی نجی اطلاع نہیں</string>
+    <string name="notifications_empty_desc">چھپی ہوئی ایپس کی اطلاعات یہاں نظر آئیں گی</string>
+
+    <!-- Authenticate -->
+    <string name="unlock_app_title">%1$s ان لاک کریں</string>
+    <string name="unlock_private_apps">نجی ایپس کو ان لاک کریں</string>
+    <string name="auth_prompt_format">%1$s کو ان لاک کرنے کے لیے اپنی سینڈ باکس اسناد درج کریں</string>
+    <string name="enter_current_pin_to_change">سیکیورٹی تبدیل کرنے کے لیے اپنا موجودہ پن درج کریں</string>
+    <string name="enter_current_password_to_change">سیکیورٹی تبدیل کرنے کے لیے اپنا موجودہ پاس ورڈ درج کریں</string>
+    <string name="draw_current_pattern_to_change">سیکیورٹی تبدیل کرنے کے لیے اپنا موجودہ پیٹرن بنائیں</string>
+
+    <!-- Security Questions -->
+    <string name="question_pet_name">آپ کے پالتو جانور کا نام کیا ہے؟</string>
+    <string name="question_birth_city">آپ کس شہر میں پیدا ہوئے؟</string>
+    <string name="question_fav_movie">آپ کی پسندیدہ فلم کون سی ہے؟</string>
+    <string name="question_mother_maiden">آپ کی والدہ کا شادی سے پہلے نام کیا تھا؟</string>
+    <string name="question_first_car">آپ کی پہلی کار کون سی تھی؟</string>
+    <string name="count_format">(%1$d)</string>
+    <string name="badge_count_format">%1$d</string>
+</resources>

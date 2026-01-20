@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sandbox</string>
+
+    <!-- Common -->
+    <string name="back">رجوع</string>
+    <string name="ok">موافق</string>
+    <string name="cancel">إلغاء</string>
+    <string name="settings">الإعدادات</string>
+    <string name="launch">تشغيل</string>
+    <string name="selected">محدد</string>
+    <string name="continue_text">متابعة</string>
+    <string name="skip_for_now">تخطي الآن</string>
+    <string name="unlock">إلغاء القفل</string>
+    <string name="hide">إخفاء</string>
+    <string name="show">إظهار</string>
+    <string name="dismiss">تجاهل</string>
+    <string name="open">فتح</string>
+    <string name="reset">إعادة ضبط</string>
+    <string name="search_apps">البحث عن تطبيقات...</string>
+    <string name="version">الإصدار</string>
+    <string name="about">حول</string>
+
+    <!-- Navigation Labels -->
+    <string name="apps">التطبيقات</string>
+    <string name="notifications">الإشعارات</string>
+
+    <!-- Security Setup -->
+    <string name="secure_your_private_apps">تأمين تطبيقاتك الخاصة</string>
+    <string name="choose_protection_method">اختر كيفية حماية تطبيقاتك المخفية</string>
+    <string name="pin">رمز PIN</string>
+    <string name="password">كلمة المرور</string>
+    <string name="pattern">النمط</string>
+    <string name="pin_description">رمز من 4-6 أرقام</string>
+    <string name="password_description">كلمة مرور أبجدية رقمية</string>
+    <string name="pattern_description">ارسم النمط لإلغاء القفل</string>
+
+    <!-- Security Screens -->
+    <string name="create_pin">إنشاء رمز PIN</string>
+    <string name="confirm_pin">تأكيد رمز PIN</string>
+    <string name="enter_pin">أدخل رمز PIN</string>
+    <string name="choose_pin_prompt">اختر رمز PIN مكون من 4 أرقام</string>
+    <string name="reenter_pin_prompt">أعد إدخال رمز PIN الخاص بك</string>
+    <string name="enter_pin_to_unlock">أدخل رمز PIN لإلغاء قفل التطبيقات الخاصة</string>
+    <string name="pins_mismatched">رموز PIN غير متطابقة. حاول مرة أخرى أو ارجع.</string>
+    <string name="incorrect_pin">رمز PIN غير صحيح</string>
+
+    <string name="create_pattern">إنشاء نمط</string>
+    <string name="confirm_pattern">تأكيد النمط</string>
+    <string name="draw_pattern">رسم النمط</string>
+    <string name="patterns_mismatched">الأنماط غير متطابقة</string>
+    <string name="wrong_pattern">نمط خاطئ</string>
+    <string name="connect_dots_prompt">قم بتوصيل 4 نقاط على الأقل</string>
+    <string name="draw_pattern_again_prompt">ارسم نمطك مرة أخرى</string>
+    <string name="draw_pattern_to_unlock">ارسم نمطك لإلغاء قفل التطبيقات الخاصة</string>
+
+    <string name="create_password">إنشاء كلمة مرور</string>
+    <string name="confirm_password">تأكيد كلمة المرور</string>
+    <string name="set_password">تعيين كلمة المرور</string>
+    <string name="enter_password">أدخل كلمة المرور</string>
+    <string name="choose_password_prompt">اختر كلمة مرور آمنة</string>
+    <string name="reenter_password_prompt">أعد إدخال كلمة المرور الخاصة بك</string>
+    <string name="enter_password_to_unlock">أدخل كلمة المرور لإلغاء قفل التطبيقات الخاصة</string>
+    <string name="passwords_mismatched">كلمات المرور غير متطابقة. حاول مرة أخرى أو ارجع.</string>
+    <string name="incorrect_password">كلمة مرور غير صحيحة</string>
+    <string name="enter_password_placeholder">أدخل كلمة المرور</string>
+
+    <string name="forgot_password_q">هل نسيت كلمة المرور؟</string>
+    <string name="biometric_unlock">إلغاء القفل بالمقاييس الحيوية</string>
+    <string name="backspace">حذف</string>
+
+    <!-- Recovery -->
+    <string name="recovery_option">خيار الاسترداد</string>
+    <string name="recovery_setup_description">قم بإعداد سؤال أمان في حالة نسيان كلمة المرور</string>
+    <string name="security_question">سؤال الأمان</string>
+    <string name="select_a_question">اختر سؤالاً</string>
+    <string name="your_answer">إجابتك</string>
+    <string name="verify_answer">التحقق من الإجابة</string>
+    <string name="forgot_password_title">نسيت كلمة المرور</string>
+    <string name="reset_password_description">أجب عن سؤال الأمان لإعادة تعيين كلمة المرور</string>
+    <string name="incorrect_answer">إجابة غير صحيحة. يرجى المحاولة مرة أخرى.</string>
+    <string name="reset_password_dialog_title">إعادة تعيين كلمة المرور؟</string>
+    <string name="reset_password_dialog_message">سيؤدي هذا إلى مسح كلمة المرور الحالية وستحتاج إلى إعداد كلمة مرور جديدة. ستظل جميع بيانات التطبيقات الخاصة سليمة.</string>
+
+    <!-- Settings -->
+    <string name="private_apps_security">أمان التطبيقات الخاصة</string>
+    <string name="current_lock_type">نوع القفل الحالي</string>
+    <string name="not_set">لم يتم التعيين</string>
+    <string name="use_pin">استخدام رمز PIN</string>
+    <string name="use_password">استخدام كلمة المرور</string>
+    <string name="use_pattern">استخدام النمط</string>
+    <string name="biometrics">المقاييس الحيوية</string>
+    <string name="unlock_with_biometrics">إلغاء القفل بالمقاييس الحيوية</string>
+    <string name="biometrics_description">استخدام بصمة الإصبع أو الوجه</string>
+    <string name="recovery_options">خيارات الاسترداد</string>
+    <string name="forgot_password_item">نسيت كلمة المرور</string>
+    <string name="forgot_password_subtitle">إعادة تعيين كلمة المرور باستخدام سؤال الأمان</string>
+    <string name="setup_security_question">إعداد سؤال الأمان</string>
+    <string name="recovery_required_subtitle">مطلوب لاسترداد كلمة المرور</string>
+    
+    <string name="locked_app_behavior">سلوك التطبيق المقفل</string>
+    <string name="locked_app_behavior_description">التحكم في وقت إعادة قفل التطبيقات المفتوحة</string>
+    <string name="relock_on_leave">إعادة القفل عند المغادرة</string>
+    <string name="relock_on_leave_description">إعادة القفل فوراً عند مغادرة التطبيق المفتوح</string>
+    <string name="relock_after_timeout">إعادة القفل بعد مهلة</string>
+    <string name="relock_after_timeout_description">إعادة القفل بعد %1$d ثانية من عدم النشاط</string>
+    <string name="relock_on_screen_off">إعادة القفل عند إيقاف الشاشة</string>
+    <string name="relock_on_screen_off_description">البقاء مفتوحاً عند تبديل التطبيقات، والقفل عند إيقاف الشاشة</string>
+    <string name="relock_only_killed">إعادة القفل فقط عند الإغلاق التام</string>
+    <string name="relock_only_killed_description">البقاء مفتوحاً حتى يتم إغلاق Sandbox قسرياً</string>
+
+    <string name="private_section_behavior">سلوك القسم الخاص</string>
+    <string name="private_section_behavior_description">التحكم في وقت قفل قسم التطبيقات الخاصة في هذا التطبيق</string>
+    <string name="collapse_on_leave">طي عند المغادرة</string>
+    <string name="collapse_on_leave_description">طي وقفل عند مغادرة تطبيق Sandbox</string>
+    <string name="collapse_after_timeout">طي بعد مهلة</string>
+    <string name="collapse_after_timeout_description">تم الطي بعد %1$d ثانية من مغادرة التطبيق</string>
+    <string name="lock_timeout">مهلة القفل</string>
+    <string name="seconds_format">%1$d ثانية</string>
+    <string name="minutes_format_singular">دقيقة واحدة</string>
+    <string name="minutes_format_plural">%1$d دقائق</string>
+
+    <!-- Sandbox App -->
+    <string name="lock_app">قفل التطبيق</string>
+    <string name="lock_app_description">يتطلب المصادقة لفتح هذا التطبيق</string>
+    <string name="hide_app">إخفاء التطبيق</string>
+    <string name="hide_app_description">إخفاء من المشغل والإعدادات</string>
+    <string name="sandbox">Sandbox</string>
+    <string name="sandbox_description">إخفاء من التطبيقات الأخرى (التطبيقات المصرفية، إلخ)</string>
+    <string name="hide_dev_options">إخفاء خيارات المطور</string>
+    <string name="hide_dev_options_description">سيرى هذا التطبيق خيارات المطور معطلة</string>
+    <string name="no_apps_found">لم يتم العثور على تطبيقات</string>
+    <string name="private_apps">تطبيقات خاصة</string>
+    <string name="sandboxed_apps">تطبيقات معزولة</string>
+    <string name="dev_opts_hidden">إخفاء المطور</string>
+    <string name="all_apps">جميع التطبيقات</string>
+    <string name="setup_private_apps">إعداد التطبيقات الخاصة</string>
+    <string name="setup_private_apps_description">أنشئ رمز PIN أو كلمة مرور أو نمطاً لقفل وإخفاء التطبيقات</string>
+    <string name="collapse">طي</string>
+    <string name="expand">توسيع</string>
+    <string name="lock">قفل</string>
+    <string name="dev_opt">المطور</string>
+    <string name="notifications_locked">الإشعارات مقفلة</string>
+    <string name="unlock_private_area_desc">إلغاء قفل المنطقة الخاصة لعرض الإشعارات</string>
+    <string name="no_private_notifications">لا توجد إشعارات خاصة</string>
+    <string name="notifications_empty_desc">ستظهر الإشعارات من التطبيقات المخفية هنا</string>
+
+    <!-- Authenticate -->
+    <string name="unlock_app_title">إلغاء قفل %1$s</string>
+    <string name="unlock_private_apps">إلغاء قفل التطبيقات الخاصة</string>
+    <string name="auth_prompt_format">أدخل بيانات اعتماد Sandbox لإلغاء قفل %1$s</string>
+    <string name="enter_current_pin_to_change">أدخل رمز PIN الحالي لتغيير الأمان</string>
+    <string name="enter_current_password_to_change">أدخل كلمة المرور الحالية لتغيير الأمان</string>
+    <string name="draw_current_pattern_to_change">ارسم النمط الحالي لتغيير الأمان</string>
+
+    <!-- Security Questions -->
+    <string name="question_pet_name">ما هو اسم حيوانك الأليف؟</string>
+    <string name="question_birth_city">في أي مدينة ولدت؟</string>
+    <string name="question_fav_movie">ما هو فيلمك المفضل؟</string>
+    <string name="question_mother_maiden">ما هو اسم والدتك قبل الزواج؟</string>
+    <string name="question_first_car">ما هي أول سيارة امتلكتها؟</string>
+    <string name="count_format">(%1$d)</string>
+    <string name="badge_count_format">%1$d</string>
+</resources>

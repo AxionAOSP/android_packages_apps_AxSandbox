@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sandbox</string>
+
+    <!-- Common -->
+    <string name="back">Vissza</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Mégse</string>
+    <string name="settings">Beállítások</string>
+    <string name="launch">Indítás</string>
+    <string name="selected">Kiválasztva</string>
+    <string name="continue_text">Folytatás</string>
+    <string name="skip_for_now">Kihagyás egyelőre</string>
+    <string name="unlock">Feloldás</string>
+    <string name="hide">Elrejtés</string>
+    <string name="show">Megjelenítés</string>
+    <string name="dismiss">Elvetés</string>
+    <string name="open">Megnyitás</string>
+    <string name="reset">Visszaállítás</string>
+    <string name="search_apps">Alkalmazások keresése...</string>
+    <string name="version">Verzió</string>
+    <string name="about">Névjegy</string>
+
+    <!-- Navigation Labels -->
+    <string name="apps">Alkalmazások</string>
+    <string name="notifications">Értesítések</string>
+
+    <!-- Security Setup -->
+    <string name="secure_your_private_apps">Privát alkalmazások védelme</string>
+    <string name="choose_protection_method">Válassza ki a rejtett alkalmazások védelmi módját</string>
+    <string name="pin">PIN</string>
+    <string name="password">Jelszó</string>
+    <string name="pattern">Minta</string>
+    <string name="pin_description">4-6 jegyű kód</string>
+    <string name="password_description">Alfanumerikus jelszó</string>
+    <string name="pattern_description">Minta rajzolása a feloldáshoz</string>
+
+    <!-- Security Screens -->
+    <string name="create_pin">PIN létrehozása</string>
+    <string name="confirm_pin">PIN megerősítése</string>
+    <string name="enter_pin">PIN megadása</string>
+    <string name="choose_pin_prompt">Válasszon egy 4 jegyű PIN-kódot</string>
+    <string name="reenter_pin_prompt">Adja meg újra a PIN-kódot</string>
+    <string name="enter_pin_to_unlock">PIN megadása a privát alkalmazások feloldásához</string>
+    <string name="pins_mismatched">A PIN-kódok nem egyeznek. Próbálja újra, vagy lépjen vissza.</string>
+    <string name="incorrect_pin">Helytelen PIN-kód</string>
+
+    <string name="create_pattern">Minta létrehozása</string>
+    <string name="confirm_pattern">Minta megerősítése</string>
+    <string name="draw_pattern">Minta rajzolása</string>
+    <string name="patterns_mismatched">A minták nem egyeznek</string>
+    <string name="wrong_pattern">Helytelen minta</string>
+    <string name="connect_dots_prompt">Kössön össze legalább 4 pontot</string>
+    <string name="draw_pattern_again_prompt">Rajzolja meg újra a mintát</string>
+    <string name="draw_pattern_to_unlock">Minta rajzolása a privát alkalmazások feloldásához</string>
+
+    <string name="create_password">Jelszó létrehozása</string>
+    <string name="confirm_password">Jelszó megerősítése</string>
+    <string name="set_password">Jelszó beállítása</string>
+    <string name="enter_password">Jelszó megadása</string>
+    <string name="choose_password_prompt">Válasszon egy biztonságos jelszót</string>
+    <string name="reenter_password_prompt">Adja meg újra a jelszót</string>
+    <string name="enter_password_to_unlock">Jelszó megadása a privát alkalmazások feloldásához</string>
+    <string name="passwords_mismatched">A jelszavak nem egyeznek. Próbálja újra, vagy lépjen vissza.</string>
+    <string name="incorrect_password">Helytelen jelszó</string>
+    <string name="enter_password_placeholder">Jelszó megadása</string>
+
+    <string name="forgot_password_q">Elfelejtette a jelszavát?</string>
+    <string name="biometric_unlock">Biometrikus feloldás</string>
+    <string name="backspace">Visszatörlés</string>
+
+    <!-- Recovery -->
+    <string name="recovery_option">Helyreállítási lehetőség</string>
+    <string name="recovery_setup_description">Állítson be egy biztonsági kérdést arra az esetre, ha elfelejtené a jelszavát</string>
+    <string name="security_question">Biztonsági kérdés</string>
+    <string name="select_a_question">Válasszon kérdést</string>
+    <string name="your_answer">Válasz</string>
+    <string name="verify_answer">Válasz ellenőrzése</string>
+    <string name="forgot_password_title">Elfelejtett jelszó</string>
+    <string name="reset_password_description">Válaszoljon a biztonsági kérdésre a jelszó visszaállításához</string>
+    <string name="incorrect_answer">Helytelen válasz. Kérjük, próbálja újra.</string>
+    <string name="reset_password_dialog_title">Jelszó visszaállítása?</string>
+    <string name="reset_password_dialog_message">Ez törli a jelenlegi jelszót, és újat kell beállítania. Minden privát alkalmazásadat érintetlen marad.</string>
+
+    <!-- Settings -->
+    <string name="private_apps_security">Privát alkalmazások biztonsága</string>
+    <string name="current_lock_type">Jelenlegi zártípus</string>
+    <string name="not_set">Nincs beállítva</string>
+    <string name="use_pin">PIN használata</string>
+    <string name="use_password">Jelszó használata</string>
+    <string name="use_pattern">Minta használata</string>
+    <string name="biometrics">Biometria</string>
+    <string name="unlock_with_biometrics">Feloldás biometriával</string>
+    <string name="biometrics_description">Ujjlenyomat vagy arcfelismerés használata</string>
+    <string name="recovery_options">Helyreállítási lehetőségek</string>
+    <string name="forgot_password_item">Elfelejtette a jelszavát</string>
+    <string name="forgot_password_subtitle">Jelszó visszaállítása biztonsági kérdés segítségével</string>
+    <string name="setup_security_question">Biztonsági kérdés beállítása</string>
+    <string name="recovery_required_subtitle">Szükséges a jelszó helyreállításához</string>
+    
+    <string name="locked_app_behavior">Zárolt alkalmazás viselkedése</string>
+    <string name="locked_app_behavior_description">Szabályozza, mikor zárolódnak újra a feloldott alkalmazások</string>
+    <string name="relock_on_leave">Zárolás kilépéskor</string>
+    <string name="relock_on_leave_description">Feloldott alkalmazás azonnali újrazárása kilépéskor</string>
+    <string name="relock_after_timeout">Zárolás időtúllépés után</string>
+    <string name="relock_after_timeout_description">Újrazárás %1$d mp inaktivitás után</string>
+    <string name="relock_on_screen_off">Zárolás képernyő kikapcsolásakor</string>
+    <string name="relock_on_screen_off_description">Feloldva tartás alkalmazásváltáskor, zárolás képernyő kikapcsolásakor</string>
+    <string name="relock_only_killed">Zárolás csak bezáráskor</string>
+    <string name="relock_only_killed_description">Feloldva tartás a Sandbox kényszerített bezárásáig</string>
+
+    <string name="private_section_behavior">Privát szakasz viselkedése</string>
+    <string name="private_section_behavior_description">Szabályozza, mikor zárolódik a privát alkalmazások szakasza ebben az alkalmazásban</string>
+    <string name="collapse_on_leave">Összecsukás kilépéskor</string>
+    <string name="collapse_on_leave_description">Összecsukás és zárolás a Sandbox alkalmazás elhagyásakor</string>
+    <string name="collapse_after_timeout">Összecsukás időtúllépés után</string>
+    <string name="collapse_after_timeout_description">Összecsukva %1$d mp-cel az alkalmazás elhagyása után</string>
+    <string name="lock_timeout">Zárolási időtúllépés</string>
+    <string name="seconds_format">%1$d másodperc</string>
+    <string name="minutes_format_singular">%1$d perc</string>
+    <string name="minutes_format_plural">%1$d perc</string>
+
+    <!-- Sandbox App -->
+    <string name="lock_app">Alkalmazás zárolása</string>
+    <string name="lock_app_description">Hitelesítés szükséges az alkalmazás megnyitásához</string>
+    <string name="hide_app">Alkalmazás elrejtése</string>
+    <string name="hide_app_description">Elrejtés az indítóból és a beállításokból</string>
+    <string name="sandbox">Sandbox</string>
+    <string name="sandbox_description">Elrejtés más alkalmazások elől (banki appok stb.)</string>
+    <string name="hide_dev_options">Fejlesztői beállítások elrejtése</string>
+    <string name="hide_dev_options_description">Ez az alkalmazás kikapcsoltnak látja a fejlesztői beállításokat</string>
+    <string name="no_apps_found">Nem találhatók alkalmazások</string>
+    <string name="private_apps">Privát alkalmazások</string>
+    <string name="sandboxed_apps">Sandboxolt alkalmazások</string>
+    <string name="dev_opts_hidden">DevOpts rejtett</string>
+    <string name="all_apps">Összes alkalmazás</string>
+    <string name="setup_private_apps">Privát alkalmazások beállítása</string>
+    <string name="setup_private_apps_description">Hozzon létre PIN-t, jelszót vagy mintát az alkalmazások zárolásához és elrejtéséhez</string>
+    <string name="collapse">Összecsukás</string>
+    <string name="expand">Kibontás</string>
+    <string name="lock">Zárolás</string>
+    <string name="dev_opt">Fejl.</string>
+    <string name="notifications_locked">Értesítések zárolva</string>
+    <string name="unlock_private_area_desc">Oldja fel a privát területet az értesítések megtekintéséhez</string>
+    <string name="no_private_notifications">Nincsenek privát értesítések</string>
+    <string name="notifications_empty_desc">A rejtett alkalmazások értesítései itt fognak megjelenni</string>
+
+    <!-- Authenticate -->
+    <string name="unlock_app_title">%1$s feloldása</string>
+    <string name="unlock_private_apps">Privát alkalmazások feloldása</string>
+    <string name="auth_prompt_format">Adja meg Sandbox hitelesítő adatait a(z) %1$s feloldásához</string>
+    <string name="enter_current_pin_to_change">Adja meg jelenlegi PIN-kódját a biztonság módosításához</string>
+    <string name="enter_current_password_to_change">Adja meg jelenlegi jelszavát a biztonság módosításához</string>
+    <string name="draw_current_pattern_to_change">Rajzolja meg jelenlegi mintáját a biztonság módosításához</string>
+
+    <!-- Security Questions -->
+    <string name="question_pet_name">Mi a háziállata neve?</string>
+    <string name="question_birth_city">Melyik városban született?</string>
+    <string name="question_fav_movie">Mi a kedvenc filmje?</string>
+    <string name="question_mother_maiden">Mi anyja lánykori neve?</string>
+    <string name="question_first_car">Mi volt az első autója?</string>
+    <string name="count_format">(%1$d)</string>
+    <string name="badge_count_format">%1$d</string>
+</resources>

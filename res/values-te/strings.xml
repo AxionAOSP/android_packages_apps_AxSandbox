@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sandbox</string>
+
+    <!-- Common -->
+    <string name="back">వెనుకకు</string>
+    <string name="ok">సరే</string>
+    <string name="cancel">రద్దు చేయి</string>
+    <string name="settings">సెట్టింగ్స్</string>
+    <string name="launch">ప్రారంభించు</string>
+    <string name="selected">ఎంపిక చేయబడింది</string>
+    <string name="continue_text">కొనసాగించు</string>
+    <string name="skip_for_now">ప్రస్తుతానికి వదిలేయండి</string>
+    <string name="unlock">అన్‌లాక్</string>
+    <string name="hide">దాచు</string>
+    <string name="show">చూపించు</string>
+    <string name="dismiss">తీసివేయి</string>
+    <string name="open">తెరువు</string>
+    <string name="reset">రీసెట్</string>
+    <string name="search_apps">యాప్‌లను వెతకండి...</string>
+    <string name="version">వెర్షన్</string>
+    <string name="about">గురించి</string>
+
+    <!-- Navigation Labels -->
+    <string name="apps">యాప్‌లు</string>
+    <string name="notifications">నోటిఫికేషన్‌లు</string>
+
+    <!-- Security Setup -->
+    <string name="secure_your_private_apps">మీ ప్రైవేట్ యాప్‌లను సురక్షితం చేయండి</string>
+    <string name="choose_protection_method">మీరు మీ దాచిన యాప్‌లను ఎలా రక్షించాలనుకుంటున్నారో ఎంచుకోండి</string>
+    <string name="pin">పిన్ (PIN)</string>
+    <string name="password">పాస్‌వర్డ్</string>
+    <string name="pattern">ప్యాటర్న్</string>
+    <string name="pin_description">4-6 అంకెల కోడ్</string>
+    <string name="password_description">అక్షరాలు మరియు అంకెల పాస్‌వర్డ్</string>
+    <string name="pattern_description">అన్‌లాక్ చేయడానికి ప్యాటర్న్ గీయండి</string>
+
+    <!-- Security Screens -->
+    <string name="create_pin">పిన్‌ని సృష్టించండి</string>
+    <string name="confirm_pin">పిన్‌ని ధృవీకరించండి</string>
+    <string name="enter_pin">పిన్‌ని నమోదు చేయండి</string>
+    <string name="choose_pin_prompt">4 అంకెల పిన్‌ని ఎంచుకోండి</string>
+    <string name="reenter_pin_prompt">మీ పిన్‌ని మళ్లీ నమోదు చేయండి</string>
+    <string name="enter_pin_to_unlock">ప్రైవేట్ యాప్‌లను అన్‌లాక్ చేయడానికి పిన్‌ని నమోదు చేయండి</string>
+    <string name="pins_mismatched">పిన్‌లు సరిపోలలేదు. మళ్లీ ప్రయత్నించండి లేదా వెనుకకు వెళ్లండి.</string>
+    <string name="incorrect_pin">తప్పుడు పిన్</string>
+
+    <string name="create_pattern">ప్యాటర్న్‌ని సృష్టించండి</string>
+    <string name="confirm_pattern">ప్యాటర్న్‌ని ధృవీకరించండి</string>
+    <string name="draw_pattern">ప్యాటర్న్ గీయండి</string>
+    <string name="patterns_mismatched">ప్యాటర్న్ సరిపోలలేదు</string>
+    <string name="wrong_pattern">తప్పుడు ప్యాటర్న్</string>
+    <string name="connect_dots_prompt">కనీసం 4 చుక్కలను కలపండి</string>
+    <string name="draw_pattern_again_prompt">మీ ప్యాటర్న్‌ని మళ్లీ గీయండి</string>
+    <string name="draw_pattern_to_unlock">ప్రైవేట్ యాప్‌లను అన్‌లాక్ చేయడానికి ప్యాటర్న్ గీయండి</string>
+
+    <string name="create_password">పాస్‌వర్డ్‌ని సృష్టించండి</string>
+    <string name="confirm_password">పాస్‌వర్డ్‌ని ధృవీకరించండి</string>
+    <string name="set_password">పాస్‌వర్డ్‌ని సెట్ చేయండి</string>
+    <string name="enter_password">పాస్‌వర్డ్‌ని నమోదు చేయండి</string>
+    <string name="choose_password_prompt">సురక్షితమైన పాస్‌వర్డ్‌ని ఎంచుకోండి</string>
+    <string name="reenter_password_prompt">మీ పాస్‌వర్డ్‌ని మళ్లీ నమోదు చేయండి</string>
+    <string name="enter_password_to_unlock">ప్రైవేట్ యాప్‌లను అన్‌లాక్ చేయడానికి పాస్‌వర్డ్‌ని నమోదు చేయండి</string>
+    <string name="passwords_mismatched">పాస్‌వర్డ్‌లు సరిపోలలేదు. మళ్లీ ప్రయత్నించండి లేదా వెనుకకు వెళ్లండి.</string>
+    <string name="incorrect_password">తప్పుడు పాస్‌వర్డ్</string>
+    <string name="enter_password_placeholder">పాస్‌వర్డ్‌ని నమోదు చేయండి</string>
+
+    <string name="forgot_password_q">పాస్‌వర్డ్ మర్చిపోయారా?</string>
+    <string name="biometric_unlock">బయోమెట్రిక్ అన్‌లాక్</string>
+    <string name="backspace">బ్యాక్‌స్పేస్</string>
+
+    <!-- Recovery -->
+    <string name="recovery_option">రికవరీ ఆప్షన్</string>
+    <string name="recovery_setup_description">మీరు పాస్‌వర్డ్ మర్చిపోతే సహాయం కోసం ఒక భద్రతా ప్రశ్నను సెట్ చేయండి</string>
+    <string name="security_question">భద్రతా ప్రశ్న</string>
+    <string name="select_a_question">ఒక ప్రశ్నను ఎంచుకోండి</string>
+    <string name="your_answer">మీ సమాధానం</string>
+    <string name="verify_answer">సమాధానాన్ని ధృవీకరించండి</string>
+    <string name="forgot_password_title">పాస్‌వర్డ్ మర్చిపోయాను</string>
+    <string name="reset_password_description">పాస్‌వర్డ్‌ని రీసెట్ చేయడానికి మీ భద్రతా ప్రశ్నకు సమాధానం ఇవ్వండి</string>
+    <string name="incorrect_answer">తప్పుడు సమాధానం. దయచేసి మళ్లీ ప్రయత్నించండి.</string>
+    <string name="reset_password_dialog_title">పాస్‌వర్డ్‌ని రీసెట్ చేయాలా?</string>
+    <string name="reset_password_dialog_message">ఇది మీ ప్రస్తుత పాస్‌వర్డ్‌ను తుడిచివేస్తుంది మరియు మీరు కొత్తదాన్ని సెట్ చేయాల్సి ఉంటుంది. మొత్తం ప్రైవేట్ యాప్ డేటా సురక్షితంగా ఉంటుంది.</string>
+
+    <!-- Settings -->
+    <string name="private_apps_security">ప్రైవేట్ యాప్‌ల భద్రత</string>
+    <string name="current_lock_type">ప్రస్తుత లాక్ రకం</string>
+    <string name="not_set">సెట్ చేయలేదు</string>
+    <string name="use_pin">పిన్‌ని ఉపయోగించండి</string>
+    <string name="use_password">పాస్‌వర్డ్‌ని ఉపయోగించండి</string>
+    <string name="use_pattern">ప్యాటర్న్‌ని ఉపయోగించండి</string>
+    <string name="biometrics">బయోమెట్రిక్స్</string>
+    <string name="unlock_with_biometrics">బయోమెట్రిక్స్ ద్వారా అన్‌లాక్ చేయండి</string>
+    <string name="biometrics_description">ఫింగర్‌ప్రింట్ లేదా ఫేస్ అన్‌లాక్ ఉపయోగించండి</string>
+    <string name="recovery_options">రికవరీ ఆప్షన్‌లు</string>
+    <string name="forgot_password_item">పాస్‌వర్డ్ మర్చిపోయారా</string>
+    <string name="forgot_password_subtitle">భద్రతా ప్రశ్నను ఉపయోగించి మీ పాస్‌వర్డ్‌ని రీసెట్ చేయండి</string>
+    <string name="setup_security_question">భద్రతా ప్రశ్నను సెట్ చేయండి</string>
+    <string name="recovery_required_subtitle">పాస్‌వర్డ్ రికవరీ కోసం అవసరం</string>
+    
+    <string name="locked_app_behavior">లాక్ చేయబడిన యాప్‌ల ప్రవర్తన</string>
+    <string name="locked_app_behavior_description">అన్‌లాక్ చేసిన యాప్‌లు మళ్లీ ఎప్పుడు లాక్ అవ్వాలో నియంత్రించండి</string>
+    <string name="relock_on_leave">వదిలివెళ్లినప్పుడు మళ్లీ లాక్ చేయి</string>
+    <string name="relock_on_leave_description">అన్‌లాక్ చేసిన యాప్ నుండి బయటకు రాగానే వెంటనే దాన్ని మళ్లీ లాక్ చేయి</string>
+    <string name="relock_after_timeout">సమయం ముగిసిన తర్వాత మళ్లీ లాక్ చేయి</string>
+    <string name="relock_after_timeout_description">%1$d సెకన్ల నిష్క్రియ తర్వాత మళ్లీ లాక్ చేయి</string>
+    <string name="relock_on_screen_off">స్క్రీన్ ఆఫ్ అయినప్పుడు మళ్లీ లాక్ చేయి</string>
+    <string name="relock_on_screen_off_description">యాప్‌లు మారుస్తున్నప్పుడు అన్‌లాక్ అయి ఉండనివ్వండి, స్క్రీన్ ఆఫ్ అయినప్పుడు లాక్ చేయండి</string>
+    <string name="relock_only_killed">మూసివేసినప్పుడు మాత్రమే మళ్లీ లాక్ చేయి</string>
+    <string name="relock_only_killed_description">Sandbox బలవంతంగా మూసివేయబడే వరకు అన్‌లాక్ అయి ఉండనివ్వండి</string>
+
+    <string name="private_section_behavior">ప్రైవేట్ సెక్షన్ ప్రవర్తన</string>
+    <string name="private_section_behavior_description">ఈ యాప్‌లోని ప్రైవేట్ యాప్‌ల సెక్షన్ ఎప్పుడు లాక్ అవ్వాలో నియంత్రించండి</string>
+    <string name="collapse_on_leave">వదిలివెళ్లినప్పుడు మూసివేయి</string>
+    <string name="collapse_on_leave_description">Sandbox యాప్ నుండి బయటకు వెళ్లేటప్పుడు సెక్షన్‌ని మూసివేసి లాక్ చేయండి</string>
+    <string name="collapse_after_timeout">సమయం ముగిసిన తర్వాత మూసివేయి</string>
+    <string name="collapse_after_timeout_description">యాప్ నుండి బయటకు వచ్చిన %1$d సెకన్ల తర్వాత మూసివేయబడింది</string>
+    <string name="lock_timeout">లాక్ టైమౌట్</string>
+    <string name="seconds_format">%1$d సెకన్లు</string>
+    <string name="minutes_format_singular">%1$d నిమిషం</string>
+    <string name="minutes_format_plural">%1$d నిమిషాలు</string>
+
+    <!-- Sandbox App -->
+    <string name="lock_app">యాప్‌ని లాక్ చేయి</string>
+    <string name="lock_app_description">ఈ యాప్‌ని తెరవడానికి ధృవీకరణ అవసరం</string>
+    <string name="hide_app">యాప్‌ని దాచు</string>
+    <string name="hide_app_description">లాంచర్ మరియు సెట్టింగ్స్ నుండి దాచండి</string>
+    <string name="sandbox">Sandbox</string>
+    <string name="sandbox_description">ఇతర యాప్‌ల (బ్యాంకింగ్ యాప్‌లు మొదలైనవి) నుండి దాచండి</string>
+    <string name="hide_dev_options">డెవలపర్ ఆప్షన్‌లను దాచు</string>
+    <string name="hide_dev_options_description">ఈ యాప్ డెవలపర్ ఆప్షన్‌లను నిలిపివేసినట్లుగా చూస్తుంది</string>
+    <string name="no_apps_found">యాప్‌లేవీ కనుగొనబడలేదు</string>
+    <string name="private_apps">ప్రైవేట్ యాప్‌లు</string>
+    <string name="sandboxed_apps">శాండ్‌బాక్స్డ్ యాప్‌లు</string>
+    <string name="dev_opts_hidden">DevOpts దాచబడ్డాయి</string>
+    <string name="all_apps">అన్ని యాప్‌లు</string>
+    <string name="setup_private_apps">ప్రైవేట్ యాప్‌లను సెట్ చేయండి</string>
+    <string name="setup_private_apps_description">యాప్‌లను లాక్ చేయడానికి మరియు దాచడానికి పిన్, పాస్‌వర్డ్ లేదా ప్యాటర్న్ సృష్టించండి</string>
+    <string name="collapse">మూసివేయి</string>
+    <string name="expand">విస్తరించు</string>
+    <string name="lock">లాక్</string>
+    <string name="dev_opt">డెవలపర్</string>
+    <string name="notifications_locked">నోటిఫికేషన్‌లు లాక్ చేయబడ్డాయి</string>
+    <string name="unlock_private_area_desc">నోటిఫికేషన్‌లను చూడటానికి ప్రైవేట్ ఏరియాని అన్‌లాక్ చేయండి</string>
+    <string name="no_private_notifications">ప్రైవేట్ నోటిఫికేషన్‌లేవీ లేవు</string>
+    <string name="notifications_empty_desc">దాచిన యాప్‌ల నుండి వచ్చే నోటిఫికేషన్‌లు ఇక్కడ కనిపిస్తాయి</string>
+
+    <!-- Authenticate -->
+    <string name="unlock_app_title">%1$s ని అన్‌లాక్ చేయండి</string>
+    <string name="unlock_private_apps">ప్రైవేట్ యాప్‌లను అన్‌లాక్ చేయండి</string>
+    <string name="auth_prompt_format">%1$s ని అన్‌లాక్ చేయడానికి మీ Sandbox ఆధారాలను నమోదు చేయండి</string>
+    <string name="enter_current_pin_to_change">భద్రతను మార్చడానికి మీ ప్రస్తుత పిన్‌ని నమోదు చేయండి</string>
+    <string name="enter_current_password_to_change">భద్రతను మార్చడానికి మీ ప్రస్తుత పాస్‌వర్డ్‌ని నమోదు చేయండి</string>
+    <string name="draw_current_pattern_to_change">భద్రతను మార్చడానికి మీ ప్రస్తుత ప్యాటర్న్ గీయండి</string>
+
+    <!-- Security Questions -->
+    <string name="question_pet_name">మీ పెంపుడు జంతువు పేరు ఏమిటి?</string>
+    <string name="question_birth_city">మీరు ఏ నగరంలో జన్మించారు?</string>
+    <string name="question_fav_movie">మీకు ఇష్టమైన సినిమా ఏది?</string>
+    <string name="question_mother_maiden">మీ తల్లి పెళ్లికి ముందు పేరు ఏమిటి?</string>
+    <string name="question_first_car">మీ మొదటి కారు ఏది?</string>
+    <string name="count_format">(%1$d)</string>
+    <string name="badge_count_format">%1$d</string>
+</resources>

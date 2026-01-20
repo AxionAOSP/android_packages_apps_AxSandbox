@@ -17,8 +17,10 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import com.android.axion.sandbox.R
 import com.android.axion.sandbox.security.LockedAppBehavior
 import com.android.axion.sandbox.security.PrivateSectionBehavior
 import com.android.axion.sandbox.security.SecurityType
@@ -60,7 +62,7 @@ fun SettingsScreen(
             TopAppBar(
                 title = {
                     Text(
-                        "Settings",
+                        stringResource(R.string.settings),
                         fontWeight = FontWeight.Bold
                     )
                 },
@@ -68,7 +70,7 @@ fun SettingsScreen(
                     IconButton(onClick = onBackClick) {
                         Icon(
                             imageVector = Icons.AutoMirrored.Filled.ArrowBack,
-                            contentDescription = "Back"
+                            contentDescription = stringResource(R.string.back)
                         )
                     }
                 },
@@ -86,7 +88,7 @@ fun SettingsScreen(
                 .padding(horizontal = 16.dp)
         ) {
             Text(
-                text = "Private Apps Security",
+                text = stringResource(R.string.private_apps_security),
                 style = MaterialTheme.typography.titleSmall,
                 color = MaterialTheme.colorScheme.primary,
                 fontWeight = FontWeight.SemiBold,
@@ -110,12 +112,12 @@ fun SettingsScreen(
                             SecurityType.PATTERN -> Icons.Outlined.Pattern
                             SecurityType.NONE -> Icons.Outlined.Lock
                         },
-                        title = "Current Lock Type",
+                        title = stringResource(R.string.current_lock_type),
                         subtitle = when (currentSecurityType) {
-                            SecurityType.PIN -> "PIN (4-6 digits)"
-                            SecurityType.PASSWORD -> "Password"
-                            SecurityType.PATTERN -> "Pattern"
-                            SecurityType.NONE -> "Not set"
+                            SecurityType.PIN -> stringResource(R.string.pin_description)
+                            SecurityType.PASSWORD -> stringResource(R.string.password)
+                            SecurityType.PATTERN -> stringResource(R.string.pattern)
+                            SecurityType.NONE -> stringResource(R.string.not_set)
                         },
                         onClick = null
                     )
@@ -127,24 +129,24 @@ fun SettingsScreen(
                     
                     SettingsItem(
                         icon = Icons.Outlined.Pin,
-                        title = "Use PIN",
-                        subtitle = "4-6 digit code",
+                        title = stringResource(R.string.use_pin),
+                        subtitle = stringResource(R.string.pin_description),
                         isSelected = currentSecurityType == SecurityType.PIN,
                         onClick = { onChangeSecurityType(SecurityType.PIN) }
                     )
                     
                     SettingsItem(
                         icon = Icons.Outlined.Password,
-                        title = "Use Password",
-                        subtitle = "Alphanumeric password",
+                        title = stringResource(R.string.use_password),
+                        subtitle = stringResource(R.string.password_description),
                         isSelected = currentSecurityType == SecurityType.PASSWORD,
                         onClick = { onChangeSecurityType(SecurityType.PASSWORD) }
                     )
                     
                     SettingsItem(
                         icon = Icons.Outlined.Pattern,
-                        title = "Use Pattern",
-                        subtitle = "Draw pattern to unlock",
+                        title = stringResource(R.string.use_pattern),
+                        subtitle = stringResource(R.string.pattern_description),
                         isSelected = currentSecurityType == SecurityType.PATTERN,
                         onClick = { onChangeSecurityType(SecurityType.PATTERN) }
                     )
@@ -155,7 +157,7 @@ fun SettingsScreen(
             
             if (isBiometricAvailable) {
                 Text(
-                    text = "Biometrics",
+                    text = stringResource(R.string.biometrics),
                     style = MaterialTheme.typography.titleSmall,
                     color = MaterialTheme.colorScheme.primary,
                     fontWeight = FontWeight.SemiBold,
@@ -174,8 +176,8 @@ fun SettingsScreen(
                     ) {
                         SettingsSwitchItem(
                             icon = Icons.Outlined.Fingerprint,
-                            title = "Unlock with Biometrics",
-                            subtitle = "Use fingerprint or face unlock",
+                            title = stringResource(R.string.unlock_with_biometrics),
+                            subtitle = stringResource(R.string.biometrics_description),
                             checked = isBiometricEnabled,
                             onCheckedChange = onChangeBiometricEnabled
                         )
@@ -188,8 +190,8 @@ fun SettingsScreen(
 
                             SettingsSwitchItem(
                                 icon = Icons.Outlined.AutoMode,
-                                title = "Auto-show Biometric Prompt",
-                                subtitle = "Automatically show biometric prompt when opening locked apps",
+                                title = stringResource(R.string.auto_show_biometric_prompt),
+                                subtitle = stringResource(R.string.auto_show_biometric_prompt_description),
                                 checked = isPreferBiometric,
                                 onCheckedChange = onChangePreferBiometric
                             )
@@ -202,7 +204,7 @@ fun SettingsScreen(
             
             if (currentSecurityType != SecurityType.NONE) {
                 Text(
-                    text = "Recovery Options",
+                    text = stringResource(R.string.recovery_options),
                     style = MaterialTheme.typography.titleSmall,
                     color = MaterialTheme.colorScheme.primary,
                     fontWeight = FontWeight.SemiBold,
@@ -222,15 +224,15 @@ fun SettingsScreen(
                         if (hasSecurityQuestion) {
                             SettingsItem(
                                 icon = Icons.Outlined.LockReset,
-                                title = "Forgot Password",
-                                subtitle = "Reset your password using security question",
+                                title = stringResource(R.string.forgot_password_item),
+                                subtitle = stringResource(R.string.forgot_password_subtitle),
                                 onClick = onForgotPassword
                             )
                         } else {
                             SettingsItem(
                                 icon = Icons.Outlined.Help,
-                                title = "Set Up Security Question",
-                                subtitle = "Required for password recovery",
+                                title = stringResource(R.string.setup_security_question),
+                                subtitle = stringResource(R.string.recovery_required_subtitle),
                                 onClick = onSetupRecovery
                             )
                         }
@@ -241,7 +243,7 @@ fun SettingsScreen(
             }
             
             Text(
-                text = "Locked App Behavior",
+                text = stringResource(R.string.locked_app_behavior),
                 style = MaterialTheme.typography.titleSmall,
                 color = MaterialTheme.colorScheme.primary,
                 fontWeight = FontWeight.SemiBold,
@@ -249,7 +251,7 @@ fun SettingsScreen(
             )
             
             Text(
-                text = "Controls when unlocked apps re-lock",
+                text = stringResource(R.string.locked_app_behavior_description),
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 modifier = Modifier.padding(start = 8.dp, bottom = 8.dp)
@@ -267,16 +269,16 @@ fun SettingsScreen(
                 ) {
                     SettingsItem(
                         icon = Icons.Outlined.ExitToApp,
-                        title = "Re-lock when leaving app",
-                        subtitle = "Re-lock immediately when leaving the unlocked app",
+                        title = stringResource(R.string.relock_on_leave),
+                        subtitle = stringResource(R.string.relock_on_leave_description),
                         isSelected = currentLockedAppBehavior == LockedAppBehavior.ON_LEAVE,
                         onClick = { onChangeLockedAppBehavior(LockedAppBehavior.ON_LEAVE) }
                     )
                     
                     SettingsItem(
                         icon = Icons.Outlined.Timer,
-                        title = "Re-lock after timeout",
-                        subtitle = "Re-lock after ${currentLockedAppTimeout}s of inactivity",
+                        title = stringResource(R.string.relock_after_timeout),
+                        subtitle = stringResource(R.string.relock_after_timeout_description, currentLockedAppTimeout),
                         isSelected = currentLockedAppBehavior == LockedAppBehavior.TIMEOUT,
                         onClick = { 
                             onChangeLockedAppBehavior(LockedAppBehavior.TIMEOUT)
@@ -286,16 +288,16 @@ fun SettingsScreen(
                     
                     SettingsItem(
                         icon = Icons.Outlined.Smartphone,
-                        title = "Re-lock on screen off",
-                        subtitle = "Keep unlocked when switching apps, lock on screen off",
+                        title = stringResource(R.string.relock_on_screen_off),
+                        subtitle = stringResource(R.string.relock_on_screen_off_description),
                         isSelected = currentLockedAppBehavior == LockedAppBehavior.ON_SCREEN_OFF,
                         onClick = { onChangeLockedAppBehavior(LockedAppBehavior.ON_SCREEN_OFF) }
                     )
                     
                     SettingsItem(
                         icon = Icons.Outlined.Close,
-                        title = "Re-lock only when killed",
-                        subtitle = "Keep unlocked until Sandbox is force closed",
+                        title = stringResource(R.string.relock_only_killed),
+                        subtitle = stringResource(R.string.relock_only_killed_description),
                         isSelected = currentLockedAppBehavior == LockedAppBehavior.ON_KILL,
                         onClick = { onChangeLockedAppBehavior(LockedAppBehavior.ON_KILL) }
                     )
@@ -305,7 +307,7 @@ fun SettingsScreen(
             Spacer(modifier = Modifier.height(24.dp))
             
             Text(
-                text = "Private Section Behavior",
+                text = stringResource(R.string.private_section_behavior),
                 style = MaterialTheme.typography.titleSmall,
                 color = MaterialTheme.colorScheme.primary,
                 fontWeight = FontWeight.SemiBold,
@@ -313,7 +315,7 @@ fun SettingsScreen(
             )
             
             Text(
-                text = "Controls when the private apps section in this app locks",
+                text = stringResource(R.string.private_section_behavior_description),
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 modifier = Modifier.padding(start = 8.dp, bottom = 8.dp)
@@ -331,16 +333,16 @@ fun SettingsScreen(
                 ) {
                     SettingsItem(
                         icon = Icons.Outlined.ExitToApp,
-                        title = "Collapse when leaving",
-                        subtitle = "Collapse and lock when leaving Sandbox app",
+                        title = stringResource(R.string.collapse_on_leave),
+                        subtitle = stringResource(R.string.collapse_on_leave_description),
                         isSelected = currentPrivateBehavior == PrivateSectionBehavior.ON_LEAVE,
                         onClick = { onChangePrivateBehavior(PrivateSectionBehavior.ON_LEAVE) }
                     )
                     
                     SettingsItem(
                         icon = Icons.Outlined.Timer,
-                        title = "Collapse after timeout",
-                        subtitle = "Collapsed after ${currentPrivateTimeout}s of leaving the app",
+                        title = stringResource(R.string.collapse_after_timeout),
+                        subtitle = stringResource(R.string.collapse_after_timeout_description, currentPrivateTimeout),
                         isSelected = currentPrivateBehavior == PrivateSectionBehavior.TIMEOUT,
                         onClick = { 
                             onChangePrivateBehavior(PrivateSectionBehavior.TIMEOUT)
@@ -353,7 +355,7 @@ fun SettingsScreen(
             Spacer(modifier = Modifier.height(24.dp))
             
             Text(
-                text = "About",
+                text = stringResource(R.string.about),
                 style = MaterialTheme.typography.titleSmall,
                 color = MaterialTheme.colorScheme.primary,
                 fontWeight = FontWeight.SemiBold,
@@ -372,7 +374,7 @@ fun SettingsScreen(
                 ) {
                     SettingsItem(
                         icon = Icons.Outlined.Info,
-                        title = "Version",
+                        title = stringResource(R.string.version),
                         subtitle = "1.0.0",
                         onClick = null
                     )
@@ -415,7 +417,7 @@ private fun TimeoutPickerDialog(
     
     AlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text("Lock Timeout") },
+        title = { Text(stringResource(R.string.lock_timeout)) },
         text = {
             Column {
                 timeoutOptions.forEach { seconds ->
@@ -433,8 +435,9 @@ private fun TimeoutPickerDialog(
                         )
                         Spacer(modifier = Modifier.width(12.dp))
                         Text(
-                            text = if (seconds < 60) "$seconds seconds" 
-                                   else "${seconds / 60} minute${if (seconds >= 120) "s" else ""}"
+                            text = if (seconds < 60) stringResource(R.string.seconds_format, seconds) 
+                                   else if (seconds == 60) stringResource(R.string.minutes_format_singular, 1)
+                                   else stringResource(R.string.minutes_format_plural, seconds / 60)
                         )
                     }
                 }
@@ -442,12 +445,12 @@ private fun TimeoutPickerDialog(
         },
         confirmButton = {
             TextButton(onClick = { onConfirm(selectedTimeout) }) {
-                Text("OK")
+                Text(stringResource(R.string.ok))
             }
         },
         dismissButton = {
             TextButton(onClick = onDismiss) {
-                Text("Cancel")
+                Text(stringResource(R.string.cancel))
             }
         }
     )
@@ -518,7 +521,7 @@ private fun SettingsItem(
         if (isSelected) {
             Icon(
                 imageVector = Icons.Default.CheckCircle,
-                contentDescription = "Selected",
+                contentDescription = stringResource(R.string.selected),
                 tint = MaterialTheme.colorScheme.primary,
                 modifier = Modifier.size(24.dp)
             )

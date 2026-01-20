@@ -19,6 +19,8 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.platform.LocalHapticFeedback
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
@@ -26,6 +28,7 @@ import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import com.android.axion.sandbox.R
 import com.android.axion.sandbox.security.SandboxSecurityManager
 
 private object PasswordScreenShapes {
@@ -51,6 +54,7 @@ fun PasswordScreen(
     var errorMessage by remember { mutableStateOf("") }
     var isPasswordVisible by remember { mutableStateOf(false) }
     val haptic = LocalHapticFeedback.current
+    val context = LocalContext.current
     
     LaunchedEffect(confirmPassword) {
         enteredPassword = ""
@@ -83,7 +87,7 @@ fun PasswordScreen(
             } else {
                 haptic.performHapticFeedback(HapticFeedbackType.LongPress)
                 isError = true
-                errorMessage = if (isSetup && confirmPassword != null) "Passwords mismatched. Try again or go back." else "Incorrect password"
+                errorMessage = if (isSetup && confirmPassword != null) context.getString(R.string.passwords_mismatched) else context.getString(R.string.incorrect_password)
             }
         }
     }
@@ -112,8 +116,8 @@ fun PasswordScreen(
         ) {
             Text(
                 text = if (isSetup) {
-                    if (confirmPassword == null) "Create Password" else "Confirm Password"
-                } else "Enter Password",
+                    if (confirmPassword == null) stringResource(R.string.create_password) else stringResource(R.string.confirm_password)
+                } else stringResource(R.string.enter_password),
                 style = MaterialTheme.typography.headlineMedium,
                 fontWeight = FontWeight.Bold,
                 color = MaterialTheme.colorScheme.onSurface,
@@ -124,8 +128,8 @@ fun PasswordScreen(
             
             Text(
                 text = promptText ?: if (isSetup) {
-                    if (confirmPassword == null) "Choose a secure password" else "Re-enter your password"
-                } else "Enter your password to unlock private apps",
+                    if (confirmPassword == null) stringResource(R.string.choose_password_prompt) else stringResource(R.string.reenter_password_prompt)
+                } else stringResource(R.string.enter_password_to_unlock),
                 style = MaterialTheme.typography.bodyMedium,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 textAlign = TextAlign.Center
@@ -142,8 +146,8 @@ fun PasswordScreen(
                 modifier = Modifier
                     .fillMaxWidth()
                     .graphicsLayer { translationX = shakeTranslation },
-                label = { Text("Password") },
-                placeholder = { Text("Enter password") },
+                label = { Text(stringResource(R.string.password)) },
+                placeholder = { Text(stringResource(R.string.enter_password_placeholder)) },
                 singleLine = true,
                 visualTransformation = if (isPasswordVisible) 
                     VisualTransformation.None else PasswordVisualTransformation(),
@@ -159,7 +163,7 @@ fun PasswordScreen(
                         Icon(
                             imageVector = if (isPasswordVisible) Icons.Default.Visibility 
                                           else Icons.Default.VisibilityOff,
-                            contentDescription = if (isPasswordVisible) "Hide" else "Show"
+                            contentDescription = if (isPasswordVisible) stringResource(R.string.hide) else stringResource(R.string.show)
                         )
                     }
                 },
@@ -189,8 +193,8 @@ fun PasswordScreen(
             ) {
                 Text(
                     text = if (isSetup) {
-                        if (confirmPassword == null) "Continue" else "Set Password"
-                    } else "Unlock",
+                        if (confirmPassword == null) stringResource(R.string.continue_text) else stringResource(R.string.set_password)
+                    } else stringResource(R.string.unlock),
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.SemiBold
                 )
@@ -208,7 +212,7 @@ fun PasswordScreen(
                     Icon(
                         imageVector = if (biometricType == SandboxSecurityManager.BiometricType.FACE) 
                             Icons.Filled.Face else Icons.Filled.Fingerprint,
-                        contentDescription = "Biometric Unlock",
+                        contentDescription = stringResource(R.string.biometric_unlock),
                         tint = MaterialTheme.colorScheme.onPrimaryContainer,
                         modifier = Modifier.size(28.dp)
                     )
@@ -216,10 +220,10 @@ fun PasswordScreen(
             }
             
             if (!isSetup && onForgotPassword != null) {
-                Spacer(modifier = Modifier.height(16.dp))
+                Spacer(modifier = Modifier.height(24.dp))
                 TextButton(onClick = onForgotPassword) {
                     Text(
-                        text = "Forgot Password?",
+                        text = stringResource(R.string.forgot_password_q),
                         style = MaterialTheme.typography.bodyMedium,
                         color = MaterialTheme.colorScheme.primary
                     )

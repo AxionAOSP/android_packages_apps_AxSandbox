@@ -11,9 +11,11 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import com.android.axion.sandbox.R
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -51,12 +53,12 @@ fun ForgotPasswordScreen(
             ) {
                 Icon(
                     imageVector = Icons.AutoMirrored.Filled.ArrowBack,
-                    contentDescription = "Back"
+                    contentDescription = stringResource(R.string.back)
                 )
             }
             
             Text(
-                text = "Forgot Password",
+                text = stringResource(R.string.forgot_password_title),
                 style = MaterialTheme.typography.headlineMedium,
                 fontWeight = FontWeight.Bold,
                 color = MaterialTheme.colorScheme.onSurface
@@ -65,7 +67,7 @@ fun ForgotPasswordScreen(
             Spacer(modifier = Modifier.height(8.dp))
             
             Text(
-                text = "Answer your security question to reset your password",
+                text = stringResource(R.string.reset_password_description),
                 style = MaterialTheme.typography.bodyMedium,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )
@@ -83,7 +85,7 @@ fun ForgotPasswordScreen(
                     modifier = Modifier.padding(16.dp)
                 ) {
                     Text(
-                        text = "Security Question",
+                        text = stringResource(R.string.security_question),
                         style = MaterialTheme.typography.labelMedium,
                         color = MaterialTheme.colorScheme.primary,
                         fontWeight = FontWeight.SemiBold
@@ -106,12 +108,12 @@ fun ForgotPasswordScreen(
                     answer = it
                     isError = false
                 },
-                label = { Text("Your Answer") },
+                label = { Text(stringResource(R.string.your_answer)) },
                 modifier = Modifier.fillMaxWidth(),
                 singleLine = true,
                 isError = isError,
                 supportingText = if (isError) {
-                    { Text("Incorrect answer. Please try again.") }
+                    { Text(stringResource(R.string.incorrect_answer)) }
                 } else null,
                 shape = RoundedCornerShape(12.dp)
             )
@@ -133,7 +135,7 @@ fun ForgotPasswordScreen(
                 shape = RoundedCornerShape(16.dp)
             ) {
                 Text(
-                    text = "Verify Answer",
+                    text = stringResource(R.string.verify_answer),
                     style = MaterialTheme.typography.titleMedium
                 )
             }
@@ -152,13 +154,13 @@ fun ForgotPasswordScreen(
             },
             title = { 
                 Text(
-                    text = "Reset Password?",
+                    text = stringResource(R.string.reset_password_dialog_title),
                     textAlign = TextAlign.Center
                 ) 
             },
             text = { 
                 Text(
-                    text = "This will clear your current password and you'll need to set up a new one. All private app data will remain intact.",
+                    text = stringResource(R.string.reset_password_dialog_message),
                     textAlign = TextAlign.Center
                 ) 
             },
@@ -172,12 +174,12 @@ fun ForgotPasswordScreen(
                         containerColor = MaterialTheme.colorScheme.error
                     )
                 ) {
-                    Text("Reset")
+                    Text(stringResource(R.string.reset))
                 }
             },
             dismissButton = {
                 TextButton(onClick = { showConfirmDialog = false }) {
-                    Text("Cancel")
+                    Text(stringResource(R.string.cancel))
                 }
             }
         )

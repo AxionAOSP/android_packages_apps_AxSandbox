@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sandbox</string>
+
+    <!-- Common -->
+    <string name="back">返回</string>
+    <string name="ok">确定</string>
+    <string name="cancel">取消</string>
+    <string name="settings">设置</string>
+    <string name="launch">启动</string>
+    <string name="selected">已选择</string>
+    <string name="continue_text">继续</string>
+    <string name="skip_for_now">暂时跳过</string>
+    <string name="unlock">解锁</string>
+    <string name="hide">隐藏</string>
+    <string name="show">显示</string>
+    <string name="dismiss">忽略</string>
+    <string name="open">打开</string>
+    <string name="reset">重置</string>
+    <string name="search_apps">搜索应用...</string>
+    <string name="version">版本</string>
+    <string name="about">关于</string>
+
+    <!-- Navigation Labels -->
+    <string name="apps">应用</string>
+    <string name="notifications">通知</string>
+
+    <!-- Security Setup -->
+    <string name="secure_your_private_apps">保护您的私密应用</string>
+    <string name="choose_protection_method">选择您想要保护隐藏应用的方式</string>
+    <string name="pin">PIN 码</string>
+    <string name="password">密码</string>
+    <string name="pattern">图案</string>
+    <string name="pin_description">4-6 位数字代码</string>
+    <string name="password_description">字母数字密码</string>
+    <string name="pattern_description">绘制图案以解锁</string>
+
+    <!-- Security Screens -->
+    <string name="create_pin">创建 PIN 码</string>
+    <string name="confirm_pin">确认 PIN 码</string>
+    <string name="enter_pin">输入 PIN 码</string>
+    <string name="choose_pin_prompt">选择一个 4 位数字的 PIN 码</string>
+    <string name="reenter_pin_prompt">重新输入您的 PIN 码</string>
+    <string name="enter_pin_to_unlock">输入您的 PIN 码以解锁私密应用</string>
+    <string name="pins_mismatched">PIN 码不匹配。请重试或返回。</string>
+    <string name="incorrect_pin">PIN 码错误</string>
+
+    <string name="create_pattern">创建图案</string>
+    <string name="confirm_pattern">确认图案</string>
+    <string name="draw_pattern">绘制图案</string>
+    <string name="patterns_mismatched">图案不匹配</string>
+    <string name="wrong_pattern">图案错误</string>
+    <string name="connect_dots_prompt">至少连接 4 个点</string>
+    <string name="draw_pattern_again_prompt">再次绘制您的图案</string>
+    <string name="draw_pattern_to_unlock">绘制您的图案以解锁私密应用</string>
+
+    <string name="create_password">创建密码</string>
+    <string name="confirm_password">确认密码</string>
+    <string name="set_password">设置密码</string>
+    <string name="enter_password">输入密码</string>
+    <string name="choose_password_prompt">选择一个安全的密码</string>
+    <string name="reenter_password_prompt">重新输入您的密码</string>
+    <string name="enter_password_to_unlock">输入您的密码以解锁私密应用</string>
+    <string name="passwords_mismatched">密码不匹配。请重试或返回。</string>
+    <string name="incorrect_password">密码错误</string>
+    <string name="enter_password_placeholder">输入密码</string>
+
+    <string name="forgot_password_q">忘记密码？</string>
+    <string name="biometric_unlock">生物识别解锁</string>
+    <string name="backspace">退格</string>
+
+    <!-- Recovery -->
+    <string name="recovery_option">恢复选项</string>
+    <string name="recovery_setup_description">设置一个安全问题，以防您忘记密码</string>
+    <string name="security_question">安全问题</string>
+    <string name="select_a_question">选择一个问题</string>
+    <string name="your_answer">您的答案</string>
+    <string name="verify_answer">验证答案</string>
+    <string name="forgot_password_title">忘记密码</string>
+    <string name="reset_password_description">回答您的安全问题以重置密码</string>
+    <string name="incorrect_answer">答案错误。请重试。</string>
+    <string name="reset_password_dialog_title">重置密码？</string>
+    <string name="reset_password_dialog_message">这将清除您当前的密码，您需要设置一个新密码。所有私密应用数据将保持不变。</string>
+
+    <!-- Settings -->
+    <string name="private_apps_security">私密应用安全</string>
+    <string name="current_lock_type">当前锁定类型</string>
+    <string name="not_set">未设置</string>
+    <string name="use_pin">使用 PIN 码</string>
+    <string name="use_password">使用密码</string>
+    <string name="use_pattern">使用图案</string>
+    <string name="biometrics">生物识别</string>
+    <string name="unlock_with_biometrics">使用生物识别解锁</string>
+    <string name="biometrics_description">使用指纹或面部解锁</string>
+    <string name="recovery_options">恢复选项</string>
+    <string name="forgot_password_item">忘记密码</string>
+    <string name="forgot_password_subtitle">使用安全问题重置您的密码</string>
+    <string name="setup_security_question">设置安全问题</string>
+    <string name="recovery_required_subtitle">密码恢复所需</string>
+    
+    <string name="locked_app_behavior">已锁定应用行为</string>
+    <string name="locked_app_behavior_description">控制解锁的应用何时重新锁定</string>
+    <string name="relock_on_leave">离开应用时重新锁定</string>
+    <string name="relock_on_leave_description">离开已解锁的应用时立即重新锁定</string>
+    <string name="relock_after_timeout">超时后重新锁定</string>
+    <string name="relock_after_timeout_description">在 %1$d 秒无操作后重新锁定</string>
+    <string name="relock_on_screen_off">屏幕关闭时重新锁定</string>
+    <string name="relock_on_screen_off_description">切换应用时保持解锁，屏幕关闭时锁定</string>
+    <string name="relock_only_killed">仅在被终止时重新锁定</string>
+    <string name="relock_only_killed_description">保持解锁直到 Sandbox 被强制关闭</string>
+
+    <string name="private_section_behavior">私密板块行为</string>
+    <string name="private_section_behavior_description">控制此应用中的私密应用板块何时锁定</string>
+    <string name="collapse_on_leave">离开时折叠</string>
+    <string name="collapse_on_leave_description">离开 Sandbox 应用时折叠并锁定</string>
+    <string name="collapse_after_timeout">超时后折叠</string>
+    <string name="collapse_after_timeout_description">离开应用 %1$d 秒后已折叠</string>
+    <string name="lock_timeout">锁定超时</string>
+    <string name="seconds_format">%1$d 秒</string>
+    <string name="minutes_format_singular">%1$d 分钟</string>
+    <string name="minutes_format_plural">%1$d 分钟</string>
+
+    <!-- Sandbox App -->
+    <string name="lock_app">锁定应用</string>
+    <string name="lock_app_description">打开此应用需要身份验证</string>
+    <string name="hide_app">隐藏应用</string>
+    <string name="hide_app_description">从启动器和设置中隐藏</string>
+    <string name="sandbox">沙箱</string>
+    <string name="sandbox_description">对其他应用（如银行应用等）隐藏</string>
+    <string name="hide_dev_options">隐藏开发者选项</string>
+    <string name="hide_dev_options_description">此应用会将开发者选项视为已禁用</string>
+    <string name="no_apps_found">未找到应用</string>
+    <string name="private_apps">私密应用</string>
+    <string name="sandboxed_apps">已沙箱化应用</string>
+    <string name="dev_opts_hidden">开发者选项已隐藏</string>
+    <string name="all_apps">所有应用</string>
+    <string name="setup_private_apps">设置私密应用</string>
+    <string name="setup_private_apps_description">创建 PIN 码、密码或图案以锁定并隐藏应用</string>
+    <string name="collapse">折叠</string>
+    <string name="expand">展开</string>
+    <string name="lock">锁定</string>
+    <string name="dev_opt">开发者</string>
+    <string name="notifications_locked">通知已锁定</string>
+    <string name="unlock_private_area_desc">解锁私密区域以查看通知</string>
+    <string name="no_private_notifications">无私密通知</string>
+    <string name="notifications_empty_desc">隐藏应用的通知将在此处显示</string>
+
+    <!-- Authenticate -->
+    <string name="unlock_app_title">解锁 %1$s</string>
+    <string name="unlock_private_apps">解锁私密应用</string>
+    <string name="auth_prompt_format">输入您的 Sandbox 凭据以解锁 %1$s</string>
+    <string name="enter_current_pin_to_change">输入您当前的 PIN 码以更改安全设置</string>
+    <string name="enter_current_password_to_change">输入您当前的密码以更改安全设置</string>
+    <string name="draw_current_pattern_to_change">绘制您当前的图案以更改安全设置</string>
+
+    <!-- Security Questions -->
+    <string name="question_pet_name">您的宠物叫什么名字？</string>
+    <string name="question_birth_city">您出生在哪个城市？</string>
+    <string name="question_fav_movie">您最喜欢的电影是什么？</string>
+    <string name="question_mother_maiden">您母亲的婚前姓是什么？</string>
+    <string name="question_first_car">您的第一辆车是什么？</string>
+    <string name="count_format">(%1$d)</string>
+    <string name="badge_count_format">%1$d</string>
+</resources>

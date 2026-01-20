@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sandbox</string>
+
+    <!-- Common -->
+    <string name="back">Назад</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Отмена</string>
+    <string name="settings">Настройки</string>
+    <string name="launch">Запустить</string>
+    <string name="selected">Выбрано</string>
+    <string name="continue_text">Продолжить</string>
+    <string name="skip_for_now">Пропустить</string>
+    <string name="unlock">Разблокировать</string>
+    <string name="hide">Скрыть</string>
+    <string name="show">Показать</string>
+    <string name="dismiss">Закрыть</string>
+    <string name="open">Открыть</string>
+    <string name="reset">Сбросить</string>
+    <string name="search_apps">Поиск приложений...</string>
+    <string name="version">Версия</string>
+    <string name="about">О приложении</string>
+
+    <!-- Navigation Labels -->
+    <string name="apps">Приложения</string>
+    <string name="notifications">Уведомления</string>
+
+    <!-- Security Setup -->
+    <string name="secure_your_private_apps">Защитите личные приложения</string>
+    <string name="choose_protection_method">Выберите способ защиты скрытых приложений</string>
+    <string name="pin">PIN-код</string>
+    <string name="password">Пароль</string>
+    <string name="pattern">Графический ключ</string>
+    <string name="pin_description">4-6 значный код</string>
+    <string name="password_description">Буквенно-цифровой пароль</string>
+    <string name="pattern_description">Нарисуйте ключ для разблокировки</string>
+
+    <!-- Security Screens -->
+    <string name="create_pin">Создать PIN-код</string>
+    <string name="confirm_pin">Подтвердить PIN-код</string>
+    <string name="enter_pin">Введите PIN-код</string>
+    <string name="choose_pin_prompt">Выберите 4-значный PIN-код</string>
+    <string name="reenter_pin_prompt">Введите PIN-код еще раз</string>
+    <string name="enter_pin_to_unlock">Введите PIN-код, чтобы разблокировать приложения</string>
+    <string name="pins_mismatched">PIN-коды не совпадают. Попробуйте еще раз.</string>
+    <string name="incorrect_pin">Неверный PIN-код</string>
+
+    <string name="create_pattern">Создать графический ключ</string>
+    <string name="confirm_pattern">Подтвердить графический ключ</string>
+    <string name="draw_pattern">Нарисовать ключ</string>
+    <string name="patterns_mismatched">Ключи не совпадают</string>
+    <string name="wrong_pattern">Неверный ключ</string>
+    <string name="connect_dots_prompt">Соедините минимум 4 точки</string>
+    <string name="draw_pattern_again_prompt">Нарисуйте ключ еще раз</string>
+    <string name="draw_pattern_to_unlock">Нарисуйте ключ для разблокировки приложений</string>
+
+    <string name="create_password">Создать пароль</string>
+    <string name="confirm_password">Подтвердить пароль</string>
+    <string name="set_password">Установить пароль</string>
+    <string name="enter_password">Введите пароль</string>
+    <string name="choose_password_prompt">Выберите надежный пароль</string>
+    <string name="reenter_password_prompt">Введите пароль еще раз</string>
+    <string name="enter_password_to_unlock">Введите пароль для разблокировки приложений</string>
+    <string name="passwords_mismatched">Пароли не совпадают. Попробуйте еще раз.</string>
+    <string name="incorrect_password">Неверный пароль</string>
+    <string name="enter_password_placeholder">Введите пароль</string>
+
+    <string name="forgot_password_q">Забыли пароль?</string>
+    <string name="biometric_unlock">Биометрическая разблокировка</string>
+    <string name="backspace">Стереть</string>
+
+    <!-- Recovery -->
+    <string name="recovery_option">Способ восстановления</string>
+    <string name="recovery_setup_description">Настройте секретный вопрос на случай, если забудете пароль</string>
+    <string name="security_question">Секретный вопрос</string>
+    <string name="select_a_question">Выберите вопрос</string>
+    <string name="your_answer">Ваш ответ</string>
+    <string name="verify_answer">Проверить ответ</string>
+    <string name="forgot_password_title">Забыли пароль</string>
+    <string name="reset_password_description">Ответьте на секретный вопрос, чтобы сбросить пароль</string>
+    <string name="incorrect_answer">Неверный ответ. Попробуйте еще раз.</string>
+    <string name="reset_password_dialog_title">Сбросить пароль?</string>
+    <string name="reset_password_dialog_message">Текущий пароль будет удален, вам нужно будет установить новый. Данные приложений не пострадают.</string>
+
+    <!-- Settings -->
+    <string name="private_apps_security">Безопасность личных приложений</string>
+    <string name="current_lock_type">Текущий тип блокировки</string>
+    <string name="not_set">Не установлено</string>
+    <string name="use_pin">Использовать PIN-код</string>
+    <string name="use_password">Использовать пароль</string>
+    <string name="use_pattern">Использовать графический ключ</string>
+    <string name="biometrics">Биометрия</string>
+    <string name="unlock_with_biometrics">Разблокировка биометрией</string>
+    <string name="biometrics_description">Использовать отпечаток пальца или лицо</string>
+    <string name="recovery_options">Варианты восстановления</string>
+    <string name="forgot_password_item">Забыли пароль</string>
+    <string name="forgot_password_subtitle">Сброс пароля через секретный вопрос</string>
+    <string name="setup_security_question">Настроить секретный вопрос</string>
+    <string name="recovery_required_subtitle">Необходимо для восстановления</string>
+    
+    <string name="locked_app_behavior">Поведение заблокированных приложений</string>
+    <string name="locked_app_behavior_description">Настройка повторной блокировки приложений</string>
+    <string name="relock_on_leave">Блокировать при выходе</string>
+    <string name="relock_on_leave_description">Блокировать сразу после выхода из приложения</string>
+    <string name="relock_after_timeout">Блокировать через время</string>
+    <string name="relock_after_timeout_description">Блокировать после %1$d сек. неактивности</string>
+    <string name="relock_on_screen_off">Блокировать при выключении экрана</string>
+    <string name="relock_on_screen_off_description">Не блокировать при переключении, блокировать при выключении экрана</string>
+    <string name="relock_only_killed">Блокировать только после закрытия</string>
+    <string name="relock_only_killed_description">Не блокировать, пока Sandbox не будет принудительно закрыт</string>
+
+    <string name="private_section_behavior">Поведение личного раздела</string>
+    <string name="private_section_behavior_description">Настройка блокировки личного раздела в приложении</string>
+    <string name="collapse_on_leave">Сворачивать при выходе</string>
+    <string name="collapse_on_leave_description">Сворачивать и блокировать при выходе из Sandbox</string>
+    <string name="collapse_after_timeout">Сворачивать через время</string>
+    <string name="collapse_after_timeout_description">Свернуто через %1$d сек. после выхода</string>
+    <string name="lock_timeout">Время блокировки</string>
+    <string name="seconds_format">%1$d секунд</string>
+    <string name="minutes_format_singular">%1$d минута</string>
+    <string name="minutes_format_plural">%1$d минут</string>
+
+    <!-- Sandbox App -->
+    <string name="lock_app">Заблокировать приложение</string>
+    <string name="lock_app_description">Требовать аутентификацию для открытия</string>
+    <string name="hide_app">Скрыть приложение</string>
+    <string name="hide_app_description">Скрыть из меню приложений и настроек</string>
+    <string name="sandbox">Sandbox</string>
+    <string name="sandbox_description">Скрыть от других приложений (банковские и др.)</string>
+    <string name="hide_dev_options">Скрыть параметры разработчика</string>
+    <string name="hide_dev_options_description">Приложение будет видеть параметры разработчика выключенными</string>
+    <string name="no_apps_found">Приложения не найдены</string>
+    <string name="private_apps">Личные приложения</string>
+    <string name="sandboxed_apps">Изолированные приложения</string>
+    <string name="dev_opts_hidden">Скрыто от разработчика</string>
+    <string name="all_apps">Все приложения</string>
+    <string name="setup_private_apps">Настроить личные приложения</string>
+    <string name="setup_private_apps_description">Создайте PIN, пароль или ключ, чтобы скрыть приложения</string>
+    <string name="collapse">Свернуть</string>
+    <string name="expand">Развернуть</string>
+    <string name="lock">Блокировка</string>
+    <string name="dev_opt">Разраб</string>
+    <string name="notifications_locked">Уведомления заблокированы</string>
+    <string name="unlock_private_area_desc">Разблокируйте личный раздел, чтобы увидеть уведомления</string>
+    <string name="no_private_notifications">Нет личных уведомлений</string>
+    <string name="notifications_empty_desc">Здесь появятся уведомления от скрытых приложений</string>
+
+    <!-- Authenticate -->
+    <string name="unlock_app_title">Разблокировать %1$s</string>
+    <string name="unlock_private_apps">Разблокировать личные приложения</string>
+    <string name="auth_prompt_format">Введите учетные данные Sandbox, чтобы разблокировать %1$s</string>
+    <string name="enter_current_pin_to_change">Введите текущий PIN-код для смены защиты</string>
+    <string name="enter_current_password_to_change">Введите текущий пароль для смены защиты</string>
+    <string name="draw_current_pattern_to_change">Нарисуйте текущий ключ для смены защиты</string>
+
+    <!-- Security Questions -->
+    <string name="question_pet_name">Как зовут вашего питомца?</string>
+    <string name="question_birth_city">В каком городе вы родились?</string>
+    <string name="question_fav_movie">Какой ваш любимый фильм?</string>
+    <string name="question_mother_maiden">Девичья фамилия вашей матери?</string>
+    <string name="question_first_car">Какой была ваша первая машина?</string>
+    <string name="count_format">(%1$d)</string>
+    <string name="badge_count_format">%1$d</string>
+</resources>

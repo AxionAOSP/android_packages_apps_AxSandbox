@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sandbox</string>
+
+    <!-- Common -->
+    <string name="back">Geri</string>
+    <string name="ok">Tamam</string>
+    <string name="cancel">İptal</string>
+    <string name="settings">Ayarlar</string>
+    <string name="launch">Başlat</string>
+    <string name="selected">Seçildi</string>
+    <string name="continue_text">Devam Et</string>
+    <string name="skip_for_now">Şimdilik atla</string>
+    <string name="unlock">Kilidi Aç</string>
+    <string name="hide">Gizle</string>
+    <string name="show">Göster</string>
+    <string name="dismiss">Kapat</string>
+    <string name="open">Aç</string>
+    <string name="reset">Sıfırla</string>
+    <string name="search_apps">Uygulamaları ara...</string>
+    <string name="version">Versiyon</string>
+    <string name="about">Hakkında</string>
+
+    <!-- Navigation Labels -->
+    <string name="apps">Uygulamalar</string>
+    <string name="notifications">Bildirimler</string>
+
+    <!-- Security Setup -->
+    <string name="secure_your_private_apps">Özel Uygulamalarınızı Güvenceye Alın</string>
+    <string name="choose_protection_method">Gizli uygulamalarınızı nasıl korumak istediğinizi seçin</string>
+    <string name="pin">PIN</string>
+    <string name="password">Şifre</string>
+    <string name="pattern">Desen</string>
+    <string name="pin_description">4-6 haneli kod</string>
+    <string name="password_description">Alfanümerik şifre</string>
+    <string name="pattern_description">Kilidi açmak için desen çizin</string>
+
+    <!-- Security Screens -->
+    <string name="create_pin">PIN Oluştur</string>
+    <string name="confirm_pin">PIN\'i Onayla</string>
+    <string name="enter_pin">PIN Girin</string>
+    <string name="choose_pin_prompt">4 haneli bir PIN seçin</string>
+    <string name="reenter_pin_prompt">PIN\'inizi tekrar girin</string>
+    <string name="enter_pin_to_unlock">Özel uygulamaların kilidini açmak için PIN girin</string>
+    <string name="pins_mismatched">PIN\'ler eşleşmedi. Tekrar deneyin veya geri dönün.</string>
+    <string name="incorrect_pin">Yanlış PIN</string>
+
+    <string name="create_pattern">Desen Oluştur</string>
+    <string name="confirm_pattern">Deseni Onayla</string>
+    <string name="draw_pattern">Desen Çiz</string>
+    <string name="patterns_mismatched">Desenler eşleşmedi</string>
+    <string name="wrong_pattern">Yanlış desen</string>
+    <string name="connect_dots_prompt">En az 4 noktayı birleştirin</string>
+    <string name="draw_pattern_again_prompt">Deseni tekrar çizin</string>
+    <string name="draw_pattern_to_unlock">Özel uygulamaların kilidini açmak için desen çizin</string>
+
+    <string name="create_password">Şifre Oluştur</string>
+    <string name="confirm_password">Şifreyi Onayla</string>
+    <string name="set_password">Şifre Belirle</string>
+    <string name="enter_password">Şifre Girin</string>
+    <string name="choose_password_prompt">Güvenli bir şifre seçin</string>
+    <string name="reenter_password_prompt">Şifrenizi tekrar girin</string>
+    <string name="enter_password_to_unlock">Özel uygulamaların kilidini açmak için şifre girin</string>
+    <string name="passwords_mismatched">Şifreler eşleşmedi. Tekrar deneyin veya geri dönün.</string>
+    <string name="incorrect_password">Yanlış şifre</string>
+    <string name="enter_password_placeholder">Şifre girin</string>
+
+    <string name="forgot_password_q">Şifrenizi mi unuttunuz?</string>
+    <string name="biometric_unlock">Biyometrik Kilit Açma</string>
+    <string name="backspace">Geri Sil</string>
+
+    <!-- Recovery -->
+    <string name="recovery_option">Kurtarma Seçeneği</string>
+    <string name="recovery_setup_description">Şifrenizi unutmanız durumunda bir güvenlik sorusu ayarlayın</string>
+    <string name="security_question">Güvenlik Sorusu</string>
+    <string name="select_a_question">Bir soru seçin</string>
+    <string name="your_answer">Cevabınız</string>
+    <string name="verify_answer">Cevabı Doğrula</string>
+    <string name="forgot_password_title">Şifremi Unuttum</string>
+    <string name="reset_password_description">Şifrenizi sıfırlamak için güvenlik sorunuzu cevaplayın</string>
+    <string name="incorrect_answer">Yanlış cevap. Lütfen tekrar deneyin.</string>
+    <string name="reset_password_dialog_title">Şifre Sıfırlansın mı?</string>
+    <string name="reset_password_dialog_message">Mevcut şifreniz silinecek ve yenisini ayarlamanız gerekecek. Tüm özel uygulama verileri olduğu gibi kalacaktır.</string>
+
+    <!-- Settings -->
+    <string name="private_apps_security">Özel Uygulama Güvenliği</string>
+    <string name="current_lock_type">Mevcut Kilit Türü</string>
+    <string name="not_set">Ayarlanmadı</string>
+    <string name="use_pin">PIN Kullan</string>
+    <string name="use_password">Şifre Kullan</string>
+    <string name="use_pattern">Desen Kullan</string>
+    <string name="biometrics">Biyometri</string>
+    <string name="unlock_with_biometrics">Biyometri ile Kilidi Aç</string>
+    <string name="biometrics_description">Parmak izi veya yüz tanıma kullanın</string>
+    <string name="recovery_options">Kurtarma Seçenekleri</string>
+    <string name="forgot_password_item">Şifremi Unuttum</string>
+    <string name="forgot_password_subtitle">Güvenlik sorusunu kullanarak şifrenizi sıfırlayın</string>
+    <string name="setup_security_question">Güvenlik Sorusu Ayarla</string>
+    <string name="recovery_required_subtitle">Şifre kurtarma için gerekli</string>
+    
+    <string name="locked_app_behavior">Kilitli Uygulama Davranışı</string>
+    <string name="locked_app_behavior_description">Kilidi açılmış uygulamaların ne zaman tekrar kilitleneceğini kontrol eder</string>
+    <string name="relock_on_leave">Uygulamadan ayrıldığında tekrar kilitle</string>
+    <string name="relock_on_leave_description">Kilidi açılmış uygulamadan ayrıldığınızda hemen tekrar kilitle</string>
+    <string name="relock_after_timeout">Zaman aşımından sonra tekrar kilitle</string>
+    <string name="relock_after_timeout_description">%1$d saniye hareketsizlikten sonra tekrar kilitle</string>
+    <string name="relock_on_screen_off">Ekran kapandığında tekrar kilitle</string>
+    <string name="relock_on_screen_off_description">Uygulama değiştirirken kilidi açık tut, ekran kapandığında kilitle</string>
+    <string name="relock_only_killed">Sadece kapatıldığında tekrar kilitle</string>
+    <string name="relock_only_killed_description">Sandbox zorla kapatılana kadar kilidi açık tut</string>
+
+    <string name="private_section_behavior">Özel Bölüm Davranışı</string>
+    <string name="private_section_behavior_description">Bu uygulamadaki özel uygulamalar bölümünün ne zaman kilitleneceğini kontrol eder</string>
+    <string name="collapse_on_leave">Ayrıldığında daralt</string>
+    <string name="collapse_on_leave_description">Sandbox uygulamasından ayrıldığında daralt ve kilitle</string>
+    <string name="collapse_after_timeout">Zaman aşımından sonra daralt</string>
+    <string name="collapse_after_timeout_description">Uygulamadan ayrıldıktan %1$d saniye sonra daraltıldı</string>
+    <string name="lock_timeout">Kilit Zaman Aşımı</string>
+    <string name="seconds_format">%1$d saniye</string>
+    <string name="minutes_format_singular">%1$d dakika</string>
+    <string name="minutes_format_plural">%1$d dakika</string>
+
+    <!-- Sandbox App -->
+    <string name="lock_app">Uygulamayı Kilitle</string>
+    <string name="lock_app_description">Bu uygulamayı açmak için kimlik doğrulaması gerektir</string>
+    <string name="hide_app">Uygulamayı Gizle</string>
+    <string name="hide_app_description">Başlatıcıdan ve ayarlardan gizle</string>
+    <string name="sandbox">Sandbox</string>
+    <string name="sandbox_description">Diğer uygulamalardan gizle (bankacılık uygulamaları vb.)</string>
+    <string name="hide_dev_options">Geliştirici Seçeneklerini Gizle</string>
+    <string name="hide_dev_options_description">Bu uygulama geliştirici seçeneklerini devre dışı olarak görür</string>
+    <string name="no_apps_found">Uygulama bulunamadı</string>
+    <string name="private_apps">Özel Uygulamalar</string>
+    <string name="sandboxed_apps">Sandbox Uygulamaları</string>
+    <string name="dev_opts_hidden">Geliştirici Seç. Gizli</string>
+    <string name="all_apps">Tüm Uygulamalar</string>
+    <string name="setup_private_apps">Özel Uygulamaları Ayarla</string>
+    <string name="setup_private_apps_description">Uygulamaları kilitlemek ve gizlemek için bir PIN, şifre veya desen oluşturun</string>
+    <string name="collapse">Daralt</string>
+    <string name="expand">Genişlet</string>
+    <string name="lock">Kilitle</string>
+    <string name="dev_opt">Gel. Seç.</string>
+    <string name="notifications_locked">Bildirimler Kilitli</string>
+    <string name="unlock_private_area_desc">Bildirimleri görüntülemek için özel alanı açın</string>
+    <string name="no_private_notifications">Özel bildirim yok</string>
+    <string name="notifications_empty_desc">Gizli uygulamalardan gelen bildirimler burada görünecek</string>
+
+    <!-- Authenticate -->
+    <string name="unlock_app_title">%1$s Kilidini Aç</string>
+    <string name="unlock_private_apps">Özel Uygulamaların Kilidini Aç</string>
+    <string name="auth_prompt_format">%1$s kilidini açmak için Sandbox kimlik bilgilerinizi girin</string>
+    <string name="enter_current_pin_to_change">Güvenliği değiştirmek için mevcut PIN\'inizi girin</string>
+    <string name="enter_current_password_to_change">Güvenliği değiştirmek için mevcut şifrenizi girin</string>
+    <string name="draw_current_pattern_to_change">Güvenliği değiştirmek için mevcut deseninizi çizin</string>
+
+    <!-- Security Questions -->
+    <string name="question_pet_name">Evcil hayvanınızın adı nedir?</string>
+    <string name="question_birth_city">Hangi şehirde doğdunuz?</string>
+    <string name="question_fav_movie">En sevdiğiniz film hangisi?</string>
+    <string name="question_mother_maiden">Annenizin kızlık soyadı nedir?</string>
+    <string name="question_first_car">İlk arabanız neydi?</string>
+    <string name="count_format">(%1$d)</string>
+    <string name="badge_count_format">%1$d</string>
+</resources>

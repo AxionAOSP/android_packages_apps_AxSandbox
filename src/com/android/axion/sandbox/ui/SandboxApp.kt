@@ -70,12 +70,14 @@ import androidx.compose.ui.graphics.painter.BitmapPainter
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalLifecycleOwner
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.core.graphics.drawable.toBitmap
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
+import com.android.axion.sandbox.R
 import com.android.internal.app.IHiddenNotificationListener
 import com.android.internal.app.HiddenNotificationInfo
 import java.text.SimpleDateFormat
@@ -366,7 +368,7 @@ fun AppDetailScreen(
                     IconButton(onClick = onBackClick) {
                         Icon(
                             imageVector = Icons.AutoMirrored.Filled.ArrowBack,
-                            contentDescription = "Back"
+                            contentDescription = stringResource(R.string.back)
                         )
                     }
                 },
@@ -374,7 +376,7 @@ fun AppDetailScreen(
                     IconButton(onClick = { onLaunch(app) }) {
                         Icon(
                             imageVector = Icons.Default.OpenInNew,
-                            contentDescription = "Launch"
+                            contentDescription = stringResource(R.string.launch)
                         )
                     }
                 },
@@ -423,8 +425,8 @@ fun AppDetailScreen(
                     SettingsCard(
                         icon = Icons.Outlined.Lock,
                         activeIcon = Icons.Filled.Lock,
-                        title = "Lock App",
-                        description = "Require authentication to open this app",
+                        title = stringResource(R.string.lock_app),
+                        description = stringResource(R.string.lock_app_description),
                         isEnabled = app.isLocked,
                         onToggle = { onLockToggle(app) },
                         accentColor = MaterialTheme.colorScheme.primary
@@ -435,8 +437,8 @@ fun AppDetailScreen(
                     SettingsCard(
                         icon = Icons.Outlined.VisibilityOff,
                         activeIcon = Icons.Filled.VisibilityOff,
-                        title = "Hide App",
-                        description = "Hide from launcher and settings",
+                        title = stringResource(R.string.hide_app),
+                        description = stringResource(R.string.hide_app_description),
                         isEnabled = app.isHidden,
                         onToggle = { onHideToggle(app) },
                         accentColor = MaterialTheme.colorScheme.tertiary
@@ -448,8 +450,8 @@ fun AppDetailScreen(
                 SettingsCard(
                     icon = Icons.Outlined.Security,
                     activeIcon = Icons.Filled.Security,
-                    title = "Sandbox",
-                    description = "Hide from other apps (banking apps, etc.)",
+                    title = stringResource(R.string.sandbox),
+                    description = stringResource(R.string.sandbox_description),
                     isEnabled = app.isSandboxed,
                     onToggle = { onSandboxToggle(app) },
                     accentColor = MaterialTheme.colorScheme.secondary
@@ -460,8 +462,8 @@ fun AppDetailScreen(
                 SettingsCard(
                     icon = Icons.Outlined.Code,
                     activeIcon = Icons.Filled.Code,
-                    title = "Hide Developer Options",
-                    description = "This app sees dev options as disabled",
+                    title = stringResource(R.string.hide_dev_options),
+                    description = stringResource(R.string.hide_dev_options_description),
                     isEnabled = app.isDevOptionsHidden,
                     onToggle = { onDevOptionsToggle(app) },
                     accentColor = MaterialTheme.colorScheme.error
@@ -588,7 +590,7 @@ fun ExpressiveHeader(
                         value = searchQuery,
                         onValueChange = onSearchQueryChange,
                         modifier = Modifier.fillMaxWidth(),
-                        placeholder = { Text("Search apps...") },
+                        placeholder = { Text(stringResource(R.string.search_apps)) },
                         leadingIcon = { 
                             Icon(
                                 imageVector = Icons.Default.Search,
@@ -607,7 +609,7 @@ fun ExpressiveHeader(
                     )
                 } else {
                     Text(
-                        text = "Sandbox",
+                        text = stringResource(R.string.sandbox),
                         style = MaterialTheme.typography.headlineLarge,
                         fontWeight = FontWeight.Bold,
                         color = MaterialTheme.colorScheme.onSurface
@@ -631,7 +633,7 @@ fun ExpressiveHeader(
             ) {
                 Icon(
                     imageVector = Icons.Default.Search,
-                    contentDescription = "Search"
+                    contentDescription = stringResource(R.string.search)
                 )
             }
             
@@ -650,7 +652,7 @@ fun ExpressiveHeader(
                 ) {
                     Icon(
                         imageVector = if (notificationCount > 0) Icons.Filled.Notifications else Icons.Outlined.Notifications,
-                        contentDescription = "Notifications"
+                        contentDescription = stringResource(R.string.notifications)
                     )
                 }
                 
@@ -665,7 +667,7 @@ fun ExpressiveHeader(
                         contentAlignment = Alignment.Center
                     ) {
                         Text(
-                            text = if (notificationCount > 9) "9+" else notificationCount.toString(),
+                            text = if (notificationCount > 9) "9+" else stringResource(R.string.badge_count_format, notificationCount),
                             style = MaterialTheme.typography.labelSmall,
                             color = MaterialTheme.colorScheme.onError,
                             fontWeight = FontWeight.Bold
@@ -685,7 +687,7 @@ fun ExpressiveHeader(
             ) {
                 Icon(
                     imageVector = Icons.Default.Settings,
-                    contentDescription = "Settings"
+                    contentDescription = stringResource(R.string.settings)
                 )
             }
         }
@@ -717,10 +719,10 @@ fun ExpressiveNavigationBar(
             icon = {
                 Icon(
                     imageVector = if (selectedIndex == 0) Icons.Filled.Apps else Icons.Outlined.Apps,
-                    contentDescription = "Apps"
+                    contentDescription = stringResource(R.string.apps)
                 )
             },
-            label = { Text("Apps") },
+            label = { Text(stringResource(R.string.apps)) },
             colors = NavigationBarItemDefaults.colors(
                 selectedIconColor = MaterialTheme.colorScheme.onPrimaryContainer,
                 selectedTextColor = MaterialTheme.colorScheme.onSurface,
@@ -735,10 +737,10 @@ fun ExpressiveNavigationBar(
             icon = {
                 Icon(
                     imageVector = if (selectedIndex == 1) Icons.Filled.Notifications else Icons.Outlined.Notifications,
-                    contentDescription = "Notifications"
+                    contentDescription = stringResource(R.string.notifications)
                 )
             },
-            label = { Text("Notifications") },
+            label = { Text(stringResource(R.string.notifications)) },
             colors = NavigationBarItemDefaults.colors(
                 selectedIconColor = MaterialTheme.colorScheme.onPrimaryContainer,
                 selectedTextColor = MaterialTheme.colorScheme.onSurface,
@@ -863,7 +865,7 @@ fun AppsTab(
                 )
                 Spacer(modifier = Modifier.height(16.dp))
                 Text(
-                    "No apps found",
+                    stringResource(R.string.no_apps_found),
                     style = MaterialTheme.typography.bodyLarge,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
@@ -883,7 +885,7 @@ fun AppsTab(
                 } else if (privateApps.isNotEmpty()) {
                     CollapsibleSectionHeader(
                         icon = if (effectiveExpanded) Icons.Filled.LockOpen else Icons.Filled.Lock,
-                        title = "Private Apps",
+                        title = stringResource(R.string.private_apps),
                         count = privateApps.size,
                         color = MaterialTheme.colorScheme.primary,
                         isExpanded = effectiveExpanded,
@@ -920,7 +922,7 @@ fun AppsTab(
                 item(span = { GridItemSpan(4) }) {
                     SectionHeader(
                         icon = Icons.Filled.Security,
-                        title = "Sandboxed Apps",
+                        title = stringResource(R.string.sandboxed_apps),
                         count = sandboxedApps.size,
                         color = MaterialTheme.colorScheme.secondary
                     )
@@ -945,7 +947,7 @@ fun AppsTab(
                 item(span = { GridItemSpan(4) }) {
                     SectionHeader(
                         icon = Icons.Filled.Code,
-                        title = "DevOpts Hidden",
+                        title = stringResource(R.string.dev_opts_hidden),
                         count = devOptsHiddenApps.size,
                         color = MaterialTheme.colorScheme.error
                     )
@@ -969,7 +971,7 @@ fun AppsTab(
             item(span = { GridItemSpan(4) }) {
                 SectionHeader(
                     icon = Icons.Filled.Apps,
-                    title = "All Apps",
+                    title = stringResource(R.string.all_apps),
                     count = regularApps.size,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
@@ -1029,21 +1031,21 @@ fun SetupPrivateAppsCard(
             Spacer(modifier = Modifier.width(16.dp))
             Column(modifier = Modifier.weight(1f)) {
                 Text(
-                    text = "Set Up Private Apps",
+                    text = stringResource(R.string.setup_private_apps),
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.SemiBold,
                     color = MaterialTheme.colorScheme.onSurface
                 )
                 Spacer(modifier = Modifier.height(4.dp))
                 Text(
-                    text = "Create a PIN, password, or pattern to lock and hide apps",
+                    text = stringResource(R.string.setup_private_apps_description),
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
             }
             Icon(
                 imageVector = Icons.Default.ExpandMore,
-                contentDescription = "Set up",
+                contentDescription = stringResource(R.string.setup_private_apps),
                 tint = MaterialTheme.colorScheme.primary,
                 modifier = Modifier.size(20.dp)
             )
@@ -1079,7 +1081,7 @@ fun SectionHeader(
         )
         Spacer(modifier = Modifier.width(6.dp))
         Text(
-            text = "($count)",
+            text = stringResource(R.string.count_format, count),
             style = MaterialTheme.typography.bodySmall,
             color = color.copy(alpha = 0.7f)
         )
@@ -1140,14 +1142,14 @@ fun CollapsibleSectionHeader(
         ) {
             Spacer(modifier = Modifier.width(8.dp))
             Text(
-                text = "$count",
+                text = stringResource(R.string.badge_count_format, count),
                 style = MaterialTheme.typography.labelMedium,
                 color = color.copy(alpha = 0.7f)
             )
             Spacer(modifier = Modifier.width(2.dp))
             Icon(
                 imageVector = Icons.Filled.ExpandMore,
-                contentDescription = if (isExpanded) "Collapse" else "Expand",
+                contentDescription = if (isExpanded) stringResource(R.string.collapse) else stringResource(R.string.expand),
                 tint = color,
                 modifier = Modifier
                     .size(20.dp)
@@ -1220,7 +1222,7 @@ fun AppGridItem(
                         contentAlignment = Alignment.Center
                     ) {
                         Text(
-                            text = "${protectionStates.size}",
+                            text = stringResource(R.string.badge_count_format, protectionStates.size),
                             style = MaterialTheme.typography.labelSmall,
                             fontWeight = FontWeight.Bold,
                             color = MaterialTheme.colorScheme.onPrimaryContainer
@@ -1312,7 +1314,7 @@ fun AppQuickActionsSheet(
             ) {
                 Icon(
                     imageVector = Icons.Default.OpenInNew,
-                    contentDescription = "Launch"
+                    contentDescription = stringResource(R.string.launch)
                 )
             }
         }
@@ -1322,7 +1324,7 @@ fun AppQuickActionsSheet(
         QuickActionRow(
             icon = Icons.Outlined.Lock,
             activeIcon = Icons.Filled.Lock,
-            title = "Lock",
+            title = stringResource(R.string.lock),
             isEnabled = app.isLocked,
             color = MaterialTheme.colorScheme.primary,
             onToggle = { onLockToggle(app) }
@@ -1331,7 +1333,7 @@ fun AppQuickActionsSheet(
         QuickActionRow(
             icon = Icons.Outlined.VisibilityOff,
             activeIcon = Icons.Filled.VisibilityOff,
-            title = "Hide",
+            title = stringResource(R.string.hide),
             isEnabled = app.isHidden,
             color = MaterialTheme.colorScheme.tertiary,
             onToggle = { onHideToggle(app) }
@@ -1340,7 +1342,7 @@ fun AppQuickActionsSheet(
         QuickActionRow(
             icon = Icons.Outlined.Security,
             activeIcon = Icons.Filled.Security,
-            title = "Sandbox",
+            title = stringResource(R.string.sandbox),
             isEnabled = app.isSandboxed,
             color = MaterialTheme.colorScheme.secondary,
             onToggle = { onSandboxToggle(app) }
@@ -1349,7 +1351,7 @@ fun AppQuickActionsSheet(
         QuickActionRow(
             icon = Icons.Outlined.Code,
             activeIcon = Icons.Filled.Code,
-            title = "Hide DevOpts",
+            title = stringResource(R.string.dev_opt),
             isEnabled = app.isDevOptionsHidden,
             color = MaterialTheme.colorScheme.error,
             onToggle = { onDevOptionsToggle(app) }
@@ -1482,28 +1484,28 @@ fun AppListItem(
                         if (app.isLocked) {
                             TextChip(
                                 icon = Icons.Filled.Lock,
-                                text = "Locked",
+                                text = stringResource(R.string.lock),
                                 color = MaterialTheme.colorScheme.primary
                             )
                         }
                         if (app.isHidden) {
                             TextChip(
                                 icon = Icons.Filled.VisibilityOff,
-                                text = "Hidden",
+                                text = stringResource(R.string.hide),
                                 color = MaterialTheme.colorScheme.tertiary
                             )
                         }
                         if (app.isSandboxed) {
                             TextChip(
                                 icon = Icons.Filled.Security,
-                                text = "Sandbox",
+                                text = stringResource(R.string.sandbox),
                                 color = MaterialTheme.colorScheme.secondary
                             )
                         }
                         if (app.isDevOptionsHidden) {
                             TextChip(
                                 icon = Icons.Filled.Code,
-                                text = "DevOpt",
+                                text = stringResource(R.string.dev_opt),
                                 color = MaterialTheme.colorScheme.error
                             )
                         }
@@ -1587,7 +1589,7 @@ fun NotificationsTab(
                 Spacer(modifier = Modifier.height(24.dp))
                 
                 Text(
-                    text = "Notifications Locked",
+                    text = stringResource(R.string.notifications_locked),
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.SemiBold,
                     color = MaterialTheme.colorScheme.onSurface
@@ -1596,7 +1598,7 @@ fun NotificationsTab(
                 Spacer(modifier = Modifier.height(8.dp))
                 
                 Text(
-                    text = "Unlock the private area to view notifications",
+                    text = stringResource(R.string.unlock_private_area_desc),
                     style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
@@ -1613,7 +1615,7 @@ fun NotificationsTab(
                         modifier = Modifier.size(18.dp)
                     )
                     Spacer(modifier = Modifier.width(8.dp))
-                    Text("Unlock")
+                    Text(stringResource(R.string.unlock))
                 }
             }
         }
@@ -1726,7 +1728,7 @@ fun NotificationsTab(
                 Spacer(modifier = Modifier.height(24.dp))
                 
                 Text(
-                    text = "No private notifications",
+                    text = stringResource(R.string.no_private_notifications),
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.SemiBold,
                     color = MaterialTheme.colorScheme.onSurface
@@ -1735,7 +1737,7 @@ fun NotificationsTab(
                 Spacer(modifier = Modifier.height(8.dp))
                 
                 Text(
-                    text = "Notifications from hidden apps will appear here",
+                    text = stringResource(R.string.notifications_empty_desc),
                     style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
@@ -1863,7 +1865,7 @@ fun ExpressiveNotificationItem(
                 horizontalArrangement = Arrangement.End
             ) {
                 TextButton(onClick = onDismiss) {
-                    Text("Dismiss")
+                    Text(stringResource(R.string.dismiss))
                 }
                 Spacer(modifier = Modifier.width(8.dp))
                 FilledTonalButton(
@@ -1876,7 +1878,7 @@ fun ExpressiveNotificationItem(
                         modifier = Modifier.size(16.dp)
                     )
                     Spacer(modifier = Modifier.width(6.dp))
-                    Text("Open")
+                    Text(stringResource(R.string.open))
                 }
             }
         }

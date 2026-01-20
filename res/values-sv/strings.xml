@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sandbox</string>
+
+    <!-- Common -->
+    <string name="back">Bakåt</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Avbryt</string>
+    <string name="settings">Inställningar</string>
+    <string name="launch">Starta</string>
+    <string name="selected">Vald</string>
+    <string name="continue_text">Fortsätt</string>
+    <string name="skip_for_now">Hoppa över nu</string>
+    <string name="unlock">Lås upp</string>
+    <string name="hide">Dölj</string>
+    <string name="show">Visa</string>
+    <string name="dismiss">Stäng</string>
+    <string name="open">Öppna</string>
+    <string name="reset">Återställ</string>
+    <string name="search_apps">Sök appar...</string>
+    <string name="version">Version</string>
+    <string name="about">Om</string>
+
+    <!-- Navigation Labels -->
+    <string name="apps">Appar</string>
+    <string name="notifications">Aviseringar</string>
+
+    <!-- Security Setup -->
+    <string name="secure_your_private_apps">Säkra dina privata appar</string>
+    <string name="choose_protection_method">Välj hur du vill skydda dina dolda appar</string>
+    <string name="pin">PIN</string>
+    <string name="password">Lösenord</string>
+    <string name="pattern">Mönster</string>
+    <string name="pin_description">4-6 siffrig kod</string>
+    <string name="password_description">Alfanumeriskt lösenord</string>
+    <string name="pattern_description">Rita mönster för att låsa upp</string>
+
+    <!-- Security Screens -->
+    <string name="create_pin">Skapa PIN</string>
+    <string name="confirm_pin">Bekräfta PIN</string>
+    <string name="enter_pin">Ange PIN</string>
+    <string name="choose_pin_prompt">Välj en 4-siffrig PIN</string>
+    <string name="reenter_pin_prompt">Ange din PIN igen</string>
+    <string name="enter_pin_to_unlock">Ange PIN för att låsa upp privata appar</string>
+    <string name="pins_mismatched">PIN-koderna stämmer inte överens. Försök igen eller gå tillbaka.</string>
+    <string name="incorrect_pin">Felaktig PIN</string>
+
+    <string name="create_pattern">Skapa mönster</string>
+    <string name="confirm_pattern">Bekräfta mönster</string>
+    <string name="draw_pattern">Rita mönster</string>
+    <string name="patterns_mismatched">Mönstren stämmer inte överens</string>
+    <string name="wrong_pattern">Fel mönster</string>
+    <string name="connect_dots_prompt">Anslut minst 4 prickar</string>
+    <string name="draw_pattern_again_prompt">Rita ditt mönster igen</string>
+    <string name="draw_pattern_to_unlock">Rita ditt mönster för att låsa upp privata appar</string>
+
+    <string name="create_password">Skapa lösenord</string>
+    <string name="confirm_password">Bekräfta lösenord</string>
+    <string name="set_password">Ange lösenord</string>
+    <string name="enter_password">Ange lösenord</string>
+    <string name="choose_password_prompt">Välj ett säkert lösenord</string>
+    <string name="reenter_password_prompt">Ange ditt lösenord igen</string>
+    <string name="enter_password_to_unlock">Ange ditt lösenord för att låsa upp privata appar</string>
+    <string name="passwords_mismatched">Lösenorden stämmer inte överens. Försök igen eller gå tillbaka.</string>
+    <string name="incorrect_password">Felaktigt lösenord</string>
+    <string name="enter_password_placeholder">Ange lösenord</string>
+
+    <string name="forgot_password_q">Glömt lösenordet?</string>
+    <string name="biometric_unlock">Biometrisk upplåsning</string>
+    <string name="backspace">Backsteg</string>
+
+    <!-- Recovery -->
+    <string name="recovery_option">Återställningsalternativ</string>
+    <string name="recovery_setup_description">Ställ in en säkerhetsfråga om du glömmer ditt lösenord</string>
+    <string name="security_question">Säkerhetsfråga</string>
+    <string name="select_a_question">Välj en fråga</string>
+    <string name="your_answer">Ditt svar</string>
+    <string name="verify_answer">Verifiera svar</string>
+    <string name="forgot_password_title">Glömt lösenord</string>
+    <string name="reset_password_description">Svara på din säkerhetsfråga för att återställa ditt lösenord</string>
+    <string name="incorrect_answer">Felaktigt svar. Försök igen.</string>
+    <string name="reset_password_dialog_title">Återställa lösenordet?</string>
+    <string name="reset_password_dialog_message">Detta kommer att rensa ditt nuvarande lösenord och du måste ställa in ett nytt. All privat appdata kommer att förbli intakt.</string>
+
+    <!-- Settings -->
+    <string name="private_apps_security">Säkerhet för privata appar</string>
+    <string name="current_lock_type">Aktuell låstyp</string>
+    <string name="not_set">Inte inställt</string>
+    <string name="use_pin">Använd PIN</string>
+    <string name="use_password">Använd lösenord</string>
+    <string name="use_pattern">Använd mönster</string>
+    <string name="biometrics">Biometri</string>
+    <string name="unlock_with_biometrics">Lås upp med biometri</string>
+    <string name="biometrics_description">Använd fingeravtryck eller ansiktsigenkänning</string>
+    <string name="recovery_options">Återställningsalternativ</string>
+    <string name="forgot_password_item">Glömt lösenordet</string>
+    <string name="forgot_password_subtitle">Återställ ditt lösenord med säkerhetsfrågan</string>
+    <string name="setup_security_question">Ställ in säkerhetsfråga</string>
+    <string name="recovery_required_subtitle">Krävs för återställning av lösenord</string>
+    
+    <string name="locked_app_behavior">Beteende för låsta appar</string>
+    <string name="locked_app_behavior_description">Styr när upplåsta appar låses igen</string>
+    <string name="relock_on_leave">Lås vid avslut</string>
+    <string name="relock_on_leave_description">Lås upplåst app igen omedelbart när du lämnar den</string>
+    <string name="relock_after_timeout">Lås efter tidsgräns</string>
+    <string name="relock_after_timeout_description">Lås igen efter %1$d s inaktivitet</string>
+    <string name="relock_on_screen_off">Lås när skärmen stängs av</string>
+    <string name="relock_on_screen_off_description">Håll upplåst vid byte av appar, lås när skärmen stängs av</string>
+    <string name="relock_only_killed">Lås endast om stängd</string>
+    <string name="relock_only_killed_description">Håll upplåst tills Sandbox tvingas stängas</string>
+
+    <string name="private_section_behavior">Beteende för privat sektion</string>
+    <string name="private_section_behavior_description">Styr när sektionen för privata appar i denna app låses</string>
+    <string name="collapse_on_leave">Fäll ihop vid avslut</string>
+    <string name="collapse_on_leave_description">Fäll ihop och lås när du lämnar Sandbox-appen</string>
+    <string name="collapse_after_timeout">Fäll ihop efter tidsgräns</string>
+    <string name="collapse_after_timeout_description">Ihopfälld efter %1$d s efter att ha lämnat appen</string>
+    <string name="lock_timeout">Tidsgräns för lås</string>
+    <string name="seconds_format">%1$d sekunder</string>
+    <string name="minutes_format_singular">%1$d minut</string>
+    <string name="minutes_format_plural">%1$d minuter</string>
+
+    <!-- Sandbox App -->
+    <string name="lock_app">Lås app</string>
+    <string name="lock_app_description">Kräv autentisering för att öppna denna app</string>
+    <string name="hide_app">Dölj app</string>
+    <string name="hide_app_description">Dölj från startskärmen och inställningar</string>
+    <string name="sandbox">Sandbox</string>
+    <string name="sandbox_description">Dölj för andra appar (bankappar etc.)</string>
+    <string name="hide_dev_options">Dölj utvecklaralternativ</string>
+    <string name="hide_dev_options_description">Denna app kommer att se utvecklaralternativ som inaktiverade</string>
+    <string name="no_apps_found">Inga appar hittades</string>
+    <string name="private_apps">Privata appar</string>
+    <string name="sandboxed_apps">Sandboxed-appar</string>
+    <string name="dev_opts_hidden">DevOpts dolda</string>
+    <string name="all_apps">Alla appar</string>
+    <string name="setup_private_apps">Konfigurera privata appar</string>
+    <string name="setup_private_apps_description">Skapa en PIN, lösenord eller mönster för att låsa och dölja appar</string>
+    <string name="collapse">Fäll ihop</string>
+    <string name="expand">Expandera</string>
+    <string name="lock">Lås</string>
+    <string name="dev_opt">Dev.</string>
+    <string name="notifications_locked">Aviseringar låsta</string>
+    <string name="unlock_private_area_desc">Lås upp det privata området för att visa aviseringar</string>
+    <string name="no_private_notifications">Inga privata aviseringar</string>
+    <string name="notifications_empty_desc">Aviseringar från dolda appar visas här</string>
+
+    <!-- Authenticate -->
+    <string name="unlock_app_title">Lås upp %1$s</string>
+    <string name="unlock_private_apps">Lås upp privata appar</string>
+    <string name="auth_prompt_format">Ange dina Sandbox-uppgifter för att låsa upp %1$s</string>
+    <string name="enter_current_pin_to_change">Ange din nuvarande PIN för att ändra säkerhet</string>
+    <string name="enter_current_password_to_change">Ange ditt nuvarande lösenord för att ändra säkerhet</string>
+    <string name="draw_current_pattern_to_change">Rita ditt nuvarande mönster för att ändra säkerhet</string>
+
+    <!-- Security Questions -->
+    <string name="question_pet_name">Vad heter ditt husdjur?</string>
+    <string name="question_birth_city">I vilken stad föddes du?</string>
+    <string name="question_fav_movie">Vilken är din favoritfilm?</string>
+    <string name="question_mother_maiden">Vad är din mors flicknamn?</string>
+    <string name="question_first_car">Vilken var din första bil?</string>
+    <string name="count_format">(%1$d)</string>
+    <string name="badge_count_format">%1$d</string>
+</resources>

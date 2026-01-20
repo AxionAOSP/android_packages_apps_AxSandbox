@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sandbox</string>
+
+    <!-- Common -->
+    <string name="back">뒤로</string>
+    <string name="ok">확인</string>
+    <string name="cancel">취소</string>
+    <string name="settings">설정</string>
+    <string name="launch">실행</string>
+    <string name="selected">선택됨</string>
+    <string name="continue_text">계속</string>
+    <string name="skip_for_now">지금은 건너뛰기</string>
+    <string name="unlock">잠금 해제</string>
+    <string name="hide">숨기기</string>
+    <string name="show">표시</string>
+    <string name="dismiss">닫기</string>
+    <string name="open">열기</string>
+    <string name="reset">초기화</string>
+    <string name="search_apps">앱 검색...</string>
+    <string name="version">버전</string>
+    <string name="about">정보</string>
+
+    <!-- Navigation Labels -->
+    <string name="apps">앱</string>
+    <string name="notifications">알림</string>
+
+    <!-- Security Setup -->
+    <string name="secure_your_private_apps">비공개 앱 보호</string>
+    <string name="choose_protection_method">숨겨진 앱을 보호할 방법을 선택하세요</string>
+    <string name="pin">PIN</string>
+    <string name="password">비밀번호</string>
+    <string name="pattern">패턴</string>
+    <string name="pin_description">4-6자리 코드</string>
+    <string name="password_description">영문/숫자 비밀번호</string>
+    <string name="pattern_description">잠금 해제를 위해 패턴 그리기</string>
+
+    <!-- Security Screens -->
+    <string name="create_pin">PIN 생성</string>
+    <string name="confirm_pin">PIN 확인</string>
+    <string name="enter_pin">PIN 입력</string>
+    <string name="choose_pin_prompt">4자리 PIN을 선택하세요</string>
+    <string name="reenter_pin_prompt">PIN을 다시 입력하세요</string>
+    <string name="enter_pin_to_unlock">비공개 앱을 해제하려면 PIN을 입력하세요</string>
+    <string name="pins_mismatched">PIN이 일치하지 않습니다. 다시 시도하거나 뒤로 가세요.</string>
+    <string name="incorrect_pin">PIN이 올바르지 않습니다</string>
+
+    <string name="create_pattern">패턴 생성</string>
+    <string name="confirm_pattern">패턴 확인</string>
+    <string name="draw_pattern">패턴 그리기</string>
+    <string name="patterns_mismatched">패턴이 일치하지 않습니다</string>
+    <string name="wrong_pattern">패턴이 올바르지 않습니다</string>
+    <string name="connect_dots_prompt">최소 4개의 점을 연결하세요</string>
+    <string name="draw_pattern_again_prompt">패턴을 다시 그리세요</string>
+    <string name="draw_pattern_to_unlock">비공개 앱을 해제하려면 패턴을 그리세요</string>
+
+    <string name="create_password">비밀번호 생성</string>
+    <string name="confirm_password">비밀번호 확인</string>
+    <string name="set_password">비밀번호 설정</string>
+    <string name="enter_password">비밀번호 입력</string>
+    <string name="choose_password_prompt">안전한 비밀번호를 선택하세요</string>
+    <string name="reenter_password_prompt">비밀번호를 다시 입력하세요</string>
+    <string name="enter_password_to_unlock">비공개 앱을 해제하려면 비밀번호를 입력하세요</string>
+    <string name="passwords_mismatched">비밀번호가 일치하지 않습니다. 다시 시도하거나 뒤로 가세요.</string>
+    <string name="incorrect_password">비밀번호가 올바르지 않습니다</string>
+    <string name="enter_password_placeholder">비밀번호 입력</string>
+
+    <string name="forgot_password_q">비밀번호를 잊으셨나요?</string>
+    <string name="biometric_unlock">생체 인식 해제</string>
+    <string name="backspace">백스페이스</string>
+
+    <!-- Recovery -->
+    <string name="recovery_option">복구 옵션</string>
+    <string name="recovery_setup_description">비밀번호를 잊어버린 경우를 대비해 보안 질문을 설정하세요</string>
+    <string name="security_question">보안 질문</string>
+    <string name="select_a_question">질문 선택</string>
+    <string name="your_answer">답변</string>
+    <string name="verify_answer">답변 확인</string>
+    <string name="forgot_password_title">비밀번호 분실</string>
+    <string name="reset_password_description">보안 질문에 답하여 비밀번호를 재설정하세요</string>
+    <string name="incorrect_answer">답변이 올바르지 않습니다. 다시 시도해 주세요.</string>
+    <string name="reset_password_dialog_title">비밀번호를 재설정하시겠습니까?</string>
+    <string name="reset_password_dialog_message">현재 비밀번호가 지워지며 새 비밀번호를 설정해야 합니다. 모든 비공개 앱 데이터는 그대로 유지됩니다.</string>
+
+    <!-- Settings -->
+    <string name="private_apps_security">비공개 앱 보안</string>
+    <string name="current_lock_type">현재 잠금 유형</string>
+    <string name="not_set">설정 안 됨</string>
+    <string name="use_pin">PIN 사용</string>
+    <string name="use_password">비밀번호 사용</string>
+    <string name="use_pattern">패턴 사용</string>
+    <string name="biometrics">생체 인식</string>
+    <string name="unlock_with_biometrics">생체 인식으로 잠금 해제</string>
+    <string name="biometrics_description">지문 또는 얼굴 인식 사용</string>
+    <string name="recovery_options">복구 옵션</string>
+    <string name="forgot_password_item">비밀번호를 잊으셨나요</string>
+    <string name="forgot_password_subtitle">보안 질문을 사용하여 비밀번호 재설정</string>
+    <string name="setup_security_question">보안 질문 설정</string>
+    <string name="recovery_required_subtitle">비밀번호 복구에 필요함</string>
+    
+    <string name="locked_app_behavior">잠긴 앱 동작</string>
+    <string name="locked_app_behavior_description">잠금 해제된 앱이 다시 잠기는 시점을 제어합니다</string>
+    <string name="relock_on_leave">떠날 때 다시 잠금</string>
+    <string name="relock_on_leave_description">잠금 해제된 앱에서 나가는 즉시 다시 잠금</string>
+    <string name="relock_after_timeout">시간 초과 후 다시 잠금</string>
+    <string name="relock_after_timeout_description">%1$d초 동안 비활성 상태일 때 다시 잠금</string>
+    <string name="relock_on_screen_off">화면 꺼짐 시 다시 잠금</string>
+    <string name="relock_on_screen_off_description">앱 전환 시 잠금 해제 유지, 화면 꺼짐 시 잠금</string>
+    <string name="relock_only_killed">종료 시에만 다시 잠금</string>
+    <string name="relock_only_killed_description">Sandbox가 강제 종료될 때까지 잠금 해제 유지</string>
+
+    <string name="private_section_behavior">비공개 섹션 동작</string>
+    <string name="private_section_behavior_description">이 앱의 비공개 앱 섹션이 잠기는 시점을 제어합니다</string>
+    <string name="collapse_on_leave">떠날 때 접기</string>
+    <string name="collapse_on_leave_description">Sandbox 앱을 떠날 때 접고 잠금</string>
+    <string name="collapse_after_timeout">시간 초과 후 접기</string>
+    <string name="collapse_after_timeout_description">앱을 떠난 후 %1$d초 후에 접힘</string>
+    <string name="lock_timeout">잠금 시간 초과</string>
+    <string name="seconds_format">%1$d초</string>
+    <string name="minutes_format_singular">%1$d분</string>
+    <string name="minutes_format_plural">%1$d분</string>
+
+    <!-- Sandbox App -->
+    <string name="lock_app">앱 잠금</string>
+    <string name="lock_app_description">이 앱을 열려면 인증 필요</string>
+    <string name="hide_app">앱 숨기기</string>
+    <string name="hide_app_description">런처 및 설정에서 숨기기</string>
+    <string name="sandbox">Sandbox</string>
+    <string name="sandbox_description">다른 앱(은행 앱 등)으로부터 숨기기</string>
+    <string name="hide_dev_options">개발자 옵션 숨기기</string>
+    <string name="hide_dev_options_description">이 앱은 개발자 옵션이 비활성화된 것으로 인식합니다</string>
+    <string name="no_apps_found">앱을 찾을 수 없음</string>
+    <string name="private_apps">비공개 앱</string>
+    <string name="sandboxed_apps">샌드박스 처리된 앱</string>
+    <string name="dev_opts_hidden">개발자 옵션 숨김</string>
+    <string name="all_apps">모든 앱</string>
+    <string name="setup_private_apps">비공개 앱 설정</string>
+    <string name="setup_private_apps_description">앱을 잠그고 숨기기 위해 PIN, 비밀번호 또는 패턴을 생성하세요</string>
+    <string name="collapse">접기</string>
+    <string name="expand">펼치기</string>
+    <string name="lock">잠금</string>
+    <string name="dev_opt">개발자</string>
+    <string name="notifications_locked">알림이 잠겼습니다</string>
+    <string name="unlock_private_area_desc">알림을 보려면 비공개 영역을 해제하세요</string>
+    <string name="no_private_notifications">비공개 알림 없음</string>
+    <string name="notifications_empty_desc">숨겨진 앱의 알림이 여기에 표시됩니다</string>
+
+    <!-- Authenticate -->
+    <string name="unlock_app_title">%1$s 잠금 해제</string>
+    <string name="unlock_private_apps">비공개 앱 잠금 해제</string>
+    <string name="auth_prompt_format">%1$s을(를) 해제하려면 Sandbox 자격 증명을 입력하세요</string>
+    <string name="enter_current_pin_to_change">보안을 변경하려면 현재 PIN을 입력하세요</string>
+    <string name="enter_current_password_to_change">보안을 변경하려면 현재 비밀번호를 입력하세요</string>
+    <string name="draw_current_pattern_to_change">보안을 변경하려면 현재 패턴을 그리세요</string>
+
+    <!-- Security Questions -->
+    <string name="question_pet_name">반려동물의 이름은 무엇인가요?</string>
+    <string name="question_birth_city">태어난 도시는 어디인가요?</string>
+    <string name="question_fav_movie">가장 좋아하는 영화는 무엇인가요?</string>
+    <string name="question_mother_maiden">어머니의 성함(결혼 전)은 무엇인가요?</string>
+    <string name="question_first_car">첫 차는 무엇이었나요?</string>
+    <string name="count_format">(%1$d)</string>
+    <string name="badge_count_format">%1$d</string>
+</resources>

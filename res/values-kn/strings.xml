@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sandbox</string>
+
+    <!-- Common -->
+    <string name="back">ಹಿಂದಕ್ಕೆ</string>
+    <string name="ok">ಸರಿ</string>
+    <string name="cancel">ರದ್ದುಗೊಳಿಸಿ</string>
+    <string name="settings">ಸೆಟ್ಟಿಂಗ್‌ಗಳು</string>
+    <string name="launch">ಪ್ರಾರಂಭಿಸಿ</string>
+    <string name="selected">ಆಯ್ಕೆಮಾಡಲಾಗಿದೆ</string>
+    <string name="continue_text">ಮುಂದುವರಿಯಿರಿ</string>
+    <string name="skip_for_now">ಸದ್ಯಕ್ಕೆ ಬೇಡ</string>
+    <string name="unlock">ಅನ್ಲಾಕ್ ಮಾಡಿ</string>
+    <string name="hide">ಮರೆಮಾಡಿ</string>
+    <string name="show">ತೋರಿಸಿ</string>
+    <string name="dismiss">ತೆಗೆದುಹಾಕಿ</string>
+    <string name="open">ತೆರೆಯಿರಿ</string>
+    <string name="reset">ಮರುಹೊಂದಿಸಿ</string>
+    <string name="search_apps">ಅಪ್ಲಿಕೇಶನ್‌ಗಳನ್ನು ಹುಡುಕಿ...</string>
+    <string name="version">ಆವೃತ್ತಿ</string>
+    <string name="about">ಬಗ್ಗೆ</string>
+
+    <!-- Navigation Labels -->
+    <string name="apps">ಅಪ್ಲಿಕೇಶನ್‌ಗಳು</string>
+    <string name="notifications">ನೋಟಿಫಿಕೇಶನ್‌ಗಳು</string>
+
+    <!-- Security Setup -->
+    <string name="secure_your_private_apps">ನಿಮ್ಮ ಖಾಸಗಿ ಅಪ್ಲಿಕೇಶನ್‌ಗಳನ್ನು ಸುರಕ್ಷಿತಗೊಳಿಸಿ</string>
+    <string name="choose_protection_method">ನಿಮ್ಮ ಅಡಗಿಸಿದ ಅಪ್ಲಿಕೇಶನ್‌ಗಳನ್ನು ಹೇಗೆ ರಕ್ಷಿಸಬೇಕೆಂದು ಆಯ್ಕೆಮಾಡಿ</string>
+    <string name="pin">ಪಿನ್ (PIN)</string>
+    <string name="password">ಪಾಸ್‌ವರ್ಡ್</string>
+    <string name="pattern">ಪ್ಯಾಟರ್ನ್</string>
+    <string name="pin_description">೪-೬ ಅಂಕಿಗಳ ಕೋಡ್</string>
+    <string name="password_description">ಅಕ್ಷರ ಮತ್ತು ಸಂಖ್ಯೆಗಳ ಪಾಸ್‌ವರ್ಡ್</string>
+    <string name="pattern_description">ಅನ್ಲಾಕ್ ಮಾಡಲು ಪ್ಯಾಟರ್ನ್ ಬಿಡಿಸಿ</string>
+
+    <!-- Security Screens -->
+    <string name="create_pin">ಪಿನ್ ರಚಿಸಿ</string>
+    <string name="confirm_pin">ಪಿನ್ ಖಚಿತಪಡಿಸಿ</string>
+    <string name="enter_pin">ಪಿನ್ ನಮೂದಿಸಿ</string>
+    <string name="choose_pin_prompt">೪ ಅಂಕಿಯ ಪಿನ್ ಆಯ್ಕೆಮಾಡಿ</string>
+    <string name="reenter_pin_prompt">ನಿಮ್ಮ ಪಿನ್ ಅನ್ನು ಮತ್ತೆ ನಮೂದಿಸಿ</string>
+    <string name="enter_pin_to_unlock">ಖಾಸಗಿ ಅಪ್ಲಿಕೇಶನ್‌ಗಳನ್ನು ಅನ್ಲಾಕ್ ಮಾಡಲು ಪಿನ್ ನಮೂದಿಸಿ</string>
+    <string name="pins_mismatched">ಪಿನ್ ಹೊಂದಿಕೆಯಾಗುತ್ತಿಲ್ಲ. ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ ಅಥವಾ ಹಿಂದಕ್ಕೆ ಹೋಗಿ.</string>
+    <string name="incorrect_pin">ತಪ್ಪಾದ ಪಿನ್</string>
+
+    <string name="create_pattern">ಪ್ಯಾಟರ್ನ್ ರಚಿಸಿ</string>
+    <string name="confirm_pattern">ಪ್ಯಾಟರ್ನ್ ಖಚಿತಪಡಿಸಿ</string>
+    <string name="draw_pattern">ಪ್ಯಾಟರ್ನ್ ಬಿಡಿಸಿ</string>
+    <string name="patterns_mismatched">ಪ್ಯಾಟರ್ನ್ ಹೊಂದಿಕೆಯಾಗುತ್ತಿಲ್ಲ</string>
+    <string name="wrong_pattern">ತಪ್ಪಾದ ಪ್ಯಾಟರ್ನ್</string>
+    <string name="connect_dots_prompt">ಕನಿಷ್ಠ ೪ ಚುಕ್ಕೆಗಳನ್ನು ಜೋಡಿಸಿ</string>
+    <string name="draw_pattern_again_prompt">ನಿಮ್ಮ ಪ್ಯಾಟರ್ನ್ ಅನ್ನು ಮತ್ತೆ ಬಿಡಿಸಿ</string>
+    <string name="draw_pattern_to_unlock">ಖಾಸಗಿ ಅಪ್ಲಿಕೇಶನ್‌ಗಳನ್ನು ಅನ್ಲಾಕ್ ಮಾಡಲು ಪ್ಯಾಟರ್ನ್ ಬಿಡಿಸಿ</string>
+
+    <string name="create_password">ಪಾಸ್‌ವರ್ಡ್ ರಚಿಸಿ</string>
+    <string name="confirm_password">ಪಾಸ್‌ವರ್ಡ್ ಖಚಿತಪಡಿಸಿ</string>
+    <string name="set_password">ಪಾಸ್‌ವರ್ಡ್ ಹೊಂದಿಸಿ</string>
+    <string name="enter_password">ಪಾಸ್‌ವರ್ಡ್ ನಮೂದಿಸಿ</string>
+    <string name="choose_password_prompt">ಸುರಕ್ಷಿತ ಪಾಸ್‌ವರ್ಡ್ ಆಯ್ಕೆಮಾಡಿ</string>
+    <string name="reenter_password_prompt">ನಿಮ್ಮ ಪಾಸ್‌ವರ್ಡ್ ಅನ್ನು ಮತ್ತೆ ನಮೂದಿಸಿ</string>
+    <string name="enter_password_to_unlock">ಖಾಸಗಿ ಅಪ್ಲಿಕೇಶನ್‌ಗಳನ್ನು ಅನ್ಲಾಕ್ ಮಾಡಲು ಪಾಸ್‌ವರ್ಡ್ ನಮೂದಿಸಿ</string>
+    <string name="passwords_mismatched">ಪಾಸ್‌ವರ್ಡ್ ಹೊಂದಿಕೆಯಾಗುತ್ತಿಲ್ಲ. ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ ಅಥವಾ ಹಿಂದಕ್ಕೆ ಹೋಗಿ.</string>
+    <string name="incorrect_password">ತಪ್ಪಾದ ಪಾಸ್‌ವರ್ಡ್</string>
+    <string name="enter_password_placeholder">ಪಾಸ್‌ವರ್ಡ್ ನಮೂದಿಸಿ</string>
+
+    <string name="forgot_password_q">ಪಾಸ್‌ವರ್ಡ್ ಮರೆತಿದೆಯೇ?</string>
+    <string name="biometric_unlock">ಬಯೋಮೆಟ್ರಿಕ್ ಅನ್ಲಾಕ್</string>
+    <string name="backspace">ಬ್ಯಾಕ್‌ಸ್ಪೇಸ್</string>
+
+    <!-- Recovery -->
+    <string name="recovery_option">ರಿಕವರಿ ಆಯ್ಕೆ</string>
+    <string name="recovery_setup_description">ನೀವು ಪಾಸ್‌ವರ್ಡ್ ಮರೆತರೆ ಸಹಾಯಕ್ಕಾಗಿ ಭದ್ರತಾ ಪ್ರಶ್ನೆಯನ್ನು ಹೊಂದಿಸಿ</string>
+    <string name="security_question">ಭದ್ರತಾ ಪ್ರಶ್ನೆ</string>
+    <string name="select_a_question">ಪ್ರಶ್ನೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ</string>
+    <string name="your_answer">ನಿಮ್ಮ ಉತ್ತರ</string>
+    <string name="verify_answer">ಉತ್ತರವನ್ನು ಪರಿಶೀಲಿಸಿ</string>
+    <string name="forgot_password_title">ಪಾಸ್‌ವರ್ಡ್ ಮರೆತಿದ್ದೇನೆ</string>
+    <string name="reset_password_description">ನಿಮ್ಮ ಪಾಸ್‌ವರ್ಡ್ ಮರುಹೊಂದಿಸಲು ಭದ್ರತಾ ಪ್ರಶ್ನೆಗೆ ಉತ್ತರಿಸಿ</string>
+    <string name="incorrect_answer">ತಪ್ಪಾದ ಉತ್ತರ. ದಯವಿಟ್ಟು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.</string>
+    <string name="reset_password_dialog_title">ಪಾಸ್‌ವರ್ಡ್ ಮರುಹೊಂದಿಸಬೇಕೆ?</string>
+    <string name="reset_password_dialog_message">ಇದು ನಿಮ್ಮ ಪ್ರಸ್ತುತ ಪಾಸ್‌ವರ್ಡ್ ಅನ್ನು ಅಳಿಸುತ್ತದೆ ಮತ್ತು ನೀವು ಹೊಸದನ್ನು ಹೊಂದಿಸಬೇಕಾಗುತ್ತದೆ. ಎಲ್ಲಾ ಖಾಸಗಿ ಅಪ್ಲಿಕೇಶನ್ ಡೇಟಾ ಹಾಗೆಯೇ ಇರುತ್ತದೆ.</string>
+
+    <!-- Settings -->
+    <string name="private_apps_security">ಖಾಸಗಿ ಅಪ್ಲಿಕೇಶನ್‌ಗಳ ಭದ್ರತೆ</string>
+    <string name="current_lock_type">ಪ್ರಸ್ತುತ ಲಾಕ್ ಪ್ರಕಾರ</string>
+    <string name="not_set">ಹೊಂದಿಸಿಲ್ಲ</string>
+    <string name="use_pin">ಪಿನ್ ಬಳಸಿ</string>
+    <string name="use_password">ಪಾಸ್‌ವರ್ಡ್ ಬಳಸಿ</string>
+    <string name="use_pattern">ಪ್ಯಾಟರ್ನ್ ಬಳಸಿ</string>
+    <string name="biometrics">ಬಯೋಮೆಟ್ರಿಕ್ಸ್</string>
+    <string name="unlock_with_biometrics">ಬಯೋಮೆಟ್ರಿಕ್ಸ್ ಮೂಲಕ ಅನ್ಲಾಕ್ ಮಾಡಿ</string>
+    <string name="biometrics_description">ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಅಥವಾ ಫೇಸ್ ಅನ್ಲಾಕ್ ಬಳಸಿ</string>
+    <string name="recovery_options">ರಿಕವರಿ ಆಯ್ಕೆಗಳು</string>
+    <string name="forgot_password_item">ಪಾಸ್‌ವರ್ಡ್ ಮರೆತಿದೆಯೇ</string>
+    <string name="forgot_password_subtitle">ಭದ್ರತಾ ಪ್ರಶ್ನೆಯನ್ನು ಬಳಸಿಕೊಂಡು ನಿಮ್ಮ ಪಾಸ್‌ವರ್ಡ್ ಮರುಹೊಂದಿಸಿ</string>
+    <string name="setup_security_question">ಭದ್ರತಾ ಪ್ರಶ್ನೆಯನ್ನು ಹೊಂದಿಸಿ</string>
+    <string name="recovery_required_subtitle">ಪಾಸ್‌ವರ್ಡ್ ರಿಕವರಿಗಾಗಿ ಅಗತ್ಯವಿದೆ</string>
+    
+    <string name="locked_app_behavior">ಲಾಕ್ ಆದ ಅಪ್ಲಿಕೇಶನ್‌ನ ನಡವಳಿಕೆ</string>
+    <string name="locked_app_behavior_description">ಅನ್ಲಾಕ್ ಮಾಡಿದ ಅಪ್ಲಿಕೇಶನ್‌ಗಳು ಯಾವಾಗ ಮತ್ತೆ ಲಾಕ್ ಆಗಬೇಕು ಎಂದು ನಿಯಂತ್ರಿಸಿ</string>
+    <string name="relock_on_leave">ನಿರ್ಗಮಿಸುವಾಗ ಮತ್ತೆ ಲಾಕ್ ಮಾಡಿ</string>
+    <string name="relock_on_leave_description">ಅನ್ಲಾಕ್ ಮಾಡಿದ ಅಪ್ಲಿಕೇಶನ್‌ನಿಂದ ಹೊರಬಂದ ತಕ್ಷಣ ಅದನ್ನು ಮತ್ತೆ ಲಾಕ್ ಮಾಡಿ</string>
+    <string name="relock_after_timeout">ಸಮಯ ಮೀರಿದ ನಂತರ ಮತ್ತೆ ಲಾಕ್ ಮಾಡಿ</string>
+    <string name="relock_after_timeout_description">%1$d ಸೆಕೆಂಡುಗಳ ನಿಷ್ಕ್ರಿಯತೆಯ ನಂತರ ಮತ್ತೆ ಲಾಕ್ ಮಾಡಿ</string>
+    <string name="relock_on_screen_off">ಸ್ಕ್ರೀನ್ ಆಫ್ ಆದಾಗ ಮತ್ತೆ ಲಾಕ್ ಮಾಡಿ</string>
+    <string name="relock_on_screen_off_description">ಅಪ್ಲಿಕೇಶನ್‌ಗಳ ನಡುವೆ ಬದಲಾಯಿಸುವಾಗ ಅನ್ಲಾಕ್ ಆಗಿರಲಿ, ಸ್ಕ್ರೀನ್ ಆಫ್ ಆದಾಗ ಲಾಕ್ ಮಾಡಿ</string>
+    <string name="relock_only_killed">ಮುಚ್ಚಿದಾಗ ಮಾತ್ರ ಮತ್ತೆ ಲಾಕ್ ಮಾಡಿ</string>
+    <string name="relock_only_killed_description">Sandbox ಅನ್ನು ಬಲವಂತವಾಗಿ ಮುಚ್ಚುವವರೆಗೆ ಅನ್ಲಾಕ್ ಆಗಿರಲಿ</string>
+
+    <string name="private_section_behavior">ಖಾಸಗಿ ವಿಭಾಗದ ನಡವಳಿಕೆ</string>
+    <string name="private_section_behavior_description">ಈ ಅಪ್ಲಿಕೇಶನ್‌ನಲ್ಲಿ ಖಾಸಗಿ ಅಪ್ಲಿಕೇಶನ್‌ಗಳ ವಿಭಾಗವು ಯಾವಾಗ ಲಾಕ್ ಆಗಬೇಕು ಎಂದು ನಿಯಂತ್ರಿಸಿ</string>
+    <string name="collapse_on_leave">ನಿರ್ಗಮಿಸುವಾಗ ಮುಚ್ಚಿ</string>
+    <string name="collapse_on_leave_description">Sandbox ಅಪ್ಲಿಕೇಶನ್‌ನಿಂದ ಹೊರಬಂದಾಗ ವಿಭಾಗವನ್ನು ಮುಚ್ಚಿ ಮತ್ತು ಲಾಕ್ ಮಾಡಿ</string>
+    <string name="collapse_after_timeout">ಸಮಯ ಮೀರಿದ ನಂತರ ಮುಚ್ಚಿ</string>
+    <string name="collapse_after_timeout_description">ಅಪ್ಲಿಕೇಶನ್‌ನಿಂದ ಹೊರಬಂದ %1$d ಸೆಕೆಂಡುಗಳ ನಂತರ ಮುಚ್ಚಲಾಗಿದೆ</string>
+    <string name="lock_timeout">ಲಾಕ್ ಟೈಮ್‌ಔಟ್</string>
+    <string name="seconds_format">%1$d ಸೆಕೆಂಡುಗಳು</string>
+    <string name="minutes_format_singular">%1$d ನಿಮಿಷ</string>
+    <string name="minutes_format_plural">%1$d ನಿಮಿಷಗಳು</string>
+
+    <!-- Sandbox App -->
+    <string name="lock_app">ಅಪ್ಲಿಕೇಶನ್ ಲಾಕ್ ಮಾಡಿ</string>
+    <string name="lock_app_description">ಈ ಅಪ್ಲಿಕೇಶನ್ ತೆರೆಯಲು ದೃಢೀಕರಣದ ಅಗತ್ಯವಿದೆ</string>
+    <string name="hide_app">ಅಪ್ಲಿಕೇಶನ್ ಮರೆಮಾಡಿ</string>
+    <string name="hide_app_description">ಲಾಂಚರ್ ಮತ್ತು ಸೆಟ್ಟಿಂಗ್‌ಗಳಿಂದ ಮರೆಮಾಡಿ</string>
+    <string name="sandbox">Sandbox</string>
+    <string name="sandbox_description">ಇತರ ಅಪ್ಲಿಕೇಶನ್‌ಗಳಿಂದ (ಬ್ಯಾಂಕಿಂಗ್ ಅಪ್ಲಿಕೇಶನ್‌ಗಳು ಇತ್ಯಾದಿ) ಮರೆಮಾಡಿ</string>
+    <string name="hide_dev_options">ಡೆವಲಪರ್ ಆಯ್ಕೆಗಳನ್ನು ಮರೆಮಾಡಿ</string>
+    <string name="hide_dev_options_description">ಈ ಅಪ್ಲಿಕೇಶನ್ ಡೆವಲಪರ್ ಆಯ್ಕೆಗಳನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಿದಂತೆ ಕಾಣುತ್ತದೆ</string>
+    <string name="no_apps_found">ಯಾವುದೇ ಅಪ್ಲಿಕೇಶನ್‌ಗಳು ಕಂಡುಬಂದಿಲ್ಲ</string>
+    <string name="private_apps">ಖಾಸಗಿ ಅಪ್ಲಿಕೇಶನ್‌ಗಳು</string>
+    <string name="sandboxed_apps">ಸ್ಯಾಂಡ್‌ಬಾಕ್ಸ್ ಅಪ್ಲಿಕೇಶನ್‌ಗಳು</string>
+    <string name="dev_opts_hidden">DevOpts ಮರೆಮಾಡಲಾಗಿದೆ</string>
+    <string name="all_apps">ಎಲ್ಲಾ ಅಪ್ಲಿಕೇಶನ್‌ಗಳು</string>
+    <string name="setup_private_apps">ಖಾಸಗಿ ಅಪ್ಲಿಕೇಶನ್‌ಗಳನ್ನು ಹೊಂದಿಸಿ</string>
+    <string name="setup_private_apps_description">ಅಪ್ಲಿಕೇಶನ್‌ಗಳನ್ನು ಲಾಕ್ ಮಾಡಲು ಮತ್ತು ಮರೆಮಾಡಲು ಪಿನ್, ಪಾಸ್‌ವರ್ಡ್ ಅಥವಾ ಪ್ಯಾಟರ್ನ್ ರಚಿಸಿ</string>
+    <string name="collapse">ಮುಚ್ಚಿ</string>
+    <string name="expand">ವಿಸ್ತರಿಸಿ</string>
+    <string name="lock">ಲಾಕ್</string>
+    <string name="dev_opt">ಡೆವಲಪರ್</string>
+    <string name="notifications_locked">ನೋಟಿಫಿಕೇಶನ್‌ಗಳು ಲಾಕ್ ಆಗಿವೆ</string>
+    <string name="unlock_private_area_desc">ನೋಟಿಫಿಕೇಶನ್‌ಗಳನ್ನು ನೋಡಲು ಖಾಸಗಿ ಪ್ರದೇಶವನ್ನು ಅನ್ಲಾಕ್ ಮಾಡಿ</string>
+    <string name="no_private_notifications">ಯಾವುದೇ ಖಾಸಗಿ ನೋಟಿಫಿಕೇಶನ್‌ಗಳಿಲ್ಲ</string>
+    <string name="notifications_empty_desc">ಅಡಗಿಸಿದ ಅಪ್ಲಿಕೇಶನ್‌ಗಳ ನೋಟಿಫಿಕೇಶನ್‌ಗಳು ಇಲ್ಲಿ ಕಾಣಿಸಿಕೊಳ್ಳುತ್ತವೆ</string>
+
+    <!-- Authenticate -->
+    <string name="unlock_app_title">%1$s ಅನ್ಲಾಕ್ ಮಾಡಿ</string>
+    <string name="unlock_private_apps">ಖಾಸಗಿ ಅಪ್ಲಿಕೇಶನ್‌ಗಳನ್ನು ಅನ್ಲಾಕ್ ಮಾಡಿ</string>
+    <string name="auth_prompt_format">%1$s ಅನ್ಲಾಕ್ ಮಾಡಲು ನಿಮ್ಮ Sandbox ರುಜುವಾತುಗಳನ್ನು ನಮೂದಿಸಿ</string>
+    <string name="enter_current_pin_to_change">ಭದ್ರತೆಯನ್ನು ಬದಲಾಯಿಸಲು ನಿಮ್ಮ ಪ್ರಸ್ತುತ ಪಿನ್ ನಮೂದಿಸಿ</string>
+    <string name="enter_current_password_to_change">ಭದ್ರತೆಯನ್ನು ಬದಲಾಯಿಸಲು ನಿಮ್ಮ ಪ್ರಸ್ತುತ ಪಾಸ್‌ವರ್ಡ್ ನಮೂದಿಸಿ</string>
+    <string name="draw_current_pattern_to_change">ಭದ್ರತೆಯನ್ನು ಬದಲಾಯಿಸಲು ನಿಮ್ಮ ಪ್ರಸ್ತುತ ಪ್ಯಾಟರ್ನ್ ಬಿಡಿಸಿ</string>
+
+    <!-- Security Questions -->
+    <string name="question_pet_name">ನಿಮ್ಮ ಸಾಕುಪ್ರಾಣಿಯ ಹೆಸರೇನು?</string>
+    <string name="question_birth_city">ನೀವು ಯಾವ ನಗರದಲ್ಲಿ ಜನಿಸಿದಿರಿ?</string>
+    <string name="question_fav_movie">ನಿಮ್ಮ ಮೆಚ್ಚಿನ ಚಲನಚಿತ್ರ ಯಾವುದು?</string>
+    <string name="question_mother_maiden">ನಿಮ್ಮ ತಾಯಿಯ ಮದುವೆಗೆ ಮುಂಚಿನ ಹೆಸರೇನು?</string>
+    <string name="question_first_car">ನಿಮ್ಮ ಮೊದಲ ಕಾರು ಯಾವುದು?</string>
+    <string name="count_format">(%1$d)</string>
+    <string name="badge_count_format">%1$d</string>
+</resources>

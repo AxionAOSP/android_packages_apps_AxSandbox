@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sandbox</string>
+
+    <!-- Common -->
+    <string name="back">Retour</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Annuler</string>
+    <string name="settings">Paramètres</string>
+    <string name="launch">Lancer</string>
+    <string name="selected">Sélectionné</string>
+    <string name="continue_text">Continuer</string>
+    <string name="skip_for_now">Ignorer pour l\'instant</string>
+    <string name="unlock">Déverrouiller</string>
+    <string name="hide">Masquer</string>
+    <string name="show">Afficher</string>
+    <string name="dismiss">Ignorer</string>
+    <string name="open">Ouvrir</string>
+    <string name="reset">Réinitialiser</string>
+    <string name="search_apps">Rechercher des applications...</string>
+    <string name="version">Version</string>
+    <string name="about">À propos</string>
+
+    <!-- Navigation Labels -->
+    <string name="apps">Applications</string>
+    <string name="notifications">Notifications</string>
+
+    <!-- Security Setup -->
+    <string name="secure_your_private_apps">Sécurisez vos applications privées</string>
+    <string name="choose_protection_method">Choisissez comment vous souhaitez protéger vos applications masquées</string>
+    <string name="pin">Code PIN</string>
+    <string name="password">Mot de passe</string>
+    <string name="pattern">Schéma</string>
+    <string name="pin_description">Code de 4 à 6 chiffres</string>
+    <string name="password_description">Mot de passe alphanumérique</string>
+    <string name="pattern_description">Dessiner un schéma pour déverrouiller</string>
+
+    <!-- Security Screens -->
+    <string name="create_pin">Créer un code PIN</string>
+    <string name="confirm_pin">Confirmer le code PIN</string>
+    <string name="enter_pin">Saisir le code PIN</string>
+    <string name="choose_pin_prompt">Choisissez un code PIN à 4 chiffres</string>
+    <string name="reenter_pin_prompt">Saisissez à nouveau votre code PIN</string>
+    <string name="enter_pin_to_unlock">Saisissez le code PIN pour déverrouiller les applications privées</string>
+    <string name="pins_mismatched">Les codes PIN ne correspondent pas. Réessayez ou revenez en arrière.</string>
+    <string name="incorrect_pin">Code PIN incorrect</string>
+
+    <string name="create_pattern">Créer un schéma</string>
+    <string name="confirm_pattern">Confirmer le schéma</string>
+    <string name="draw_pattern">Dessiner le schéma</string>
+    <string name="patterns_mismatched">Les schémas ne correspondent pas</string>
+    <string name="wrong_pattern">Schéma incorrect</string>
+    <string name="connect_dots_prompt">Reliez au moins 4 points</string>
+    <string name="draw_pattern_again_prompt">Dessinez à nouveau votre schéma</string>
+    <string name="draw_pattern_to_unlock">Dessinez votre schéma pour déverrouiller les applications privées</string>
+
+    <string name="create_password">Créer un mot de passe</string>
+    <string name="confirm_password">Confirmer le mot de passe</string>
+    <string name="set_password">Définir le mot de passe</string>
+    <string name="enter_password">Saisir le mot de passe</string>
+    <string name="choose_password_prompt">Choisissez un mot de passe sécurisé</string>
+    <string name="reenter_password_prompt">Saisissez à nouveau votre mot de passe</string>
+    <string name="enter_password_to_unlock">Saisissez votre mot de passe pour déverrouiller les applications privées</string>
+    <string name="passwords_mismatched">Les mots de passe ne correspondent pas. Réessayez ou revenez en arrière.</string>
+    <string name="incorrect_password">Mot de passe incorrect</string>
+    <string name="enter_password_placeholder">Saisir le mot de passe</string>
+
+    <string name="forgot_password_q">Mot de passe oublié ?</string>
+    <string name="biometric_unlock">Déverrouillage biométrique</string>
+    <string name="backspace">Retour arrière</string>
+
+    <!-- Recovery -->
+    <string name="recovery_option">Option de récupération</string>
+    <string name="recovery_setup_description">Configurez une question de sécurité au cas où vous oublieriez votre mot de passe</string>
+    <string name="security_question">Question de sécurité</string>
+    <string name="select_a_question">Sélectionner une question</string>
+    <string name="your_answer">Votre réponse</string>
+    <string name="verify_answer">Vérifier la réponse</string>
+    <string name="forgot_password_title">Mot de passe oublié</string>
+    <string name="reset_password_description">Répondez à votre question de sécurité pour réinitialiser votre mot de passe</string>
+    <string name="incorrect_answer">Réponse incorrecte. Veuillez réessayer.</string>
+    <string name="reset_password_dialog_title">Réinitialiser le mot de passe ?</string>
+    <string name="reset_password_dialog_message">Cela effacera votre mot de passe actuel et vous devrez en configurer un nouveau. Toutes les données des applications privées resteront intactes.</string>
+
+    <!-- Settings -->
+    <string name="private_apps_security">Sécurité des applications privées</string>
+    <string name="current_lock_type">Type de verrouillage actuel</string>
+    <string name="not_set">Non défini</string>
+    <string name="use_pin">Utiliser un code PIN</string>
+    <string name="use_password">Utiliser un mot de passe</string>
+    <string name="use_pattern">Utiliser un schéma</string>
+    <string name="biometrics">Biométrie</string>
+    <string name="unlock_with_biometrics">Déverrouiller avec la biométrie</string>
+    <string name="biometrics_description">Utiliser l\'empreinte digitale ou la reconnaissance faciale</string>
+    <string name="recovery_options">Options de récupération</string>
+    <string name="forgot_password_item">Mot de passe oublié</string>
+    <string name="forgot_password_subtitle">Réinitialisez votre mot de passe à l\'aide de la question de sécurité</string>
+    <string name="setup_security_question">Configurer la question de sécurité</string>
+    <string name="recovery_required_subtitle">Requis pour la récupération du mot de passe</string>
+    
+    <string name="locked_app_behavior">Comportement des applications verrouillées</string>
+    <string name="locked_app_behavior_description">Contrôlez quand les applications déverrouillées se reverrouillent</string>
+    <string name="relock_on_leave">Reverrouiller en quittant</string>
+    <string name="relock_on_leave_description">Reverrouiller immédiatement l\'application déverrouillée en la quittant</string>
+    <string name="relock_after_timeout">Reverrouiller après un délai</string>
+    <string name="relock_after_timeout_description">Reverrouiller après %1$d s d\'inactivité</string>
+    <string name="relock_on_screen_off">Reverrouiller à l\'extinction de l\'écran</string>
+    <string name="relock_on_screen_off_description">Garder déverrouillé lors du changement d\'application, verrouiller à l\'extinction de l\'écran</string>
+    <string name="relock_only_killed">Reverrouiller uniquement si fermé</string>
+    <string name="relock_only_killed_description">Garder déverrouillé jusqu\'à ce que Sandbox soit forcé de fermer</string>
+
+    <string name="private_section_behavior">Comportement de la section privée</string>
+    <string name="private_section_behavior_description">Contrôlez quand la section des applications privées de cette application se verrouille</string>
+    <string name="collapse_on_leave">Réduire en quittant</string>
+    <string name="collapse_on_leave_description">Réduire et verrouiller en quittant l\'application Sandbox</string>
+    <string name="collapse_after_timeout">Réduire après un délai</string>
+    <string name="collapse_after_timeout_description">Réduit après %1$d s après avoir quitté l\'application</string>
+    <string name="lock_timeout">Délai de verrouillage</string>
+    <string name="seconds_format">%1$d secondes</string>
+    <string name="minutes_format_singular">%1$d minute</string>
+    <string name="minutes_format_plural">%1$d minutes</string>
+
+    <!-- Sandbox App -->
+    <string name="lock_app">Verrouiller l\'application</string>
+    <string name="lock_app_description">Authentification requise pour ouvrir cette application</string>
+    <string name="hide_app">Masquer l\'application</string>
+    <string name="hide_app_description">Masquer du lanceur et des paramètres</string>
+    <string name="sandbox">Sandbox</string>
+    <string name="sandbox_description">Masquer des autres applications (applications bancaires, etc.)</string>
+    <string name="hide_dev_options">Masquer les options développeur</string>
+    <string name="hide_dev_options_description">Cette application voit les options développeur comme désactivées</string>
+    <string name="no_apps_found">Aucune application trouvée</string>
+    <string name="private_apps">Applications privées</string>
+    <string name="sandboxed_apps">Applications sandboxées</string>
+    <string name="dev_opts_hidden">Options dév. masquées</string>
+    <string name="all_apps">Toutes les applications</string>
+    <string name="setup_private_apps">Configurer les apps privées</string>
+    <string name="setup_private_apps_description">Créez un code PIN, un mot de passe ou un schéma pour verrouiller et masquer les apps</string>
+    <string name="collapse">Réduire</string>
+    <string name="expand">Développer</string>
+    <string name="lock">Verrouiller</string>
+    <string name="dev_opt">Dév.</string>
+    <string name="notifications_locked">Notifications verrouillées</string>
+    <string name="unlock_private_area_desc">Déverrouillez la zone privée pour voir les notifications</string>
+    <string name="no_private_notifications">Aucune notification privée</string>
+    <string name="notifications_empty_desc">Les notifications des applications masquées apparaîtront ici</string>
+
+    <!-- Authenticate -->
+    <string name="unlock_app_title">Déverrouiller %1$s</string>
+    <string name="unlock_private_apps">Déverrouiller les applications privées</string>
+    <string name="auth_prompt_format">Saisissez vos identifiants Sandbox pour déverrouiller %1$s</string>
+    <string name="enter_current_pin_to_change">Saisissez votre code PIN actuel pour modifier la sécurité</string>
+    <string name="enter_current_password_to_change">Saisissez votre mot de passe actuel pour modifier la sécurité</string>
+    <string name="draw_current_pattern_to_change">Dessinez votre schéma actuel pour modifier la sécurité</string>
+
+    <!-- Security Questions -->
+    <string name="question_pet_name">Quel est le nom de votre animal de compagnie ?</string>
+    <string name="question_birth_city">Dans quelle ville êtes-vous né ?</string>
+    <string name="question_fav_movie">Quel est votre film préféré ?</string>
+    <string name="question_mother_maiden">Quel est le nom de jeune fille de votre mère ?</string>
+    <string name="question_first_car">Quelle était votre première voiture ?</string>
+    <string name="count_format">(%1$d)</string>
+    <string name="badge_count_format">%1$d</string>
+</resources>

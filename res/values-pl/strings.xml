@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sandbox</string>
+
+    <!-- Common -->
+    <string name="back">Wstecz</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Anuluj</string>
+    <string name="settings">Ustawienia</string>
+    <string name="launch">Uruchom</string>
+    <string name="selected">Wybrano</string>
+    <string name="continue_text">Kontynuuj</string>
+    <string name="skip_for_now">Pomiń na razie</string>
+    <string name="unlock">Odblokuj</string>
+    <string name="hide">Ukryj</string>
+    <string name="show">Pokaż</string>
+    <string name="dismiss">Odrzuć</string>
+    <string name="open">Otwórz</string>
+    <string name="reset">Resetuj</string>
+    <string name="search_apps">Szukaj aplikacji...</string>
+    <string name="version">Wersja</string>
+    <string name="about">O programie</string>
+
+    <!-- Navigation Labels -->
+    <string name="apps">Aplikacje</string>
+    <string name="notifications">Powiadomienia</string>
+
+    <!-- Security Setup -->
+    <string name="secure_your_private_apps">Zabezpiecz swoje prywatne aplikacje</string>
+    <string name="choose_protection_method">Wybierz sposób ochrony ukrytych aplikacji</string>
+    <string name="pin">PIN</string>
+    <string name="password">Hasło</string>
+    <string name="pattern">Wzór</string>
+    <string name="pin_description">Kod 4-6 cyfrowy</string>
+    <string name="password_description">Hasło alfanumeryczne</string>
+    <string name="pattern_description">Narysuj wzór, aby odblokować</string>
+
+    <!-- Security Screens -->
+    <string name="create_pin">Utwórz PIN</string>
+    <string name="confirm_pin">Potwierdź PIN</string>
+    <string name="enter_pin">Wprowadź PIN</string>
+    <string name="choose_pin_prompt">Wybierz 4-cyfrowy PIN</string>
+    <string name="reenter_pin_prompt">Wprowadź PIN ponownie</string>
+    <string name="enter_pin_to_unlock">Wprowadź PIN, aby odblokować prywatne aplikacje</string>
+    <string name="pins_mismatched">Kody PIN nie są zgodne. Spróbuj ponownie lub wróć.</string>
+    <string name="incorrect_pin">Niepoprawny PIN</string>
+
+    <string name="create_pattern">Utwórz wzór</string>
+    <string name="confirm_pattern">Potwierdź wzór</string>
+    <string name="draw_pattern">Narysuj wzór</string>
+    <string name="patterns_mismatched">Wzory nie są zgodne</string>
+    <string name="wrong_pattern">Niepoprawny wzór</string>
+    <string name="connect_dots_prompt">Połącz co najmniej 4 kropki</string>
+    <string name="draw_pattern_again_prompt">Narysuj wzór ponownie</string>
+    <string name="draw_pattern_to_unlock">Narysuj wzór, aby odblokować prywatne aplikacje</string>
+
+    <string name="create_password">Utwórz hasło</string>
+    <string name="confirm_password">Potwierdź hasło</string>
+    <string name="set_password">Ustaw hasło</string>
+    <string name="enter_password">Wprowadź hasło</string>
+    <string name="choose_password_prompt">Wybierz bezpieczne hasło</string>
+    <string name="reenter_password_prompt">Wprowadź hasło ponownie</string>
+    <string name="enter_password_to_unlock">Wprowadź hasło, aby odblokować prywatne aplikacje</string>
+    <string name="passwords_mismatched">Hasła nie są zgodne. Spróbuj ponownie lub wróć.</string>
+    <string name="incorrect_password">Niepoprawne hasło</string>
+    <string name="enter_password_placeholder">Wprowadź hasło</string>
+
+    <string name="forgot_password_q">Zapomniałeś hasła?</string>
+    <string name="biometric_unlock">Odblokowanie biometryczne</string>
+    <string name="backspace">Backspace</string>
+
+    <!-- Recovery -->
+    <string name="recovery_option">Opcja odzyskiwania</string>
+    <string name="recovery_setup_description">Ustaw pytanie bezpieczeństwa na wypadek zapomnienia hasła</string>
+    <string name="security_question">Pytanie bezpieczeństwa</string>
+    <string name="select_a_question">Wybierz pytanie</string>
+    <string name="your_answer">Twoja odpowiedź</string>
+    <string name="verify_answer">Zweryfikuj odpowiedź</string>
+    <string name="forgot_password_title">Zapomniałem hasła</string>
+    <string name="reset_password_description">Odpowiedz na pytanie bezpieczeństwa, aby zresetować hasło</string>
+    <string name="incorrect_answer">Niepoprawna odpowiedź. Spróbuj ponownie.</string>
+    <string name="reset_password_dialog_title">Zresetować hasło?</string>
+    <string name="reset_password_dialog_message">To spowoduje usunięcie obecnego hasła i konieczność ustawienia nowego. Wszystkie dane prywatnych aplikacji pozostaną nienaruszone.</string>
+
+    <!-- Settings -->
+    <string name="private_apps_security">Bezpieczeństwo prywatnych aplikacji</string>
+    <string name="current_lock_type">Aktualny typ blokady</string>
+    <string name="not_set">Nie ustawiono</string>
+    <string name="use_pin">Użyj PIN</string>
+    <string name="use_password">Użyj hasła</string>
+    <string name="use_pattern">Użyj wzoru</string>
+    <string name="biometrics">Biometria</string>
+    <string name="unlock_with_biometrics">Odblokuj biometrią</string>
+    <string name="biometrics_description">Użyj odcisku palca lub rozpoznawania twarzy</string>
+    <string name="recovery_options">Opcje odzyskiwania</string>
+    <string name="forgot_password_item">Zapomniałeś hasła</string>
+    <string name="forgot_password_subtitle">Zresetuj hasło za pomocą pytania bezpieczeństwa</string>
+    <string name="setup_security_question">Ustaw pytanie bezpieczeństwa</string>
+    <string name="recovery_required_subtitle">Wymagane do odzyskania hasła</string>
+    
+    <string name="locked_app_behavior">Zachowanie zablokowanych aplikacji</string>
+    <string name="locked_app_behavior_description">Kontroluj, kiedy odblokowane aplikacje są ponownie blokowane</string>
+    <string name="relock_on_leave">Blokuj przy opuszczaniu</string>
+    <string name="relock_on_leave_description">Blokuj odblokowaną aplikację natychmiast po jej opuszczeniu</string>
+    <string name="relock_after_timeout">Blokuj po czasie</string>
+    <string name="relock_after_timeout_description">Blokuj ponownie po %1$d s nieaktywności</string>
+    <string name="relock_on_screen_off">Blokuj przy wyłączonym ekranie</string>
+    <string name="relock_on_screen_off_description">Pozostaw odblokowane przy przełączaniu aplikacji, blokuj przy wyłączonym ekranie</string>
+    <string name="relock_only_killed">Blokuj tylko przy zamknięciu</string>
+    <string name="relock_only_killed_description">Pozostaw odblokowane, dopóki Sandbox nie zostanie wymuszony do zamknięcia</string>
+
+    <string name="private_section_behavior">Zachowanie sekcji prywatnej</string>
+    <string name="private_section_behavior_description">Kontroluj, kiedy sekcja prywatnych aplikacji w tej aplikacji jest blokowana</string>
+    <string name="collapse_on_leave">Zwiń przy opuszczaniu</string>
+    <string name="collapse_on_leave_description">Zwiń i zablokuj przy opuszczaniu aplikacji Sandbox</string>
+    <string name="collapse_after_timeout">Zwiń po czasie</string>
+    <string name="collapse_after_timeout_description">Zwinięto po %1$d s od opuszczenia aplikacji</string>
+    <string name="lock_timeout">Limit czasu blokady</string>
+    <string name="seconds_format">%1$d sekund</string>
+    <string name="minutes_format_singular">%1$d minuta</string>
+    <string name="minutes_format_plural">%1$d minut</string>
+
+    <!-- Sandbox App -->
+    <string name="lock_app">Zablokuj aplikację</string>
+    <string name="lock_app_description">Wymagaj uwierzytelnienia, aby otworzyć tę aplikację</string>
+    <string name="hide_app">Ukryj aplikację</string>
+    <string name="hide_app_description">Ukryj w launcherze i ustawieniach</string>
+    <string name="sandbox">Sandbox</string>
+    <string name="sandbox_description">Ukryj przed innymi aplikacjami (bankowe itp.)</string>
+    <string name="hide_dev_options">Ukryj opcje programistyczne</string>
+    <string name="hide_dev_options_description">Ta aplikacja będzie widzieć opcje programistyczne jako wyłączone</string>
+    <string name="no_apps_found">Nie znaleziono aplikacji</string>
+    <string name="private_apps">Prywatne aplikacje</string>
+    <string name="sandboxed_apps">Aplikacje w Sandbox</string>
+    <string name="dev_opts_hidden">DevOpts ukryte</string>
+    <string name="all_apps">Wszystkie aplikacje</string>
+    <string name="setup_private_apps">Skonfiguruj prywatne aplikacje</string>
+    <string name="setup_private_apps_description">Utwórz PIN, hasło lub wzór, aby blokować i ukrywać aplikacje</string>
+    <string name="collapse">Zwiń</string>
+    <string name="expand">Rozwiń</string>
+    <string name="lock">Zablokuj</string>
+    <string name="dev_opt">Dev.</string>
+    <string name="notifications_locked">Powiadomienia zablokowane</string>
+    <string name="unlock_private_area_desc">Odblokuj obszar prywatny, aby wyświetlić powiadomienia</string>
+    <string name="no_private_notifications">Brak prywatnych powiadomień</string>
+    <string name="notifications_empty_desc">Powiadomienia z ukrytych aplikacji pojawią się tutaj</string>
+
+    <!-- Authenticate -->
+    <string name="unlock_app_title">Odblokuj %1$s</string>
+    <string name="unlock_private_apps">Odblokuj prywatne aplikacje</string>
+    <string name="auth_prompt_format">Wprowadź swoje dane Sandbox, aby odblokować %1$s</string>
+    <string name="enter_current_pin_to_change">Wprowadź swój obecny PIN, aby zmienić zabezpieczenia</string>
+    <string name="enter_current_password_to_change">Wprowadź swoje obecne hasło, aby zmienić zabezpieczenia</string>
+    <string name="draw_current_pattern_to_change">Narysuj swój obecny wzór, aby zmienić zabezpieczenia</string>
+
+    <!-- Security Questions -->
+    <string name="question_pet_name">Jak nazywa się Twoje zwierzę?</string>
+    <string name="question_birth_city">W jakim mieście się urodziłeś?</string>
+    <string name="question_fav_movie">Jaki jest Twój ulubiony film?</string>
+    <string name="question_mother_maiden">Jakie jest nazwisko rodowe Twojej matki?</string>
+    <string name="question_first_car">Jaki był Twój pierwszy samochód?</string>
+    <string name="count_format">(%1$d)</string>
+    <string name="badge_count_format">%1$d</string>
+</resources>

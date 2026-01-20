@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sandbox</string>
+
+    <!-- Common -->
+    <string name="back">Bumalik</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Kanselahin</string>
+    <string name="settings">Mga Setting</string>
+    <string name="launch">I-launch</string>
+    <string name="selected">Napili</string>
+    <string name="continue_text">Ipagpatuloy</string>
+    <string name="skip_for_now">Laktawan muna</string>
+    <string name="unlock">I-unlock</string>
+    <string name="hide">Itago</string>
+    <string name="show">Ipakita</string>
+    <string name="dismiss">I-dismiss</string>
+    <string name="open">Buksan</string>
+    <string name="reset">I-reset</string>
+    <string name="search_apps">Maghanap ng mga app...</string>
+    <string name="version">Bersyon</string>
+    <string name="about">Tungkol</string>
+
+    <!-- Navigation Labels -->
+    <string name="apps">Mga App</string>
+    <string name="notifications">Mga Notification</string>
+
+    <!-- Security Setup -->
+    <string name="secure_your_private_apps">I-secure ang iyong mga pribadong app</string>
+    <string name="choose_protection_method">Pumili kung paano mo gustong protektahan ang iyong mga nakatagong app</string>
+    <string name="pin">PIN</string>
+    <string name="password">Password</string>
+    <string name="pattern">Pattern</string>
+    <string name="pin_description">4-6 digit na code</string>
+    <string name="password_description">Alphanumeric na password</string>
+    <string name="pattern_description">Gumuhit ng pattern para i-unlock</string>
+
+    <!-- Security Screens -->
+    <string name="create_pin">Gumawa ng PIN</string>
+    <string name="confirm_pin">I-confirm ang PIN</string>
+    <string name="enter_pin">Ilagay ang PIN</string>
+    <string name="choose_pin_prompt">Pumili ng 4-digit na PIN</string>
+    <string name="reenter_pin_prompt">Ilagay muli ang iyong PIN</string>
+    <string name="enter_pin_to_unlock">Ilagay ang PIN para i-unlock ang mga pribadong app</string>
+    <string name="pins_mismatched">Hindi magkatugma ang mga PIN. Subukang muli o bumalik.</string>
+    <string name="incorrect_pin">Maling PIN</string>
+
+    <string name="create_pattern">Gumawa ng Pattern</string>
+    <string name="confirm_pattern">I-confirm ang Pattern</string>
+    <string name="draw_pattern">Gumuhit ng Pattern</string>
+    <string name="patterns_mismatched">Hindi magkatugma ang mga pattern</string>
+    <string name="wrong_pattern">Maling pattern</string>
+    <string name="connect_dots_prompt">Ikonekta ang hindi bababa sa 4 na tuldok</string>
+    <string name="draw_pattern_again_prompt">Gumuhit muli ng iyong pattern</string>
+    <string name="draw_pattern_to_unlock">Gumuhit ng pattern para i-unlock ang mga pribadong app</string>
+
+    <string name="create_password">Gumawa ng Password</string>
+    <string name="confirm_password">I-confirm ang Password</string>
+    <string name="set_password">Magtakda ng Password</string>
+    <string name="enter_password">Ilagay ang Password</string>
+    <string name="choose_password_prompt">Pumili ng secure na password</string>
+    <string name="reenter_password_prompt">Ilagay muli ang iyong password</string>
+    <string name="enter_password_to_unlock">Ilagay ang password para i-unlock ang mga pribadong app</string>
+    <string name="passwords_mismatched">Hindi magkatugma ang mga password. Subukang muli o bumalik.</string>
+    <string name="incorrect_password">Maling password</string>
+    <string name="enter_password_placeholder">Ilagay ang password</string>
+
+    <string name="forgot_password_q">Nakalimutan ang password?</string>
+    <string name="biometric_unlock">Biometric na Unlock</string>
+    <string name="backspace">Backspace</string>
+
+    <!-- Recovery -->
+    <string name="recovery_option">Opsyon sa Pag-recover</string>
+    <string name="recovery_setup_description">Magtakda ng security question kung sakaling makalimutan mo ang iyong password</string>
+    <string name="security_question">Security Question</string>
+    <string name="select_a_question">Pumili ng tanong</string>
+    <string name="your_answer">Ang iyong Sagot</string>
+    <string name="verify_answer">I-verify ang Sagot</string>
+    <string name="forgot_password_title">Nakalimutan ang Password</string>
+    <string name="reset_password_description">Sagutin ang iyong security question para i-reset ang iyong password</string>
+    <string name="incorrect_answer">Maling sagot. Pakisubukan muli.</string>
+    <string name="reset_password_dialog_title">I-reset ang password?</string>
+    <string name="reset_password_dialog_message">Buburahin nito ang iyong kasalukuyang password at kakailanganin mong mag-set up ng bago. Mananatiling buo ang lahat ng pribadong data ng app.</string>
+
+    <!-- Settings -->
+    <string name="private_apps_security">Seguridad ng Pribadong App</string>
+    <string name="current_lock_type">Kasalukuyang Uri ng Lock</string>
+    <string name="not_set">Hindi nakatakda</string>
+    <string name="use_pin">Gamitin ang PIN</string>
+    <string name="use_password">Gamitin ang Password</string>
+    <string name="use_pattern">Gamitin ang Pattern</string>
+    <string name="biometrics">Biometrics</string>
+    <string name="unlock_with_biometrics">I-unlock gamit ang Biometrics</string>
+    <string name="biometrics_description">Gamitin ang fingerprint o face unlock</string>
+    <string name="recovery_options">Mga Opsyon sa Pag-recover</string>
+    <string name="forgot_password_item">Nakalimutan ang password</string>
+    <string name="forgot_password_subtitle">I-reset ang iyong password gamit ang security question</string>
+    <string name="setup_security_question">Mag-set up ng security question</string>
+    <string name="recovery_required_subtitle">Kailangan para sa pag-recover ng password</string>
+    
+    <string name="locked_app_behavior">Gawi ng Naka-lock na App</string>
+    <string name="locked_app_behavior_description">Kontrolin kung kailan muling magla-lock ang mga na-unlock na app</string>
+    <string name="relock_on_leave">I-relock kapag umalis</string>
+    <string name="relock_on_leave_description">Muling i-lock ang na-unlock na app kaagad kapag umalis dito</string>
+    <string name="relock_after_timeout">I-relock pagkatapos ng timeout</string>
+    <string name="relock_after_timeout_description">Muling i-lock pagkatapos ng %1$d s na walang aktibidad</string>
+    <string name="relock_on_screen_off">I-relock kapag naka-off ang screen</string>
+    <string name="relock_on_screen_off_description">Panatilihing na-unlock kapag naglilipat ng app, i-lock kapag naka-off ang screen</string>
+    <string name="relock_only_killed">I-relock lang kapag pinatay</string>
+    <string name="relock_only_killed_description">Panatilihing na-unlock hanggang sa pilit na isara ang Sandbox</string>
+
+    <string name="private_section_behavior">Gawi ng Pribadong Seksyon</string>
+    <string name="private_section_behavior_description">Kontrolin kung kailan magla-lock ang seksyon ng mga pribadong app sa app na ito</string>
+    <string name="collapse_on_leave">I-collapse kapag umalis</string>
+    <string name="collapse_on_leave_description">I-collapse at i-lock kapag umalis sa Sandbox app</string>
+    <string name="collapse_after_timeout">I-collapse pagkatapos ng timeout</string>
+    <string name="collapse_after_timeout_description">Na-collapse pagkatapos ng %1$d s ng pag-alis sa app</string>
+    <string name="lock_timeout">Lock Timeout</string>
+    <string name="seconds_format">%1$d segundo</string>
+    <string name="minutes_format_singular">%1$d minuto</string>
+    <string name="minutes_format_plural">%1$d minuto</string>
+
+    <!-- Sandbox App -->
+    <string name="lock_app">I-lock ang App</string>
+    <string name="lock_app_description">Kailangan ng authentication para mabuksan ang app na ito</string>
+    <string name="hide_app">Itago ang App</string>
+    <string name="hide_app_description">Itago mula sa launcher at mga setting</string>
+    <string name="sandbox">Sandbox</string>
+    <string name="sandbox_description">Itago mula sa ibang app (mga banking app atbp.)</string>
+    <string name="hide_dev_options">Itago ang Mga Opsyon sa Developer</string>
+    <string name="hide_dev_options_description">Makikita ng app na ito ang mga opsyon sa developer bilang naka-disable</string>
+    <string name="no_apps_found">Walang nahanap na app</string>
+    <string name="private_apps">Mga Pribadong App</string>
+    <string name="sandboxed_apps">Mga Sandboxed na App</string>
+    <string name="dev_opts_hidden">Nakatago ang DevOpts</string>
+    <string name="all_apps">Lahat ng App</string>
+    <string name="setup_private_apps">Mag-set up ng Pribadong App</string>
+    <string name="setup_private_apps_description">Gumawa ng PIN, password, o pattern para i-lock at itago ang mga app</string>
+    <string name="collapse">I-collapse</string>
+    <string name="expand">I-expand</string>
+    <string name="lock">I-lock</string>
+    <string name="dev_opt">Dev.</string>
+    <string name="notifications_locked">Naka-lock ang mga Notification</string>
+    <string name="unlock_private_area_desc">I-unlock ang pribadong lugar para makita ang mga notification</string>
+    <string name="no_private_notifications">Walang pribadong notification</string>
+    <string name="notifications_empty_desc">Lilitaw dito ang mga notification mula sa mga nakatagong app</string>
+
+    <!-- Authenticate -->
+    <string name="unlock_app_title">I-unlock ang %1$s</string>
+    <string name="unlock_private_apps">I-unlock ang mga Pribadong App</string>
+    <string name="auth_prompt_format">Ilagay ang iyong mga kredensyal sa Sandbox para i-unlock ang %1$s</string>
+    <string name="enter_current_pin_to_change">Ilagay ang iyong kasalukuyang PIN para baguhin ang seguridad</string>
+    <string name="enter_current_password_to_change">Ilagay ang iyong kasalukuyang password para baguhin ang seguridad</string>
+    <string name="draw_current_pattern_to_change">Gumuhit ng iyong kasalukuyang pattern para baguhin ang seguridad</string>
+
+    <!-- Security Questions -->
+    <string name="question_pet_name">Ano ang pangalan ng iyong alagang hayop?</string>
+    <string name="question_birth_city">Sa anong lungsod ka ipinanganak?</string>
+    <string name="question_fav_movie">Ano ang paborito mong pelikula?</string>
+    <string name="question_mother_maiden">Ano ang maiden name ng iyong ina?</string>
+    <string name="question_first_car">Ano ang iyong unang kotse?</string>
+    <string name="count_format">(%1$d)</string>
+    <string name="badge_count_format">%1$d</string>
+</resources>

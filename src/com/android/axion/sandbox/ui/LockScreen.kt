@@ -21,12 +21,15 @@ import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalHapticFeedback
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import kotlinx.coroutines.delay
+import com.android.axion.sandbox.R
 import com.android.axion.sandbox.security.SandboxSecurityManager
 
 private object LockScreenShapes {
@@ -52,6 +55,7 @@ fun LockScreen(
     var isError by remember { mutableStateOf(false) }
     var errorMessage by remember { mutableStateOf("") }
     val haptic = LocalHapticFeedback.current
+    val context = LocalContext.current
     
     LaunchedEffect(confirmPin) {
         enteredPin = ""
@@ -85,7 +89,7 @@ fun LockScreen(
                 onUnlock()
             } else {
                 haptic.performHapticFeedback(HapticFeedbackType.LongPress)
-                errorMessage = if (isSetup && confirmPin != null) "PINs mismatched. Try again or go back." else "Incorrect PIN"
+                errorMessage = if (isSetup && confirmPin != null) context.getString(R.string.pins_mismatched) else context.getString(R.string.incorrect_pin)
                 isError = true
             }
         }
@@ -113,8 +117,8 @@ fun LockScreen(
         ) {
             Text(
                 text = if (isSetup) {
-                    if (confirmPin == null) "Create PIN" else "Confirm PIN"
-                } else "Enter PIN",
+                    if (confirmPin == null) stringResource(R.string.create_pin) else stringResource(R.string.confirm_pin)
+                } else stringResource(R.string.enter_pin),
                 style = MaterialTheme.typography.headlineMedium,
                 fontWeight = FontWeight.Bold,
                 color = MaterialTheme.colorScheme.onSurface,
@@ -125,8 +129,8 @@ fun LockScreen(
             
             Text(
                 text = promptText ?: if (isSetup) {
-                    if (confirmPin == null) "Choose a 4-digit PIN" else "Re-enter your PIN"
-                } else "Enter your PIN to unlock private apps",
+                    if (confirmPin == null) stringResource(R.string.choose_pin_prompt) else stringResource(R.string.reenter_pin_prompt)
+                } else stringResource(R.string.enter_pin_to_unlock),
                 style = MaterialTheme.typography.bodyMedium,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 textAlign = TextAlign.Center
@@ -201,7 +205,7 @@ fun LockScreen(
                                 Icon(
                                     imageVector = if (biometricType == SandboxSecurityManager.BiometricType.FACE) 
                                         Icons.Filled.Face else Icons.Filled.Fingerprint,
-                                    contentDescription = "Biometric Unlock",
+                                    contentDescription = stringResource(R.string.biometric_unlock),
                                     tint = MaterialTheme.colorScheme.onPrimaryContainer,
                                     modifier = Modifier.size(28.dp)
                                 )
@@ -237,7 +241,7 @@ fun LockScreen(
                         ) {
                             Icon(
                                 imageVector = Icons.AutoMirrored.Filled.Backspace,
-                                contentDescription = "Backspace",
+                                contentDescription = stringResource(R.string.backspace),
                                 tint = MaterialTheme.colorScheme.onSurfaceVariant,
                                 modifier = Modifier.size(24.dp)
                             )
@@ -250,7 +254,7 @@ fun LockScreen(
                 Spacer(modifier = Modifier.height(24.dp))
                 TextButton(onClick = onForgotPassword) {
                     Text(
-                        text = "Forgot Password?",
+                        text = stringResource(R.string.forgot_password_q),
                         style = MaterialTheme.typography.bodyMedium,
                         color = MaterialTheme.colorScheme.primary
                     )

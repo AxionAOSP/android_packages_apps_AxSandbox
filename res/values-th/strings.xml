@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sandbox</string>
+
+    <!-- Common -->
+    <string name="back">กลับ</string>
+    <string name="ok">ตกลง</string>
+    <string name="cancel">ยกเลิก</string>
+    <string name="settings">การตั้งค่า</string>
+    <string name="launch">เปิด</string>
+    <string name="selected">เลือกแล้ว</string>
+    <string name="continue_text">ดำเนินการต่อ</string>
+    <string name="skip_for_now">ข้ามไปก่อน</string>
+    <string name="unlock">ปลดล็อก</string>
+    <string name="hide">ซ่อน</string>
+    <string name="show">แสดง</string>
+    <string name="dismiss">ปิด</string>
+    <string name="open">เปิด</string>
+    <string name="reset">รีเซ็ต</string>
+    <string name="search_apps">ค้นหาแอป...</string>
+    <string name="version">เวอร์ชัน</string>
+    <string name="about">เกี่ยวกับ</string>
+
+    <!-- Navigation Labels -->
+    <string name="apps">แอป</string>
+    <string name="notifications">การแจ้งเตือน</string>
+
+    <!-- Security Setup -->
+    <string name="secure_your_private_apps">รักษาความปลอดภัยแอปส่วนตัวของคุณ</string>
+    <string name="choose_protection_method">เลือกวิธีที่คุณต้องการป้องกันแอปที่ซ่อนไว้</string>
+    <string name="pin">PIN</string>
+    <string name="password">รหัสผ่าน</string>
+    <string name="pattern">รูปแบบ</string>
+    <string name="pin_description">รหัส 4-6 หลัก</string>
+    <string name="password_description">รหัสผ่านแบบตัวอักษรและตัวเลข</string>
+    <string name="pattern_description">วาดรูปแบบเพื่อปลดล็อก</string>
+
+    <!-- Security Screens -->
+    <string name="create_pin">สร้าง PIN</string>
+    <string name="confirm_pin">ยืนยัน PIN</string>
+    <string name="enter_pin">ใส่ PIN</string>
+    <string name="choose_pin_prompt">เลือก PIN 4 หลัก</string>
+    <string name="reenter_pin_prompt">ใส่ PIN ของคุณอีกครั้ง</string>
+    <string name="enter_pin_to_unlock">ใส่ PIN เพื่อปลดล็อกแอปส่วนตัว</string>
+    <string name="pins_mismatched">PIN ไม่ตรงกัน ลองอีกครั้งหรือย้อนกลับ</string>
+    <string name="incorrect_pin">PIN ไม่ถูกต้อง</string>
+
+    <string name="create_pattern">สร้างรูปแบบ</string>
+    <string name="confirm_pattern">ยืนยันรูปแบบ</string>
+    <string name="draw_pattern">วาดรูปแบบ</string>
+    <string name="patterns_mismatched">รูปแบบไม่ตรงกัน</string>
+    <string name="wrong_pattern">รูปแบบไม่ถูกต้อง</string>
+    <string name="connect_dots_prompt">เชื่อมต่ออย่างน้อย 4 จุด</string>
+    <string name="draw_pattern_again_prompt">วาดรูปแบบของคุณอีกครั้ง</string>
+    <string name="draw_pattern_to_unlock">วาดรูปแบบเพื่อปลดล็อกแอปส่วนตัว</string>
+
+    <string name="create_password">สร้างรหัสผ่าน</string>
+    <string name="confirm_password">ยืนยันรหัสผ่าน</string>
+    <string name="set_password">ตั้งรหัสผ่าน</string>
+    <string name="enter_password">ใส่รหัสผ่าน</string>
+    <string name="choose_password_prompt">เลือกรหัสผ่านที่ปลอดภัย</string>
+    <string name="reenter_password_prompt">ใส่รหัสผ่านของคุณอีกครั้ง</string>
+    <string name="enter_password_to_unlock">ใส่รหัสผ่านเพื่อปลดล็อกแอปส่วนตัว</string>
+    <string name="passwords_mismatched">รหัสผ่านไม่ตรงกัน ลองอีกครั้งหรือย้อนกลับ</string>
+    <string name="incorrect_password">รหัสผ่านไม่ถูกต้อง</string>
+    <string name="enter_password_placeholder">ใส่รหัสผ่าน</string>
+
+    <string name="forgot_password_q">ลืมรหัสผ่าน?</string>
+    <string name="biometric_unlock">การปลดล็อกด้วยไบโอเมตริกซ์</string>
+    <string name="backspace">ลบ</string>
+
+    <!-- Recovery -->
+    <string name="recovery_option">ตัวเลือกการกู้คืน</string>
+    <string name="recovery_setup_description">ตั้งคำถามเพื่อความปลอดภัยในกรณีที่คุณลืมรหัสผ่าน</string>
+    <string name="security_question">คำถามเพื่อความปลอดภัย</string>
+    <string name="select_a_question">เลือกคำถาม</string>
+    <string name="your_answer">คำตอบของคุณ</string>
+    <string name="verify_answer">ตรวจสอบคำตอบ</string>
+    <string name="forgot_password_title">ลืมรหัสผ่าน</string>
+    <string name="reset_password_description">ตอบคำถามเพื่อความปลอดภัยเพื่อรีเซ็ตรหัสผ่านของคุณ</string>
+    <string name="incorrect_answer">คำตอบไม่ถูกต้อง โปรดลองอีกครั้ง</string>
+    <string name="reset_password_dialog_title">รีเซ็ตรหัสผ่าน?</string>
+    <string name="reset_password_dialog_message">สิ่งนี้จะล้างรหัสผ่านปัจจุบันของคุณและคุณจะต้องตั้งรหัสผ่านใหม่ ข้อมูลแอปส่วนตัวทั้งหมดจะยังคงอยู่</string>
+
+    <!-- Settings -->
+    <string name="private_apps_security">ความปลอดภัยของแอปส่วนตัว</string>
+    <string name="current_lock_type">ประเภทการล็อกปัจจุบัน</string>
+    <string name="not_set">ไม่ได้ตั้งค่า</string>
+    <string name="use_pin">ใช้ PIN</string>
+    <string name="use_password">ใช้รหัสผ่าน</string>
+    <string name="use_pattern">ใช้รูปแบบ</string>
+    <string name="biometrics">ไบโอเมตริกซ์</string>
+    <string name="unlock_with_biometrics">ปลดล็อกด้วยไบโอเมตริกซ์</string>
+    <string name="biometrics_description">ใช้ลายนิ้วมือหรือการสแกนใบหน้า</string>
+    <string name="recovery_options">ตัวเลือกการกู้คืน</string>
+    <string name="forgot_password_item">ลืมรหัสผ่าน</string>
+    <string name="forgot_password_subtitle">รีเซ็ตรหัสผ่านของคุณโดยใช้คำถามเพื่อความปลอดภัย</string>
+    <string name="setup_security_question">ตั้งคำถามเพื่อความปลอดภัย</string>
+    <string name="recovery_required_subtitle">จำเป็นสำหรับการกู้คืนรหัสผ่าน</string>
+    
+    <string name="locked_app_behavior">พฤติกรรมแอปที่ล็อก</string>
+    <string name="locked_app_behavior_description">ควบคุมว่าแอปที่ปลดล็อกแล้วจะล็อกอีกครั้งเมื่อใด</string>
+    <string name="relock_on_leave">ล็อกเมื่อออก</string>
+    <string name="relock_on_leave_description">ล็อกแอปที่ปลดล็อกแล้วทันทีเมื่อออกจากแอป</string>
+    <string name="relock_after_timeout">ล็อกเมื่อหมดเวลา</string>
+    <string name="relock_after_timeout_description">ล็อกอีกครั้งหลังจากไม่มีการใช้งาน %1$d วินาที</string>
+    <string name="relock_on_screen_off">ล็อกเมื่อหน้าจอปิด</string>
+    <string name="relock_on_screen_off_description">คงสถานะปลดล็อกเมื่อสลับแอป และล็อกเมื่อหน้าจอปิด</string>
+    <string name="relock_only_killed">ล็อกเมื่อถูกปิดเท่านั้น</string>
+    <string name="relock_only_killed_description">คงสถานะปลดล็อกจนกว่า Sandbox จะถูกบังคับปิด</string>
+
+    <string name="private_section_behavior">พฤติกรรมส่วนส่วนตัว</string>
+    <string name="private_section_behavior_description">ควบคุมว่าส่วนแอปส่วนตัวในแอปนี้จะล็อกเมื่อใด</string>
+    <string name="collapse_on_leave">ยุบเมื่อออก</string>
+    <string name="collapse_on_leave_description">ยุบและล็อกเมื่อออกจากแอป Sandbox</string>
+    <string name="collapse_after_timeout">ยุบเมื่อหมดเวลา</string>
+    <string name="collapse_after_timeout_description">ยุบหลังจากออกจากแอป %1$d วินาที</string>
+    <string name="lock_timeout">หมดเวลาการล็อก</string>
+    <string name="seconds_format">%1$d วินาที</string>
+    <string name="minutes_format_singular">%1$d นาที</string>
+    <string name="minutes_format_plural">%1$d นาที</string>
+
+    <!-- Sandbox App -->
+    <string name="lock_app">ล็อกแอป</string>
+    <string name="lock_app_description">ต้องมีการยืนยันตัวตนเพื่อเปิดแอปนี้</string>
+    <string name="hide_app">ซ่อนแอป</string>
+    <string name="hide_app_description">ซ่อนจากลอนเชอร์และการตั้งค่า</string>
+    <string name="sandbox">Sandbox</string>
+    <string name="sandbox_description">ซ่อนจากแอปอื่น (แอปธนาคาร ฯลฯ)</string>
+    <string name="hide_dev_options">ซ่อนตัวเลือกนักพัฒนา</string>
+    <string name="hide_dev_options_description">แอปนี้จะเห็นตัวเลือกนักพัฒนาถูกปิดใช้งาน</string>
+    <string name="no_apps_found">ไม่พบแอป</string>
+    <string name="private_apps">แอปส่วนตัว</string>
+    <string name="sandboxed_apps">แอปใน Sandbox</string>
+    <string name="dev_opts_hidden">ซ่อน DevOpts</string>
+    <string name="all_apps">แอปทั้งหมด</string>
+    <string name="setup_private_apps">ตั้งค่าแอปส่วนตัว</string>
+    <string name="setup_private_apps_description">สร้าง PIN, รหัสผ่าน หรือรูปแบบเพื่อล็อกและซ่อนแอป</string>
+    <string name="collapse">ยุบ</string>
+    <string name="expand">ขยาย</string>
+    <string name="lock">ล็อก</string>
+    <string name="dev_opt">ผู้พัฒนา</string>
+    <string name="notifications_locked">การแจ้งเตือนถูกล็อก</string>
+    <string name="unlock_private_area_desc">ปลดล็อกพื้นที่ส่วนตัวเพื่อดูการแจ้งเตือน</string>
+    <string name="no_private_notifications">ไม่มีการแจ้งเตือนส่วนตัว</string>
+    <string name="notifications_empty_desc">การแจ้งเตือนจากแอปที่ซ่อนไว้จะปรากฏที่นี่</string>
+
+    <!-- Authenticate -->
+    <string name="unlock_app_title">ปลดล็อก %1$s</string>
+    <string name="unlock_private_apps">ปลดล็อกแอปส่วนตัว</string>
+    <string name="auth_prompt_format">ใส่ข้อมูลประจำตัว Sandbox ของคุณเพื่อปลดล็อก %1$s</string>
+    <string name="enter_current_pin_to_change">ใส่ PIN ปัจจุบันของคุณเพื่อเปลี่ยนความปลอดภัย</string>
+    <string name="enter_current_password_to_change">ใส่รหัสผ่านปัจจุบันของคุณเพื่อเปลี่ยนความปลอดภัย</string>
+    <string name="draw_current_pattern_to_change">วาดรูปแบบปัจจุบันของคุณเพื่อเปลี่ยนความปลอดภัย</string>
+
+    <!-- Security Questions -->
+    <string name="question_pet_name">สัตว์เลี้ยงของคุณชื่ออะไร?</string>
+    <string name="question_birth_city">คุณเกิดที่เมืองไหน?</string>
+    <string name="question_fav_movie">หนังที่คุณชอบที่สุดคือเรื่องอะไร?</string>
+    <string name="question_mother_maiden">นามสกุลเดิมของแม่คุณคืออะไร?</string>
+    <string name="question_first_car">รถคันแรกของคุณคืออะไร?</string>
+    <string name="count_format">(%1$d)</string>
+    <string name="badge_count_format">%1$d</string>
+</resources>

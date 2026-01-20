@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sandbox</string>
+
+    <!-- Common -->
+    <string name="back">Quay lại</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Hủy</string>
+    <string name="settings">Cài đặt</string>
+    <string name="launch">Khởi chạy</string>
+    <string name="selected">Đã chọn</string>
+    <string name="continue_text">Tiếp tục</string>
+    <string name="skip_for_now">Bỏ qua lúc này</string>
+    <string name="unlock">Mở khóa</string>
+    <string name="hide">Ẩn</string>
+    <string name="show">Hiện</string>
+    <string name="dismiss">Bỏ qua</string>
+    <string name="open">Mở</string>
+    <string name="reset">Đặt lại</string>
+    <string name="search_apps">Tìm kiếm ứng dụng...</string>
+    <string name="version">Phiên bản</string>
+    <string name="about">Giới thiệu</string>
+
+    <!-- Navigation Labels -->
+    <string name="apps">Ứng dụng</string>
+    <string name="notifications">Thông báo</string>
+
+    <!-- Security Setup -->
+    <string name="secure_your_private_apps">Bảo mật ứng dụng riêng tư</string>
+    <string name="choose_protection_method">Chọn cách bạn muốn bảo vệ các ứng dụng bị ẩn</string>
+    <string name="pin">Mã PIN</string>
+    <string name="password">Mật khẩu</string>
+    <string name="pattern">Mẫu hình</string>
+    <string name="pin_description">Mã 4-6 chữ số</string>
+    <string name="password_description">Mật khẩu chữ và số</string>
+    <string name="pattern_description">Vẽ mẫu hình để mở khóa</string>
+
+    <!-- Security Screens -->
+    <string name="create_pin">Tạo mã PIN</string>
+    <string name="confirm_pin">Xác nhận mã PIN</string>
+    <string name="enter_pin">Nhập mã PIN</string>
+    <string name="choose_pin_prompt">Chọn mã PIN 4 chữ số</string>
+    <string name="reenter_pin_prompt">Nhập lại mã PIN</string>
+    <string name="enter_pin_to_unlock">Nhập mã PIN để mở khóa ứng dụng riêng tư</string>
+    <string name="pins_mismatched">Mã PIN không khớp. Thử lại hoặc quay lại.</string>
+    <string name="incorrect_pin">Mã PIN không chính xác</string>
+
+    <string name="create_pattern">Tạo mẫu hình</string>
+    <string name="confirm_pattern">Xác nhận mẫu hình</string>
+    <string name="draw_pattern">Vẽ mẫu hình</string>
+    <string name="patterns_mismatched">Mẫu hình không khớp</string>
+    <string name="wrong_pattern">Mẫu hình không chính xác</string>
+    <string name="connect_dots_prompt">Nối ít nhất 4 điểm</string>
+    <string name="draw_pattern_again_prompt">Vẽ lại mẫu hình</string>
+    <string name="draw_pattern_to_unlock">Vẽ mẫu hình để mở khóa ứng dụng riêng tư</string>
+
+    <string name="create_password">Tạo mật khẩu</string>
+    <string name="confirm_password">Xác nhận mật khẩu</string>
+    <string name="set_password">Đặt mật khẩu</string>
+    <string name="enter_password">Nhập mật khẩu</string>
+    <string name="choose_password_prompt">Chọn một mật khẩu an toàn</string>
+    <string name="reenter_password_prompt">Nhập lại mật khẩu</string>
+    <string name="enter_password_to_unlock">Nhập mật khẩu để mở khóa ứng dụng riêng tư</string>
+    <string name="passwords_mismatched">Mật khẩu không khớp. Thử lại hoặc quay lại.</string>
+    <string name="incorrect_password">Mật khẩu không chính xác</string>
+    <string name="enter_password_placeholder">Nhập mật khẩu</string>
+
+    <string name="forgot_password_q">Quên mật khẩu?</string>
+    <string name="biometric_unlock">Mở khóa sinh trắc học</string>
+    <string name="backspace">Xóa</string>
+
+    <!-- Recovery -->
+    <string name="recovery_option">Tùy chọn khôi phục</string>
+    <string name="recovery_setup_description">Thiết lập câu hỏi bảo mật trong trường hợp bạn quên mật khẩu</string>
+    <string name="security_question">Câu hỏi bảo mật</string>
+    <string name="select_a_question">Chọn một câu hỏi</string>
+    <string name="your_answer">Câu trả lời của bạn</string>
+    <string name="verify_answer">Xác minh câu trả lời</string>
+    <string name="forgot_password_title">Quên mật khẩu</string>
+    <string name="reset_password_description">Trả lời câu hỏi bảo mật để đặt lại mật khẩu</string>
+    <string name="incorrect_answer">Câu trả lời không chính xác. Vui lòng thử lại.</string>
+    <string name="reset_password_dialog_title">Đặt lại mật khẩu?</string>
+    <string name="reset_password_dialog_message">Thao tác này sẽ xóa mật khẩu hiện tại và bạn sẽ cần thiết lập mật khẩu mới. Tất cả dữ liệu ứng dụng riêng tư sẽ được giữ nguyên.</string>
+
+    <!-- Settings -->
+    <string name="private_apps_security">Bảo mật ứng dụng riêng tư</string>
+    <string name="current_lock_type">Loại khóa hiện tại</string>
+    <string name="not_set">Chưa thiết lập</string>
+    <string name="use_pin">Dùng mã PIN</string>
+    <string name="use_password">Dùng mật khẩu</string>
+    <string name="use_pattern">Dùng mẫu hình</string>
+    <string name="biometrics">Sinh trắc học</string>
+    <string name="unlock_with_biometrics">Mở khóa bằng sinh trắc học</string>
+    <string name="biometrics_description">Sử dụng vân tay hoặc nhận diện khuôn mặt</string>
+    <string name="recovery_options">Tùy chọn khôi phục</string>
+    <string name="forgot_password_item">Quên mật khẩu</string>
+    <string name="forgot_password_subtitle">Đặt lại mật khẩu bằng câu hỏi bảo mật</string>
+    <string name="setup_security_question">Thiết lập câu hỏi bảo mật</string>
+    <string name="recovery_required_subtitle">Bắt buộc để khôi phục mật khẩu</string>
+    
+    <string name="locked_app_behavior">Hành vi ứng dụng bị khóa</string>
+    <string name="locked_app_behavior_description">Kiểm soát thời điểm các ứng dụng đã mở khóa sẽ bị khóa lại</string>
+    <string name="relock_on_leave">Khóa lại khi thoát</string>
+    <string name="relock_on_leave_description">Khóa lại ứng dụng đã mở khóa ngay khi thoát khỏi ứng dụng</string>
+    <string name="relock_after_timeout">Khóa lại sau thời gian chờ</string>
+    <string name="relock_after_timeout_description">Khóa lại sau %1$d giây không hoạt động</string>
+    <string name="relock_on_screen_off">Khóa lại khi tắt màn hình</string>
+    <string name="relock_on_screen_off_description">Giữ mở khóa khi chuyển đổi ứng dụng, khóa khi tắt màn hình</string>
+    <string name="relock_only_killed">Chỉ khóa lại khi bị đóng</string>
+    <string name="relock_only_killed_description">Giữ mở khóa cho đến khi Sandbox bị buộc đóng</string>
+
+    <string name="private_section_behavior">Hành vi phần riêng tư</string>
+    <string name="private_section_behavior_description">Kiểm soát thời điểm phần ứng dụng riêng tư trong ứng dụng này bị khóa</string>
+    <string name="collapse_on_leave">Thu gọn khi thoát</string>
+    <string name="collapse_on_leave_description">Thu gọn và khóa khi thoát ứng dụng Sandbox</string>
+    <string name="collapse_after_timeout">Thu gọn sau thời gian chờ</string>
+    <string name="collapse_after_timeout_description">Đã thu gọn sau %1$d giây kể từ khi thoát ứng dụng</string>
+    <string name="lock_timeout">Thời gian chờ khóa</string>
+    <string name="seconds_format">%1$d giây</string>
+    <string name="minutes_format_singular">%1$d phút</string>
+    <string name="minutes_format_plural">%1$d phút</string>
+
+    <!-- Sandbox App -->
+    <string name="lock_app">Khóa ứng dụng</string>
+    <string name="lock_app_description">Yêu cầu xác thực để mở ứng dụng này</string>
+    <string name="hide_app">Ẩn ứng dụng</string>
+    <string name="hide_app_description">Ẩn khỏi trình khởi chạy và cài đặt</string>
+    <string name="sandbox">Sandbox</string>
+    <string name="sandbox_description">Ẩn khỏi các ứng dụng khác (ứng dụng ngân hàng, v.v.)</string>
+    <string name="hide_dev_options">Ẩn tùy chọn nhà phát triển</string>
+    <string name="hide_dev_options_description">Ứng dụng này sẽ thấy các tùy chọn nhà phát triển bị vô hiệu hóa</string>
+    <string name="no_apps_found">Không tìm thấy ứng dụng</string>
+    <string name="private_apps">Ứng dụng riêng tư</string>
+    <string name="sandboxed_apps">Ứng dụng đã Sandbox</string>
+    <string name="dev_opts_hidden">Đã ẩn tùy chọn PT</string>
+    <string name="all_apps">Tất cả ứng dụng</string>
+    <string name="setup_private_apps">Thiết lập ứng dụng riêng tư</string>
+    <string name="setup_private_apps_description">Tạo mã PIN, mật khẩu hoặc mẫu hình để khóa và ẩn ứng dụng</string>
+    <string name="collapse">Thu gọn</string>
+    <string name="expand">Mở rộng</string>
+    <string name="lock">Khóa</string>
+    <string name="dev_opt">Phát triển</string>
+    <string name="notifications_locked">Thông báo bị khóa</string>
+    <string name="unlock_private_area_desc">Mở khóa khu vực riêng tư để xem thông báo</string>
+    <string name="no_private_notifications">Không có thông báo riêng tư</string>
+    <string name="notifications_empty_desc">Thông báo từ các ứng dụng bị ẩn sẽ xuất hiện ở đây</string>
+
+    <!-- Authenticate -->
+    <string name="unlock_app_title">Mở khóa %1$s</string>
+    <string name="unlock_private_apps">Mở khóa ứng dụng riêng tư</string>
+    <string name="auth_prompt_format">Nhập thông tin xác thực Sandbox của bạn để mở khóa %1$s</string>
+    <string name="enter_current_pin_to_change">Nhập mã PIN hiện tại để thay đổi bảo mật</string>
+    <string name="enter_current_password_to_change">Nhập mật khẩu hiện tại để thay đổi bảo mật</string>
+    <string name="draw_current_pattern_to_change">Vẽ mẫu hình hiện tại để thay đổi bảo mật</string>
+
+    <!-- Security Questions -->
+    <string name="question_pet_name">Tên thú cưng của bạn là gì?</string>
+    <string name="question_birth_city">Bạn sinh ra ở thành phố nào?</string>
+    <string name="question_fav_movie">Bộ phim yêu thích của bạn là gì?</string>
+    <string name="question_mother_maiden">Tên thời thiếu nữ của mẹ bạn là gì?</string>
+    <string name="question_first_car">Chiếc xe hơi đầu tiên của bạn là gì?</string>
+    <string name="count_format">(%1$d)</string>
+    <string name="badge_count_format">%1$d</string>
+</resources>

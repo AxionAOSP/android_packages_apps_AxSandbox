@@ -29,6 +29,7 @@ import com.android.axion.sandbox.ui.SecurityQuestionSetupScreen
 import android.hardware.biometrics.BiometricPrompt
 import android.hardware.biometrics.BiometricManager
 import android.os.CancellationSignal
+import androidx.compose.ui.res.stringResource
 import com.android.axion.sandbox.ui.theme.SandboxTheme
 
 class MainActivity : ComponentActivity() {
@@ -60,8 +61,8 @@ class MainActivity : ComponentActivity() {
     
     private fun showBiometricPrompt(onSuccess: () -> Unit) {
         val prompt = BiometricPrompt.Builder(this)
-            .setTitle("Unlock Private Apps")
-            .setNegativeButton("Cancel", mainExecutor) { _, _ -> }
+            .setTitle(getString(R.string.unlock_private_apps))
+            .setNegativeButton(getString(R.string.cancel), mainExecutor) { _, _ -> }
             .setAllowedAuthenticators(
                 BiometricManager.Authenticators.BIOMETRIC_STRONG or 
                 BiometricManager.Authenticators.BIOMETRIC_WEAK
@@ -467,7 +468,7 @@ fun SandboxNavigation(
                 SecurityType.PIN -> {
                     LockScreen(
                         isSetup = false,
-                        promptText = "Enter your current PIN to change security",
+                        promptText = stringResource(R.string.enter_current_pin_to_change),
                         onUnlock = onVerified,
                         onPinEntered = { pin -> securityManager.verifyCredential(pin) },
                         biometricType = if (currentBiometricEnabled && securityManager.isBiometricAvailable()) 
@@ -482,7 +483,7 @@ fun SandboxNavigation(
                 SecurityType.PASSWORD -> {
                     PasswordScreen(
                         isSetup = false,
-                        promptText = "Enter your current password to change security",
+                        promptText = stringResource(R.string.enter_current_password_to_change),
                         onUnlock = onVerified,
                         onPasswordEntered = { password -> securityManager.verifyCredential(password) },
                         biometricType = if (currentBiometricEnabled && securityManager.isBiometricAvailable()) 
@@ -497,7 +498,7 @@ fun SandboxNavigation(
                 SecurityType.PATTERN -> {
                     PatternScreen(
                         isSetup = false,
-                        promptText = "Draw your current pattern to change security",
+                        promptText = stringResource(R.string.draw_current_pattern_to_change),
                         onUnlock = onVerified,
                         onPatternEntered = { pattern -> securityManager.verifyPattern(pattern) },
                         biometricType = if (currentBiometricEnabled && securityManager.isBiometricAvailable()) 

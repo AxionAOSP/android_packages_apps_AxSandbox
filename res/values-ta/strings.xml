@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sandbox</string>
+
+    <!-- Common -->
+    <string name="back">பின்செல்</string>
+    <string name="ok">சரி</string>
+    <string name="cancel">ரத்துசெய்</string>
+    <string name="settings">அமைப்புகள்</string>
+    <string name="launch">தொடங்கு</string>
+    <string name="selected">தேர்ந்தெடுக்கப்பட்டது</string>
+    <string name="continue_text">தொடரவும்</string>
+    <string name="skip_for_now">இப்போதைக்குத் தவிர்</string>
+    <string name="unlock">அன்லாக்</string>
+    <string name="hide">மறை</string>
+    <string name="show">காண்பி</string>
+    <string name="dismiss">விலக்கு</string>
+    <string name="open">திற</string>
+    <string name="reset">மீட்டமை</string>
+    <string name="search_apps">செயலிகளைத் தேடு...</string>
+    <string name="version">பதிப்பு</string>
+    <string name="about">பற்றி</string>
+
+    <!-- Navigation Labels -->
+    <string name="apps">செயலிகள்</string>
+    <string name="notifications">அறிவிப்புகள்</string>
+
+    <!-- Security Setup -->
+    <string name="secure_your_private_apps">உங்கள் தனிப்பட்ட செயலிகளைப் பாதுகாக்கவும்</string>
+    <string name="choose_protection_method">உங்கள் மறைக்கப்பட்ட செயலிகளை எவ்வாறு பாதுகாக்க விரும்புகிறீர்கள் என்பதைத் தேர்வுசெய்க</string>
+    <string name="pin">பின் (PIN)</string>
+    <string name="password">கடவுச்சொல்</string>
+    <string name="pattern">பேட்டர்ன்</string>
+    <string name="pin_description">4-6 இலக்கக் குறியீடு</string>
+    <string name="password_description">எழுத்து மற்றும் எண் கலந்த கடவுச்சொல்</string>
+    <string name="pattern_description">அன்லாக் செய்ய பேட்டர்ன் வரையவும்</string>
+
+    <!-- Security Screens -->
+    <string name="create_pin">பின்னை உருவாக்கு</string>
+    <string name="confirm_pin">பின்னை உறுதிப்படுத்து</string>
+    <string name="enter_pin">பின்னை உள்ளிடவும்</string>
+    <string name="choose_pin_prompt">4 இலக்க பின்னைத் தேர்வுசெய்க</string>
+    <string name="reenter_pin_prompt">உங்கள் பின்னை மீண்டும் உள்ளிடவும்</string>
+    <string name="enter_pin_to_unlock">தனிப்பட்ட செயலிகளை அன்லாக் செய்ய பின்னை உள்ளிடவும்</string>
+    <string name="pins_mismatched">பின் பொருந்தவில்லை. மீண்டும் முயற்சிக்கவும் அல்லது பின்செல்லவும்.</string>
+    <string name="incorrect_pin">தவறான பின்</string>
+
+    <string name="create_pattern">பேட்டர்னை உருவாக்கு</string>
+    <string name="confirm_pattern">பேட்டர்னை உறுதிப்படுத்து</string>
+    <string name="draw_pattern">பேட்டர்ன் வரையவும்</string>
+    <string name="patterns_mismatched">பேட்டர்ன் பொருந்தவில்லை</string>
+    <string name="wrong_pattern">தவறான பேட்டர்ன்</string>
+    <string name="connect_dots_prompt">குறைந்தது 4 புள்ளிகளை இணைக்கவும்</string>
+    <string name="draw_pattern_again_prompt">உங்கள் பேட்டர்னை மீண்டும் வரையவும்</string>
+    <string name="draw_pattern_to_unlock">தனிப்பட்ட செயலிகளை அன்லாக் செய்ய பேட்டர்ன் வரையவும்</string>
+
+    <string name="create_password">கடவுச்சொல்லை உருவாக்கு</string>
+    <string name="confirm_password">கடவுச்சொல்லை உறுதிப்படுத்து</string>
+    <string name="set_password">கடவுச்சொல்லை அமை</string>
+    <string name="enter_password">கடவுச்சொல்லை உள்ளிடவும்</string>
+    <string name="choose_password_prompt">பாதுகாப்பான கடவுச்சொல்லைத் தேர்வுசெய்க</string>
+    <string name="reenter_password_prompt">உங்கள் கடவுச்சொல்லை மீண்டும் உள்ளிடவும்</string>
+    <string name="enter_password_to_unlock">தனிப்பட்ட செயலிகளை அன்லாக் செய்ய கடவுச்சொல்லை உள்ளிடவும்</string>
+    <string name="passwords_mismatched">கடவுச்சொல் பொருந்தவில்லை. மீண்டும் முயற்சிக்கவும் அல்லது பின்செல்லவும்.</string>
+    <string name="incorrect_password">தவறான கடவுச்சொல்</string>
+    <string name="enter_password_placeholder">கடவுச்சொல்லை உள்ளிடவும்</string>
+
+    <string name="forgot_password_q">கடவுச்சொல் மறந்துவிட்டதா?</string>
+    <string name="biometric_unlock">உயிரியளவீடு அன்லாக்</string>
+    <string name="backspace">பேக்ஸ்பேஸ்</string>
+
+    <!-- Recovery -->
+    <string name="recovery_option">மீட்பு விருப்பம்</string>
+    <string name="recovery_setup_description">உங்கள் கடவுச்சொல்லை மறந்தால் உதவுவதற்கு ஒரு பாதுகாப்பு கேள்வியை அமைக்கவும்</string>
+    <string name="security_question">பாதுகாப்பு கேள்வி</string>
+    <string name="select_a_question">ஒரு கேள்வியைத் தேர்வுசெய்க</string>
+    <string name="your_answer">உங்கள் பதில்</string>
+    <string name="verify_answer">பதிலைச் சரிபார்க்கவும்</string>
+    <string name="forgot_password_title">கடவுச்சொல் மறந்துவிட்டது</string>
+    <string name="reset_password_description">கடவுச்சொல்லை மீட்டமைக்க உங்கள் பாதுகாப்பு கேள்விக்கு பதிலளிக்கவும்</string>
+    <string name="incorrect_answer">தவறான பதில். மீண்டும் முயற்சிக்கவும்.</string>
+    <string name="reset_password_dialog_title">கடவுச்சொல்லை மீட்டமைக்கவா?</string>
+    <string name="reset_password_dialog_message">இது உங்கள் தற்போதைய கடவுச்சொல்லை அழிக்கும், நீங்கள் புதிய ஒன்றை அமைக்க வேண்டும். அனைத்து தனிப்பட்ட செயலி தரவுகளும் அப்படியே இருக்கும்.</string>
+
+    <!-- Settings -->
+    <string name="private_apps_security">தனிப்பட்ட செயலிகள் பாதுகாப்பு</string>
+    <string name="current_lock_type">தற்போதைய பூட்டு வகை</string>
+    <string name="not_set">அமைக்கப்படவில்லை</string>
+    <string name="use_pin">பின்னைப் பயன்படுத்தவும்</string>
+    <string name="use_password">கடவுச்சொல்லைப் பயன்படுத்தவும்</string>
+    <string name="use_pattern">பேட்டர்னைப் பயன்படுத்தவும்</string>
+    <string name="biometrics">உயிரியளவீடுகள்</string>
+    <string name="unlock_with_biometrics">உயிரியளவீடு மூலம் அன்லாக் செய்க</string>
+    <string name="biometrics_description">கைரேகை அல்லது முக அங்கீகாரத்தைப் பயன்படுத்தவும்</string>
+    <string name="recovery_options">மீட்பு விருப்பங்கள்</string>
+    <string name="forgot_password_item">கடவுச்சொல் மறந்துவிட்டது</string>
+    <string name="forgot_password_subtitle">பாதுகாப்பு கேள்வியைப் பயன்படுத்தி உங்கள் கடவுச்சொல்லை மீட்டமைக்கவும்</string>
+    <string name="setup_security_question">பாதுகாப்பு கேள்வியை அமைக்கவும்</string>
+    <string name="recovery_required_subtitle">கடவுச்சொல் மீட்புக்குத் தேவையானது</string>
+    
+    <string name="locked_app_behavior">பூட்டப்பட்ட செயலி நடத்தை</string>
+    <string name="locked_app_behavior_description">அன்லாக் செய்யப்பட்ட செயலிகள் எப்போது மீண்டும் பூட்டப்பட வேண்டும் என்பதைக் கட்டுப்படுத்தவும்</string>
+    <string name="relock_on_leave">வெளியேறும்போது மீண்டும் பூட்டு</string>
+    <string name="relock_on_leave_description">அன்லாக் செய்யப்பட்ட செயலியை விட்டு வெளியேறியவுடன் உடனடியாக மீண்டும் பூட்டவும்</string>
+    <string name="relock_after_timeout">நேரம் முடிந்ததும் மீண்டும் பூட்டு</string>
+    <string name="relock_after_timeout_description">%1$d விநாடிகள் செயலிழந்த பிறகு மீண்டும் பூட்டவும்</string>
+    <string name="relock_on_screen_off">திரை அணைக்கப்படும்போது மீண்டும் பூட்டு</string>
+    <string name="relock_on_screen_off_description">செயலிகளை மாற்றும்போது அன்லாக் செய்து வைக்கவும், திரை அணைக்கப்படும்போது பூட்டவும்</string>
+    <string name="relock_only_killed">மூடப்படும்போது மட்டும் மீண்டும் பூட்டு</string>
+    <string name="relock_only_killed_description">Sandbox கட்டாயமாக மூடப்படும் வரை அன்லாக் செய்து வைக்கவும்</string>
+
+    <string name="private_section_behavior">தனிப்பட்ட பிரிவு நடத்தை</string>
+    <string name="private_section_behavior_description">இந்த செயலியில் உள்ள தனிப்பட்ட செயலிகள் பிரிவு எப்போது பூட்டப்பட வேண்டும் என்பதைக் கட்டுப்படுத்தவும்</string>
+    <string name="collapse_on_leave">வெளியேறும்போது சுருக்கு</string>
+    <string name="collapse_on_leave_description">Sandbox செயலியை விட்டு வெளியேறும்போது சுருக்கிப் பூட்டவும்</string>
+    <string name="collapse_after_timeout">நேரம் முடிந்ததும் சுருக்கு</string>
+    <string name="collapse_after_timeout_description">செயலியை விட்டு வெளியேறி %1$d விநாடிகளுக்குப் பிறகு சுருக்கப்பட்டது</string>
+    <string name="lock_timeout">பூட்டு காலாவதி நேரம்</string>
+    <string name="seconds_format">%1$d விநாடிகள்</string>
+    <string name="minutes_format_singular">%1$d நிமிடம்</string>
+    <string name="minutes_format_plural">%1$d நிமிடங்கள்</string>
+
+    <!-- Sandbox App -->
+    <string name="lock_app">செயலியைப் பூட்டு</string>
+    <string name="lock_app_description">இந்தச் செயலியைத் திறக்க அங்கீகாரம் தேவை</string>
+    <string name="hide_app">செயலியை மறை</string>
+    <string name="hide_app_description">லான்ச்சர் மற்றும் அமைப்புகளில் இருந்து மறைக்கவும்</string>
+    <string name="sandbox">Sandbox</string>
+    <string name="sandbox_description">பிற செயலிகளில் (வங்கிச் செயலிகள் போன்றவை) இருந்து மறைக்கவும்</string>
+    <string name="hide_dev_options">டெவலப்பர் விருப்பங்களை மறை</string>
+    <string name="hide_dev_options_description">இந்தச் செயலி டெவலப்பர் விருப்பங்களை முடக்கப்பட்டதாகக் காணும்</string>
+    <string name="no_apps_found">செயலிகள் எதுவும் கிடைக்கவில்லை</string>
+    <string name="private_apps">தனிப்பட்ட செயலிகள்</string>
+    <string name="sandboxed_apps">சேண்ட்பாக்ஸ் செய்யப்பட்ட செயலிகள்</string>
+    <string name="dev_opts_hidden">DevOpts மறைக்கப்பட்டுள்ளது</string>
+    <string name="all_apps">அனைத்து செயலிகள்</string>
+    <string name="setup_private_apps">தனிப்பட்ட செயலிகளை அமைக்கவும்</string>
+    <string name="setup_private_apps_description">செயலிகளைப் பூட்டவும் மறைக்கவும் பின், கடவுச்சொல் அல்லது பேட்டர்னை உருவாக்கவும்</string>
+    <string name="collapse">சுருக்கு</string>
+    <string name="expand">விரிவாக்கு</string>
+    <string name="lock">பூட்டு</string>
+    <string name="dev_opt">டெவ்.</string>
+    <string name="notifications_locked">அறிவிப்புகள் பூட்டப்பட்டுள்ளன</string>
+    <string name="unlock_private_area_desc">அறிவிப்புகளைக் காண தனிப்பட்ட பகுதியை அன்லாக் செய்யவும்</string>
+    <string name="no_private_notifications">தனிப்பட்ட அறிவிப்புகள் எதுவுமில்லை</string>
+    <string name="notifications_empty_desc">மறைக்கப்பட்ட செயலிகளில் இருந்து வரும் அறிவிப்புகள் இங்கே தோன்றும்</string>
+
+    <!-- Authenticate -->
+    <string name="unlock_app_title">%1$s ஐ அன்லாக் செய்க</string>
+    <string name="unlock_private_apps">தனிப்பட்ட செயலிகளை அன்லாக் செய்க</string>
+    <string name="auth_prompt_format">%1$s ஐ அன்லாக் செய்ய உங்கள் Sandbox நற்சான்றிதழ்களை உள்ளிடவும்</string>
+    <string name="enter_current_pin_to_change">பாதுகாப்பை மாற்ற உங்கள் தற்போதைய பின்னை உள்ளிடவும்</string>
+    <string name="enter_current_password_to_change">பாதுகாப்பை மாற்ற உங்கள் தற்போதைய கடவுச்சொல்லை உள்ளிடவும்</string>
+    <string name="draw_current_pattern_to_change">பாதுகாப்பை மாற்ற உங்கள் தற்போதைய பேட்டர்னை வரையவும்</string>
+
+    <!-- Security Questions -->
+    <string name="question_pet_name">உங்கள் செல்லப் பிராணியின் பெயர் என்ன?</string>
+    <string name="question_birth_city">நீங்கள் பிறந்த நகரம் எது?</string>
+    <string name="question_fav_movie">உங்களுக்குப் பிடித்த திரைப்படம் எது?</string>
+    <string name="question_mother_maiden">உங்கள் தாயின் திருமணத்திற்கு முந்தைய பெயர் என்ன?</string>
+    <string name="question_first_car">உங்களின் முதல் கார் எது?</string>
+    <string name="count_format">(%1$d)</string>
+    <string name="badge_count_format">%1$d</string>
+</resources>

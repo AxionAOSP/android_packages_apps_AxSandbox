@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">جعبه ابزار (Sandbox)</string>
+
+    <!-- Common -->
+    <string name="back">بازگشت</string>
+    <string name="ok">تأیید</string>
+    <string name="cancel">لغو</string>
+    <string name="settings">تنظیمات</string>
+    <string name="launch">اجرا</string>
+    <string name="selected">انتخاب شده</string>
+    <string name="continue_text">ادامه</string>
+    <string name="skip_for_now">فعلاً رد کردن</string>
+    <string name="unlock">باز کردن قفل</string>
+    <string name="hide">پنهان کردن</string>
+    <string name="show">نمایش</string>
+    <string name="dismiss">بستن</string>
+    <string name="open">باز کردن</string>
+    <string name="reset">بازنشانی</string>
+    <string name="search_apps">جستجوی برنامه‌ها...</string>
+    <string name="version">نسخه</string>
+    <string name="about">درباره</string>
+
+    <!-- Navigation Labels -->
+    <string name="apps">برنامه‌ها</string>
+    <string name="notifications">اعلان‌ها</string>
+
+    <!-- Security Setup -->
+    <string name="secure_your_private_apps">برنامه‌های خصوصی خود را ایمن کنید</string>
+    <string name="choose_protection_method">روش محافظت از برنامه‌های پنهان خود را انتخاب کنید</string>
+    <string name="pin">پین (PIN)</string>
+    <string name="password">رمز عبور</string>
+    <string name="pattern">الگو</string>
+    <string name="pin_description">کد ۴ تا ۶ رقمی</string>
+    <string name="password_description">رمز عبور ترکیبی از حروف و اعداد</string>
+    <string name="pattern_description">ترسیم الگو برای باز کردن قفل</string>
+
+    <!-- Security Screens -->
+    <string name="create_pin">ایجاد پین</string>
+    <string name="confirm_pin">تأیید پین</string>
+    <string name="enter_pin">وارد کردن پین</string>
+    <string name="choose_pin_prompt">یک پین ۴ رقمی انتخاب کنید</string>
+    <string name="reenter_pin_prompt">پین خود را دوباره وارد کنید</string>
+    <string name="enter_pin_to_unlock">برای باز کردن برنامه‌های خصوصی، پین را وارد کنید</string>
+    <string name="pins_mismatched">پین‌ها مطابقت ندارند. دوباره تلاش کنید یا به عقب برگردید.</string>
+    <string name="incorrect_pin">پین اشتباه است</string>
+
+    <string name="create_pattern">ایجاد الگو</string>
+    <string name="confirm_pattern">تأیید الگو</string>
+    <string name="draw_pattern">ترسیم الگو</string>
+    <string name="patterns_mismatched">الگوها مطابقت ندارند</string>
+    <string name="wrong_pattern">الگوی اشتباه</string>
+    <string name="connect_dots_prompt">حداقل ۴ نقطه را وصل کنید</string>
+    <string name="draw_pattern_again_prompt">الگوی خود را دوباره ترسیم کنید</string>
+    <string name="draw_pattern_to_unlock">برای باز کردن برنامه‌های خصوصی، الگو را ترسیم کنید</string>
+
+    <string name="create_password">ایجاد رمز عبور</string>
+    <string name="confirm_password">تأیید رمز عبور</string>
+    <string name="set_password">تنظیم رمز عبور</string>
+    <string name="enter_password">وارد کردن رمز عبور</string>
+    <string name="choose_password_prompt">یک رمز عبور امن انتخاب کنید</string>
+    <string name="reenter_password_prompt">رمز عبور خود را دوباره وارد کنید</string>
+    <string name="enter_password_to_unlock">برای باز کردن برنامه‌های خصوصی، رمز عبور را وارد کنید</string>
+    <string name="passwords_mismatched">رمزهای عبور مطابقت ندارند. دوباره تلاش کنید یا به عقب برگردید.</string>
+    <string name="incorrect_password">رمز عبور اشتباه است</string>
+    <string name="enter_password_placeholder">رمز عبور را وارد کنید</string>
+
+    <string name="forgot_password_q">رمز عبور را فراموش کرده‌اید؟</string>
+    <string name="biometric_unlock">بازگشایی بیومتریک</string>
+    <string name="backspace">پاک کردن</string>
+
+    <!-- Recovery -->
+    <string name="recovery_option">گزینه بازیابی</string>
+    <string name="recovery_setup_description">یک سوال امنیتی تنظیم کنید تا در صورت فراموشی رمز عبور از آن استفاده کنید</string>
+    <string name="security_question">سوال امنیتی</string>
+    <string name="select_a_question">یک سوال انتخاب کنید</string>
+    <string name="your_answer">پاسخ شما</string>
+    <string name="verify_answer">تأیید پاسخ</string>
+    <string name="forgot_password_title">فراموشی رمز عبور</string>
+    <string name="reset_password_description">به سوال امنیتی خود پاسخ دهید تا رمز عبور بازنشانی شود</string>
+    <string name="incorrect_answer">پاسخ اشتباه است. لطفا دوباره تلاش کنید.</string>
+    <string name="reset_password_dialog_title">بازنشانی رمز عبور؟</string>
+    <string name="reset_password_dialog_message">این کار رمز عبور فعلی شما را پاک می‌کند و باید رمز جدیدی تنظیم کنید. تمام داده‌های برنامه‌های خصوصی دست‌نخورده باقی می‌مانند.</string>
+
+    <!-- Settings -->
+    <string name="private_apps_security">امنیت برنامه‌های خصوصی</string>
+    <string name="current_lock_type">نوع قفل فعلی</string>
+    <string name="not_set">تنظیم نشده</string>
+    <string name="use_pin">استفاده از پین</string>
+    <string name="use_password">استفاده از رمز عبور</string>
+    <string name="use_pattern">استفاده از الگو</string>
+    <string name="biometrics">بیومتریک</string>
+    <string name="unlock_with_biometrics">باز کردن قفل با بیومتریک</string>
+    <string name="biometrics_description">استفاده از اثر انگشت یا تشخیص چهره</string>
+    <string name="recovery_options">گزینه‌های بازیابی</string>
+    <string name="forgot_password_item">رمز عبور را فراموش کرده‌اید</string>
+    <string name="forgot_password_subtitle">رمز عبور خود را با استفاده از سوال امنیتی بازنشانی کنید</string>
+    <string name="setup_security_question">تنظیم سوال امنیتی</string>
+    <string name="recovery_required_subtitle">برای بازیابی رمز عبور الزامی است</string>
+    
+    <string name="locked_app_behavior">رفتار برنامه‌های قفل شده</string>
+    <string name="locked_app_behavior_description">زمان قفل شدن دوباره برنامه‌های باز شده را کنترل کنید</string>
+    <string name="relock_on_leave">قفل شدن هنگام خروج</string>
+    <string name="relock_on_leave_description">بلافاصله پس از خروج از برنامه باز شده، دوباره قفل شود</string>
+    <string name="relock_after_timeout">قفل شدن پس از زمان معین</string>
+    <string name="relock_after_timeout_description">قفل شدن دوباره پس از %1$d ثانیه عدم فعالیت</string>
+    <string name="relock_on_screen_off">قفل شدن با خاموش شدن صفحه</string>
+    <string name="relock_on_screen_off_description">هنگام جابه‌جایی بین برنامه‌ها باز بماند، با خاموش شدن صفحه قفل شود</string>
+    <string name="relock_only_killed">فقط هنگام بسته شدن اجباری قفل شود</string>
+    <string name="relock_only_killed_description">تا زمانی که Sandbox به اجبار بسته نشود، باز بماند</string>
+
+    <string name="private_section_behavior">رفتار بخش خصوصی</string>
+    <string name="private_section_behavior_description">زمان قفل شدن بخش برنامه‌های خصوصی در این برنامه را کنترل کنید</string>
+    <string name="collapse_on_leave">بستن هنگام خروج</string>
+    <string name="collapse_on_leave_description">هنگام خروج از برنامه Sandbox، بخش خصوصی بسته و قفل شود</string>
+    <string name="collapse_after_timeout">بستن پس از زمان معین</string>
+    <string name="collapse_after_timeout_description">%1$d ثانیه پس از خروج از برنامه بسته شد</string>
+    <string name="lock_timeout">زمان انتظار قفل</string>
+    <string name="seconds_format">%1$d ثانیه</string>
+    <string name="minutes_format_singular">%1$d دقیقه</string>
+    <string name="minutes_format_plural">%1$d دقیقه</string>
+
+    <!-- Sandbox App -->
+    <string name="lock_app">قفل کردن برنامه</string>
+    <string name="lock_app_description">برای باز کردن این برنامه نیاز به احراز هویت است</string>
+    <string name="hide_app">پنهان کردن برنامه</string>
+    <string name="hide_app_description">پنهان کردن از لیست برنامه‌ها و تنظیمات</string>
+    <string name="sandbox">جعبه ابزار (Sandbox)</string>
+    <string name="sandbox_description">پنهان کردن از سایر برنامه‌ها (برنامه‌های بانکی و غیره)</string>
+    <string name="hide_dev_options">پنهان کردن تنظیمات توسعه‌دهنده</string>
+    <string name="hide_dev_options_description">این برنامه تنظیمات توسعه‌دهنده را غیرفعال می‌بیند</string>
+    <string name="no_apps_found">برنامه‌ای یافت نشد</string>
+    <string name="private_apps">برنامه‌های خصوصی</string>
+    <string name="sandboxed_apps">برنامه‌های در جعبه ابزار</string>
+    <string name="dev_opts_hidden">تنظیمات توسعه‌دهنده پنهان شد</string>
+    <string name="all_apps">همه برنامه‌ها</string>
+    <string name="setup_private_apps">تنظیم برنامه‌های خصوصی</string>
+    <string name="setup_private_apps_description">یک پین، رمز عبور یا الگو برای قفل و پنهان کردن برنامه‌ها ایجاد کنید</string>
+    <string name="collapse">بستن</string>
+    <string name="expand">گسترش</string>
+    <string name="lock">قفل</string>
+    <string name="dev_opt">توسعه‌دهنده</string>
+    <string name="notifications_locked">اعلان‌ها قفل هستند</string>
+    <string name="unlock_private_area_desc">برای مشاهده اعلان‌ها، بخش خصوصی را باز کنید</string>
+    <string name="no_private_notifications">اعلان خصوصی وجود ندارد</string>
+    <string name="notifications_empty_desc">اعلان‌های برنامه‌های پنهان در اینجا ظاهر می‌شوند</string>
+
+    <!-- Authenticate -->
+    <string name="unlock_app_title">باز کردن %1$s</string>
+    <string name="unlock_private_apps">باز کردن برنامه‌های خصوصی</string>
+    <string name="auth_prompt_format">برای باز کردن %1$s اعتبارنامه‌های Sandbox خود را وارد کنید</string>
+    <string name="enter_current_pin_to_change">برای تغییر امنیت، پین فعلی خود را وارد کنید</string>
+    <string name="enter_current_password_to_change">برای تغییر امنیت، رمز عبور فعلی خود را وارد کنید</string>
+    <string name="draw_current_pattern_to_change">برای تغییر امنیت، الگوی فعلی خود را ترسیم کنید</string>
+
+    <!-- Security Questions -->
+    <string name="question_pet_name">نام حیوان خانگی شما چیست؟</string>
+    <string name="question_birth_city">در کدام شهر متولد شده‌اید؟</string>
+    <string name="question_fav_movie">فیلم مورد علاقه شما چیست؟</string>
+    <string name="question_mother_maiden">نام خانوادگی قبلی مادر شما چیست؟</string>
+    <string name="question_first_car">اولین ماشین شما چه بود؟</string>
+    <string name="count_format">(%1$d)</string>
+    <string name="badge_count_format">%1$d</string>
+</resources>

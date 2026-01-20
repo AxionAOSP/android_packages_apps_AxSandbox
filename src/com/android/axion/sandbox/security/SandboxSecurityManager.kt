@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.SharedPreferences
 import android.hardware.biometrics.BiometricManager
 import android.provider.Settings
+import com.android.axion.sandbox.R
 import java.security.MessageDigest
 
 enum class SecurityType {
@@ -249,11 +250,11 @@ class SandboxSecurityManager(private val context: Context) {
         const val DEFAULT_TIMEOUT_SECONDS = 30
         
         val SECURITY_QUESTIONS = listOf(
-            "What is your pet's name?",
-            "What city were you born in?",
-            "What is your favorite movie?",
-            "What is your mother's maiden name?",
-            "What was your first car?"
+            R.string.question_pet_name,
+            R.string.question_birth_city,
+            R.string.question_fav_movie,
+            R.string.question_mother_maiden,
+            R.string.question_first_car
         )
     }
 }

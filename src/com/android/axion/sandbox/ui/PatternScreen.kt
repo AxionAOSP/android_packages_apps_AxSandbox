@@ -20,12 +20,15 @@ import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.input.pointer.pointerInput
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalHapticFeedback
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
+import com.android.axion.sandbox.R
 import com.android.axion.sandbox.security.SandboxSecurityManager
 import kotlinx.coroutines.delay
 import kotlin.math.pow
@@ -50,6 +53,7 @@ fun PatternScreen(
     var errorMessage by remember { mutableStateOf("") }
     var dotPositions by remember { mutableStateOf<Map<Int, Offset>>(emptyMap()) }
     val haptic = LocalHapticFeedback.current
+    val context = LocalContext.current
     
     LaunchedEffect(confirmPattern) {
         selectedDots = emptyList()
@@ -83,11 +87,11 @@ fun PatternScreen(
                 onUnlock()
             } else {
                 haptic.performHapticFeedback(HapticFeedbackType.LongPress)
-                errorMessage = if (isSetup && confirmPattern != null) "Patterns don't match" else "Wrong pattern"
+                errorMessage = if (isSetup && confirmPattern != null) context.getString(R.string.patterns_mismatched) else context.getString(R.string.wrong_pattern)
                 isError = true
             }
         } else if (selectedDots.isNotEmpty()) {
-            errorMessage = "Connect at least 4 dots"
+            errorMessage = context.getString(R.string.connect_dots_prompt)
             isError = true
         }
     }
@@ -124,8 +128,8 @@ fun PatternScreen(
         ) {
             Text(
                 text = if (isSetup) {
-                    if (confirmPattern == null) "Create Pattern" else "Confirm Pattern"
-                } else "Draw Pattern",
+                    if (confirmPattern == null) stringResource(R.string.create_pattern) else stringResource(R.string.confirm_pattern)
+                } else stringResource(R.string.draw_pattern),
                 style = MaterialTheme.typography.headlineMedium,
                 fontWeight = FontWeight.Bold,
                 color = MaterialTheme.colorScheme.onSurface,
@@ -136,8 +140,8 @@ fun PatternScreen(
             
             Text(
                 text = promptText ?: if (isSetup) {
-                    if (confirmPattern == null) "Connect at least 4 dots" else "Draw your pattern again"
-                } else "Draw your pattern to unlock private apps",
+                    if (confirmPattern == null) stringResource(R.string.connect_dots_prompt) else stringResource(R.string.draw_pattern_again_prompt)
+                } else stringResource(R.string.draw_pattern_to_unlock),
                 style = MaterialTheme.typography.bodyMedium,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 textAlign = TextAlign.Center
@@ -270,7 +274,7 @@ fun PatternScreen(
                     Icon(
                         imageVector = if (biometricType == SandboxSecurityManager.BiometricType.FACE) 
                             Icons.Filled.Face else Icons.Filled.Fingerprint,
-                        contentDescription = "Biometric Unlock",
+                        contentDescription = stringResource(R.string.biometric_unlock),
                         tint = MaterialTheme.colorScheme.onPrimaryContainer,
                         modifier = Modifier.size(28.dp)
                     )
@@ -281,7 +285,7 @@ fun PatternScreen(
                 Spacer(modifier = Modifier.height(24.dp))
                 TextButton(onClick = onForgotPassword) {
                     Text(
-                        text = "Forgot Password?",
+                        text = stringResource(R.string.forgot_password_q),
                         style = MaterialTheme.typography.bodyMedium,
                         color = MaterialTheme.colorScheme.primary
                     )

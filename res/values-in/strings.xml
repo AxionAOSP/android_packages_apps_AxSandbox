@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sandbox</string>
+
+    <!-- Common -->
+    <string name="back">Kembali</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Batal</string>
+    <string name="settings">Pengaturan</string>
+    <string name="launch">Buka</string>
+    <string name="selected">Terpilih</string>
+    <string name="continue_text">Lanjutkan</string>
+    <string name="skip_for_now">Lewati sekarang</string>
+    <string name="unlock">Buka kunci</string>
+    <string name="hide">Sembunyikan</string>
+    <string name="show">Tampilkan</string>
+    <string name="dismiss">Tutup</string>
+    <string name="open">Buka</string>
+    <string name="reset">Reset</string>
+    <string name="search_apps">Cari aplikasi...</string>
+    <string name="version">Versi</string>
+    <string name="about">Tentang</string>
+
+    <!-- Navigation Labels -->
+    <string name="apps">Aplikasi</string>
+    <string name="notifications">Notifikasi</string>
+
+    <!-- Security Setup -->
+    <string name="secure_your_private_apps">Amankan aplikasi pribadi Anda</string>
+    <string name="choose_protection_method">Pilih cara Anda ingin melindungi aplikasi tersembunyi</string>
+    <string name="pin">PIN</string>
+    <string name="password">Kata Sandi</string>
+    <string name="pattern">Pola</string>
+    <string name="pin_description">Kode 4-6 digit</string>
+    <string name="password_description">Kata sandi alfanumerik</string>
+    <string name="pattern_description">Gambar pola untuk membuka kunci</string>
+
+    <!-- Security Screens -->
+    <string name="create_pin">Buat PIN</string>
+    <string name="confirm_pin">Konfirmasi PIN</string>
+    <string name="enter_pin">Masukkan PIN</string>
+    <string name="choose_pin_prompt">Pilih PIN 4 digit</string>
+    <string name="reenter_pin_prompt">Masukkan kembali PIN Anda</string>
+    <string name="enter_pin_to_unlock">Masukkan PIN untuk membuka aplikasi pribadi</string>
+    <string name="pins_mismatched">PIN tidak cocok. Coba lagi atau kembali.</string>
+    <string name="incorrect_pin">PIN salah</string>
+
+    <string name="create_pattern">Buat Pola</string>
+    <string name="confirm_pattern">Konfirmasi Pola</string>
+    <string name="draw_pattern">Gambar Pola</string>
+    <string name="patterns_mismatched">Pola tidak cocok</string>
+    <string name="wrong_pattern">Pola salah</string>
+    <string name="connect_dots_prompt">Hubungkan minimal 4 titik</string>
+    <string name="draw_pattern_again_prompt">Gambar pola Anda lagi</string>
+    <string name="draw_pattern_to_unlock">Gambar pola untuk membuka aplikasi pribadi</string>
+
+    <string name="create_password">Buat Kata Sandi</string>
+    <string name="confirm_password">Konfirmasi Kata Sandi</string>
+    <string name="set_password">Atur Kata Sandi</string>
+    <string name="enter_password">Masukkan Kata Sandi</string>
+    <string name="choose_password_prompt">Pilih kata sandi yang aman</string>
+    <string name="reenter_password_prompt">Masukkan kembali kata sandi Anda</string>
+    <string name="enter_password_to_unlock">Masukkan kata sandi untuk membuka aplikasi pribadi</string>
+    <string name="passwords_mismatched">Kata sandi tidak cocok. Coba lagi atau kembali.</string>
+    <string name="incorrect_password">Kata sandi salah</string>
+    <string name="enter_password_placeholder">Masukkan kata sandi</string>
+
+    <string name="forgot_password_q">Lupa kata sandi?</string>
+    <string name="biometric_unlock">Buka kunci biometrik</string>
+    <string name="backspace">Backspace</string>
+
+    <!-- Recovery -->
+    <string name="recovery_option">Opsi pemulihan</string>
+    <string name="recovery_setup_description">Atur pertanyaan keamanan jika Anda lupa kata sandi</string>
+    <string name="security_question">Pertanyaan keamanan</string>
+    <string name="select_a_question">Pilih pertanyaan</string>
+    <string name="your_answer">Jawaban Anda</string>
+    <string name="verify_answer">Verifikasi jawaban</string>
+    <string name="forgot_password_title">Lupa Kata Sandi</string>
+    <string name="reset_password_description">Jawab pertanyaan keamanan Anda untuk mereset kata sandi</string>
+    <string name="incorrect_answer">Jawaban salah. Silakan coba lagi.</string>
+    <string name="reset_password_dialog_title">Reset kata sandi?</string>
+    <string name="reset_password_dialog_message">Ini akan menghapus kata sandi Anda saat ini dan Anda harus mengatur yang baru. Semua data aplikasi pribadi akan tetap utuh.</string>
+
+    <!-- Settings -->
+    <string name="private_apps_security">Keamanan aplikasi pribadi</string>
+    <string name="current_lock_type">Tipe kunci saat ini</string>
+    <string name="not_set">Belum diatur</string>
+    <string name="use_pin">Gunakan PIN</string>
+    <string name="use_password">Gunakan Kata Sandi</string>
+    <string name="use_pattern">Gunakan Pola</string>
+    <string name="biometrics">Biometrik</string>
+    <string name="unlock_with_biometrics">Buka dengan biometrik</string>
+    <string name="biometrics_description">Gunakan sidik jari atau pengenalan wajah</string>
+    <string name="recovery_options">Opsi pemulihan</string>
+    <string name="forgot_password_item">Lupa kata sandi</string>
+    <string name="forgot_password_subtitle">Reset kata sandi menggunakan pertanyaan keamanan</string>
+    <string name="setup_security_question">Atur pertanyaan keamanan</string>
+    <string name="recovery_required_subtitle">Diperlukan untuk pemulihan kata sandi</string>
+    
+    <string name="locked_app_behavior">Perilaku aplikasi terkunci</string>
+    <string name="locked_app_behavior_description">Kontrol kapan aplikasi yang terbuka dikunci kembali</string>
+    <string name="relock_on_leave">Kunci saat meninggalkan</string>
+    <string name="relock_on_leave_description">Kunci kembali aplikasi segera setelah meninggalkannya</string>
+    <string name="relock_after_timeout">Kunci setelah batas waktu</string>
+    <string name="relock_after_timeout_description">Kunci kembali setelah %1$d d tidak ada aktivitas</string>
+    <string name="relock_on_screen_off">Kunci saat layar mati</string>
+    <string name="relock_on_screen_off_description">Biarkan terbuka saat beralih aplikasi, kunci saat layar mati</string>
+    <string name="relock_only_killed">Kunci hanya jika ditutup</string>
+    <string name="relock_only_killed_description">Biarkan terbuka hingga Sandbox ditutup paksa</string>
+
+    <string name="private_section_behavior">Perilaku bagian pribadi</string>
+    <string name="private_section_behavior_description">Kontrol kapan bagian aplikasi pribadi di aplikasi ini terkunci</string>
+    <string name="collapse_on_leave">Ciutkan saat meninggalkan</string>
+    <string name="collapse_on_leave_description">Ciutkan dan kunci saat meninggalkan aplikasi Sandbox</string>
+    <string name="collapse_after_timeout">Ciutkan setelah batas waktu</string>
+    <string name="collapse_after_timeout_description">Diciutkan setelah %1$d d meninggalkan aplikasi</string>
+    <string name="lock_timeout">Batas waktu kunci</string>
+    <string name="seconds_format">%1$d detik</string>
+    <string name="minutes_format_singular">%1$d menit</string>
+    <string name="minutes_format_plural">%1$d menit</string>
+
+    <!-- Sandbox App -->
+    <string name="lock_app">Kunci Aplikasi</string>
+    <string name="lock_app_description">Butuh autentikasi untuk membuka aplikasi ini</string>
+    <string name="hide_app">Sembunyikan Aplikasi</string>
+    <string name="hide_app_description">Sembunyikan dari peluncur dan pengaturan</string>
+    <string name="sandbox">Sandbox</string>
+    <string name="sandbox_description">Sembunyikan dari aplikasi lain (aplikasi bank, dll.)</string>
+    <string name="hide_dev_options">Sembunyikan opsi pengembang</string>
+    <string name="hide_dev_options_description">Aplikasi ini akan melihat opsi pengembang dinonaktifkan</string>
+    <string name="no_apps_found">Aplikasi tidak ditemukan</string>
+    <string name="private_apps">Aplikasi Pribadi</string>
+    <string name="sandboxed_apps">Aplikasi Sandboxed</string>
+    <string name="dev_opts_hidden">DevOpts tersembunyi</string>
+    <string name="all_apps">Semua aplikasi</string>
+    <string name="setup_private_apps">Atur aplikasi pribadi</string>
+    <string name="setup_private_apps_description">Buat PIN, kata sandi, atau pola untuk mengunci dan menyembunyikan aplikasi</string>
+    <string name="collapse">Ciutkan</string>
+    <string name="expand">Perluas</string>
+    <string name="lock">Kunci</string>
+    <string name="dev_opt">Dev.</string>
+    <string name="notifications_locked">Notifikasi terkunci</string>
+    <string name="unlock_private_area_desc">Buka kunci area pribadi untuk melihat notifikasi</string>
+    <string name="no_private_notifications">Tidak ada notifikasi pribadi</string>
+    <string name="notifications_empty_desc">Notifikasi dari aplikasi tersembunyi akan muncul di sini</string>
+
+    <!-- Authenticate -->
+    <string name="unlock_app_title">Buka %1$s</string>
+    <string name="unlock_private_apps">Buka aplikasi pribadi</string>
+    <string name="auth_prompt_format">Masukkan kredensial Sandbox untuk membuka %1$s</string>
+    <string name="enter_current_pin_to_change">Masukkan PIN saat ini untuk mengubah keamanan</string>
+    <string name="enter_current_password_to_change">Masukkan kata sandi saat ini untuk mengubah keamanan</string>
+    <string name="draw_current_pattern_to_change">Gambar pola saat ini untuk mengubah keamanan</string>
+
+    <!-- Security Questions -->
+    <string name="question_pet_name">Siapa nama hewan peliharaan Anda?</string>
+    <string name="question_birth_city">Di kota mana Anda lahir?</string>
+    <string name="question_fav_movie">Apa film favorit Anda?</string>
+    <string name="question_mother_maiden">Siapa nama gadis ibu Anda?</string>
+    <string name="question_first_car">Apa mobil pertama Anda?</string>
+    <string name="count_format">(%1$d)</string>
+    <string name="badge_count_format">%1$d</string>
+</resources>

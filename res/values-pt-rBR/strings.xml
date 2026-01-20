@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sandbox</string>
+
+    <!-- Common -->
+    <string name="back">Voltar</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancelar</string>
+    <string name="settings">Configurações</string>
+    <string name="launch">Iniciar</string>
+    <string name="selected">Selecionado</string>
+    <string name="continue_text">Continuar</string>
+    <string name="skip_for_now">Pular por enquanto</string>
+    <string name="unlock">Desbloquear</string>
+    <string name="hide">Ocultar</string>
+    <string name="show">Mostrar</string>
+    <string name="dismiss">Dispensar</string>
+    <string name="open">Abrir</string>
+    <string name="reset">Redefinir</string>
+    <string name="search_apps">Pesquisar apps...</string>
+    <string name="version">Versão</string>
+    <string name="about">Sobre</string>
+
+    <!-- Navigation Labels -->
+    <string name="apps">Apps</string>
+    <string name="notifications">Notificações</string>
+
+    <!-- Security Setup -->
+    <string name="secure_your_private_apps">Proteja seus apps privados</string>
+    <string name="choose_protection_method">Escolha como deseja proteger seus apps ocultos</string>
+    <string name="pin">PIN</string>
+    <string name="password">Senha</string>
+    <string name="pattern">Padrão</string>
+    <string name="pin_description">Código de 4 a 6 dígitos</string>
+    <string name="password_description">Senha alfanumérica</string>
+    <string name="pattern_description">Desenhe um padrão para desbloquear</string>
+
+    <!-- Security Screens -->
+    <string name="create_pin">Criar PIN</string>
+    <string name="confirm_pin">Confirmar PIN</string>
+    <string name="enter_pin">Inserir PIN</string>
+    <string name="choose_pin_prompt">Escolha um PIN de 4 dígitos</string>
+    <string name="reenter_pin_prompt">Insira seu PIN novamente</string>
+    <string name="enter_pin_to_unlock">Insira o PIN para desbloquear apps privados</string>
+    <string name="pins_mismatched">PINs não coincidem. Tente novamente ou volte.</string>
+    <string name="incorrect_pin">PIN incorreto</string>
+
+    <string name="create_pattern">Criar Padrão</string>
+    <string name="confirm_pattern">Confirmar Padrão</string>
+    <string name="draw_pattern">Desenhar Padrão</string>
+    <string name="patterns_mismatched">Padrões não coincidem</string>
+    <string name="wrong_pattern">Padrão incorreto</string>
+    <string name="connect_dots_prompt">Conecte pelo menos 4 pontos</string>
+    <string name="draw_pattern_again_prompt">Desenhe seu padrão novamente</string>
+    <string name="draw_pattern_to_unlock">Desenhe seu padrão para desbloquear apps privados</string>
+
+    <string name="create_password">Criar Senha</string>
+    <string name="confirm_password">Confirmar Senha</string>
+    <string name="set_password">Definir Senha</string>
+    <string name="enter_password">Inserir Senha</string>
+    <string name="choose_password_prompt">Escolha uma senha segura</string>
+    <string name="reenter_password_prompt">Insira sua senha novamente</string>
+    <string name="enter_password_to_unlock">Insira sua senha para desbloquear apps privados</string>
+    <string name="passwords_mismatched">Senhas não coincidem. Tente novamente ou volte.</string>
+    <string name="incorrect_password">Senha incorreta</string>
+    <string name="enter_password_placeholder">Inserir senha</string>
+
+    <string name="forgot_password_q">Esqueceu a senha?</string>
+    <string name="biometric_unlock">Desbloqueio biométrico</string>
+    <string name="backspace">Apagar</string>
+
+    <!-- Recovery -->
+    <string name="recovery_option">Opção de recuperação</string>
+    <string name="recovery_setup_description">Configure uma pergunta de segurança caso esqueça sua senha</string>
+    <string name="security_question">Pergunta de segurança</string>
+    <string name="select_a_question">Selecione uma pergunta</string>
+    <string name="your_answer">Sua resposta</string>
+    <string name="verify_answer">Verificar resposta</string>
+    <string name="forgot_password_title">Esqueci a Senha</string>
+    <string name="reset_password_description">Responda à sua pergunta de segurança para redefinir sua senha</string>
+    <string name="incorrect_answer">Resposta incorreta. Tente novamente.</string>
+    <string name="reset_password_dialog_title">Redefinir senha?</string>
+    <string name="reset_password_dialog_message">Isso limpará sua senha atual e você precisará configurar uma nova. Todos os dados dos apps privados permanecerão intactos.</string>
+
+    <!-- Settings -->
+    <string name="private_apps_security">Segurança de apps privados</string>
+    <string name="current_lock_type">Tipo de bloqueio atual</string>
+    <string name="not_set">Não definido</string>
+    <string name="use_pin">Usar PIN</string>
+    <string name="use_password">Usar Senha</string>
+    <string name="use_pattern">Usar Padrão</string>
+    <string name="biometrics">Biometria</string>
+    <string name="unlock_with_biometrics">Desbloquear com biometria</string>
+    <string name="biometrics_description">Usar impressão digital ou reconhecimento facial</string>
+    <string name="recovery_options">Opções de recuperação</string>
+    <string name="forgot_password_item">Esqueceu a senha</string>
+    <string name="forgot_password_subtitle">Redefina sua senha usando a pergunta de segurança</string>
+    <string name="setup_security_question">Configurar pergunta de segurança</string>
+    <string name="recovery_required_subtitle">Necessário para recuperação de senha</string>
+    
+    <string name="locked_app_behavior">Comportamento de apps bloqueados</string>
+    <string name="locked_app_behavior_description">Controla quando apps desbloqueados são bloqueados novamente</string>
+    <string name="relock_on_leave">Bloquear ao sair</string>
+    <string name="relock_on_leave_description">Bloquear novamente o app desbloqueado imediatamente ao sair</string>
+    <string name="relock_after_timeout">Bloquear após tempo limite</string>
+    <string name="relock_after_timeout_description">Bloquear novamente após %1$d s de inatividade</string>
+    <string name="relock_on_screen_off">Bloquear ao desligar a tela</string>
+    <string name="relock_on_screen_off_description">Manter desbloqueado ao alternar apps, bloquear ao desligar a tela</string>
+    <string name="relock_only_killed">Bloquear apenas se fechado</string>
+    <string name="relock_only_killed_description">Manter desbloqueado até que o Sandbox seja forçado a fechar</string>
+
+    <string name="private_section_behavior">Comportamento da seção privada</string>
+    <string name="private_section_behavior_description">Controla quando a seção de apps privados neste app é bloqueada</string>
+    <string name="collapse_on_leave">Recolher ao sair</string>
+    <string name="collapse_on_leave_description">Recolher e bloquear ao sair do app Sandbox</string>
+    <string name="collapse_after_timeout">Recolher após tempo limite</string>
+    <string name="collapse_after_timeout_description">Recolhido após %1$d s de sair do app</string>
+    <string name="lock_timeout">Tempo limite de bloqueio</string>
+    <string name="seconds_format">%1$d segundos</string>
+    <string name="minutes_format_singular">%1$d minuto</string>
+    <string name="minutes_format_plural">%1$d minutos</string>
+
+    <!-- Sandbox App -->
+    <string name="lock_app">Bloquear App</string>
+    <string name="lock_app_description">Exigir autenticação para abrir este app</string>
+    <string name="hide_app">Ocultar App</string>
+    <string name="hide_app_description">Ocultar do launcher e das configurações</string>
+    <string name="sandbox">Sandbox</string>
+    <string name="sandbox_description">Ocultar de outros apps (apps de banco, etc.)</string>
+    <string name="hide_dev_options">Ocultar opções de desenvolvedor</string>
+    <string name="hide_dev_options_description">Este app verá as opções de desenvolvedor como desativadas</string>
+    <string name="no_apps_found">Nenhum app encontrado</string>
+    <string name="private_apps">Apps privados</string>
+    <string name="sandboxed_apps">Apps em Sandbox</string>
+    <string name="dev_opts_hidden">Opções de Dev. ocultas</string>
+    <string name="all_apps">Todos os apps</string>
+    <string name="setup_private_apps">Configurar apps privados</string>
+    <string name="setup_private_apps_description">Crie um PIN, senha ou padrão para bloquear e ocultar apps</string>
+    <string name="collapse">Recolher</string>
+    <string name="expand">Expandir</string>
+    <string name="lock">Bloquear</string>
+    <string name="dev_opt">Dev.</string>
+    <string name="notifications_locked">Notificações bloqueadas</string>
+    <string name="unlock_private_area_desc">Desbloqueie a área privada para ver as notificações</string>
+    <string name="no_private_notifications">Nenhuma notificação privada</string>
+    <string name="notifications_empty_desc">Notificações de apps ocultos aparecerão aqui</string>
+
+    <!-- Authenticate -->
+    <string name="unlock_app_title">Desbloquear %1$s</string>
+    <string name="unlock_private_apps">Desbloquear apps privados</string>
+    <string name="auth_prompt_format">Insira suas credenciais do Sandbox para desbloquear %1$s</string>
+    <string name="enter_current_pin_to_change">Insira seu PIN atual para alterar a segurança</string>
+    <string name="enter_current_password_to_change">Insira sua senha atual para alterar a segurança</string>
+    <string name="draw_current_pattern_to_change">Desenhe seu padrão atual para alterar a segurança</string>
+
+    <!-- Security Questions -->
+    <string name="question_pet_name">Qual o nome do seu animal de estimação?</string>
+    <string name="question_birth_city">Em qual cidade você nasceu?</string>
+    <string name="question_fav_movie">Qual o seu filme favorito?</string>
+    <string name="question_mother_maiden">Qual o nome de solteira da sua mãe?</string>
+    <string name="question_first_car">Qual foi o seu primeiro carro?</string>
+    <string name="count_format">(%1$d)</string>
+    <string name="badge_count_format">%1$d</string>
+</resources>

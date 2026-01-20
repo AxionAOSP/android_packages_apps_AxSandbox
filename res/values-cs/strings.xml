@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sandbox</string>
+
+    <!-- Common -->
+    <string name="back">Zpět</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Zrušit</string>
+    <string name="settings">Nastavení</string>
+    <string name="launch">Spustit</string>
+    <string name="selected">Vybráno</string>
+    <string name="continue_text">Pokračovat</string>
+    <string name="skip_for_now">Zatím přeskočit</string>
+    <string name="unlock">Odemknout</string>
+    <string name="hide">Skrýt</string>
+    <string name="show">Zobrazit</string>
+    <string name="dismiss">Zavřít</string>
+    <string name="open">Otevřít</string>
+    <string name="reset">Resetovat</string>
+    <string name="search_apps">Hledat aplikace...</string>
+    <string name="version">Verze</string>
+    <string name="about">O aplikaci</string>
+
+    <!-- Navigation Labels -->
+    <string name="apps">Aplikace</string>
+    <string name="notifications">Oznámení</string>
+
+    <!-- Security Setup -->
+    <string name="secure_your_private_apps">Zabezpečte své soukromé aplikace</string>
+    <string name="choose_protection_method">Vyberte, jak chcete chránit své skryté aplikace</string>
+    <string name="pin">PIN</string>
+    <string name="password">Heslo</string>
+    <string name="pattern">Gesto</string>
+    <string name="pin_description">4-6 místný kód</string>
+    <string name="password_description">Alfanumerické heslo</string>
+    <string name="pattern_description">Nakreslete gesto pro odemknutí</string>
+
+    <!-- Security Screens -->
+    <string name="create_pin">Vytvořit PIN</string>
+    <string name="confirm_pin">Potvrdit PIN</string>
+    <string name="enter_pin">Zadat PIN</string>
+    <string name="choose_pin_prompt">Zvolte si 4místný PIN</string>
+    <string name="reenter_pin_prompt">Zadejte PIN znovu</string>
+    <string name="enter_pin_to_unlock">Zadejte PIN pro odemknutí soukromých aplikací</string>
+    <string name="pins_mismatched">PIN kódy se neshodují. Zkuste to znovu nebo se vraťte zpět.</string>
+    <string name="incorrect_pin">Nesprávný PIN</string>
+
+    <string name="create_pattern">Vytvořit gesto</string>
+    <string name="confirm_pattern">Potvrdit gesto</string>
+    <string name="draw_pattern">Nakreslit gesto</string>
+    <string name="patterns_mismatched">Gesta se neshodují</string>
+    <string name="wrong_pattern">Nesprávné gesto</string>
+    <string name="connect_dots_prompt">Spojte alespoň 4 body</string>
+    <string name="draw_pattern_again_prompt">Nakreslete gesto znovu</string>
+    <string name="draw_pattern_to_unlock">Nakreslete gesto pro odemknutí soukromých aplikací</string>
+
+    <string name="create_password">Vytvořit heslo</string>
+    <string name="confirm_password">Potvrdit heslo</string>
+    <string name="set_password">Nastavit heslo</string>
+    <string name="enter_password">Zadat heslo</string>
+    <string name="choose_password_prompt">Zvolte si bezpečné heslo</string>
+    <string name="reenter_password_prompt">Zadejte heslo znovu</string>
+    <string name="enter_password_to_unlock">Zadejte heslo pro odemknutí soukromých aplikací</string>
+    <string name="passwords_mismatched">Hesla se neshodují. Zkuste to znovu nebo se vraťte zpět.</string>
+    <string name="incorrect_password">Nesprávné heslo</string>
+    <string name="enter_password_placeholder">Zadat heslo</string>
+
+    <string name="forgot_password_q">Zapomněli jste heslo?</string>
+    <string name="biometric_unlock">Biometrické odemknutí</string>
+    <string name="backspace">Smazat</string>
+
+    <!-- Recovery -->
+    <string name="recovery_option">Možnost obnovení</string>
+    <string name="recovery_setup_description">Nastavte si bezpečnostní otázku pro případ, že zapomenete heslo</string>
+    <string name="security_question">Bezpečnostní otázka</string>
+    <string name="select_a_question">Vyberte otázku</string>
+    <string name="your_answer">Vaše odpověď</string>
+    <string name="verify_answer">Ověřit odpověď</string>
+    <string name="forgot_password_title">Zapomenuté heslo</string>
+    <string name="reset_password_description">Odpovězte na bezpečnostní otázku pro resetování hesla</string>
+    <string name="incorrect_answer">Nesprávná odpověď. Zkuste to prosím znovu.</string>
+    <string name="reset_password_dialog_title">Resetovat heslo?</string>
+    <string name="reset_password_dialog_message">Tímto se vymaže vaše současné heslo a budete si muset nastavit nové. Všechna data soukromých aplikací zůstanou zachována.</string>
+
+    <!-- Settings -->
+    <string name="private_apps_security">Zabezpečení soukromých aplikací</string>
+    <string name="current_lock_type">Aktuální typ zámku</string>
+    <string name="not_set">Nenastaveno</string>
+    <string name="use_pin">Použít PIN</string>
+    <string name="use_password">Použít heslo</string>
+    <string name="use_pattern">Použít gesto</string>
+    <string name="biometrics">Biometrie</string>
+    <string name="unlock_with_biometrics">Odemknout biometrií</string>
+    <string name="biometrics_description">Použít otisk prstu nebo rozpoznání obličeje</string>
+    <string name="recovery_options">Možnosti obnovení</string>
+    <string name="forgot_password_item">Zapomenuté heslo</string>
+    <string name="forgot_password_subtitle">Resetujte heslo pomocí bezpečnostní otázky</string>
+    <string name="setup_security_question">Nastavit bezpečnostní otázku</string>
+    <string name="recovery_required_subtitle">Vyžadováno pro obnovení hesla</string>
+    
+    <string name="locked_app_behavior">Chování uzamčených aplikací</string>
+    <string name="locked_app_behavior_description">Určete, kdy se odemknuté aplikace znovu uzamknou</string>
+    <string name="relock_on_leave">Uzamknout při opuštění</string>
+    <string name="relock_on_leave_description">Znovu uzamknout aplikaci ihned po jejím opuštění</string>
+    <string name="relock_after_timeout">Uzamknout po časovém limitu</string>
+    <string name="relock_after_timeout_description">Znovu uzamknout po %1$d s neaktivity</string>
+    <string name="relock_on_screen_off">Uzamknout při vypnutí obrazovky</string>
+    <string name="relock_on_screen_off_description">Při přepínání aplikací nechat odemknuté, uzamknout při vypnutí obrazovky</string>
+    <string name="relock_only_killed">Uzamknout pouze při ukončení</string>
+    <string name="relock_only_killed_description">Nechat odemknuté, dokud není Sandbox vynuceně ukončen</string>
+
+    <string name="private_section_behavior">Chování soukromé sekce</string>
+    <string name="private_section_behavior_description">Určete, kdy se sekce soukromých aplikací v této aplikaci uzamkne</string>
+    <string name="collapse_on_leave">Sbalit při opuštění</string>
+    <string name="collapse_on_leave_description">Sbalit a uzamknout při opuštění aplikace Sandbox</string>
+    <string name="collapse_after_timeout">Sbalit po časovém limitu</string>
+    <string name="collapse_after_timeout_description">Sbaleno po %1$d s od opuštění aplikace</string>
+    <string name="lock_timeout">Časový limit zámku</string>
+    <string name="seconds_format">%1$d sekund</string>
+    <string name="minutes_format_singular">%1$d minuta</string>
+    <string name="minutes_format_plural">%1$d minut</string>
+
+    <!-- Sandbox App -->
+    <string name="lock_app">Uzamknout aplikaci</string>
+    <string name="lock_app_description">Pro otevření této aplikace je vyžadováno ověření</string>
+    <string name="hide_app">Skrýt aplikaci</string>
+    <string name="hide_app_description">Skrýt ze spouštěče a nastavení</string>
+    <string name="sandbox">Sandbox</string>
+    <string name="sandbox_description">Skrýt před ostatními aplikacemi (bankovní aplikace atd.)</string>
+    <string name="hide_dev_options">Skrýt možnosti pro vývojáře</string>
+    <string name="hide_dev_options_description">Tato aplikace uvidí možnosti pro vývojáře jako zakázané</string>
+    <string name="no_apps_found">Nebyly nalezeny žádné aplikace</string>
+    <string name="private_apps">Soukromé aplikace</string>
+    <string name="sandboxed_apps">Sandboxed aplikace</string>
+    <string name="dev_opts_hidden">DevOpts skryto</string>
+    <string name="all_apps">Všechny aplikace</string>
+    <string name="setup_private_apps">Nastavit soukromé aplikace</string>
+    <string name="setup_private_apps_description">Vytvořte PIN, heslo nebo gesto pro uzamčení a skrytí aplikací</string>
+    <string name="collapse">Sbalit</string>
+    <string name="expand">Rozbalit</string>
+    <string name="lock">Zámek</string>
+    <string name="dev_opt">Vývoj</string>
+    <string name="notifications_locked">Oznámení uzamčena</string>
+    <string name="unlock_private_area_desc">Pro zobrazení oznámení odemkněte soukromou oblast</string>
+    <string name="no_private_notifications">Žádná soukromá oznámení</string>
+    <string name="notifications_empty_desc">Zde se zobrazí oznámení ze skrytých aplikací</string>
+
+    <!-- Authenticate -->
+    <string name="unlock_app_title">Odemknout %1$s</string>
+    <string name="unlock_private_apps">Odemknout soukromé aplikace</string>
+    <string name="auth_prompt_format">Zadejte své přihlašovací údaje k Sandboxu pro odemknutí %1$s</string>
+    <string name="enter_current_pin_to_change">Zadejte svůj současný PIN pro změnu zabezpečení</string>
+    <string name="enter_current_password_to_change">Zadejte své současné heslo pro změnu zabezpečení</string>
+    <string name="draw_current_pattern_to_change">Nakreslete své současné gesto pro změnu zabezpečení</string>
+
+    <!-- Security Questions -->
+    <string name="question_pet_name">Jak se jmenuje váš domácí mazlíček?</string>
+    <string name="question_birth_city">Ve kterém městě jste se narodili?</string>
+    <string name="question_fav_movie">Jaký je váš oblíbený film?</string>
+    <string name="question_mother_maiden">Jaké je rodné jméno vaší matky?</string>
+    <string name="question_first_car">Jaké bylo vaše první auto?</string>
+    <string name="count_format">(%1$d)</string>
+    <string name="badge_count_format">%1$d</string>
+</resources>

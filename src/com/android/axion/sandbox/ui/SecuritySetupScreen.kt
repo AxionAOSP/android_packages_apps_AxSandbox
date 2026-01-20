@@ -14,9 +14,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import com.android.axion.sandbox.R
 import com.android.axion.sandbox.security.SecurityType
 
 private object SetupShapes {
@@ -66,7 +68,7 @@ fun SecuritySetupScreen(
             Spacer(modifier = Modifier.height(24.dp))
             
             Text(
-                text = "Secure Your Private Apps",
+                text = stringResource(R.string.secure_your_private_apps),
                 style = MaterialTheme.typography.headlineMedium,
                 fontWeight = FontWeight.Bold,
                 color = MaterialTheme.colorScheme.onSurface,
@@ -76,7 +78,7 @@ fun SecuritySetupScreen(
             Spacer(modifier = Modifier.height(8.dp))
             
             Text(
-                text = "Choose how you want to protect your hidden apps",
+                text = stringResource(R.string.choose_protection_method),
                 style = MaterialTheme.typography.bodyMedium,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 textAlign = TextAlign.Center
@@ -86,8 +88,8 @@ fun SecuritySetupScreen(
             
             SecurityOption(
                 icon = Icons.Outlined.Pin,
-                title = "PIN",
-                description = "4-6 digit code",
+                title = stringResource(R.string.pin),
+                description = stringResource(R.string.pin_description),
                 onClick = { onSecurityTypeSelected(SecurityType.PIN) }
             )
             
@@ -95,8 +97,8 @@ fun SecuritySetupScreen(
             
             SecurityOption(
                 icon = Icons.Outlined.Password,
-                title = "Password",
-                description = "Alphanumeric password",
+                title = stringResource(R.string.password),
+                description = stringResource(R.string.password_description),
                 onClick = { onSecurityTypeSelected(SecurityType.PASSWORD) }
             )
             
@@ -104,8 +106,8 @@ fun SecuritySetupScreen(
             
             SecurityOption(
                 icon = Icons.Outlined.Pattern,
-                title = "Pattern",
-                description = "Draw pattern to unlock",
+                title = stringResource(R.string.pattern),
+                description = stringResource(R.string.pattern_description),
                 onClick = { onSecurityTypeSelected(SecurityType.PATTERN) }
             )
             
@@ -116,7 +118,7 @@ fun SecuritySetupScreen(
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Text(
-                    text = "Skip for now",
+                    text = stringResource(R.string.skip_for_now),
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
             }

@@ -15,8 +15,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import com.android.axion.sandbox.R
 import com.android.axion.sandbox.security.SandboxSecurityManager
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -26,7 +29,8 @@ fun SecurityQuestionSetupScreen(
     onSkip: (() -> Unit)? = null,
     onBack: () -> Unit
 ) {
-    var selectedQuestion by remember { mutableStateOf<String?>(null) }
+    val context = LocalContext.current
+    var selectedQuestionRes by remember { mutableStateOf<Int?>(null) }
     var answer by remember { mutableStateOf("") }
     var showQuestionPicker by remember { mutableStateOf(false) }
     
@@ -55,12 +59,12 @@ fun SecurityQuestionSetupScreen(
             ) {
                 Icon(
                     imageVector = Icons.AutoMirrored.Filled.ArrowBack,
-                    contentDescription = "Back"
+                    contentDescription = stringResource(R.string.back)
                 )
             }
             
             Text(
-                text = "Recovery Option",
+                text = stringResource(R.string.recovery_option),
                 style = MaterialTheme.typography.headlineMedium,
                 fontWeight = FontWeight.Bold,
                 color = MaterialTheme.colorScheme.onSurface
@@ -69,7 +73,7 @@ fun SecurityQuestionSetupScreen(
             Spacer(modifier = Modifier.height(8.dp))
             
             Text(
-                text = "Set up a security question in case you forget your password",
+                text = stringResource(R.string.recovery_setup_description),
                 style = MaterialTheme.typography.bodyMedium,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )
@@ -77,7 +81,7 @@ fun SecurityQuestionSetupScreen(
             Spacer(modifier = Modifier.height(32.dp))
             
             Text(
-                text = "Security Question",
+                text = stringResource(R.string.security_question),
                 style = MaterialTheme.typography.labelLarge,
                 color = MaterialTheme.colorScheme.onSurface,
                 fontWeight = FontWeight.SemiBold,
@@ -102,9 +106,9 @@ fun SecurityQuestionSetupScreen(
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     Text(
-                        text = selectedQuestion ?: "Select a question",
+                        text = selectedQuestionRes?.let { stringResource(it) } ?: stringResource(R.string.select_a_question),
                         style = MaterialTheme.typography.bodyLarge,
-                        color = if (selectedQuestion != null) 
+                        color = if (selectedQuestionRes != null) 
                             MaterialTheme.colorScheme.onSurface 
                         else 
                             MaterialTheme.colorScheme.onSurfaceVariant,
@@ -118,10 +122,10 @@ fun SecurityQuestionSetupScreen(
             OutlinedTextField(
                 value = answer,
                 onValueChange = { answer = it },
-                label = { Text("Your Answer") },
+                label = { Text(stringResource(R.string.your_answer)) },
                 modifier = Modifier.fillMaxWidth(),
                 singleLine = true,
-                enabled = selectedQuestion != null,
+                enabled = selectedQuestionRes != null,
                 shape = RoundedCornerShape(12.dp)
             )
             
@@ -129,18 +133,18 @@ fun SecurityQuestionSetupScreen(
             
             Button(
                 onClick = {
-                    selectedQuestion?.let { q ->
-                        onComplete(q, answer)
+                    selectedQuestionRes?.let { qRes ->
+                        onComplete(context.getString(qRes), answer)
                     }
                 },
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(56.dp),
-                enabled = selectedQuestion != null && answer.isNotBlank(),
+                enabled = selectedQuestionRes != null && answer.isNotBlank(),
                 shape = RoundedCornerShape(16.dp)
             ) {
                 Text(
-                    text = "Continue",
+                    text = stringResource(R.string.continue_text),
                     style = MaterialTheme.typography.titleMedium
                 )
             }
@@ -153,7 +157,7 @@ fun SecurityQuestionSetupScreen(
                     modifier = Modifier.fillMaxWidth()
                 ) {
                     Text(
-                        text = "Skip for now",
+                        text = stringResource(R.string.skip_for_now),
                         style = MaterialTheme.typography.bodyMedium,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
@@ -165,30 +169,30 @@ fun SecurityQuestionSetupScreen(
     if (showQuestionPicker) {
         AlertDialog(
             onDismissRequest = { showQuestionPicker = false },
-            title = { Text("Select a Question") },
+            title = { Text(stringResource(R.string.select_a_question)) },
             text = {
                 Column {
-                    SandboxSecurityManager.SECURITY_QUESTIONS.forEach { question ->
+                    SandboxSecurityManager.SECURITY_QUESTIONS.forEach { questionRes ->
                         Row(
                             modifier = Modifier
                                 .fillMaxWidth()
                                 .clip(RoundedCornerShape(8.dp))
                                 .clickable { 
-                                    selectedQuestion = question
+                                    selectedQuestionRes = questionRes
                                     showQuestionPicker = false
                                 }
                                 .padding(12.dp),
                             verticalAlignment = Alignment.CenterVertically
                         ) {
                             Text(
-                                text = question,
+                                text = stringResource(questionRes),
                                 style = MaterialTheme.typography.bodyMedium,
                                 modifier = Modifier.weight(1f)
                             )
-                            if (selectedQuestion == question) {
+                            if (selectedQuestionRes == questionRes) {
                                 Icon(
                                     imageVector = Icons.Filled.Check,
-                                    contentDescription = "Selected",
+                                    contentDescription = stringResource(R.string.selected),
                                     tint = MaterialTheme.colorScheme.primary
                                 )
                             }
@@ -199,7 +203,7 @@ fun SecurityQuestionSetupScreen(
             confirmButton = {},
             dismissButton = {
                 TextButton(onClick = { showQuestionPicker = false }) {
-                    Text("Cancel")
+                    Text(stringResource(R.string.cancel))
                 }
             }
         )

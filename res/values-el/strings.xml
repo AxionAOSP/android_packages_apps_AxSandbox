@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sandbox</string>
+
+    <!-- Common -->
+    <string name="back">Πίσω</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Ακύρωση</string>
+    <string name="settings">Ρυθμίσεις</string>
+    <string name="launch">Έναρξη</string>
+    <string name="selected">Επιλέχθηκε</string>
+    <string name="continue_text">Συνέχεια</string>
+    <string name="skip_for_now">Παράλειψη για τώρα</string>
+    <string name="unlock">Ξεκλείδωμα</string>
+    <string name="hide">Απόκρυψη</string>
+    <string name="show">Εμφάνιση</string>
+    <string name="dismiss">Απόρριψη</string>
+    <string name="open">Άνοιγμα</string>
+    <string name="reset">Επαναφορά</string>
+    <string name="search_apps">Αναζήτηση εφαρμογών...</string>
+    <string name="version">Έκδοση</string>
+    <string name="about">Σχετικά</string>
+
+    <!-- Navigation Labels -->
+    <string name="apps">Εφαρμογές</string>
+    <string name="notifications">Ειδοποιήσεις</string>
+
+    <!-- Security Setup -->
+    <string name="secure_your_private_apps">Ασφαλίστε τις ιδιωτικές σας εφαρμογές</string>
+    <string name="choose_protection_method">Επιλέξτε πώς θέλετε να προστατεύσετε τις κρυφές εφαρμογές σας</string>
+    <string name="pin">PIN</string>
+    <string name="password">Κωδικός πρόσβασης</string>
+    <string name="pattern">Μοτίβο</string>
+    <string name="pin_description">Κωδικός 4-6 ψηφίων</string>
+    <string name="password_description">Αλφαριθμητικός κωδικός πρόσβασης</string>
+    <string name="pattern_description">Σχεδιάστε ένα μοτίβο για ξεκλείδωμα</string>
+
+    <!-- Security Screens -->
+    <string name="create_pin">Δημιουργία PIN</string>
+    <string name="confirm_pin">Επιβεβαίωση PIN</string>
+    <string name="enter_pin">Εισαγωγή PIN</string>
+    <string name="choose_pin_prompt">Επιλέξτε ένα 4ψήφιο PIN</string>
+    <string name="reenter_pin_prompt">Εισαγάγετε ξανά το PIN σας</string>
+    <string name="enter_pin_to_unlock">Εισαγάγετε το PIN για να ξεκλειδώσετε τις ιδιωτικές εφαρμογές</string>
+    <string name="pins_mismatched">Τα PIN δεν ταιριάζουν. Δοκιμάστε ξανά ή επιστρέψτε.</string>
+    <string name="incorrect_pin">Λανθασμένο PIN</string>
+
+    <string name="create_pattern">Δημιουργία μοτίβου</string>
+    <string name="confirm_pattern">Επιβεβαίωση μοτίβου</string>
+    <string name="draw_pattern">Σχεδίαση μοτίβου</string>
+    <string name="patterns_mismatched">Τα μοτίβα δεν ταιριάζουν</string>
+    <string name="wrong_pattern">Λανθασμένο μοτίβο</string>
+    <string name="connect_dots_prompt">Συνδέστε τουλάχιστον 4 τελεία</string>
+    <string name="draw_pattern_again_prompt">Σχεδιάστε ξανά το μοτίβο σας</string>
+    <string name="draw_pattern_to_unlock">Σχεδιάστε το μοτίβο για να ξεκλειδώσετε τις ιδιωτικές εφαρμογές</string>
+
+    <string name="create_password">Δημιουργία κωδικού</string>
+    <string name="confirm_password">Επιβεβαίωση κωδικού</string>
+    <string name="set_password">Ορισμός κωδικού</string>
+    <string name="enter_password">Εισαγωγή κωδικού</string>
+    <string name="choose_password_prompt">Επιλέξτε έναν ασφαλή κωδικό</string>
+    <string name="reenter_password_prompt">Εισαγάγετε ξανά τον κωδικό σας</string>
+    <string name="enter_password_to_unlock">Εισαγάγετε τον κωδικό για να ξεκλειδώσετε τις ιδιωτικές εφαρμογές</string>
+    <string name="passwords_mismatched">Οι κωδικοί δεν ταιριάζουν. Δοκιμάστε ξανά ή επιστρέψτε.</string>
+    <string name="incorrect_password">Λανθασμένος κωδικός</string>
+    <string name="enter_password_placeholder">Εισαγωγή κωδικού</string>
+
+    <string name="forgot_password_q">Ξεχάσατε τον κωδικό;</string>
+    <string name="biometric_unlock">Βιομετρικό ξεκλείδωμα</string>
+    <string name="backspace">Backspace</string>
+
+    <!-- Recovery -->
+    <string name="recovery_option">Επιλογή ανάκτησης</string>
+    <string name="recovery_setup_description">Ορίστε μια ερώτηση ασφαλείας σε περίπτωση που ξεχάσετε τον κωδικό σας</string>
+    <string name="security_question">Ερώτηση ασφαλείας</string>
+    <string name="select_a_question">Επιλέξτε μια ερώτηση</string>
+    <string name="your_answer">Η απάντησή σας</string>
+    <string name="verify_answer">Επαλήθευση απάντησης</string>
+    <string name="forgot_password_title">Ξέχασα τον κωδικό</string>
+    <string name="reset_password_description">Απαντήστε στην ερώτηση ασφαλείας για να επαναφέρετε τον κωδικό σας</string>
+    <string name="incorrect_answer">Λανθασμένη απάντηση. Παρακαλώ δοκιμάστε ξανά.</string>
+    <string name="reset_password_dialog_title">Επαναφορά κωδικού πρόσβασης;</string>
+    <string name="reset_password_dialog_message">Αυτό θα διαγράψει τον τρέχοντα κωδικό σας και θα πρέπει να ορίσετε έναν νέο. Όλα τα δεδομένα των ιδιωτικών εφαρμογών θα παραμείνουν ανέπαφα.</string>
+
+    <!-- Settings -->
+    <string name="private_apps_security">Ασφάλεια ιδιωτικών εφαρμογών</string>
+    <string name="current_lock_type">Τρέχων τύπος κλειδώματος</string>
+    <string name="not_set">Δεν έχει οριστεί</string>
+    <string name="use_pin">Χρήση PIN</string>
+    <string name="use_password">Χρήση κωδικού</string>
+    <string name="use_pattern">Χρήση μοτίβου</string>
+    <string name="biometrics">Βιομετρικά στοιχεία</string>
+    <string name="unlock_with_biometrics">Ξεκλείδωμα με βιομετρικά</string>
+    <string name="biometrics_description">Χρήση αποτυπώματος ή αναγνώρισης προσώπου</string>
+    <string name="recovery_options">Επιλογές ανάκτησης</string>
+    <string name="forgot_password_item">Ξεχάσατε τον κωδικό</string>
+    <string name="forgot_password_subtitle">Επαναφέρετε τον κωδικό σας χρησιμοποιώντας την ερώτηση ασφαλείας</string>
+    <string name="setup_security_question">Ορισμός ερώτησης ασφαλείας</string>
+    <string name="recovery_required_subtitle">Απαιτείται για την ανάκτηση κωδικού</string>
+    
+    <string name="locked_app_behavior">Συμπεριφορά κλειδωμένων εφαρμογών</string>
+    <string name="locked_app_behavior_description">Ελέγξτε πότε οι ξεκλείδωτες εφαρμογές κλειδώνουν ξανά</string>
+    <string name="relock_on_leave">Κλείδωμα κατά την έξοδο</string>
+    <string name="relock_on_leave_description">Κλειδώστε ξανά την ξεκλείδωτη εφαρμογή αμέσως μόλις βγείτε από αυτήν</string>
+    <string name="relock_after_timeout">Κλείδωμα μετά από χρονικό όριο</string>
+    <string name="relock_after_timeout_description">Κλείδωμα ξανά μετά από %1$d δευτ. αδράνειας</string>
+    <string name="relock_on_screen_off">Κλείδωμα με την απενεργοποίηση της οθόνης</string>
+    <string name="relock_on_screen_off_description">Διατήρηση ξεκλείδωτου κατά την εναλλαγή εφαρμογών, κλείδωμα με την απενεργοποίηση οθόνης</string>
+    <string name="relock_only_killed">Κλείδωμα μόνο κατά το κλείσιμο</string>
+    <string name="relock_only_killed_description">Διατήρηση ξεκλείδωτου μέχρι το Sandbox να κλείσει αναγκαστικά</string>
+
+    <string name="private_section_behavior">Συμπεριφορά ιδιωτικής ενότητας</string>
+    <string name="private_section_behavior_description">Ελέγξτε πότε η ενότητα ιδιωτικών εφαρμογών σε αυτήν την εφαρμογή κλειδώνει</string>
+    <string name="collapse_on_leave">Σύμπτυξη κατά την έξοδο</string>
+    <string name="collapse_on_leave_description">Σύμπτυξη και κλείδωμα κατά την έξοδο από την εφαρμογή Sandbox</string>
+    <string name="collapse_after_timeout">Σύμπτυξη μετά από χρονικό όριο</string>
+    <string name="collapse_after_timeout_description">Συμπτύχθηκε μετά από %1$d δευτ. από την έξοδο από την εφαρμογή</string>
+    <string name="lock_timeout">Χρονικό όριο κλειδώματος</string>
+    <string name="seconds_format">%1$d δευτερόλεπτα</string>
+    <string name="minutes_format_singular">%1$d λεπτό</string>
+    <string name="minutes_format_plural">%1$d λεπτά</string>
+
+    <!-- Sandbox App -->
+    <string name="lock_app">Κλείδωμα εφαρμογής</string>
+    <string name="lock_app_description">Απαιτείται ταυτοποίηση για το άνοιγμα αυτής της εφαρμογής</string>
+    <string name="hide_app">Απόκρυψη εφαρμογής</string>
+    <string name="hide_app_description">Απόκρυψη από τον launcher και τις ρυθμίσεις</string>
+    <string name="sandbox">Sandbox</string>
+    <string name="sandbox_description">Απόκρυψη από άλλες εφαρμογές (τραπεζικές εφαρμογές κ.λπ.)</string>
+    <string name="hide_dev_options">Απόκρυψη επιλογών προγραμματιστή</string>
+    <string name="hide_dev_options_description">Αυτή η εφαρμογή θα βλέπει τις επιλογές προγραμματιστή ως απενεργοποιημένες</string>
+    <string name="no_apps_found">Δεν βρέθηκαν εφαρμογές</string>
+    <string name="private_apps">Ιδιωτικές εφαρμογές</string>
+    <string name="sandboxed_apps">Εφαρμογές σε Sandbox</string>
+    <string name="dev_opts_hidden">Κρυφές επιλογές προγραμματιστή</string>
+    <string name="all_apps">Όλες οι εφαρμογές</string>
+    <string name="setup_private_apps">Ορισμός ιδιωτικών εφαρμογών</string>
+    <string name="setup_private_apps_description">Δημιουργήστε ένα PIN, κωδικό ή μοτίβο για να κλειδώσετε και να κρύψετε εφαρμογές</string>
+    <string name="collapse">Σύμπτυξη</string>
+    <string name="expand">Ανάπτυξη</string>
+    <string name="lock">Κλείδωμα</string>
+    <string name="dev_opt">Προγρ.</string>
+    <string name="notifications_locked">Ειδοποιήσεις κλειδωμένες</string>
+    <string name="unlock_private_area_desc">Ξεκλειδώστε την ιδιωτική περιοχή για να δείτε ειδοποιήσεις</string>
+    <string name="no_private_notifications">Δεν υπάρχουν ιδιωτικές ειδοποιήσεις</string>
+    <string name="notifications_empty_desc">Ειδοποιήσεις από κρυφές εφαρμογές θα εμφανίζονται εδώ</string>
+
+    <!-- Authenticate -->
+    <string name="unlock_app_title">Ξεκλείδωμα %1$s</string>
+    <string name="unlock_private_apps">Ξεκλείδωμα ιδιωτικών εφαρμογών</string>
+    <string name="auth_prompt_format">Εισαγάγετε τα διαπιστευτήρια του Sandbox για να ξεκλειδώσετε το %1$s</string>
+    <string name="enter_current_pin_to_change">Εισαγάγετε το τρέχον PIN για να αλλάξετε την ασφάλεια</string>
+    <string name="enter_current_password_to_change">Εισαγάγετε τον τρέχοντα κωδικό για να αλλάξετε την ασφάλεια</string>
+    <string name="draw_current_pattern_to_change">Σχεδιάστε το τρέχον μοτίβο για να αλλάξετε την ασφάλεια</string>
+
+    <!-- Security Questions -->
+    <string name="question_pet_name">Πώς ονομάζεται το κατοικίδιο ζώο σας;</string>
+    <string name="question_birth_city">Σε ποια πόλη γεννηθήκατε;</string>
+    <string name="question_fav_movie">Ποια είναι η αγαπημένη σας ταινία;</string>
+    <string name="question_mother_maiden">Ποιο είναι το πατρικό όνομα της μητέρας σας;</string>
+    <string name="question_first_car">Ποιο ήταν το πρώτο σας αυτοκίνητο;</string>
+    <string name="count_format">(%1$d)</string>
+    <string name="badge_count_format">%1$d</string>
+</resources>

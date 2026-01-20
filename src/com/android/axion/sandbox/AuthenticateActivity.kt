@@ -22,6 +22,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import com.android.axion.sandbox.security.SecurityType
 import com.android.axion.sandbox.security.SandboxSecurityManager
 import com.android.axion.sandbox.ui.LockScreen
@@ -68,7 +69,7 @@ class AuthenticateActivity : ComponentActivity() {
             } catch (e: Exception) {
                 pkg
             }
-        } ?: "App"
+        } ?: getString(R.string.apps)
         
         userId = intent.getIntExtra(EXTRA_USER_ID, 0)
             .takeIf { it != 0 } ?: intent.getIntExtra(EXTRA_LOCKED_UID, 0).let { 
@@ -96,7 +97,7 @@ class AuthenticateActivity : ComponentActivity() {
                 ) {
                     AuthenticateScreen(
                         securityManager = securityManager,
-                        appLabel = appLabel ?: "App",
+                        appLabel = appLabel ?: getString(R.string.apps),
                         onSuccess = { unlockAndFinish() },
                         onCancel = { cancelAndFinish() },
                         biometricType = biometricType,
@@ -110,15 +111,16 @@ class AuthenticateActivity : ComponentActivity() {
     
     private fun showBiometricPrompt() {
         val negativeButtonText = when (securityManager.getSecurityType()) {
-            SecurityType.PIN -> "Use PIN"
-            SecurityType.PASSWORD -> "Use Password"
-            SecurityType.PATTERN -> "Use Pattern"
-            else -> "Cancel"
+            SecurityType.PIN -> getString(R.string.use_pin)
+            SecurityType.PASSWORD -> getString(R.string.use_password)
+            SecurityType.PATTERN -> getString(R.string.use_pattern)
+            else -> getString(R.string.cancel)
         }
 
         val prompt = BiometricPrompt.Builder(this)
-            .setTitle("Unlock ${appLabel ?: "App"}")
+            .setTitle(getString(R.string.unlock_app_title, appLabel ?: getString(R.string.apps)))
             .setNegativeButton(negativeButtonText, mainExecutor) { _, _ -> 
+                cancelAndFinish()
             }
             .setAllowedAuthenticators(
                 BiometricManager.Authenticators.BIOMETRIC_STRONG or 
@@ -278,7 +280,7 @@ fun AuthenticateScreen(
     }
 
     val securityType = securityManager.getSecurityType()
-    val promptText = "Enter your Sandbox credential to unlock $appLabel"
+    val promptText = stringResource(R.string.auth_prompt_format, appLabel)
     
     when (securityType) {
         SecurityType.PIN -> {

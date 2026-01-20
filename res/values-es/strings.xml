@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sandbox</string>
+
+    <!-- Common -->
+    <string name="back">Atrás</string>
+    <string name="ok">Aceptar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="settings">Ajustes</string>
+    <string name="launch">Iniciar</string>
+    <string name="selected">Seleccionado</string>
+    <string name="continue_text">Continuar</string>
+    <string name="skip_for_now">Omitir por ahora</string>
+    <string name="unlock">Desbloquear</string>
+    <string name="hide">Ocultar</string>
+    <string name="show">Mostrar</string>
+    <string name="dismiss">Descartar</string>
+    <string name="open">Abrir</string>
+    <string name="reset">Restablecer</string>
+    <string name="search_apps">Buscar aplicaciones...</string>
+    <string name="version">Versión</string>
+    <string name="about">Acerca de</string>
+
+    <!-- Navigation Labels -->
+    <string name="apps">Aplicaciones</string>
+    <string name="notifications">Notificaciones</string>
+
+    <!-- Security Setup -->
+    <string name="secure_your_private_apps">Proteja sus aplicaciones privadas</string>
+    <string name="choose_protection_method">Elija cómo desea proteger sus aplicaciones ocultas</string>
+    <string name="pin">PIN</string>
+    <string name="password">Contraseña</string>
+    <string name="pattern">Patrón</string>
+    <string name="pin_description">Código de 4-6 dígitos</string>
+    <string name="password_description">Contraseña alfanumérica</string>
+    <string name="pattern_description">Dibuje el patrón para desbloquear</string>
+
+    <!-- Security Screens -->
+    <string name="create_pin">Crear PIN</string>
+    <string name="confirm_pin">Confirmar PIN</string>
+    <string name="enter_pin">Ingrese el PIN</string>
+    <string name="choose_pin_prompt">Elija un PIN de 4 dígitos</string>
+    <string name="reenter_pin_prompt">Vuelva a ingresar su PIN</string>
+    <string name="enter_pin_to_unlock">Ingrese su PIN para desbloquear aplicaciones privadas</string>
+    <string name="pins_mismatched">Los PIN no coinciden. Inténtelo de nuevo o regrese.</string>
+    <string name="incorrect_pin">PIN incorrecto</string>
+
+    <string name="create_pattern">Crear patrón</string>
+    <string name="confirm_pattern">Confirmar patrón</string>
+    <string name="draw_pattern">Dibujar patrón</string>
+    <string name="patterns_mismatched">Los patrones no coinciden</string>
+    <string name="wrong_pattern">Patrón incorrecto</string>
+    <string name="connect_dots_prompt">Conecte al menos 4 puntos</string>
+    <string name="draw_pattern_again_prompt">Dibuje su patrón nuevamente</string>
+    <string name="draw_pattern_to_unlock">Dibuje su patrón para desbloquear aplicaciones privadas</string>
+
+    <string name="create_password">Crear contraseña</string>
+    <string name="confirm_password">Confirmar contraseña</string>
+    <string name="set_password">Establecer contraseña</string>
+    <string name="enter_password">Ingrese la contraseña</string>
+    <string name="choose_password_prompt">Elija una contraseña segura</string>
+    <string name="reenter_password_prompt">Vuelva a ingresar su contraseña</string>
+    <string name="enter_password_to_unlock">Ingrese su contraseña para desbloquear aplicaciones privadas</string>
+    <string name="passwords_mismatched">Las contraseñas no coinciden. Inténtelo de nuevo o regrese.</string>
+    <string name="incorrect_password">Contraseña incorrecta</string>
+    <string name="enter_password_placeholder">Ingrese la contraseña</string>
+
+    <string name="forgot_password_q">¿Olvidó su contraseña?</string>
+    <string name="biometric_unlock">Desbloqueo biométrico</string>
+    <string name="backspace">Retroceso</string>
+
+    <!-- Recovery -->
+    <string name="recovery_option">Opción de recuperación</string>
+    <string name="recovery_setup_description">Configure una pregunta de seguridad en caso de que olvide su contraseña</string>
+    <string name="security_question">Pregunta de seguridad</string>
+    <string name="select_a_question">Seleccione una pregunta</string>
+    <string name="your_answer">Su respuesta</string>
+    <string name="verify_answer">Verificar respuesta</string>
+    <string name="forgot_password_title">Olvidé mi contraseña</string>
+    <string name="reset_password_description">Responda su pregunta de seguridad para restablecer su contraseña</string>
+    <string name="incorrect_answer">Respuesta incorrecta. Por favor intente de nuevo.</string>
+    <string name="reset_password_dialog_title">¿Restablecer contraseña?</string>
+    <string name="reset_password_dialog_message">Esto borrará su contraseña actual y deberá configurar una nueva. Todos los datos de las aplicaciones privadas permanecerán intactos.</string>
+
+    <!-- Settings -->
+    <string name="private_apps_security">Seguridad de aplicaciones privadas</string>
+    <string name="current_lock_type">Tipo de bloqueo actual</string>
+    <string name="not_set">No establecido</string>
+    <string name="use_pin">Usar PIN</string>
+    <string name="use_password">Usar contraseña</string>
+    <string name="use_pattern">Usar patrón</string>
+    <string name="biometrics">Biometría</string>
+    <string name="unlock_with_biometrics">Desbloquear con biometría</string>
+    <string name="biometrics_description">Usar huella digital o desbloqueo facial</string>
+    <string name="recovery_options">Opciones de recuperación</string>
+    <string name="forgot_password_item">Olvidé mi contraseña</string>
+    <string name="forgot_password_subtitle">Restablezca su contraseña usando la pregunta de seguridad</string>
+    <string name="setup_security_question">Configurar pregunta de seguridad</string>
+    <string name="recovery_required_subtitle">Requerido para la recuperación de contraseña</string>
+    
+    <string name="locked_app_behavior">Comportamiento de aplicaciones bloqueadas</string>
+    <string name="locked_app_behavior_description">Controla cuándo se vuelven a bloquear las aplicaciones desbloqueadas</string>
+    <string name="relock_on_leave">Bloquear al salir</string>
+    <string name="relock_on_leave_description">Bloquear inmediatamente al salir de la aplicación desbloqueada</string>
+    <string name="relock_after_timeout">Bloquear tras tiempo de espera</string>
+    <string name="relock_after_timeout_description">Bloquear tras %1$ds de inactividad</string>
+    <string name="relock_on_screen_off">Bloquear al apagar pantalla</string>
+    <string name="relock_on_screen_off_description">Mantener desbloqueado al cambiar de aplicación, bloquear al apagar la pantalla</string>
+    <string name="relock_only_killed">Bloquear solo al cerrar</string>
+    <string name="relock_only_killed_description">Mantener desbloqueado hasta que Sandbox se cierre forzosamente</string>
+
+    <string name="private_section_behavior">Comportamiento de la sección privada</string>
+    <string name="private_section_behavior_description">Controla cuándo se bloquea la sección de aplicaciones privadas en esta aplicación</string>
+    <string name="collapse_on_leave">Contraer al salir</string>
+    <string name="collapse_on_leave_description">Contraer y bloquear al salir de la aplicación Sandbox</string>
+    <string name="collapse_after_timeout">Contraer tras tiempo de espera</string>
+    <string name="collapse_after_timeout_description">Contraído tras %1$ds de salir de la aplicación</string>
+    <string name="lock_timeout">Tiempo de espera de bloqueo</string>
+    <string name="seconds_format">%1$d segundos</string>
+    <string name="minutes_format_singular">%1$d minuto</string>
+    <string name="minutes_format_plural">%1$d minutos</string>
+
+    <!-- Sandbox App -->
+    <string name="lock_app">Bloquear aplicación</string>
+    <string name="lock_app_description">Requiere autenticación para abrir esta aplicación</string>
+    <string name="hide_app">Ocultar aplicación</string>
+    <string name="hide_app_description">Ocultar del lanzador y ajustes</string>
+    <string name="sandbox">Sandbox</string>
+    <string name="sandbox_description">Ocultar de otras aplicaciones (bancarias, etc.)</string>
+    <string name="hide_dev_options">Ocultar opciones de desarrollador</string>
+    <string name="hide_dev_options_description">Esta aplicación verá las opciones de desarrollador como desactivadas</string>
+    <string name="no_apps_found">No se encontraron aplicaciones</string>
+    <string name="private_apps">Aplicaciones privadas</string>
+    <string name="sandboxed_apps">Aplicaciones en Sandbox</string>
+    <string name="dev_opts_hidden">Opciones de des. ocultas</string>
+    <string name="all_apps">Todas las aplicaciones</string>
+    <string name="setup_private_apps">Configurar aplicaciones privadas</string>
+    <string name="setup_private_apps_description">Cree un PIN, contraseña o patrón para bloquear y ocultar aplicaciones</string>
+    <string name="collapse">Contraer</string>
+    <string name="expand">Expandir</string>
+    <string name="lock">Bloquear</string>
+    <string name="dev_opt">Des.</string>
+    <string name="notifications_locked">Notificaciones bloqueadas</string>
+    <string name="unlock_private_area_desc">Desbloquee el área privada para ver las notificaciones</string>
+    <string name="no_private_notifications">Sin notificaciones privadas</string>
+    <string name="notifications_empty_desc">Las notificaciones de aplicaciones ocultas aparecerán aquí</string>
+
+    <!-- Authenticate -->
+    <string name="unlock_app_title">Desbloquear %1$s</string>
+    <string name="unlock_private_apps">Desbloquear aplicaciones privadas</string>
+    <string name="auth_prompt_format">Ingrese su credencial de Sandbox para desbloquear %1$s</string>
+    <string name="enter_current_pin_to_change">Ingrese su PIN actual para cambiar la seguridad</string>
+    <string name="enter_current_password_to_change">Ingrese su contraseña actual para cambiar la seguridad</string>
+    <string name="draw_current_pattern_to_change">Dibuje su patrón actual para cambiar la seguridad</string>
+
+    <!-- Security Questions -->
+    <string name="question_pet_name">¿Cuál es el nombre de su mascota?</string>
+    <string name="question_birth_city">¿En qué ciudad nació?</string>
+    <string name="question_fav_movie">¿Cuál es su película favorita?</string>
+    <string name="question_mother_maiden">¿Cuál es el apellido de soltera de su madre?</string>
+    <string name="question_first_car">¿Cuál fue su primer coche?</string>
+    <string name="count_format">(%1$d)</string>
+    <string name="badge_count_format">%1$d</string>
+</resources>

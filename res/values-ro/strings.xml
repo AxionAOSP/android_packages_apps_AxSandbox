@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sandbox</string>
+
+    <!-- Common -->
+    <string name="back">Înapoi</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Anulare</string>
+    <string name="settings">Setări</string>
+    <string name="launch">Lansare</string>
+    <string name="selected">Selectat</string>
+    <string name="continue_text">Continuare</string>
+    <string name="skip_for_now">Omite pentru moment</string>
+    <string name="unlock">Deblocare</string>
+    <string name="hide">Ascunde</string>
+    <string name="show">Afișează</string>
+    <string name="dismiss">Respinge</string>
+    <string name="open">Deschide</string>
+    <string name="reset">Resetare</string>
+    <string name="search_apps">Căutare aplicații...</string>
+    <string name="version">Versiune</string>
+    <string name="about">Despre</string>
+
+    <!-- Navigation Labels -->
+    <string name="apps">Aplicații</string>
+    <string name="notifications">Notificări</string>
+
+    <!-- Security Setup -->
+    <string name="secure_your_private_apps">Securizează aplicațiile private</string>
+    <string name="choose_protection_method">Alege cum dorești să protejezi aplicațiile ascunse</string>
+    <string name="pin">PIN</string>
+    <string name="password">Parolă</string>
+    <string name="pattern">Model</string>
+    <string name="pin_description">Cod de 4-6 cifre</string>
+    <string name="password_description">Parolă alfanumerică</string>
+    <string name="pattern_description">Desen de model pentru deblocare</string>
+
+    <!-- Security Screens -->
+    <string name="create_pin">Creare PIN</string>
+    <string name="confirm_pin">Confirmare PIN</string>
+    <string name="enter_pin">Introducere PIN</string>
+    <string name="choose_pin_prompt">Alege un PIN de 4 cifre</string>
+    <string name="reenter_pin_prompt">Introdu PIN-ul din nou</string>
+    <string name="enter_pin_to_unlock">Introdu PIN pentru deblocarea aplicațiilor private</string>
+    <string name="pins_mismatched">PIN-urile nu se potrivesc. Încearcă din nou sau mergi înapoi.</string>
+    <string name="incorrect_pin">PIN incorect</string>
+
+    <string name="create_pattern">Creare model</string>
+    <string name="confirm_pattern">Confirmare model</string>
+    <string name="draw_pattern">Desenare model</string>
+    <string name="patterns_mismatched">Modelele nu se potrivesc</string>
+    <string name="wrong_pattern">Model incorect</string>
+    <string name="connect_dots_prompt">Conectează cel puțin 4 puncte</string>
+    <string name="draw_pattern_again_prompt">Desenază modelul din nou</string>
+    <string name="draw_pattern_to_unlock">Desenază modelul pentru deblocarea aplicațiilor private</string>
+
+    <string name="create_password">Creare parolă</string>
+    <string name="confirm_password">Confirmare parolă</string>
+    <string name="set_password">Setare parolă</string>
+    <string name="enter_password">Introducere parolă</string>
+    <string name="choose_password_prompt">Alege o parolă sigură</string>
+    <string name="reenter_password_prompt">Introdu parola din nou</string>
+    <string name="enter_password_to_unlock">Introdu parola pentru deblocarea aplicațiilor private</string>
+    <string name="passwords_mismatched">Parolele nu se potrivesc. Încearcă din nou sau mergi înapoi.</string>
+    <string name="incorrect_password">Parolă incorectă</string>
+    <string name="enter_password_placeholder">Introdu parola</string>
+
+    <string name="forgot_password_q">Ai uitat parola?</string>
+    <string name="biometric_unlock">Deblocare biometrică</string>
+    <string name="backspace">Backspace</string>
+
+    <!-- Recovery -->
+    <string name="recovery_option">Opțiune de recuperare</string>
+    <string name="recovery_setup_description">Setează o întrebare de securitate în cazul în care uiți parola</string>
+    <string name="security_question">Întrebare de securitate</string>
+    <string name="select_a_question">Selectează o întrebare</string>
+    <string name="your_answer">Răspunsul tău</string>
+    <string name="verify_answer">Verifică răspunsul</string>
+    <string name="forgot_password_title">Am uitat parola</string>
+    <string name="reset_password_description">Răspunde la întrebarea de securitate pentru a reseta parola</string>
+    <string name="incorrect_answer">Răspuns incorect. Te rugăm să încerci din nou.</string>
+    <string name="reset_password_dialog_title">Resetați parola?</string>
+    <string name="reset_password_dialog_message">Această acțiune va șterge parola curentă și va trebui să setați una nouă. Toate datele aplicațiilor private vor rămâne intacte.</string>
+
+    <!-- Settings -->
+    <string name="private_apps_security">Securitate aplicații private</string>
+    <string name="current_lock_type">Tip blocare curent</string>
+    <string name="not_set">Nesetat</string>
+    <string name="use_pin">Folosește PIN</string>
+    <string name="use_password">Folosește Parolă</string>
+    <string name="use_pattern">Folosește Model</string>
+    <string name="biometrics">Biometrie</string>
+    <string name="unlock_with_biometrics">Deblocare cu biometrie</string>
+    <string name="biometrics_description">Folosește amprenta sau recunoașterea facială</string>
+    <string name="recovery_options">Opțiuni de recuperare</string>
+    <string name="forgot_password_item">Ai uitat parola</string>
+    <string name="forgot_password_subtitle">Resetează parola folosind întrebarea de securitate</string>
+    <string name="setup_security_question">Setare întrebare de securitate</string>
+    <string name="recovery_required_subtitle">Necesar pentru recuperarea parolei</string>
+    
+    <string name="locked_app_behavior">Comportament aplicații blocate</string>
+    <string name="locked_app_behavior_description">Controlează când aplicațiile deblocate se blochează din nou</string>
+    <string name="relock_on_leave">Blocare la părăsire</string>
+    <string name="relock_on_leave_description">Blochează aplicația deblocată imediat după părăsirea ei</string>
+    <string name="relock_after_timeout">Blocare după timeout</string>
+    <string name="relock_after_timeout_description">Blocare din nou după %1$d s de inactivitate</string>
+    <string name="relock_on_screen_off">Blocare la oprirea ecranului</string>
+    <string name="relock_on_screen_off_description">Menține deblocat la schimbarea aplicațiilor, blocare la oprirea ecranului</string>
+    <string name="relock_only_killed">Blocare doar la închidere</string>
+    <string name="relock_only_killed_description">Menține deblocat până când Sandbox este închis forțat</string>
+
+    <string name="private_section_behavior">Comportament secțiune privată</string>
+    <string name="private_section_behavior_description">Controlează când secțiunea de aplicații private din această aplicație se blochează</string>
+    <string name="collapse_on_leave">Restrângere la părăsire</string>
+    <string name="collapse_on_leave_description">Restrângere și blocare la părăsirea aplicației Sandbox</string>
+    <string name="collapse_after_timeout">Restrângere după timeout</string>
+    <string name="collapse_after_timeout_description">Restrâns după %1$d s de la părăsirea aplicației</string>
+    <string name="lock_timeout">Timeout blocare</string>
+    <string name="seconds_format">%1$d secunde</string>
+    <string name="minutes_format_singular">%1$d minut</string>
+    <string name="minutes_format_plural">%1$d minute</string>
+
+    <!-- Sandbox App -->
+    <string name="lock_app">Blocare aplicație</string>
+    <string name="lock_app_description">Necesită autentificare pentru a deschide această aplicație</string>
+    <string name="hide_app">Ascunde aplicația</string>
+    <string name="hide_app_description">Ascunde din launcher și setări</string>
+    <string name="sandbox">Sandbox</string>
+    <string name="sandbox_description">Ascunde de alte aplicații (aplicații bancare etc.)</string>
+    <string name="hide_dev_options">Ascunde opțiunile dezvoltator</string>
+    <string name="hide_dev_options_description">Această aplicație va vedea opțiunile dezvoltator ca fiind dezactivate</string>
+    <string name="no_apps_found">Nicio aplicație găsită</string>
+    <string name="private_apps">Aplicații private</string>
+    <string name="sandboxed_apps">Aplicații în Sandbox</string>
+    <string name="dev_opts_hidden">Opțiuni Dev ascunse</string>
+    <string name="all_apps">Toate aplicațiile</string>
+    <string name="setup_private_apps">Configurare aplicații private</string>
+    <string name="setup_private_apps_description">Creează un PIN, o parolă sau un model pentru blocarea și ascunderea aplicațiilor</string>
+    <string name="collapse">Restrângere</string>
+    <string name="expand">Expandare</string>
+    <string name="lock">Blocare</string>
+    <string name="dev_opt">Dev.</string>
+    <string name="notifications_locked">Notificări blocate</string>
+    <string name="unlock_private_area_desc">Deblochează zona privată pentru a vizualiza notificările</string>
+    <string name="no_private_notifications">Nicio notificare privată</string>
+    <string name="notifications_empty_desc">Notificările de la aplicațiile ascunse vor apărea aici</string>
+
+    <!-- Authenticate -->
+    <string name="unlock_app_title">Deblocare %1$s</string>
+    <string name="unlock_private_apps">Deblocare aplicații private</string>
+    <string name="auth_prompt_format">Introdu datele de autentificare Sandbox pentru a debloca %1$s</string>
+    <string name="enter_current_pin_to_change">Introdu PIN-ul curent pentru a modifica securitatea</string>
+    <string name="enter_current_password_to_change">Introdu parola curentă pentru a modifica securitatea</string>
+    <string name="draw_current_pattern_to_change">Desenază modelul curent pentru a modifica securitatea</string>
+
+    <!-- Security Questions -->
+    <string name="question_pet_name">Care este numele animalului tău de companie?</string>
+    <string name="question_birth_city">În ce oraș te-ai născut?</string>
+    <string name="question_fav_movie">Care este filmul tău preferat?</string>
+    <string name="question_mother_maiden">Care este numele de fată al mamei tale?</string>
+    <string name="question_first_car">Care a fost prima ta mașină?</string>
+    <string name="count_format">(%1$d)</string>
+    <string name="badge_count_format">%1$d</string>
+</resources>

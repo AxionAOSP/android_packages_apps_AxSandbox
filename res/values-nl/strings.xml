@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sandbox</string>
+
+    <!-- Common -->
+    <string name="back">Terug</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Annuleren</string>
+    <string name="settings">Instellingen</string>
+    <string name="launch">Starten</string>
+    <string name="selected">Geselecteerd</string>
+    <string name="continue_text">Doorgaan</string>
+    <string name="skip_for_now">Nu overslaan</string>
+    <string name="unlock">Ontgrendelen</string>
+    <string name="hide">Verbergen</string>
+    <string name="show">Tonen</string>
+    <string name="dismiss">Sluiten</string>
+    <string name="open">Openen</string>
+    <string name="reset">Resetten</string>
+    <string name="search_apps">Apps zoeken...</string>
+    <string name="version">Versie</string>
+    <string name="about">Over</string>
+
+    <!-- Navigation Labels -->
+    <string name="apps">Apps</string>
+    <string name="notifications">Meldingen</string>
+
+    <!-- Security Setup -->
+    <string name="secure_your_private_apps">Beveilig je privé-apps</string>
+    <string name="choose_protection_method">Kies hoe je je verborgen apps wilt beschermen</string>
+    <string name="pin">PIN</string>
+    <string name="password">Wachtwoord</string>
+    <string name="pattern">Patroon</string>
+    <string name="pin_description">4-6 cijferige code</string>
+    <string name="password_description">Alfanumeriek wachtwoord</string>
+    <string name="pattern_description">Teken patroon om te ontgrendelen</string>
+
+    <!-- Security Screens -->
+    <string name="create_pin">PIN maken</string>
+    <string name="confirm_pin">PIN bevestigen</string>
+    <string name="enter_pin">PIN invoeren</string>
+    <string name="choose_pin_prompt">Kies een 4-cijferige PIN</string>
+    <string name="reenter_pin_prompt">Voer je PIN opnieuw in</string>
+    <string name="enter_pin_to_unlock">Voer PIN in om privé-apps te ontgrendelen</string>
+    <string name="pins_mismatched">PINs komen niet overeen. Probeer het opnieuw of ga terug.</string>
+    <string name="incorrect_pin">Onjuiste PIN</string>
+
+    <string name="create_pattern">Patroon maken</string>
+    <string name="confirm_pattern">Patroon bevestigen</string>
+    <string name="draw_pattern">Patroon tekenen</string>
+    <string name="patterns_mismatched">Patronen komen niet overeen</string>
+    <string name="wrong_pattern">Onjuist patroon</string>
+    <string name="connect_dots_prompt">Verbind minimaal 4 punten</string>
+    <string name="draw_pattern_again_prompt">Teken je patroon opnieuw</string>
+    <string name="draw_pattern_to_unlock">Teken je patroon om privé-apps te ontgrendelen</string>
+
+    <string name="create_password">Wachtwoord maken</string>
+    <string name="confirm_password">Wachtwoord bevestigen</string>
+    <string name="set_password">Wachtwoord instellen</string>
+    <string name="enter_password">Wachtwoord invoeren</string>
+    <string name="choose_password_prompt">Kies een veilig wachtwoord</string>
+    <string name="reenter_password_prompt">Voer je wachtwoord opnieuw in</string>
+    <string name="enter_password_to_unlock">Voer wachtwoord in om privé-apps te ontgrendelen</string>
+    <string name="passwords_mismatched">Wachtwoorden komen niet overeen. Probeer het opnieuw of ga terug.</string>
+    <string name="incorrect_password">Onjuist wachtwoord</string>
+    <string name="enter_password_placeholder">Wachtwoord invoeren</string>
+
+    <string name="forgot_password_q">Wachtwoord vergeten?</string>
+    <string name="biometric_unlock">Biometrisch ontgrendelen</string>
+    <string name="backspace">Backspace</string>
+
+    <!-- Recovery -->
+    <string name="recovery_option">Hersteloptie</string>
+    <string name="recovery_setup_description">Stel een beveiligingsvraag in voor het geval je je wachtwoord vergeet</string>
+    <string name="security_question">Beveiligingsvraag</string>
+    <string name="select_a_question">Selecteer een vraag</string>
+    <string name="your_answer">Jouw antwoord</string>
+    <string name="verify_answer">Antwoord verifiëren</string>
+    <string name="forgot_password_title">Wachtwoord vergeten</string>
+    <string name="reset_password_description">Beantwoord je beveiligingsvraag om je wachtwoord te resetten</string>
+    <string name="incorrect_answer">Onjuist antwoord. Probeer het opnieuw.</string>
+    <string name="reset_password_dialog_title">Wachtwoord resetten?</string>
+    <string name="reset_password_dialog_message">Dit wist je huidige wachtwoord en je moet een nieuwe instellen. Alle privé-app-gegevens blijven intact.</string>
+
+    <!-- Settings -->
+    <string name="private_apps_security">Privé-apps beveiliging</string>
+    <string name="current_lock_type">Huidig type vergrendeling</string>
+    <string name="not_set">Niet ingesteld</string>
+    <string name="use_pin">PIN gebruiken</string>
+    <string name="use_password">Wachtwoord gebruiken</string>
+    <string name="use_pattern">Patroon gebruiken</string>
+    <string name="biometrics">Biometrie</string>
+    <string name="unlock_with_biometrics">Ontgrendelen met biometrie</string>
+    <string name="biometrics_description">Vingerafdruk of gezichtsherkenning gebruiken</string>
+    <string name="recovery_options">Herstelopties</string>
+    <string name="forgot_password_item">Wachtwoord vergeten</string>
+    <string name="forgot_password_subtitle">Reset je wachtwoord met de beveiligingsvraag</string>
+    <string name="setup_security_question">Beveiligingsvraag instellen</string>
+    <string name="recovery_required_subtitle">Vereist voor wachtwoordherstel</string>
+    
+    <string name="locked_app_behavior">Gedrag vergrendelde apps</string>
+    <string name="locked_app_behavior_description">Beheer wanneer ontgrendelde apps opnieuw worden vergrendeld</string>
+    <string name="relock_on_leave">Vergrendelen bij verlaten</string>
+    <string name="relock_on_leave_description">Ontgrendelde app onmiddellijk opnieuw vergrendelen bij verlaten</string>
+    <string name="relock_after_timeout">Vergrendelen na time-out</string>
+    <string name="relock_after_timeout_description">Opnieuw vergrendelen na %1$d s inactiviteit</string>
+    <string name="relock_on_screen_off">Vergrendelen bij scherm uit</string>
+    <string name="relock_on_screen_off_description">Ontgrendeld houden bij wisselen van apps, vergrendelen bij scherm uit</string>
+    <string name="relock_only_killed">Alleen vergrendelen bij sluiten</string>
+    <string name="relock_only_killed_description">Ontgrendeld houden tot Sandbox geforceerd wordt gesloten</string>
+
+    <string name="private_section_behavior">Gedrag privégedeelte</string>
+    <string name="private_section_behavior_description">Beheer wanneer het privégedeelte in deze app wordt vergrendeld</string>
+    <string name="collapse_on_leave">Inklappen bij verlaten</string>
+    <string name="collapse_on_leave_description">Inklappen en vergrendelen bij verlaten van de Sandbox-app</string>
+    <string name="collapse_after_timeout">Inklappen na time-out</string>
+    <string name="collapse_after_timeout_description">Ingeklapt na %1$d s na verlaten van de app</string>
+    <string name="lock_timeout">Vergrendeling time-out</string>
+    <string name="seconds_format">%1$d seconden</string>
+    <string name="minutes_format_singular">%1$d minuut</string>
+    <string name="minutes_format_plural">%1$d minuten</string>
+
+    <!-- Sandbox App -->
+    <string name="lock_app">App vergrendelen</string>
+    <string name="lock_app_description">Authenticatie vereist om deze app te openen</string>
+    <string name="hide_app">App verbergen</string>
+    <string name="hide_app_description">Verbergen in launcher en instellingen</string>
+    <string name="sandbox">Sandbox</string>
+    <string name="sandbox_description">Verbergen voor andere apps (bank-apps etc.)</string>
+    <string name="hide_dev_options">Ontwikkelaarsopties verbergen</string>
+    <string name="hide_dev_options_description">Deze app ziet ontwikkelaarsopties als uitgeschakeld</string>
+    <string name="no_apps_found">Geen apps gevonden</string>
+    <string name="private_apps">Privé-apps</string>
+    <string name="sandboxed_apps">Sandboxed apps</string>
+    <string name="dev_opts_hidden">DevOpts verborgen</string>
+    <string name="all_apps">Alle apps</string>
+    <string name="setup_private_apps">Privé-apps instellen</string>
+    <string name="setup_private_apps_description">Maak een PIN, wachtwoord of patroon om apps te vergrendelen en te verbergen</string>
+    <string name="collapse">Inklappen</string>
+    <string name="expand">Uitvouwen</string>
+    <string name="lock">Vergrendelen</string>
+    <string name="dev_opt">Dev.</string>
+    <string name="notifications_locked">Meldingen vergrendeld</string>
+    <string name="unlock_private_area_desc">Ontgrendel het privégedeelte om meldingen te bekijken</string>
+    <string name="no_private_notifications">Geen privé-meldingen</string>
+    <string name="notifications_empty_desc">Meldingen van verborgen apps verschijnen hier</string>
+
+    <!-- Authenticate -->
+    <string name="unlock_app_title">%1$s ontgrendelen</string>
+    <string name="unlock_private_apps">Privé-apps ontgrendelen</string>
+    <string name="auth_prompt_format">Voer je Sandbox-gegevens in om %1$s te ontgrendelen</string>
+    <string name="enter_current_pin_to_change">Voer je huidige PIN in om de beveiliging te wijzigen</string>
+    <string name="enter_current_password_to_change">Voer je huidige wachtwoord in om de beveiliging te wijzigen</string>
+    <string name="draw_current_pattern_to_change">Teken je huidige patroon om de beveiliging te wijzigen</string>
+
+    <!-- Security Questions -->
+    <string name="question_pet_name">Hoe heet je huisdier?</string>
+    <string name="question_birth_city">In welke stad ben je geboren?</string>
+    <string name="question_fav_movie">Wat is je lievelingsfilm?</string>
+    <string name="question_mother_maiden">Wat is de meisjesnaam van je moeder?</string>
+    <string name="question_first_car">Wat was je eerste auto?</string>
+    <string name="count_format">(%1$d)</string>
+    <string name="badge_count_format">%1$d</string>
+</resources>
