@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Sandbox</string>
+    <string name="app_name">Песочница</string>
     <!-- Common -->
     <string name="back">Назад</string>
     <string name="ok">OK</string>
     <string name="cancel">Отмена</string>
     <string name="settings">Настройки</string>
-    <string name="launch">Launch</string>
+    <string name="launch">Запустить</string>
     <string name="selected">Выбрано</string>
-    <string name="continue_text">Continue</string>
-    <string name="skip_for_now">Skip for now</string>
+    <string name="continue_text">Продолжить</string>
+    <string name="skip_for_now">Пропустить</string>
     <string name="unlock">Unlock</string>
-    <string name="hide">Hide</string>
+    <string name="hide">Спрятать</string>
     <string name="show">Show</string>
     <string name="dismiss">Закрыть</string>
-    <string name="open">Open</string>
-    <string name="reset">Reset</string>
+    <string name="open">Открыть</string>
+    <string name="reset">Сброс</string>
     <string name="search">Поиск</string>
     <string name="search_apps">Поиск приложений…</string>
-    <string name="version">Version</string>
+    <string name="version">Версия</string>
     <string name="about">About</string>
     <!-- Navigation Labels -->
     <string name="apps">Apps</string>
@@ -116,7 +116,7 @@
     <string name="lock_app_description">Require authentication to open this app</string>
     <string name="hide_app">Hide App</string>
     <string name="hide_app_description">Hide from launcher and settings</string>
-    <string name="sandbox">Sandbox</string>
+    <string name="sandbox">Песочница</string>
     <string name="sandbox_description">Hide from other apps (banking apps, etc.)</string>
     <string name="hide_dev_options">Hide Developer Options</string>
     <string name="hide_dev_options_description">This app sees dev options as disabled</string>
