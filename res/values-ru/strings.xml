@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Sandbox</string>
-
+    <string name="app_name">Песочница</string>
     <!-- Common -->
     <string name="back">Назад</string>
     <string name="ok">OK</string>
@@ -11,154 +10,144 @@
     <string name="selected">Выбрано</string>
     <string name="continue_text">Продолжить</string>
     <string name="skip_for_now">Пропустить</string>
-    <string name="unlock">Разблокировать</string>
-    <string name="hide">Скрыть</string>
-    <string name="show">Показать</string>
+    <string name="unlock">Unlock</string>
+    <string name="hide">Спрятать</string>
+    <string name="show">Show</string>
     <string name="dismiss">Закрыть</string>
     <string name="open">Открыть</string>
-    <string name="reset">Сбросить</string>
-    <string name="search_apps">Поиск приложений...</string>
+    <string name="reset">Сброс</string>
+    <string name="search">Поиск</string>
+    <string name="search_apps">Поиск приложений…</string>
     <string name="version">Версия</string>
-    <string name="about">О приложении</string>
-
+    <string name="about">About</string>
     <!-- Navigation Labels -->
-    <string name="apps">Приложения</string>
+    <string name="apps">Apps</string>
     <string name="notifications">Уведомления</string>
-
     <!-- Security Setup -->
-    <string name="secure_your_private_apps">Защитите личные приложения</string>
-    <string name="choose_protection_method">Выберите способ защиты скрытых приложений</string>
-    <string name="pin">PIN-код</string>
-    <string name="password">Пароль</string>
-    <string name="pattern">Графический ключ</string>
-    <string name="pin_description">4-6 значный код</string>
-    <string name="password_description">Буквенно-цифровой пароль</string>
-    <string name="pattern_description">Нарисуйте ключ для разблокировки</string>
-
+    <string name="secure_your_private_apps">Secure Your Private Apps</string>
+    <string name="choose_protection_method">Choose how you want to protect your hidden apps</string>
+    <string name="pin">PIN</string>
+    <string name="password">Password</string>
+    <string name="pattern">Pattern</string>
+    <string name="pin_description">4-6 digit code</string>
+    <string name="password_description">Alphanumeric password</string>
+    <string name="pattern_description">Draw pattern to unlock</string>
     <!-- Security Screens -->
-    <string name="create_pin">Создать PIN-код</string>
-    <string name="confirm_pin">Подтвердить PIN-код</string>
-    <string name="enter_pin">Введите PIN-код</string>
-    <string name="choose_pin_prompt">Выберите 4-значный PIN-код</string>
-    <string name="reenter_pin_prompt">Введите PIN-код еще раз</string>
-    <string name="enter_pin_to_unlock">Введите PIN-код, чтобы разблокировать приложения</string>
-    <string name="pins_mismatched">PIN-коды не совпадают. Попробуйте еще раз.</string>
-    <string name="incorrect_pin">Неверный PIN-код</string>
-
-    <string name="create_pattern">Создать графический ключ</string>
-    <string name="confirm_pattern">Подтвердить графический ключ</string>
-    <string name="draw_pattern">Нарисовать ключ</string>
-    <string name="patterns_mismatched">Ключи не совпадают</string>
-    <string name="wrong_pattern">Неверный ключ</string>
-    <string name="connect_dots_prompt">Соедините минимум 4 точки</string>
-    <string name="draw_pattern_again_prompt">Нарисуйте ключ еще раз</string>
-    <string name="draw_pattern_to_unlock">Нарисуйте ключ для разблокировки приложений</string>
-
-    <string name="create_password">Создать пароль</string>
-    <string name="confirm_password">Подтвердить пароль</string>
-    <string name="set_password">Установить пароль</string>
-    <string name="enter_password">Введите пароль</string>
-    <string name="choose_password_prompt">Выберите надежный пароль</string>
-    <string name="reenter_password_prompt">Введите пароль еще раз</string>
-    <string name="enter_password_to_unlock">Введите пароль для разблокировки приложений</string>
-    <string name="passwords_mismatched">Пароли не совпадают. Попробуйте еще раз.</string>
-    <string name="incorrect_password">Неверный пароль</string>
-    <string name="enter_password_placeholder">Введите пароль</string>
-
-    <string name="forgot_password_q">Забыли пароль?</string>
-    <string name="biometric_unlock">Биометрическая разблокировка</string>
-    <string name="backspace">Стереть</string>
-
+    <string name="create_pin">Create PIN</string>
+    <string name="confirm_pin">Confirm PIN</string>
+    <string name="enter_pin">Enter PIN</string>
+    <string name="choose_pin_prompt">Choose a 4-digit PIN</string>
+    <string name="reenter_pin_prompt">Re-enter your PIN</string>
+    <string name="enter_pin_to_unlock">Enter your PIN to unlock private apps</string>
+    <string name="pins_mismatched">PINs mismatched. Try again or go back.</string>
+    <string name="incorrect_pin">Incorrect PIN</string>
+    <string name="create_pattern">Create Pattern</string>
+    <string name="confirm_pattern">Confirm Pattern</string>
+    <string name="draw_pattern">Draw Pattern</string>
+    <string name="patterns_mismatched">Patterns don\'t match</string>
+    <string name="wrong_pattern">Wrong pattern</string>
+    <string name="connect_dots_prompt">Connect at least 4 dots</string>
+    <string name="draw_pattern_again_prompt">Draw your pattern again</string>
+    <string name="draw_pattern_to_unlock">Draw your pattern to unlock private apps</string>
+    <string name="create_password">Create Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="set_password">Set Password</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="choose_password_prompt">Choose a secure password</string>
+    <string name="reenter_password_prompt">Re-enter your password</string>
+    <string name="enter_password_to_unlock">Enter your password to unlock private apps</string>
+    <string name="passwords_mismatched">Passwords mismatched. Try again or go back.</string>
+    <string name="incorrect_password">Incorrect password</string>
+    <string name="enter_password_placeholder">Enter password</string>
+    <string name="forgot_password_q">Forgot Password?</string>
+    <string name="biometric_unlock">Biometric Unlock</string>
+    <string name="backspace">Возврат</string>
     <!-- Recovery -->
-    <string name="recovery_option">Способ восстановления</string>
-    <string name="recovery_setup_description">Настройте секретный вопрос на случай, если забудете пароль</string>
-    <string name="security_question">Секретный вопрос</string>
-    <string name="select_a_question">Выберите вопрос</string>
-    <string name="your_answer">Ваш ответ</string>
-    <string name="verify_answer">Проверить ответ</string>
-    <string name="forgot_password_title">Забыли пароль</string>
-    <string name="reset_password_description">Ответьте на секретный вопрос, чтобы сбросить пароль</string>
-    <string name="incorrect_answer">Неверный ответ. Попробуйте еще раз.</string>
-    <string name="reset_password_dialog_title">Сбросить пароль?</string>
-    <string name="reset_password_dialog_message">Текущий пароль будет удален, вам нужно будет установить новый. Данные приложений не пострадают.</string>
-
+    <string name="recovery_option">Recovery Option</string>
+    <string name="recovery_setup_description">Set up a security question in case you forget your password</string>
+    <string name="security_question">Security Question</string>
+    <string name="select_a_question">Select a question</string>
+    <string name="your_answer">Your Answer</string>
+    <string name="verify_answer">Verify Answer</string>
+    <string name="forgot_password_title">Forgot Password</string>
+    <string name="reset_password_description">Answer your security question to reset your password</string>
+    <string name="incorrect_answer">Incorrect answer. Please try again.</string>
+    <string name="reset_password_dialog_title">Reset Password?</string>
+    <string name="reset_password_dialog_message">This will clear your current password and you\'ll need to set up a new one. All private app data will remain intact.</string>
     <!-- Settings -->
-    <string name="private_apps_security">Безопасность личных приложений</string>
-    <string name="current_lock_type">Текущий тип блокировки</string>
-    <string name="not_set">Не установлено</string>
-    <string name="use_pin">Использовать PIN-код</string>
-    <string name="use_password">Использовать пароль</string>
-    <string name="use_pattern">Использовать графический ключ</string>
-    <string name="biometrics">Биометрия</string>
-    <string name="unlock_with_biometrics">Разблокировка биометрией</string>
-    <string name="biometrics_description">Использовать отпечаток пальца или лицо</string>
-    <string name="recovery_options">Варианты восстановления</string>
-    <string name="forgot_password_item">Забыли пароль</string>
-    <string name="forgot_password_subtitle">Сброс пароля через секретный вопрос</string>
-    <string name="setup_security_question">Настроить секретный вопрос</string>
-    <string name="recovery_required_subtitle">Необходимо для восстановления</string>
-    
-    <string name="locked_app_behavior">Поведение заблокированных приложений</string>
-    <string name="locked_app_behavior_description">Настройка повторной блокировки приложений</string>
-    <string name="relock_on_leave">Блокировать при выходе</string>
-    <string name="relock_on_leave_description">Блокировать сразу после выхода из приложения</string>
-    <string name="relock_after_timeout">Блокировать через время</string>
-    <string name="relock_after_timeout_description">Блокировать после %1$d сек. неактивности</string>
-    <string name="relock_on_screen_off">Блокировать при выключении экрана</string>
-    <string name="relock_on_screen_off_description">Не блокировать при переключении, блокировать при выключении экрана</string>
-    <string name="relock_only_killed">Блокировать только после закрытия</string>
-    <string name="relock_only_killed_description">Не блокировать, пока Sandbox не будет принудительно закрыт</string>
-
-    <string name="private_section_behavior">Поведение личного раздела</string>
-    <string name="private_section_behavior_description">Настройка блокировки личного раздела в приложении</string>
-    <string name="collapse_on_leave">Сворачивать при выходе</string>
-    <string name="collapse_on_leave_description">Сворачивать и блокировать при выходе из Sandbox</string>
-    <string name="collapse_after_timeout">Сворачивать через время</string>
-    <string name="collapse_after_timeout_description">Свернуто через %1$d сек. после выхода</string>
-    <string name="lock_timeout">Время блокировки</string>
-    <string name="seconds_format">%1$d секунд</string>
-    <string name="minutes_format_singular">%1$d минута</string>
-    <string name="minutes_format_plural">%1$d минут</string>
-
+    <string name="private_apps_security">Private Apps Security</string>
+    <string name="current_lock_type">Current Lock Type</string>
+    <string name="not_set">Not set</string>
+    <string name="use_pin">Use PIN</string>
+    <string name="use_password">Use Password</string>
+    <string name="use_pattern">Use Pattern</string>
+    <string name="biometrics">Biometrics</string>
+    <string name="unlock_with_biometrics">Unlock with Biometrics</string>
+    <string name="biometrics_description">Use fingerprint or face unlock</string>
+    <string name="auto_show_biometric_prompt">Auto-show Biometric Prompt</string>
+    <string name="auto_show_biometric_prompt_description">Automatically show biometric prompt when opening locked apps</string>
+    <string name="recovery_options">Recovery Options</string>
+    <string name="forgot_password_item">Forgot Password</string>
+    <string name="forgot_password_subtitle">Reset your password using security question</string>
+    <string name="setup_security_question">Set Up Security Question</string>
+    <string name="recovery_required_subtitle">Required for password recovery</string>
+    <string name="locked_app_behavior">Locked App Behavior</string>
+    <string name="locked_app_behavior_description">Controls when unlocked apps re-lock</string>
+    <string name="relock_on_leave">Re-lock when leaving app</string>
+    <string name="relock_on_leave_description">Re-lock immediately when leaving the unlocked app</string>
+    <string name="relock_after_timeout">Re-lock after timeout</string>
+    <string name="relock_after_timeout_description">Re-lock after %1$ds of inactivity</string>
+    <string name="relock_on_screen_off">Re-lock on screen off</string>
+    <string name="relock_on_screen_off_description">Keep unlocked when switching apps, lock on screen off</string>
+    <string name="relock_only_killed">Re-lock only when killed</string>
+    <string name="relock_only_killed_description">Keep unlocked until Sandbox is force closed</string>
+    <string name="private_section_behavior">Private Section Behavior</string>
+    <string name="private_section_behavior_description">Controls when the private apps section in this app locks</string>
+    <string name="collapse_on_leave">Collapse when leaving</string>
+    <string name="collapse_on_leave_description">Collapse and lock when leaving Sandbox app</string>
+    <string name="collapse_after_timeout">Collapse after timeout</string>
+    <string name="collapse_after_timeout_description">Collapsed after %1$ds of leaving the app</string>
+    <string name="lock_timeout">Lock Timeout</string>
+    <string name="seconds_format">%1$d seconds</string>
+    <string name="minutes_format_singular">%1$d minute</string>
+    <string name="minutes_format_plural">%1$d minutes</string>
     <!-- Sandbox App -->
-    <string name="lock_app">Заблокировать приложение</string>
-    <string name="lock_app_description">Требовать аутентификацию для открытия</string>
-    <string name="hide_app">Скрыть приложение</string>
-    <string name="hide_app_description">Скрыть из меню приложений и настроек</string>
-    <string name="sandbox">Sandbox</string>
-    <string name="sandbox_description">Скрыть от других приложений (банковские и др.)</string>
-    <string name="hide_dev_options">Скрыть параметры разработчика</string>
-    <string name="hide_dev_options_description">Приложение будет видеть параметры разработчика выключенными</string>
-    <string name="no_apps_found">Приложения не найдены</string>
-    <string name="private_apps">Личные приложения</string>
-    <string name="sandboxed_apps">Изолированные приложения</string>
-    <string name="dev_opts_hidden">Скрыто от разработчика</string>
-    <string name="all_apps">Все приложения</string>
-    <string name="setup_private_apps">Настроить личные приложения</string>
-    <string name="setup_private_apps_description">Создайте PIN, пароль или ключ, чтобы скрыть приложения</string>
+    <string name="lock_app">Lock App</string>
+    <string name="lock_app_description">Require authentication to open this app</string>
+    <string name="hide_app">Hide App</string>
+    <string name="hide_app_description">Hide from launcher and settings</string>
+    <string name="sandbox">Песочница</string>
+    <string name="sandbox_description">Hide from other apps (banking apps, etc.)</string>
+    <string name="hide_dev_options">Hide Developer Options</string>
+    <string name="hide_dev_options_description">This app sees dev options as disabled</string>
+    <string name="no_apps_found">No apps found</string>
+    <string name="private_apps">Private Apps</string>
+    <string name="sandboxed_apps">Sandboxed Apps</string>
+    <string name="dev_opts_hidden">DevOpts Hidden</string>
+    <string name="all_apps">All Apps</string>
+    <string name="setup_private_apps">Set Up Private Apps</string>
+    <string name="setup_private_apps_description">Create a PIN, password, or pattern to lock and hide apps</string>
     <string name="collapse">Свернуть</string>
     <string name="expand">Развернуть</string>
     <string name="lock">Блокировка</string>
-    <string name="dev_opt">Разраб</string>
-    <string name="notifications_locked">Уведомления заблокированы</string>
-    <string name="unlock_private_area_desc">Разблокируйте личный раздел, чтобы увидеть уведомления</string>
-    <string name="no_private_notifications">Нет личных уведомлений</string>
-    <string name="notifications_empty_desc">Здесь появятся уведомления от скрытых приложений</string>
-
+    <string name="dev_opt">DevOpt</string>
+    <string name="notifications_locked">Notifications Locked</string>
+    <string name="unlock_private_area_desc">Unlock the private area to view notifications</string>
+    <string name="no_private_notifications">No private notifications</string>
+    <string name="notifications_empty_desc">Notifications from hidden apps will appear here</string>
     <!-- Authenticate -->
-    <string name="unlock_app_title">Разблокировать %1$s</string>
-    <string name="unlock_private_apps">Разблокировать личные приложения</string>
-    <string name="auth_prompt_format">Введите учетные данные Sandbox, чтобы разблокировать %1$s</string>
-    <string name="enter_current_pin_to_change">Введите текущий PIN-код для смены защиты</string>
-    <string name="enter_current_password_to_change">Введите текущий пароль для смены защиты</string>
-    <string name="draw_current_pattern_to_change">Нарисуйте текущий ключ для смены защиты</string>
-
+    <string name="unlock_app_title">Unlock %1$s</string>
+    <string name="unlock_private_apps">Unlock Private Apps</string>
+    <string name="auth_prompt_format">Enter your Sandbox credential to unlock %1$s</string>
+    <string name="enter_current_pin_to_change">Enter your current PIN to change security</string>
+    <string name="enter_current_password_to_change">Enter your current password to change security</string>
+    <string name="draw_current_pattern_to_change">Draw your current pattern to change security</string>
     <!-- Security Questions -->
-    <string name="question_pet_name">Как зовут вашего питомца?</string>
-    <string name="question_birth_city">В каком городе вы родились?</string>
-    <string name="question_fav_movie">Какой ваш любимый фильм?</string>
-    <string name="question_mother_maiden">Девичья фамилия вашей матери?</string>
-    <string name="question_first_car">Какой была ваша первая машина?</string>
+    <string name="question_pet_name">What is your pet\'s name?</string>
+    <string name="question_birth_city">What city were you born in?</string>
+    <string name="question_fav_movie">What is your favorite movie?</string>
+    <string name="question_mother_maiden">What is your mother\'s maiden name?</string>
+    <string name="question_first_car">What was your first car?</string>
     <string name="count_format">(%1$d)</string>
     <string name="badge_count_format">%1$d</string>
 </resources>

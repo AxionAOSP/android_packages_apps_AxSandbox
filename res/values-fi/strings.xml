@@ -2,27 +2,27 @@
 <resources>
     <string name="app_name">Sandbox</string>
     <!-- Common -->
-    <string name="back">Indietro</string>
+    <string name="back">Back</string>
     <string name="ok">OK</string>
-    <string name="cancel">Cancellare</string>
-    <string name="settings">Impostazioni</string>
+    <string name="cancel">Cancel</string>
+    <string name="settings">Settings</string>
     <string name="launch">Launch</string>
-    <string name="selected">Selezionato</string>
+    <string name="selected">Selected</string>
     <string name="continue_text">Continue</string>
     <string name="skip_for_now">Skip for now</string>
     <string name="unlock">Unlock</string>
     <string name="hide">Hide</string>
     <string name="show">Show</string>
-    <string name="dismiss">Ignora</string>
+    <string name="dismiss">Hylkää</string>
     <string name="open">Open</string>
     <string name="reset">Reset</string>
-    <string name="search">Cerca</string>
-    <string name="search_apps">Cerca app...</string>
+    <string name="search">Haku</string>
+    <string name="search_apps">Search apps...</string>
     <string name="version">Version</string>
     <string name="about">About</string>
     <!-- Navigation Labels -->
     <string name="apps">Apps</string>
-    <string name="notifications">Notifiche</string>
+    <string name="notifications">Ilmoitukset</string>
     <!-- Security Setup -->
     <string name="secure_your_private_apps">Secure Your Private Apps</string>
     <string name="choose_protection_method">Choose how you want to protect your hidden apps</string>
@@ -127,9 +127,9 @@
     <string name="all_apps">All Apps</string>
     <string name="setup_private_apps">Set Up Private Apps</string>
     <string name="setup_private_apps_description">Create a PIN, password, or pattern to lock and hide apps</string>
-    <string name="collapse">Comprimi</string>
-    <string name="expand">Espandi</string>
-    <string name="lock">Blocca</string>
+    <string name="collapse">Collapse</string>
+    <string name="expand">Expand</string>
+    <string name="lock">Lukko</string>
     <string name="dev_opt">DevOpt</string>
     <string name="notifications_locked">Notifications Locked</string>
     <string name="unlock_private_area_desc">Unlock the private area to view notifications</string>
