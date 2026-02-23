@@ -22,7 +22,7 @@
     <string name="about">About</string>
     <!-- Navigation Labels -->
     <string name="apps">Apps</string>
-    <string name="notifications">Notifications</string>
+    <string name="notifications">Notifikasi</string>
     <!-- Security Setup -->
     <string name="secure_your_private_apps">Secure Your Private Apps</string>
     <string name="choose_protection_method">Choose how you want to protect your hidden apps</string>
