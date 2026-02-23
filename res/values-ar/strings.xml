@@ -89,7 +89,7 @@
     <string name="recovery_options">خيارات الاستعادة</string>
     <string name="forgot_password_item">نسيت كلمة السر</string>
     <string name="forgot_password_subtitle">صفر كلمة السر ب سؤال امني</string>
-    <string name="setup_security_question">أعد سؤال امني</string>
+    <string name="setup_security_question">أعداد. سؤال امني</string>
     <string name="recovery_required_subtitle">يلزم لاستعادة كلمة السر</string>
     <string name="locked_app_behavior">تصرفات التطبيق المقفل</string>
     <string name="locked_app_behavior_description">تحكم متى يعاد قَفل التطبيقات المفكوك قفلها</string>
