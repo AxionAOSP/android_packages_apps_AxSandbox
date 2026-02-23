@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Sandbox</string>
+    <string name="app_name">サンドボックス</string>
     <!-- Common -->
     <string name="back">戻る</string>
     <string name="ok">OK</string>
     <string name="cancel">キャンセル</string>
     <string name="settings">設定</string>
-    <string name="launch">Launch</string>
+    <string name="launch">起動</string>
     <string name="selected">選択済み</string>
-    <string name="continue_text">Continue</string>
+    <string name="continue_text">続行</string>
     <string name="skip_for_now">Skip for now</string>
     <string name="unlock">Unlock</string>
     <string name="hide">Hide</string>
     <string name="show">Show</string>
     <string name="dismiss">表示しない</string>
     <string name="open">Open</string>
-    <string name="reset">Reset</string>
+    <string name="reset">リセット</string>
     <string name="search">検索</string>
     <string name="search_apps">アプリを検索...</string>
     <string name="version">Version</string>
@@ -116,7 +116,7 @@
     <string name="lock_app_description">Require authentication to open this app</string>
     <string name="hide_app">Hide App</string>
     <string name="hide_app_description">Hide from launcher and settings</string>
-    <string name="sandbox">Sandbox</string>
+    <string name="sandbox">サンドボックス</string>
     <string name="sandbox_description">Hide from other apps (banking apps, etc.)</string>
     <string name="hide_dev_options">Hide Developer Options</string>
     <string name="hide_dev_options_description">This app sees dev options as disabled</string>
@@ -124,7 +124,7 @@
     <string name="private_apps">Private Apps</string>
     <string name="sandboxed_apps">Sandboxed Apps</string>
     <string name="dev_opts_hidden">DevOpts Hidden</string>
-    <string name="all_apps">All Apps</string>
+    <string name="all_apps">すべてのアプリ</string>
     <string name="setup_private_apps">Set Up Private Apps</string>
     <string name="setup_private_apps_description">Create a PIN, password, or pattern to lock and hide apps</string>
     <string name="collapse">折りたたむ</string>
