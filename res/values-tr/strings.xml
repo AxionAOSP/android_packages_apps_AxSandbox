@@ -3,19 +3,19 @@
     <string name="app_name">Sandbox</string>
     <!-- Common -->
     <string name="back">Geri</string>
-    <string name="ok">OK</string>
-    <string name="cancel">Cancel</string>
+    <string name="ok">Tamam</string>
+    <string name="cancel">Vazgeç</string>
     <string name="settings">Ayarlar</string>
-    <string name="launch">Launch</string>
+    <string name="launch">Başlat</string>
     <string name="selected">Seçildi</string>
-    <string name="continue_text">Continue</string>
-    <string name="skip_for_now">Skip for now</string>
-    <string name="unlock">Unlock</string>
+    <string name="continue_text">Devam et</string>
+    <string name="skip_for_now">Şimdilik geç</string>
+    <string name="unlock">Kilidi aç</string>
     <string name="hide">Hide</string>
     <string name="show">Show</string>
     <string name="dismiss">Kapat</string>
     <string name="open">Open</string>
-    <string name="reset">Reset</string>
+    <string name="reset">Sıfırla</string>
     <string name="search">Ara</string>
     <string name="search_apps">Uygulama ara…</string>
     <string name="version">Version</string>
