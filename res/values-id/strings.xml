@@ -7,17 +7,17 @@
     <string name="cancel">Batal</string>
     <string name="settings">Settings</string>
     <string name="launch">Launch</string>
-    <string name="selected">Selected</string>
+    <string name="selected">Dipilih</string>
     <string name="continue_text">Continue</string>
     <string name="skip_for_now">Skip for now</string>
     <string name="unlock">Unlock</string>
     <string name="hide">Hide</string>
     <string name="show">Show</string>
-    <string name="dismiss">Dismiss</string>
+    <string name="dismiss">Abaikan</string>
     <string name="open">Open</string>
     <string name="reset">Reset</string>
     <string name="search">Pencarian</string>
-    <string name="search_apps">Search apps...</string>
+    <string name="search_apps">Mencari aplikasi...</string>
     <string name="version">Version</string>
     <string name="about">About</string>
     <!-- Navigation Labels -->
@@ -129,7 +129,7 @@
     <string name="setup_private_apps_description">Create a PIN, password, or pattern to lock and hide apps</string>
     <string name="collapse">Collapse</string>
     <string name="expand">Expand</string>
-    <string name="lock">Lock</string>
+    <string name="lock">Kunci</string>
     <string name="dev_opt">DevOpt</string>
     <string name="notifications_locked">Notifications Locked</string>
     <string name="unlock_private_area_desc">Unlock the private area to view notifications</string>
