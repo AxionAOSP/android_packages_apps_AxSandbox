@@ -3,7 +3,7 @@
     <string name="app_name">Sandbox</string>
     <!-- Common -->
     <string name="back">Back</string>
-    <string name="ok">确定</string>
+    <string name="ok">OK</string>
     <string name="cancel">Cancel</string>
     <string name="settings">设置</string>
     <string name="launch">Launch</string>
@@ -15,8 +15,8 @@
     <string name="show">Show</string>
     <string name="dismiss">Dismiss</string>
     <string name="open">Open</string>
-    <string name="reset">重置</string>
-    <string name="search">搜索</string>
+    <string name="reset">Reset</string>
+    <string name="search">Search</string>
     <string name="search_apps">Search apps...</string>
     <string name="version">Version</string>
     <string name="about">About</string>
