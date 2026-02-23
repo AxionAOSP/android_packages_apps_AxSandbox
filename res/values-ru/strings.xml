@@ -61,7 +61,7 @@
     <string name="enter_password_placeholder">Enter password</string>
     <string name="forgot_password_q">Forgot Password?</string>
     <string name="biometric_unlock">Biometric Unlock</string>
-    <string name="backspace">Backspace</string>
+    <string name="backspace">Возврат</string>
     <!-- Recovery -->
     <string name="recovery_option">Recovery Option</string>
     <string name="recovery_setup_description">Set up a security question in case you forget your password</string>
