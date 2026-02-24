@@ -4,7 +4,7 @@
     <!-- Common -->
     <string name="back">Back</string>
     <string name="ok">OK</string>
-    <string name="cancel">Cancel</string>
+    <string name="cancel">گذشتن</string>
     <string name="settings">Settings</string>
     <string name="launch">Launch</string>
     <string name="selected">Selected</string>
@@ -129,7 +129,7 @@
     <string name="setup_private_apps_description">Create a PIN, password, or pattern to lock and hide apps</string>
     <string name="collapse">Collapse</string>
     <string name="expand">Expand</string>
-    <string name="lock">Lock</string>
+    <string name="lock">بسته</string>
     <string name="dev_opt">DevOpt</string>
     <string name="notifications_locked">Notifications Locked</string>
     <string name="unlock_private_area_desc">Unlock the private area to view notifications</string>
