@@ -16,13 +16,13 @@
     <string name="dismiss">Dismiss</string>
     <string name="open">Open</string>
     <string name="reset">Reset</string>
-    <string name="search">Search</string>
+    <string name="search">جستجو</string>
     <string name="search_apps">Search apps...</string>
     <string name="version">Version</string>
     <string name="about">About</string>
     <!-- Navigation Labels -->
     <string name="apps">Apps</string>
-    <string name="notifications">Notifications</string>
+    <string name="notifications">مژدگانی‌ها</string>
     <!-- Security Setup -->
     <string name="secure_your_private_apps">Secure Your Private Apps</string>
     <string name="choose_protection_method">Choose how you want to protect your hidden apps</string>
