@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">Sandbox</string>
     <!-- Common -->
-    <string name="back">Back</string>
+    <string name="back">Voltar</string>
     <string name="ok">OK</string>
     <string name="cancel">Cancelar</string>
     <string name="settings">Configurações</string>
