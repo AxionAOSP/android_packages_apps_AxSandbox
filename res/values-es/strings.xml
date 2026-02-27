@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Sandbox</string>
+    <string name="app_name">Entorno Aislado</string>
     <!-- Common -->
     <string name="back">Atrás</string>
     <string name="ok">Aceptar</string>
@@ -36,7 +36,7 @@
     <string name="create_pin">Crear PIN</string>
     <string name="confirm_pin">Confirmar PIN</string>
     <string name="enter_pin">Ingresa tu PIN</string>
-    <string name="choose_pin_prompt">Choose a 4-digit PIN</string>
+    <string name="choose_pin_prompt">Elija un PIN de 4 dígitos</string>
     <string name="reenter_pin_prompt">Vuelva a introducir su PIN</string>
     <string name="enter_pin_to_unlock">Ingresa tu PIN para Desbloquear las apps privadas</string>
     <string name="pins_mismatched">Los PIN no coinciden. Inténtalo de nuevo o vuelve atrás.</string>
@@ -91,41 +91,41 @@
     <string name="forgot_password_subtitle">Restablecer su contraseña usando la pregunta de seguridad</string>
     <string name="setup_security_question">Configurar Pregunta de Seguridad</string>
     <string name="recovery_required_subtitle">Requerido para ingresar a las Opciones de Recuperación</string>
-    <string name="locked_app_behavior">Locked App Behavior</string>
+    <string name="locked_app_behavior">Bloquear Comportamiento de Aplicación</string>
     <string name="locked_app_behavior_description">Controls when unlocked apps re-lock</string>
-    <string name="relock_on_leave">Re-lock when leaving app</string>
-    <string name="relock_on_leave_description">Re-lock immediately when leaving the unlocked app</string>
-    <string name="relock_after_timeout">Re-lock after timeout</string>
-    <string name="relock_after_timeout_description">Re-lock after %1$ds of inactivity</string>
-    <string name="relock_on_screen_off">Re-lock on screen off</string>
-    <string name="relock_on_screen_off_description">Keep unlocked when switching apps, lock on screen off</string>
-    <string name="relock_only_killed">Re-lock only when killed</string>
-    <string name="relock_only_killed_description">Keep unlocked until Sandbox is force closed</string>
-    <string name="private_section_behavior">Private Section Behavior</string>
+    <string name="relock_on_leave">Volver a bloquear al salir de la aplicación</string>
+    <string name="relock_on_leave_description">Volver a bloquear inmediatamente al salir de la aplicación desbloqueada</string>
+    <string name="relock_after_timeout">Re-bloqueo después del tiempo de espera</string>
+    <string name="relock_after_timeout_description">Volver a bloquear después de %1$ds de inactividad</string>
+    <string name="relock_on_screen_off">Volver a bloquear cuando se apaga la pantalla</string>
+    <string name="relock_on_screen_off_description">Mantener desbloqueado al cambiar aplicaciones, bloquear al apagar la pantalla</string>
+    <string name="relock_only_killed">Volver a bloquear sólo cuando se cierre</string>
+    <string name="relock_only_killed_description">Mantener desbloqueado hasta que Sandbox se cierre</string>
+    <string name="private_section_behavior">Comportamiento de la sección privada</string>
     <string name="private_section_behavior_description">Controls when the private apps section in this app locks</string>
     <string name="collapse_on_leave">Collapse when leaving</string>
     <string name="collapse_on_leave_description">Collapse and lock when leaving Sandbox app</string>
     <string name="collapse_after_timeout">Collapse after timeout</string>
     <string name="collapse_after_timeout_description">Collapsed after %1$ds of leaving the app</string>
-    <string name="lock_timeout">Lock Timeout</string>
-    <string name="seconds_format">%1$d seconds</string>
-    <string name="minutes_format_singular">%1$d minute</string>
-    <string name="minutes_format_plural">%1$d minutes</string>
+    <string name="lock_timeout">Tiempo de bloqueo</string>
+    <string name="seconds_format">%1$d segundos</string>
+    <string name="minutes_format_singular">%1$d minuto</string>
+    <string name="minutes_format_plural">%1$d minutos</string>
     <!-- Sandbox App -->
-    <string name="lock_app">Lock App</string>
-    <string name="lock_app_description">Require authentication to open this app</string>
-    <string name="hide_app">Hide App</string>
-    <string name="hide_app_description">Hide from launcher and settings</string>
-    <string name="sandbox">Sandbox</string>
-    <string name="sandbox_description">Hide from other apps (banking apps, etc.)</string>
-    <string name="hide_dev_options">Hide Developer Options</string>
-    <string name="hide_dev_options_description">This app sees dev options as disabled</string>
-    <string name="no_apps_found">No apps found</string>
-    <string name="private_apps">Private Apps</string>
-    <string name="sandboxed_apps">Sandboxed Apps</string>
+    <string name="lock_app">Bloquear aplicación</string>
+    <string name="lock_app_description">Requiere autenticación para abrir esta aplicación</string>
+    <string name="hide_app">Ocultar aplicación</string>
+    <string name="hide_app_description">Ocultar desde Lanzador y Ajustes</string>
+    <string name="sandbox">Entorno Aislado</string>
+    <string name="sandbox_description">Ocultar de otras aplicaciones (aplicaciones bancarias, etc.)</string>
+    <string name="hide_dev_options">Ocultar opciones de desarrollador</string>
+    <string name="hide_dev_options_description">Esta aplicación ve opciones de desarrollo deshabilitadas</string>
+    <string name="no_apps_found">No se encontraron aplicaciones</string>
+    <string name="private_apps">Aplicaciones privadas</string>
+    <string name="sandboxed_apps">Aplicaciónes de Entorno Aislado</string>
     <string name="dev_opts_hidden">DevOpts Hidden</string>
-    <string name="all_apps">All Apps</string>
-    <string name="setup_private_apps">Set Up Private Apps</string>
+    <string name="all_apps">Todas las apps</string>
+    <string name="setup_private_apps">Configurar aplicaciones privadas</string>
     <string name="setup_private_apps_description">Create a PIN, password, or pattern to lock and hide apps</string>
     <string name="collapse">Contraer</string>
     <string name="expand">Expandir</string>
@@ -136,18 +136,18 @@
     <string name="no_private_notifications">No private notifications</string>
     <string name="notifications_empty_desc">Notifications from hidden apps will appear here</string>
     <!-- Authenticate -->
-    <string name="unlock_app_title">Unlock %1$s</string>
-    <string name="unlock_private_apps">Unlock Private Apps</string>
-    <string name="auth_prompt_format">Enter your Sandbox credential to unlock %1$s</string>
-    <string name="enter_current_pin_to_change">Enter your current PIN to change security</string>
-    <string name="enter_current_password_to_change">Enter your current password to change security</string>
-    <string name="draw_current_pattern_to_change">Draw your current pattern to change security</string>
+    <string name="unlock_app_title">Desbloquear %1$s</string>
+    <string name="unlock_private_apps">Desbloquear aplicaciones privadas</string>
+    <string name="auth_prompt_format">Introduce tu credencial de Sandbox para desbloquear %1$s</string>
+    <string name="enter_current_pin_to_change">Introduzca su PIN actual para cambiar la seguridad</string>
+    <string name="enter_current_password_to_change">Introduzca su contraseña actual para cambiar la seguridad</string>
+    <string name="draw_current_pattern_to_change">Dibuja tu patrón actual para cambiar la seguridad</string>
     <!-- Security Questions -->
-    <string name="question_pet_name">What is your pet\'s name?</string>
-    <string name="question_birth_city">What city were you born in?</string>
-    <string name="question_fav_movie">What is your favorite movie?</string>
-    <string name="question_mother_maiden">What is your mother\'s maiden name?</string>
-    <string name="question_first_car">What was your first car?</string>
+    <string name="question_pet_name">¿Cuál es el nombre de tu mascota?</string>
+    <string name="question_birth_city">¿En qué ciudad naciste?</string>
+    <string name="question_fav_movie">¿Cuál es tu película favorita?</string>
+    <string name="question_mother_maiden">¿Cuál es el nombre de soltera de su madre?</string>
+    <string name="question_first_car">¿Cuál fue tu primer coche?</string>
     <string name="count_format">(%1$d)</string>
     <string name="badge_count_format">%1$d</string>
 </resources>
