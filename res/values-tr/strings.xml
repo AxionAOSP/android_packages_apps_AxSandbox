@@ -137,11 +137,11 @@
     <string name="notifications_empty_desc">Notifications from hidden apps will appear here</string>
     <!-- Authenticate -->
     <string name="unlock_app_title">Unlock %1$s</string>
-    <string name="unlock_private_apps">Unlock Private Apps</string>
-    <string name="auth_prompt_format">Enter your Sandbox credential to unlock %1$s</string>
-    <string name="enter_current_pin_to_change">Enter your current PIN to change security</string>
-    <string name="enter_current_password_to_change">Enter your current password to change security</string>
-    <string name="draw_current_pattern_to_change">Draw your current pattern to change security</string>
+    <string name="unlock_private_apps">Özel Uygulamaların Kilidini Aç</string>
+    <string name="auth_prompt_format">Kilidi açmak için Sandbox kimliğini gir %1$s</string>
+    <string name="enter_current_pin_to_change">Güvenliği değiştirmek için mevcut PIN’i gir</string>
+    <string name="enter_current_password_to_change">Güvenliği değiştirmek için mevcut şifreni gir</string>
+    <string name="draw_current_pattern_to_change">Mevcut deseni çizerek güvenliği değiştir</string>
     <!-- Security Questions -->
     <string name="question_pet_name">Evcil hayvanının adı ne?</string>
     <string name="question_birth_city">Hangi şehirde doğdun?</string>
