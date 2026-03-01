@@ -17,7 +17,7 @@
     <string name="open">Open</string>
     <string name="reset">Sıfırla</string>
     <string name="search">Ara</string>
-    <string name="search_apps">Uygulama ara…</string>
+    <string name="search_apps">Uygulama ara...</string>
     <string name="version">Version</string>
     <string name="about">About</string>
     <!-- Navigation Labels -->
@@ -143,11 +143,11 @@
     <string name="enter_current_password_to_change">Enter your current password to change security</string>
     <string name="draw_current_pattern_to_change">Draw your current pattern to change security</string>
     <!-- Security Questions -->
-    <string name="question_pet_name">What is your pet\'s name?</string>
-    <string name="question_birth_city">What city were you born in?</string>
-    <string name="question_fav_movie">What is your favorite movie?</string>
-    <string name="question_mother_maiden">What is your mother\'s maiden name?</string>
-    <string name="question_first_car">What was your first car?</string>
+    <string name="question_pet_name">Evcil hayvanının adı ne?</string>
+    <string name="question_birth_city">Hangi şehirde doğdun?</string>
+    <string name="question_fav_movie">En sevdiğin film ne?</string>
+    <string name="question_mother_maiden">Annenin kızlık soyadı ne idi?</string>
+    <string name="question_first_car">İlk araban ne idi?</string>
     <string name="count_format">(%1$d)</string>
     <string name="badge_count_format">%1$d</string>
 </resources>
