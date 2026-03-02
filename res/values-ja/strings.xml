@@ -9,7 +9,7 @@
     <string name="launch">起動</string>
     <string name="selected">選択済み</string>
     <string name="continue_text">続行</string>
-    <string name="skip_for_now">Skip for now</string>
+    <string name="skip_for_now">今はスキップ</string>
     <string name="unlock">ロックを解除</string>
     <string name="hide">非表示</string>
     <string name="show">表示</string>
@@ -53,7 +53,7 @@
     <string name="confirm_password">パスワードを確認</string>
     <string name="set_password">パスワードを設定</string>
     <string name="enter_password">パスワードを入力</string>
-    <string name="choose_password_prompt">Choose a secure password</string>
+    <string name="choose_password_prompt">安全なパスワードを選択してください</string>
     <string name="reenter_password_prompt">Re-enter your password</string>
     <string name="enter_password_to_unlock">Enter your password to unlock private apps</string>
     <string name="passwords_mismatched">Passwords mismatched. Try again or go back.</string>
