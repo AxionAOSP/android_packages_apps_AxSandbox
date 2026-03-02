@@ -64,7 +64,7 @@
     <string name="backspace">Backspace</string>
     <!-- Recovery -->
     <string name="recovery_option">Recovery Option</string>
-    <string name="recovery_setup_description">Set up a security question in case you forget your password</string>
+    <string name="recovery_setup_description">Imposta una domanda di sicurezza nel caso in cui dimentichi la tua password</string>
     <string name="security_question">Security Question</string>
     <string name="select_a_question">Select a question</string>
     <string name="your_answer">Your Answer</string>
@@ -73,7 +73,7 @@
     <string name="reset_password_description">Answer your security question to reset your password</string>
     <string name="incorrect_answer">Incorrect answer. Please try again.</string>
     <string name="reset_password_dialog_title">Reset Password?</string>
-    <string name="reset_password_dialog_message">This will clear your current password and you\'ll need to set up a new one. All private app data will remain intact.</string>
+    <string name="reset_password_dialog_message">Questo cancellerà la tua password attuale e dovrai impostarne una nuova. Tutti i dati privati dell\'app rimarranno intatti.</string>
     <!-- Settings -->
     <string name="private_apps_security">Private Apps Security</string>
     <string name="current_lock_type">Current Lock Type</string>
