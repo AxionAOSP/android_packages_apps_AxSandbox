@@ -3,7 +3,7 @@
     <string name="app_name">Песочница</string>
     <!-- Common -->
     <string name="back">Назад</string>
-    <string name="ok">OK</string>
+    <string name="ok">ОК</string>
     <string name="cancel">Отмена</string>
     <string name="settings">Настройки</string>
     <string name="launch">Запустить</string>
@@ -19,59 +19,59 @@
     <string name="search">Поиск</string>
     <string name="search_apps">Поиск приложений…</string>
     <string name="version">Версия</string>
-    <string name="about">О нас</string>
+    <string name="about">О программе</string>
     <!-- Navigation Labels -->
     <string name="apps">Приложения</string>
     <string name="notifications">Уведомления</string>
     <!-- Security Setup -->
-    <string name="secure_your_private_apps">Защитите ваши личные приложения</string>
-    <string name="choose_protection_method">Выберите способ защиты скрытых приложений</string>
+    <string name="secure_your_private_apps">Защитите свои личные приложения</string>
+    <string name="choose_protection_method">Выберите способ защиты личных приложений</string>
     <string name="pin">PIN-код</string>
     <string name="password">Пароль</string>
-    <string name="pattern">Шаблон</string>
-    <string name="pin_description">4-6 цифровой пароль</string>
+    <string name="pattern">Графический ключ</string>
+    <string name="pin_description">4-6 значный код</string>
     <string name="password_description">Буквенно-цифровой пароль</string>
-    <string name="pattern_description">Нарисуйте ключ для разблокировки</string>
+    <string name="pattern_description">Введите графический ключ</string>
     <!-- Security Screens -->
-    <string name="create_pin">Создать PIN</string>
-    <string name="confirm_pin">Подтвердите PIN</string>
-    <string name="enter_pin">Введите PIN</string>
-    <string name="choose_pin_prompt">Выберите 4-значный PIN</string>
-    <string name="reenter_pin_prompt">Повторно введите ваш PIN</string>
-    <string name="enter_pin_to_unlock">Введите PIN для разблокировки приватных приложений</string>
-    <string name="pins_mismatched">PIN-коды не совпадают. Попробуйте еще раз.</string>
-    <string name="incorrect_pin">Неверный PIN</string>
-    <string name="create_pattern">Создать графический ключ</string>
+    <string name="create_pin">Создать PIN-код</string>
+    <string name="confirm_pin">Подтвердите PIN-код</string>
+    <string name="enter_pin">Введите PIN-код</string>
+    <string name="choose_pin_prompt">Введите 4-значный PIN-код</string>
+    <string name="reenter_pin_prompt">Повторно введите PIN-код</string>
+    <string name="enter_pin_to_unlock">Введите свой PIN-код для разблокировки личных приложений</string>
+    <string name="pins_mismatched">PIN-код не совпадает. Попробуйте снова или вернитесь назад.</string>
+    <string name="incorrect_pin">Неверный PIN-код.</string>
+    <string name="create_pattern">Создайте графический ключ</string>
     <string name="confirm_pattern">Подтвердите графический ключ</string>
-    <string name="draw_pattern">Создайте графический ключ</string>
-    <string name="patterns_mismatched">Графические ключи не совпадают</string>
+    <string name="draw_pattern">Нарисуйте графический ключ</string>
+    <string name="patterns_mismatched">Графический ключ не совпадает</string>
     <string name="wrong_pattern">Неверный графический ключ</string>
     <string name="connect_dots_prompt">Соедините как минимум 4 точки</string>
-    <string name="draw_pattern_again_prompt">Нарисуйте графический ключ снова</string>
-    <string name="draw_pattern_to_unlock">Введите графический ключ для разблокировки приватных приложений</string>
-    <string name="create_password">Создать пароль</string>
+    <string name="draw_pattern_again_prompt">Введите графический ключ снова</string>
+    <string name="draw_pattern_to_unlock">Введите графический ключ для разблокировки личных приложений</string>
+    <string name="create_password">Создайте пароль</string>
     <string name="confirm_password">Подтвердите пароль</string>
     <string name="set_password">Установите пароль</string>
     <string name="enter_password">Введите пароль</string>
     <string name="choose_password_prompt">Выберите безопасный пароль</string>
-    <string name="reenter_password_prompt">Введите пароль ещё раз</string>
-    <string name="enter_password_to_unlock">Введите ваш пароль для разблокировки приватных приложений</string>
-    <string name="passwords_mismatched">Пароли не совпадают. Попробуйте еще раз или вернитесь назад.</string>
-    <string name="incorrect_password">Неверный пароль</string>
-    <string name="enter_password_placeholder">Введите пароль</string>
+    <string name="reenter_password_prompt">Повторно введите пароль</string>
+    <string name="enter_password_to_unlock">Введите пароль для разблокировки личных приложений</string>
+    <string name="passwords_mismatched">Пароли не совпадают. Попробуйте снова или вернитесь назад.</string>
+    <string name="incorrect_password">Неверный пароль.</string>
+    <string name="enter_password_placeholder">Введите пароль.</string>
     <string name="forgot_password_q">Забыли пароль?</string>
     <string name="biometric_unlock">Биометрическая разблокировка</string>
     <string name="backspace">Возврат</string>
     <!-- Recovery -->
     <string name="recovery_option">Опция восстановления</string>
-    <string name="recovery_setup_description">Настройте секретный вопрос на случай, если вы забыли пароль</string>
+    <string name="recovery_setup_description">Настройте секретный вопрос на случай, если вы забудете свой пароль</string>
     <string name="security_question">Секретный вопрос</string>
-    <string name="select_a_question">Выберите вопрос</string>
+    <string name="select_a_question">Выберете вопрос</string>
     <string name="your_answer">Ваш ответ</string>
     <string name="verify_answer">Подтвердите ответ</string>
     <string name="forgot_password_title">Забыли пароль?</string>
-    <string name="reset_password_description">Ответьте на ваш секретный вопрос для сброса пароля</string>
-    <string name="incorrect_answer">Неправильный ответ. Пожалуйста, попробуйте еще раз</string>
+    <string name="reset_password_description">Ответьте на секретный вопрос для сброса пароля</string>
+    <string name="incorrect_answer">Неверный ответ. Попробуйте снова.</string>
     <string name="reset_password_dialog_title">Сбросить пароль?</string>
     <string name="reset_password_dialog_message">Это удалит ваш текущий пароль, и вам нужно установить новый. Все личные данные приложения останутся нетронутыми.</string>
     <!-- Settings -->
@@ -112,16 +112,16 @@
     <string name="minutes_format_singular">%1$d мин.</string>
     <string name="minutes_format_plural">%1$d мин.</string>
     <!-- Sandbox App -->
-    <string name="lock_app">Lock App</string>
+    <string name="lock_app">Заблокировать приложение</string>
     <string name="lock_app_description">Требовать аутентификацию для открытия этого приложения</string>
     <string name="hide_app">Скрыть приложение</string>
-    <string name="hide_app_description">Hide from launcher and settings</string>
+    <string name="hide_app_description">Спрятать из лаунчера и настроек</string>
     <string name="sandbox">Песочница</string>
     <string name="sandbox_description">Скрывать от других приложений (банковские приложения и т. д.)</string>
     <string name="hide_dev_options">Скрыть параметры разработчика</string>
     <string name="hide_dev_options_description">Это приложение видит параметры разработчика как отключенные</string>
     <string name="no_apps_found">Приложения не найдены</string>
-    <string name="private_apps">Private Apps</string>
+    <string name="private_apps">Личные приложения</string>
     <string name="sandboxed_apps">Приложения в \"Песочнице\"</string>
     <string name="dev_opts_hidden">DevOpts Hidden</string>
     <string name="all_apps">Все приложения</string>
@@ -134,7 +134,7 @@
     <string name="notifications_locked">Notifications Locked</string>
     <string name="unlock_private_area_desc">Unlock the private area to view notifications</string>
     <string name="no_private_notifications">No private notifications</string>
-    <string name="notifications_empty_desc">Notifications from hidden apps will appear here</string>
+    <string name="notifications_empty_desc">Уведомления от скрытых приложений будут отображаться здесь</string>
     <!-- Authenticate -->
     <string name="unlock_app_title">Разблокировать %1$s</string>
     <string name="unlock_private_apps">Разблокировать приватные приложения</string>
