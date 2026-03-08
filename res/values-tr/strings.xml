@@ -35,7 +35,7 @@
     <!-- Security Screens -->
     <string name="create_pin">PIN oluştur</string>
     <string name="confirm_pin">PIN’i onayla</string>
-    <string name="enter_pin">Enter PIN</string>
+    <string name="enter_pin">PIN\'i girin</string>
     <string name="choose_pin_prompt">Choose a 4-digit PIN</string>
     <string name="reenter_pin_prompt">Re-enter your PIN</string>
     <string name="enter_pin_to_unlock">Enter your PIN to unlock private apps</string>
