@@ -94,7 +94,7 @@
     <string name="locked_app_behavior">Locked App Behavior</string>
     <string name="locked_app_behavior_description">Controls when unlocked apps re-lock</string>
     <string name="relock_on_leave">Повторно заблокировать при выходе из приложения</string>
-    <string name="relock_on_leave_description">Re-lock immediately when leaving the unlocked app</string>
+    <string name="relock_on_leave_description">Блокировать сразу после покидания приложения</string>
     <string name="relock_after_timeout">Повторная блокировка после таймаута</string>
     <string name="relock_after_timeout_description">Повторная блокировка после %1$dсек бездействия</string>
     <string name="relock_on_screen_off">Блокировать при отключении экрана</string>
