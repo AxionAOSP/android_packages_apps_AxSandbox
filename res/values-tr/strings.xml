@@ -24,17 +24,17 @@
     <string name="apps">Uygulamalar</string>
     <string name="notifications">Bildirimler</string>
     <!-- Security Setup -->
-    <string name="secure_your_private_apps">Özel Uygulamalarını Kilitle</string>
-    <string name="choose_protection_method">Gizli uygulamaları koruma yöntemini seç</string>
+    <string name="secure_your_private_apps">Özel Uygulamalarını Kilitleyin</string>
+    <string name="choose_protection_method">Gizli uygulamaları koruma yöntemini seçin</string>
     <string name="pin">PIN</string>
     <string name="password">Şifre</string>
     <string name="pattern">Desen</string>
     <string name="pin_description">4-6 haneli kod</string>
-    <string name="password_description">Harf ve rakam içeren şifre gir</string>
-    <string name="pattern_description">Kilidi açmak için desen çiz</string>
+    <string name="password_description">Harf ve rakam içeren şifre girin</string>
+    <string name="pattern_description">Kilidi açmak için desen çizin</string>
     <!-- Security Screens -->
-    <string name="create_pin">PIN oluştur</string>
-    <string name="confirm_pin">PIN’i onayla</string>
+    <string name="create_pin">PIN oluşturun</string>
+    <string name="confirm_pin">PIN’i onaylayın</string>
     <string name="enter_pin">PIN\'i girin</string>
     <string name="choose_pin_prompt">Choose a 4-digit PIN</string>
     <string name="reenter_pin_prompt">Re-enter your PIN</string>
@@ -125,29 +125,29 @@
     <string name="sandboxed_apps">Sandboxed Apps</string>
     <string name="dev_opts_hidden">Geliştirici Seçenekleri Gizli</string>
     <string name="all_apps">Tüm Uygulamalar</string>
-    <string name="setup_private_apps">Özel Uygulamaları Ayarla</string>
-    <string name="setup_private_apps_description">Uygulamaları kilitlemek ve gizlemek için PIN, şifre veya desen oluştur</string>
+    <string name="setup_private_apps">Özel Uygulamaları Ayarlayın</string>
+    <string name="setup_private_apps_description">Uygulamaları kilitlemek ve gizlemek için PIN, şifre veya desen oluşturun</string>
     <string name="collapse">Daralt</string>
     <string name="expand">Genişlet</string>
     <string name="lock">Kilit</string>
     <string name="dev_opt">Geliştirici seçenekleri</string>
     <string name="notifications_locked">Bildirimler kilitlendi</string>
-    <string name="unlock_private_area_desc">Bildirimleri görmek için özel alanın kilidini aç</string>
+    <string name="unlock_private_area_desc">Bildirimleri görmek için özel alanın kilidini açın</string>
     <string name="no_private_notifications">Özel bildirim yok</string>
-    <string name="notifications_empty_desc">Gizli uygulamalardan gelen bildirimler burada görünecek</string>
+    <string name="notifications_empty_desc">Özel uygulamalardan gelen bildirimler burada görünecek</string>
     <!-- Authenticate -->
-    <string name="unlock_app_title">%1$s kilidini aç</string>
-    <string name="unlock_private_apps">Özel Uygulamaların Kilidini Aç</string>
-    <string name="auth_prompt_format">Kilidi açmak için Sandbox kimliğini gir %1$s</string>
-    <string name="enter_current_pin_to_change">Güvenliği değiştirmek için mevcut PIN’i gir</string>
-    <string name="enter_current_password_to_change">Güvenliği değiştirmek için mevcut şifreni gir</string>
-    <string name="draw_current_pattern_to_change">Mevcut deseni çizerek güvenliği değiştir</string>
+    <string name="unlock_app_title">%1$s kilidini açın</string>
+    <string name="unlock_private_apps">Özel Uygulamaların Kilidini Açın</string>
+    <string name="auth_prompt_format">Kilidi açmak için Sandbox kimliğini girin %1$s</string>
+    <string name="enter_current_pin_to_change">Güvenliği değiştirmek için mevcut PIN’i girin</string>
+    <string name="enter_current_password_to_change">Güvenliği değiştirmek için mevcut şifrenizi girin</string>
+    <string name="draw_current_pattern_to_change">Mevcut deseni çizerek güvenliği değiştirin</string>
     <!-- Security Questions -->
-    <string name="question_pet_name">Evcil hayvanının adı ne?</string>
+    <string name="question_pet_name">Evcil hayvanınızın adı nedir?</string>
     <string name="question_birth_city">Hangi şehirde doğdun?</string>
-    <string name="question_fav_movie">En sevdiğin film ne?</string>
-    <string name="question_mother_maiden">Annenin kızlık soyadı ne idi?</string>
-    <string name="question_first_car">İlk araban ne idi?</string>
+    <string name="question_fav_movie">En sevdiğiniz film nedir?</string>
+    <string name="question_mother_maiden">Annenizin kızlık soyadı ne idi?</string>
+    <string name="question_first_car">İlk arabanız ne idi?</string>
     <string name="count_format">(%1$d)</string>
     <string name="badge_count_format">%1$d</string>
 </resources>
