@@ -36,8 +36,8 @@
     <string name="create_pin">PIN oluşturun</string>
     <string name="confirm_pin">PIN’i onaylayın</string>
     <string name="enter_pin">PIN\'i girin</string>
-    <string name="choose_pin_prompt">Choose a 4-digit PIN</string>
-    <string name="reenter_pin_prompt">Re-enter your PIN</string>
+    <string name="choose_pin_prompt">4 haneli bir PIN seçin</string>
+    <string name="reenter_pin_prompt">PIN\'inizi yeniden girin</string>
     <string name="enter_pin_to_unlock">Enter your PIN to unlock private apps</string>
     <string name="pins_mismatched">PINs mismatched. Try again or go back.</string>
     <string name="incorrect_pin">Incorrect PIN</string>
@@ -86,7 +86,7 @@
     <string name="biometrics_description">Use fingerprint or face unlock</string>
     <string name="auto_show_biometric_prompt">Auto-show Biometric Prompt</string>
     <string name="auto_show_biometric_prompt_description">Automatically show biometric prompt when opening locked apps</string>
-    <string name="recovery_options">Recovery Options</string>
+    <string name="recovery_options">Kurtarma Seçenekleri</string>
     <string name="forgot_password_item">Forgot Password</string>
     <string name="forgot_password_subtitle">Reset your password using security question</string>
     <string name="setup_security_question">Set Up Security Question</string>
