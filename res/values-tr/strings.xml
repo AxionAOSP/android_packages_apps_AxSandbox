@@ -55,15 +55,15 @@
     <string name="enter_password">Şifre girin</string>
     <string name="choose_password_prompt">Güvenli bir şifre seçin</string>
     <string name="reenter_password_prompt">Şifreyi tekrar girin</string>
-    <string name="enter_password_to_unlock">Enter your password to unlock private apps</string>
-    <string name="passwords_mismatched">Passwords mismatched. Try again or go back.</string>
-    <string name="incorrect_password">Incorrect password</string>
-    <string name="enter_password_placeholder">Enter password</string>
-    <string name="forgot_password_q">Forgot Password?</string>
-    <string name="biometric_unlock">Biometric Unlock</string>
-    <string name="backspace">Backspace</string>
+    <string name="enter_password_to_unlock">Özel uygulamaları açmak için şifre girin</string>
+    <string name="passwords_mismatched">Şifreler eşleşmiyor. Tekrar deneyin veya geri dönün.</string>
+    <string name="incorrect_password">Hatalı şifre</string>
+    <string name="enter_password_placeholder">Şifre girin</string>
+    <string name="forgot_password_q">Şifreyi unuttum?</string>
+    <string name="biometric_unlock">Biyometrik Kilit Açma</string>
+    <string name="backspace">Sil</string>
     <!-- Recovery -->
-    <string name="recovery_option">Recovery Option</string>
+    <string name="recovery_option">Kurtarma Yöntemi</string>
     <string name="recovery_setup_description">Set up a security question in case you forget your password</string>
     <string name="security_question">Security Question</string>
     <string name="select_a_question">Select a question</string>
@@ -86,7 +86,7 @@
     <string name="biometrics_description">Use fingerprint or face unlock</string>
     <string name="auto_show_biometric_prompt">Auto-show Biometric Prompt</string>
     <string name="auto_show_biometric_prompt_description">Automatically show biometric prompt when opening locked apps</string>
-    <string name="recovery_options">Kurtarma Seçenekleri</string>
+    <string name="recovery_options">Kurtarma Yöntemleri</string>
     <string name="forgot_password_item">Forgot Password</string>
     <string name="forgot_password_subtitle">Reset your password using security question</string>
     <string name="setup_security_question">Set Up Security Question</string>
@@ -118,7 +118,7 @@
     <string name="hide_app_description">Hide from launcher and settings</string>
     <string name="sandbox">Sandbox</string>
     <string name="sandbox_description">Hide from other apps (banking apps, etc.)</string>
-    <string name="hide_dev_options">Hide Developer Options</string>
+    <string name="hide_dev_options">Geliştirici Seçeneklerini Gizle</string>
     <string name="hide_dev_options_description">This app sees dev options as disabled</string>
     <string name="no_apps_found">No apps found</string>
     <string name="private_apps">Private Apps</string>
