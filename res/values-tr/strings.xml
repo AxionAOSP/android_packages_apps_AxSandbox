@@ -24,8 +24,8 @@
     <string name="apps">Uygulamalar</string>
     <string name="notifications">Bildirimler</string>
     <!-- Security Setup -->
-    <string name="secure_your_private_apps">Özel Uygulamalarını Kilitleyin</string>
-    <string name="choose_protection_method">Gizli uygulamaları koruma yöntemini seçin</string>
+    <string name="secure_your_private_apps">Özel Uygulamaları Kilitleyin</string>
+    <string name="choose_protection_method">Saklı uygulamaları koruma yöntemini seçin</string>
     <string name="pin">PIN</string>
     <string name="password">Şifre</string>
     <string name="pattern">Desen</string>
@@ -41,18 +41,18 @@
     <string name="enter_pin_to_unlock">Özel uygulamaları açmak için PIN’inizi girin</string>
     <string name="pins_mismatched">PIN’ler eşleşmiyor. Tekrar deneyin veya geri dönün.</string>
     <string name="incorrect_pin">Yanlış PIN</string>
-    <string name="create_pattern">Desen oluşturun</string>
-    <string name="confirm_pattern">Deseni onaylayın</string>
-    <string name="draw_pattern">Desen çizin</string>
+    <string name="create_pattern">Desen Oluşturun</string>
+    <string name="confirm_pattern">Deseni Onaylayın</string>
+    <string name="draw_pattern">Desen Çizin</string>
     <string name="patterns_mismatched">Desenler eşleşmiyor</string>
     <string name="wrong_pattern">Yanlış desen</string>
     <string name="connect_dots_prompt">En az 4 noktayı bağlayın</string>
     <string name="draw_pattern_again_prompt">Deseni tekrar çizin</string>
     <string name="draw_pattern_to_unlock">Özel uygulamaların kilidini açmak için desen çizin</string>
-    <string name="create_password">Şifre oluşturun</string>
-    <string name="confirm_password">Şifreyi onaylayın</string>
-    <string name="set_password">Şifre ayarlayın</string>
-    <string name="enter_password">Şifre girin</string>
+    <string name="create_password">Şifre Oluşturun</string>
+    <string name="confirm_password">Şifreyi Onaylayın</string>
+    <string name="set_password">Şifre Ayarlayın</string>
+    <string name="enter_password">Şifre Girin</string>
     <string name="choose_password_prompt">Güvenli bir şifre seçin</string>
     <string name="reenter_password_prompt">Şifreyi tekrar girin</string>
     <string name="enter_password_to_unlock">Özel uygulamaları açmak için şifre girin</string>
@@ -68,14 +68,14 @@
     <string name="security_question">Güvenlik Sorusu</string>
     <string name="select_a_question">Bir soru seçin</string>
     <string name="your_answer">Yanıtınız</string>
-    <string name="verify_answer">Yanıtı doğrulayın</string>
-    <string name="forgot_password_title">Şifreyi unuttum</string>
+    <string name="verify_answer">Yanıtı Doğrulayın</string>
+    <string name="forgot_password_title">Şifreyi Unuttum</string>
     <string name="reset_password_description">Şifreyi sıfırlamak için güvenlik sorusunu yanıtlayın</string>
     <string name="incorrect_answer">Yanlış yanıt, lütfen tekrar deneyin.</string>
     <string name="reset_password_dialog_title">Şifreyi Sıfırlayın?</string>
-    <string name="reset_password_dialog_message">Bu işlem mevcut şifreyi kaldırır ve yeni bir şifre ayarlamanız gerekir. Tüm gizli uygulama verileri korunur.</string>
+    <string name="reset_password_dialog_message">Bu işlem mevcut şifreyi kaldırır ve yeni bir şifre ayarlamanız gerekir. Tüm özel uygulama verileri korunur.</string>
     <!-- Settings -->
-    <string name="private_apps_security">Gizli uygulama güvenliği</string>
+    <string name="private_apps_security">Özel Uygulama Güvenliği</string>
     <string name="current_lock_type">Mevcut Kilit Türü</string>
     <string name="not_set">Belirlenmemiş</string>
     <string name="use_pin">PIN kullan</string>
@@ -87,9 +87,9 @@
     <string name="auto_show_biometric_prompt">Biyometrik istemi otomatik göster</string>
     <string name="auto_show_biometric_prompt_description">Kilitli uygulamaları açarken biyometrik istemi otomatik göster</string>
     <string name="recovery_options">Kurtarma Yöntemleri</string>
-    <string name="forgot_password_item">Şifreyi unuttum</string>
+    <string name="forgot_password_item">Şifreyi Unuttum</string>
     <string name="forgot_password_subtitle">Şifreyi güvenlik sorusu ile sıfırlayın</string>
-    <string name="setup_security_question">Güvenlik sorusu belirle</string>
+    <string name="setup_security_question">Güvenlik Sorusu Belirle</string>
     <string name="recovery_required_subtitle">Şifre kurtarma için gerekli</string>
     <string name="locked_app_behavior">Kilitli Uygulama Davranışı</string>
     <string name="locked_app_behavior_description">Kilitli uygulamaların tekrar kilitlenme davranışını belirler</string>
@@ -112,7 +112,7 @@
     <string name="minutes_format_singular">%1$d dakika</string>
     <string name="minutes_format_plural">%1$d dakika</string>
     <!-- Sandbox App -->
-    <string name="lock_app">Uygulamayı kilitle</string>
+    <string name="lock_app">Uygulamayı Kilitle</string>
     <string name="lock_app_description">Bu uygulamayı açmak için doğrulama gerekli</string>
     <string name="hide_app">Uygulamayı Gizle</string>
     <string name="hide_app_description">Başlatıcı ve ayarlardan gizle</string>
@@ -121,7 +121,7 @@
     <string name="hide_dev_options">Geliştirici Seçeneklerini Gizle</string>
     <string name="hide_dev_options_description">Bu uygulama geliştirici seçeneklerini devre dışı görür</string>
     <string name="no_apps_found">Hiçbir uygulama bulunamadı</string>
-    <string name="private_apps">Gizli uygulamalar</string>
+    <string name="private_apps">Özel Uygulamalar</string>
     <string name="sandboxed_apps">Sandbox\'lanmış uygulamalar</string>
     <string name="dev_opts_hidden">Geliştirici Seçenekleri Gizli</string>
     <string name="all_apps">Tüm Uygulamalar</string>
@@ -132,7 +132,7 @@
     <string name="lock">Kilit</string>
     <string name="dev_opt">Geliştirici seçenekleri</string>
     <string name="notifications_locked">Bildirimler kilitlendi</string>
-    <string name="unlock_private_area_desc">Bildirimleri görmek için özel alanın kilidini açın</string>
+    <string name="unlock_private_area_desc">Bildirimleri görmek için gizli bölümün kilidini açın</string>
     <string name="no_private_notifications">Özel bildirim yok</string>
     <string name="notifications_empty_desc">Özel uygulamalardan gelen bildirimler burada görünecek</string>
     <!-- Authenticate -->
