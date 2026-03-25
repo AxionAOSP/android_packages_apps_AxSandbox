@@ -2,9 +2,9 @@
 <resources>
     <string name="app_name">Sandbox</string>
     <!-- Common -->
-    <string name="back">Back</string>
-    <string name="ok">OK</string>
-    <string name="cancel">Cancel</string>
+    <string name="back">Voltar</string>
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancelar</string>
     <string name="settings">Configurações</string>
     <string name="launch">Launch</string>
     <string name="selected">Selecionado</string>
@@ -15,7 +15,7 @@
     <string name="show">Show</string>
     <string name="dismiss">Dispensar</string>
     <string name="open">Open</string>
-    <string name="reset">Reset</string>
+    <string name="reset">Redefinir</string>
     <string name="search">Pesquisa</string>
     <string name="search_apps">Pesquisar aplicativos...</string>
     <string name="version">Version</string>
