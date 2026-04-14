@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2025-2026 AxionOS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources>
+    <string name="app_name">Sandbox</string>
+
+    <!-- Main screen -->
+    <string name="sandbox_title">沙盒</string>
+    <string name="search_hint">搜索应用…</string>
+    <string name="tab_apps">应用</string>
+    <string name="tab_notifications">通知</string>
+    <string name="no_apps_found">未找到应用</string>
+    <string name="action_search">搜索</string>
+    <string name="action_settings">设置</string>
+    <string name="action_notifications">通知</string>
+    <string name="action_back">返回</string>
+    <string name="action_launch">启动</string>
+
+    <!-- App sections -->
+    <string name="section_private_apps">私人应用</string>
+    <string name="section_isolated_apps">隔离应用</string>
+    <string name="section_all_apps">全部应用</string>
+
+    <!-- Setup private apps card -->
+    <string name="setup_private_apps_title">设置私人应用</string>
+    <string name="setup_private_apps_description">创建 PIN、密码或图案以锁定并隐藏应用</string>
+
+    <!-- App detail / quick actions -->
+    <string name="action_lock">锁定</string>
+    <string name="action_hide">隐藏</string>
+    <string name="action_isolate">隔离</string>
+    <string name="lock_app_title">锁定应用</string>
+    <string name="lock_app_description">打开此应用需要身份验证</string>
+    <string name="hide_app_title">隐藏应用</string>
+    <string name="hide_app_description_off">从启动器中隐藏，不被其他应用检测，并伪装安装来源</string>
+    <string name="hide_app_description_on">对所有应用隐藏，伪装安装来源，阻止启动活动</string>
+    <string name="isolate_app_title">隔离应用</string>
+    <string name="isolate_app_description">与其他应用隔离，限制权限和设置</string>
+
+    <!-- Sandbox sub-settings -->
+    <string name="sandbox_options_title">沙盒选项</string>
+    <string name="restrict_internet_title">限制网络</string>
+    <string name="restrict_internet_description">剥夺该应用的网络访问权限</string>
+    <string name="restrict_storage_title">限制存储</string>
+    <string name="restrict_storage_description">剥夺外部存储访问权限</string>
+    <string name="data_isolation_title">强制数据隔离</string>
+    <string name="data_isolation_description">阻止访问其他应用的数据</string>
+
+    <!-- Spoof settings -->
+    <string name="spoof_settings_title">伪装设置</string>
+    <string name="spoof_dev_settings_title">伪装开发者设置</string>
+    <string name="spoof_dev_settings_description">向该应用隐藏开发者选项、ADB 和 USB 调试状态</string>
+    <string name="spoof_adb_enabled">ADB</string>
+    <string name="spoof_adb_enabled_description">报告 ADB 为已禁用</string>
+    <string name="spoof_dev_settings_enabled">开发者选项</string>
+    <string name="spoof_dev_settings_enabled_description">报告开发者选项为已禁用</string>
+    <string name="spoof_adb_wifi_enabled">无线调试</string>
+    <string name="spoof_adb_wifi_enabled_description">报告无线调试为已禁用</string>
+    <string name="spoof_package_verifier">程序包验证器</string>
+    <string name="spoof_package_verifier_description">报告程序包验证器同意状态为已拒绝</string>
+    <string name="spoof_verify_apps_usb">USB 应用验证</string>
+    <string name="spoof_verify_apps_usb_description">报告通过 USB 进行应用验证为已禁用</string>
+    <string name="spoof_accessibility">无障碍</string>
+    <string name="spoof_accessibility_description">报告无障碍服务为已禁用</string>
+    <string name="spoof_count_format">已伪装 %d 项设置</string>
+
+    <!-- Notifications tab -->
+    <string name="notifications_locked_title">通知已锁定</string>
+    <string name="notifications_locked_description">解锁私人区域以查看通知</string>
+    <string name="action_unlock">解锁</string>
+    <string name="no_private_notifications_title">暂无私人通知</string>
+    <string name="no_private_notifications_description">来自隐藏应用的通知将显示在此处</string>
+    <string name="action_dismiss">忽略</string>
+    <string name="action_open">打开</string>
+
+    <!-- Lock screen (PIN) -->
+    <string name="pin_title_create">创建 PIN</string>
+    <string name="pin_title_confirm">确认 PIN</string>
+    <string name="pin_title_enter">输入 PIN</string>
+    <string name="pin_prompt_create">设置 4 位数字 PIN</string>
+    <string name="pin_prompt_confirm">请重新输入您的 PIN</string>
+    <string name="pin_prompt_unlock">输入您的 PIN 以解锁私人应用</string>
+    <string name="pin_error_mismatch">PIN 不一致，请重试或返回。</string>
+    <string name="pin_error_incorrect">PIN 不正确</string>
+    <string name="action_biometric_unlock">生物识别解锁</string>
+    <string name="action_backspace">退格</string>
+    <string name="action_forgot_password">忘记密码？</string>
+
+    <!-- Password screen -->
+    <string name="password_title_create">创建密码</string>
+    <string name="password_title_confirm">确认密码</string>
+    <string name="password_title_enter">输入密码</string>
+    <string name="password_prompt_create">设置一个安全密码</string>
+    <string name="password_prompt_confirm">请重新输入您的密码</string>
+    <string name="password_prompt_unlock">输入您的密码以解锁私人应用</string>
+    <string name="password_error_mismatch">密码不一致，请重试或返回。</string>
+    <string name="password_error_incorrect">密码不正确</string>
+    <string name="password_label">密码</string>
+    <string name="password_placeholder">输入密码</string>
+    <string name="action_continue">继续</string>
+    <string name="action_set_password">设置密码</string>
+    <string name="action_show_password">显示</string>
+    <string name="action_hide_password">隐藏</string>
+
+    <!-- Pattern screen -->
+    <string name="pattern_title_create">创建图案</string>
+    <string name="pattern_title_confirm">确认图案</string>
+    <string name="pattern_title_enter">绘制图案</string>
+    <string name="pattern_prompt_create">至少连接 4 个点</string>
+    <string name="pattern_prompt_confirm">请再次绘制您的图案</string>
+    <string name="pattern_prompt_unlock">绘制您的图案以解锁私人应用</string>
+    <string name="pattern_error_mismatch">图案不匹配</string>
+    <string name="pattern_error_incorrect">图案错误</string>
+    <string name="pattern_error_too_short">至少连接 4 个点</string>
+
+    <!-- Security setup screen -->
+    <string name="setup_title">保护您的私人应用</string>
+    <string name="setup_description">选择您想要保护隐藏应用的方式</string>
+    <string name="setup_pin_title">PIN</string>
+    <string name="setup_pin_description">4位数字码</string>
+    <string name="setup_password_title">密码</string>
+    <string name="setup_password_description">字母数字密码</string>
+    <string name="setup_pattern_title">图案</string>
+    <string name="setup_pattern_description">绘制图案以解锁</string>
+    <string name="action_skip">暂时跳过</string>
+
+    <!-- Security question setup -->
+    <string name="recovery_title">找回选项</string>
+    <string name="recovery_description">设置安全问题，以便在您忘记密码时找回</string>
+    <string name="recovery_question_label">安全问题</string>
+    <string name="recovery_question_placeholder">请选择一个问题</string>
+    <string name="recovery_answer_label">您的答案</string>
+    <string name="recovery_question_picker_title">选择安全问题</string>
+    <string name="action_cancel">取消</string>
+
+    <!-- Security questions -->
+    <string name="question_pet_name">您的宠物叫什么名字？</string>
+    <string name="question_birth_city">您出生在哪个城市？</string>
+    <string name="question_favorite_movie">您最喜欢的电影是什么？</string>
+    <string name="question_mother_maiden">您母亲的娘家姓是什么？</string>
+    <string name="question_first_car">您的第一辆车是什么？</string>
+
+    <!-- Forgot password screen -->
+    <string name="forgot_password_title">忘记密码</string>
+    <string name="forgot_password_description">回答您的安全问题以重置密码</string>
+    <string name="forgot_password_verify">验证答案</string>
+    <string name="forgot_password_error">答案错误，请重试。</string>
+    <string name="forgot_password_reset_title">重置密码？</string>
+    <string name="forgot_password_reset_message">这将清除您当前的密码，您需要设置一个新密码。所有私人应用数据将保持不变。</string>
+    <string name="action_reset">重置</string>
+
+    <!-- Settings screen -->
+    <string name="settings_title">设置</string>
+    <string name="settings_security_title">私人应用安全</string>
+    <string name="settings_current_lock_type">当前锁类型</string>
+    <string name="settings_lock_type_pin">PIN（4位数字）</string>
+    <string name="settings_lock_type_password">密码</string>
+    <string name="settings_lock_type_pattern">图案</string>
+    <string name="settings_lock_type_none">未设置</string>
+    <string name="settings_use_pin">使用 PIN</string>
+    <string name="settings_use_pin_summary">4位数字码</string>
+    <string name="settings_use_password">使用密码</string>
+    <string name="settings_use_password_summary">字母数字密码</string>
+    <string name="settings_use_pattern">使用图案</string>
+    <string name="settings_use_pattern_summary">绘制图案以解锁</string>
+
+    <string name="settings_biometrics_title">生物识别</string>
+    <string name="settings_biometric_unlock">使用生物识别解锁</string>
+    <string name="settings_biometric_unlock_summary">使用指纹或面部解锁</string>
+    <string name="settings_auto_biometric">自动显示生物识别提示</string>
+    <string name="settings_auto_biometric_summary">打开锁定的应用时自动显示生物识别提示</string>
+
+    <string name="settings_recovery_title">恢复</string>
+    <string name="settings_forgot_password">忘记密码</string>
+    <string name="settings_forgot_password_summary">使用安全问题重置密码</string>
+    <string name="settings_setup_question">设置安全问题</string>
+    <string name="settings_setup_question_summary">密码恢复必需</string>
+
+    <string name="settings_locked_behavior_title">锁定应用行为</string>
+    <string name="settings_locked_behavior_summary">控制已解锁应用何时重新锁定</string>
+    <string name="settings_behavior_on_leave">离开应用时重新锁定</string>
+    <string name="settings_behavior_on_leave_summary">离开已解锁应用时立即重新锁定</string>
+    <string name="settings_behavior_timeout">超时后重新锁定</string>
+    <string name="settings_behavior_timeout_summary">无操作 %d 秒后重新锁定</string>
+    <string name="settings_behavior_screen_off">熄屏时重新锁定</string>
+    <string name="settings_behavior_screen_off_summary">切换应用时保持解锁，熄屏时锁定</string>
+    <string name="settings_behavior_on_kill">仅被终止时重新锁定</string>
+    <string name="settings_behavior_on_kill_summary">保持解锁直到沙盒被强制关闭</string>
+
+    <string name="settings_private_behavior_title">私人区域行为</string>
+    <string name="settings_private_behavior_summary">控制私人应用区域何时锁定</string>
+    <string name="settings_private_on_leave">离开时折叠</string>
+    <string name="settings_private_on_leave_summary">离开沙盒应用时折叠并锁定</string>
+    <string name="settings_private_timeout">超时后折叠</string>
+    <string name="settings_private_timeout_summary">离开应用 %d 秒后折叠</string>
+
+    <string name="settings_timeout_title">锁定超时</string>
+    <string name="settings_about_title">关于</string>
+    <string name="settings_version">版本</string>
+    <string name="settings_version_value">1.0.0</string>
+
+    <!-- Timeout options -->
+    <string name="timeout_15s">15秒</string>
+    <string name="timeout_30s">30秒</string>
+    <string name="timeout_60s">1分钟</string>
+    <string name="timeout_120s">2分钟</string>
+    <string name="timeout_300s">5分钟</string>
+
+    <!-- Authenticate activity -->
+    <string name="auth_title_unlock">解锁 %s</string>
+    <string name="auth_prompt">请输入您的沙盒凭据以解锁 %s</string>
+    <string name="biometric_title">解锁私人应用</string>
+    <string name="biometric_use_pin">使用 PIN</string>
+    <string name="biometric_use_password">使用密码</string>
+    <string name="biometric_use_pattern">使用图案</string>
+
+    <!-- Verify credential -->
+    <string name="verify_pin_prompt">请输入您当前的 PIN 以更改安全设置</string>
+    <string name="verify_password_prompt">请输入您当前的密码以更改安全设置</string>
+    <string name="verify_pattern_prompt">请绘制您当前的图案以更改安全设置</string>
+</resources>
