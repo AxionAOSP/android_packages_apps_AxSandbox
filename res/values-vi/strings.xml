@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2025-2026 AxionOS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources>
+    <string name="app_name">Hộp cách ly</string>
+    <!-- Main screen -->
+    <string name="sandbox_title">Hộp cách ly</string>
+    <string name="search_hint">Search apps\u2026</string>
+    <string name="tab_apps">Các ứng dụng</string>
+    <string name="tab_notifications">Thông báo</string>
+    <string name="tab_vault">Vault</string>
+    <string name="no_apps_found">Không tìm thấy ứng dụng nào</string>
+    <string name="action_search">Tìm kiếm</string>
+    <string name="action_settings">Cài đặt</string>
+    <string name="action_notifications">Thông báo</string>
+    <string name="action_back">Back</string>
+    <string name="action_launch">Khởi chạy</string>
+    <!-- App sections -->
+    <string name="section_private_apps">Ứng dụng riêng tư</string>
+    <string name="section_isolated_apps">Isolated Apps</string>
+    <string name="section_all_apps">Tất cả ứng dụng</string>
+    <!-- Setup private apps card -->
+    <string name="setup_private_apps_title">Đặt những ứng dụng riêng tư</string>
+    <string name="setup_private_apps_description">Tạo một mã PIN, mật khẩu, hoặc hình mở khoá để khoá và ẩn các ứng dụng</string>
+    <!-- App detail / quick actions -->
+    <string name="action_lock">Khoá</string>
+    <string name="action_hide">Ẩn</string>
+    <string name="action_isolate">Isolate</string>
+    <string name="lock_app_title">Lock App</string>
+    <string name="lock_app_description">Require authentication to open this app</string>
+    <string name="hide_app_title">Hide App</string>
+    <string name="hide_app_description_off">Hide from launcher, other apps, and spoof install source</string>
+    <string name="hide_app_description_on">Hidden from all apps, install source spoofed, activity launches blocked</string>
+    <string name="isolate_app_title">Isolate App</string>
+    <string name="isolate_app_description">Isolate from other apps, restrict permissions and settings</string>
+    <!-- Sandbox sub-settings -->
+    <string name="sandbox_options_title">Sandbox Options</string>
+    <string name="restrict_internet_title">Restrict Internet</string>
+    <string name="restrict_internet_description">Strip network access from this app</string>
+    <string name="restrict_storage_title">Restrict Storage</string>
+    <string name="restrict_storage_description">Strip external storage access</string>
+    <string name="data_isolation_title">Force Data Isolation</string>
+    <string name="data_isolation_description">Prevent access to other apps\u0027 data</string>
+    <!-- Spoof settings -->
+    <string name="spoof_settings_title">Spoof Settings</string>
+    <string name="spoof_dev_settings_title">Spoof Developer Settings</string>
+    <string name="spoof_dev_settings_description">Hide developer options, ADB, and USB debugging status from this app</string>
+    <string name="spoof_adb_enabled">ADB</string>
+    <string name="spoof_adb_enabled_description">Report ADB as disabled</string>
+    <string name="spoof_dev_settings_enabled">Tuỳ chọn cho nhà phát triển</string>
+    <string name="spoof_dev_settings_enabled_description">Report developer options as disabled</string>
+    <string name="spoof_adb_wifi_enabled">Wireless Debugging</string>
+    <string name="spoof_adb_wifi_enabled_description">Report wireless debugging as disabled</string>
+    <string name="spoof_package_verifier">Package Verifier</string>
+    <string name="spoof_package_verifier_description">Report package verifier consent as denied</string>
+    <string name="spoof_verify_apps_usb">USB App Verification</string>
+    <string name="spoof_verify_apps_usb_description">Report app verification over USB as disabled</string>
+    <string name="spoof_accessibility">Accessibility</string>
+    <string name="spoof_accessibility_description">Report accessibility services as disabled</string>
+    <string name="spoof_count_format">%d settings spoofed</string>
+    <!-- Notifications tab -->
+    <string name="notifications_locked_title">Thông báo đã bị khoá</string>
+    <string name="notifications_locked_description">Mở khu vực riêng tư để xem các thông báo</string>
+    <string name="action_unlock">Mở khoá</string>
+    <string name="no_private_notifications_title">Không có thông báo riêng tư nào</string>
+    <string name="no_private_notifications_description">Thông báo từ các ứng dụng ẩn sẽ xuất hiện ở đây</string>
+    <string name="action_dismiss">Loại bỏ</string>
+    <string name="action_open">Mở</string>
+    <!-- Vault tab -->
+    <string name="vault_locked_title">Vault Locked</string>
+    <string name="vault_locked_description">Unlock the private area to access your secure vault</string>
+    <string name="vault_empty_title">Vault is empty</string>
+    <string name="vault_empty_description">Files you import will be moved here and hidden from other apps</string>
+    <string name="action_import_vault">Import to Vault</string>
+    <string name="action_export">Export</string>
+    <string name="action_delete">Xóa</string>
+    <string name="vault_import_success">%d files added to vault</string>
+    <string name="vault_import_error">Failed to import some files</string>
+    <string name="export_success">File restored from vault</string>
+    <string name="export_error">Failed to export file</string>
+    <string name="delete_confirm_title">Delete File?</string>
+    <string name="delete_confirm_message">This will permanently delete the file from your device.</string>
+    <!-- Lock screen (PIN) -->
+    <string name="pin_title_create">Tạo mã PIN</string>
+    <string name="pin_title_confirm">Xác nhận mã PIN</string>
+    <string name="pin_title_enter">Nhập mã PIN</string>
+    <string name="pin_prompt_create">Chọn một mã PIN có 4 chữ số</string>
+    <string name="pin_prompt_confirm">Nhập lại mã PIN</string>
+    <string name="pin_prompt_unlock">Nhập mã PIN để mở các ứng dụng bị ẩn của bạn</string>
+    <string name="pin_error_mismatch">Mã PIN không khớp. Thử lại hoặc quay lại.</string>
+    <string name="pin_error_incorrect">Mã PIN không đúng</string>
+    <string name="action_biometric_unlock">Mở khoá sinh trắc học</string>
+    <string name="action_backspace">Trở về</string>
+    <string name="action_forgot_password">Quên mật khẩu?</string>
+    <!-- Password screen -->
+    <string name="password_title_create">Tạo mật khẩu</string>
+    <string name="password_title_confirm">Xác nhận mật khẩu</string>
+    <string name="password_title_enter">Nhập mật khẩu</string>
+    <string name="password_prompt_create">Chọn một mật khẩu an toàn</string>
+    <string name="password_prompt_confirm">Nhập lại mật khẩu</string>
+    <string name="password_prompt_unlock">Nhập mật khẩu để mở các ứng dụng bị ẩn của bạn</string>
+    <string name="password_error_mismatch">Mật khẩu không khớp. Thử lại hoặc quay lại.</string>
+    <string name="password_error_incorrect">Mật khẩu không đúng</string>
+    <string name="password_label">Mật khẩu</string>
+    <string name="password_placeholder">Nhập mật khẩu</string>
+    <string name="action_continue">Tiếp tục</string>
+    <string name="action_set_password">Đặt mật khẩu</string>
+    <string name="action_show_password">Hiện</string>
+    <string name="action_hide_password">Ẩn</string>
+    <!-- Pattern screen -->
+    <string name="pattern_title_create">Tạo hình mở khoá</string>
+    <string name="pattern_title_confirm">Xác nhận hình mở khoá</string>
+    <string name="pattern_title_enter">Vẽ hình mở khoá</string>
+    <string name="pattern_prompt_create">Kết nối ít nhất 4 điểm</string>
+    <string name="pattern_prompt_confirm">Vẽ lại hình mở khoá</string>
+    <string name="pattern_prompt_unlock">Vẽ hình mở khoá để mở các ứng dụng bị ẩn của bạn</string>
+    <string name="pattern_error_mismatch">Patterns don\u0027t match</string>
+    <string name="pattern_error_incorrect">Hình mở khoá không đúng</string>
+    <string name="pattern_error_too_short">Kết nối ít nhất 4 điểm</string>
+    <!-- Security setup screen -->
+    <string name="setup_title">Bảo mật các ứng dụng riêng tư của bạn</string>
+    <string name="setup_description">Chọn cách bạn muốn bảo vệ những ứng dụng ẩn của mình</string>
+    <string name="setup_pin_title">PIN</string>
+    <string name="setup_pin_description">4-digit code</string>
+    <string name="setup_password_title">Mật khẩu</string>
+    <string name="setup_password_description">Mật khẩu chữ và số</string>
+    <string name="setup_pattern_title">Hình vẽ</string>
+    <string name="setup_pattern_description">Vẽ hình để mở khoá</string>
+    <string name="action_skip">Bỏ qua ngay bây giờ</string>
+    <!-- Security question setup -->
+    <string name="recovery_title">Lựa chọn khôi phục</string>
+    <string name="recovery_description">Tạo một câu hỏi bảo mật trong trường hợp bạn quên mật khẩu</string>
+    <string name="recovery_question_label">Security Question</string>
+    <string name="recovery_question_placeholder">Select a question</string>
+    <string name="recovery_answer_label">Your Answer</string>
+    <string name="recovery_question_picker_title">Select a Question</string>
+    <string name="action_cancel">Cancel</string>
+    <!-- Security questions -->
+    <string name="question_pet_name">What is your pet\u0027s name?</string>
+    <string name="question_birth_city">Bạn được sinh ra ở thành phố nào?</string>
+    <string name="question_favorite_movie">Bộ phim yêu thích của bạn là gì?</string>
+    <string name="question_mother_maiden">What is your mother\u0027s maiden name?</string>
+    <string name="question_first_car">Chiếc xe hơi đầu tiên của bạn là gì?</string>
+    <!-- Forgot password screen -->
+    <string name="forgot_password_title">Forgot Password</string>
+    <string name="forgot_password_description">Answer your security question to reset your password</string>
+    <string name="forgot_password_verify">Verify Answer</string>
+    <string name="forgot_password_error">Incorrect answer. Please try again.</string>
+    <string name="forgot_password_reset_title">Reset Password?</string>
+    <string name="forgot_password_reset_message">This will clear your current password and you\u0027ll need to set up a new one. All private app data will remain intact.</string>
+    <string name="action_reset">Reset</string>
+    <!-- Settings screen -->
+    <string name="settings_title">Cài đặt</string>
+    <string name="settings_security_title">PRIVATE APPS SECURITY</string>
+    <string name="settings_current_lock_type">Current Lock Type</string>
+    <string name="settings_lock_type_pin">PIN (4 digits)</string>
+    <string name="settings_lock_type_password">Mật khẩu</string>
+    <string name="settings_lock_type_pattern">Hình vẽ</string>
+    <string name="settings_lock_type_none">Not set</string>
+    <string name="settings_use_pin">Use PIN</string>
+    <string name="settings_use_pin_summary">4-digit code</string>
+    <string name="settings_use_password">Use Password</string>
+    <string name="settings_use_password_summary">Mật khẩu chữ và số</string>
+    <string name="settings_use_pattern">Use Pattern</string>
+    <string name="settings_use_pattern_summary">Vẽ hình để mở khoá</string>
+    <string name="settings_biometrics_title">BIOMETRICS</string>
+    <string name="settings_biometric_unlock">Unlock with Biometrics</string>
+    <string name="settings_biometric_unlock_summary">Use fingerprint or face unlock</string>
+    <string name="settings_auto_biometric">Auto-show Biometric Prompt</string>
+    <string name="settings_auto_biometric_summary">Automatically show biometric prompt when opening locked apps</string>
+    <string name="settings_recovery_title">RECOVERY</string>
+    <string name="settings_forgot_password">Forgot Password</string>
+    <string name="settings_forgot_password_summary">Reset your password using security question</string>
+    <string name="settings_setup_question">Set Up Security Question</string>
+    <string name="settings_setup_question_summary">Required for password recovery</string>
+    <string name="settings_locked_behavior_title">LOCKED APP BEHAVIOR</string>
+    <string name="settings_locked_behavior_summary">Controls when unlocked apps re-lock</string>
+    <string name="settings_behavior_on_leave">Re-lock when leaving app</string>
+    <string name="settings_behavior_on_leave_summary">Re-lock immediately when leaving the unlocked app</string>
+    <string name="settings_behavior_timeout">Re-lock after timeout</string>
+    <string name="settings_behavior_timeout_summary">Re-lock after %ds of inactivity</string>
+    <string name="settings_behavior_screen_off">Re-lock on screen off</string>
+    <string name="settings_behavior_screen_off_summary">Keep unlocked when switching apps, lock on screen off</string>
+    <string name="settings_behavior_on_kill">Re-lock only when killed</string>
+    <string name="settings_behavior_on_kill_summary">Keep unlocked until Sandbox is force closed</string>
+    <string name="settings_private_behavior_title">PRIVATE SECTION BEHAVIOR</string>
+    <string name="settings_private_behavior_summary">Controls when the private apps section locks</string>
+    <string name="settings_private_on_leave">Collapse when leaving</string>
+    <string name="settings_private_on_leave_summary">Collapse and lock when leaving Sandbox app</string>
+    <string name="settings_private_timeout">Collapse after timeout</string>
+    <string name="settings_private_timeout_summary">Collapse after %ds of leaving the app</string>
+    <string name="settings_timeout_title">Lock Timeout</string>
+    <string name="settings_about_title">ABOUT</string>
+    <string name="settings_version">Phiên bản</string>
+    <string name="settings_version_value">1.0.0</string>
+    <!-- Timeout options -->
+    <string name="timeout_15s">15 seconds</string>
+    <string name="timeout_30s">30 seconds</string>
+    <string name="timeout_60s">1 minute</string>
+    <string name="timeout_120s">2 minutes</string>
+    <string name="timeout_300s">5 minutes</string>
+    <!-- Authenticate activity -->
+    <string name="auth_title_unlock">Unlock %s</string>
+    <string name="auth_prompt">Enter your Sandbox credential to unlock %s</string>
+    <string name="biometric_title">Mở khoá các ứng dụng riêng tư</string>
+    <string name="biometric_use_pin">Use PIN</string>
+    <string name="biometric_use_password">Use Password</string>
+    <string name="biometric_use_pattern">Use Pattern</string>
+    <!-- Verify credential -->
+    <string name="verify_pin_prompt">Nhập mã PIN hiện tại của bạn để thay đổi bảo mật</string>
+    <string name="verify_password_prompt">Nhập mật khẩu hiện tại của bạn để thay đổi bảo mật</string>
+    <string name="verify_pattern_prompt">Vẽ hình mở khoá hiện tại của bạn để thay đổi bảo mật</string>
+</resources>
