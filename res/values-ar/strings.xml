@@ -205,7 +205,17 @@
     <string name="settings_timeout_title">Lock Timeout</string>
     <string name="settings_about_title">ABOUT</string>
     <string name="settings_version">أصدار</string>
-    <string name="settings_version_value">1.0.0</string>
+    <string name="settings_version_value">2.0.0</string>
+    <!-- Backup and Restore -->
+    <string name="settings_backup_title">DATA &amp; BACKUP</string>
+    <string name="settings_backup_applist">Back up Applist Configuration</string>
+    <string name="settings_backup_applist_summary">Export your locked, hidden, and isolated app settings to a file</string>
+    <string name="settings_restore_applist">Restore Applist Configuration</string>
+    <string name="settings_restore_applist_summary">Import app settings from a previously exported backup</string>
+    <string name="backup_success">Configuration backed up successfully</string>
+    <string name="backup_error">Failed to back up configuration</string>
+    <string name="restore_success">Configuration restored successfully</string>
+    <string name="restore_error">Failed to restore configuration</string>
     <!-- Timeout options -->
     <string name="timeout_15s">15 seconds</string>
     <string name="timeout_30s">30 seconds</string>
