@@ -15,11 +15,11 @@
      limitations under the License.
 -->
 <resources>
-    <string name="app_name">Sandbox</string>
+    <string name="app_name">ארגז חול</string>
     <!-- Main screen -->
-    <string name="sandbox_title">Sandbox</string>
+    <string name="sandbox_title">ארגז חול</string>
     <string name="search_hint">Search apps\u2026</string>
-    <string name="tab_apps">Apps</string>
+    <string name="tab_apps">אפליקציות</string>
     <string name="tab_notifications">התראות</string>
     <string name="tab_vault">Vault</string>
     <string name="no_apps_found">No apps found</string>
@@ -27,21 +27,21 @@
     <string name="action_settings">הגדרות</string>
     <string name="action_notifications">התראות</string>
     <string name="action_back">חזרה</string>
-    <string name="action_launch">Launch</string>
+    <string name="action_launch">הפעלה</string>
     <!-- App sections -->
-    <string name="section_private_apps">Private Apps</string>
+    <string name="section_private_apps">אפליקציות פרטיות</string>
     <string name="section_isolated_apps">Isolated Apps</string>
-    <string name="section_all_apps">All Apps</string>
+    <string name="section_all_apps">כל האפליקציות</string>
     <!-- Setup private apps card -->
     <string name="setup_private_apps_title">Set Up Private Apps</string>
     <string name="setup_private_apps_description">Create a PIN, password, or pattern to lock and hide apps</string>
     <!-- App detail / quick actions -->
     <string name="action_lock">נעילה</string>
-    <string name="action_hide">Hide</string>
+    <string name="action_hide">הסתרה</string>
     <string name="action_isolate">Isolate</string>
-    <string name="lock_app_title">Lock App</string>
+    <string name="lock_app_title">נעילת אפליקציה</string>
     <string name="lock_app_description">Require authentication to open this app</string>
-    <string name="hide_app_title">Hide App</string>
+    <string name="hide_app_title">הסתרת אפליקציה</string>
     <string name="hide_app_description_off">Hide from launcher, other apps, and spoof install source</string>
     <string name="hide_app_description_on">Hidden from all apps, install source spoofed, activity launches blocked</string>
     <string name="isolate_app_title">Isolate App</string>
@@ -78,7 +78,7 @@
     <string name="no_private_notifications_title">No private notifications</string>
     <string name="no_private_notifications_description">Notifications from hidden apps will appear here</string>
     <string name="action_dismiss">Dismiss</string>
-    <string name="action_open">Open</string>
+    <string name="action_open">פתיחה</string>
     <!-- Vault tab -->
     <string name="vault_locked_title">Vault Locked</string>
     <string name="vault_locked_description">Unlock the private area to access your secure vault</string>
@@ -113,13 +113,13 @@
     <string name="password_prompt_confirm">Re-enter your password</string>
     <string name="password_prompt_unlock">Enter your password to unlock private apps</string>
     <string name="password_error_mismatch">Passwords mismatched. Try again or go back.</string>
-    <string name="password_error_incorrect">Incorrect password</string>
+    <string name="password_error_incorrect">סיסמא שגויה</string>
     <string name="password_label">Password</string>
     <string name="password_placeholder">Enter password</string>
-    <string name="action_continue">Continue</string>
+    <string name="action_continue">המשך</string>
     <string name="action_set_password">Set Password</string>
-    <string name="action_show_password">Show</string>
-    <string name="action_hide_password">Hide</string>
+    <string name="action_show_password">הצגה</string>
+    <string name="action_hide_password">הסתרה</string>
     <!-- Pattern screen -->
     <string name="pattern_title_create">Create Pattern</string>
     <string name="pattern_title_confirm">Confirm Pattern</string>
@@ -139,7 +139,7 @@
     <string name="setup_password_description">Alphanumeric password</string>
     <string name="setup_pattern_title">Pattern</string>
     <string name="setup_pattern_description">Draw pattern to unlock</string>
-    <string name="action_skip">Skip for now</string>
+    <string name="action_skip">לדלג בינתיים</string>
     <!-- Security question setup -->
     <string name="recovery_title">Recovery Option</string>
     <string name="recovery_description">Set up a security question in case you forget your password</string>
@@ -150,10 +150,10 @@
     <string name="action_cancel">ביטול</string>
     <!-- Security questions -->
     <string name="question_pet_name">What is your pet\u0027s name?</string>
-    <string name="question_birth_city">What city were you born in?</string>
-    <string name="question_favorite_movie">What is your favorite movie?</string>
+    <string name="question_birth_city">באיזו עיר נולדת?</string>
+    <string name="question_favorite_movie">מה הסרט האהוב עליך?</string>
     <string name="question_mother_maiden">What is your mother\u0027s maiden name?</string>
-    <string name="question_first_car">What was your first car?</string>
+    <string name="question_first_car">מה היה דגם המכונית הראשונה שלך?</string>
     <!-- Forgot password screen -->
     <string name="forgot_password_title">Forgot Password</string>
     <string name="forgot_password_description">Answer your security question to reset your password</string>
@@ -172,7 +172,7 @@
     <string name="settings_lock_type_none">Not set</string>
     <string name="settings_use_pin">Use PIN</string>
     <string name="settings_use_pin_summary">4-digit code</string>
-    <string name="settings_use_password">Use Password</string>
+    <string name="settings_use_password">שימוש בסיסמה</string>
     <string name="settings_use_password_summary">Alphanumeric password</string>
     <string name="settings_use_pattern">Use Pattern</string>
     <string name="settings_use_pattern_summary">Draw pattern to unlock</string>
@@ -184,15 +184,15 @@
     <string name="settings_recovery_title">RECOVERY</string>
     <string name="settings_forgot_password">Forgot Password</string>
     <string name="settings_forgot_password_summary">Reset your password using security question</string>
-    <string name="settings_setup_question">Set Up Security Question</string>
+    <string name="settings_setup_question">הגדרת שאלת אבטחה</string>
     <string name="settings_setup_question_summary">Required for password recovery</string>
     <string name="settings_locked_behavior_title">LOCKED APP BEHAVIOR</string>
     <string name="settings_locked_behavior_summary">Controls when unlocked apps re-lock</string>
     <string name="settings_behavior_on_leave">Re-lock when leaving app</string>
     <string name="settings_behavior_on_leave_summary">Re-lock immediately when leaving the unlocked app</string>
-    <string name="settings_behavior_timeout">Re-lock after timeout</string>
+    <string name="settings_behavior_timeout">נעילה מחדש לאחר פרק זמן</string>
     <string name="settings_behavior_timeout_summary">Re-lock after %ds of inactivity</string>
-    <string name="settings_behavior_screen_off">Re-lock on screen off</string>
+    <string name="settings_behavior_screen_off">נעילה מחדש לאחר כיבוי המסך</string>
     <string name="settings_behavior_screen_off_summary">Keep unlocked when switching apps, lock on screen off</string>
     <string name="settings_behavior_on_kill">Re-lock only when killed</string>
     <string name="settings_behavior_on_kill_summary">Keep unlocked until Sandbox is force closed</string>
@@ -204,7 +204,7 @@
     <string name="settings_private_timeout_summary">Collapse after %ds of leaving the app</string>
     <string name="settings_timeout_title">Lock Timeout</string>
     <string name="settings_about_title">ABOUT</string>
-    <string name="settings_version">Version</string>
+    <string name="settings_version">גרסה</string>
     <string name="settings_version_value">2.0.0</string>
     <!-- Backup and Restore -->
     <string name="settings_backup_title">DATA &amp; BACKUP</string>
@@ -227,7 +227,7 @@
     <string name="auth_prompt">Enter your Sandbox credential to unlock %s</string>
     <string name="biometric_title">Unlock Private Apps</string>
     <string name="biometric_use_pin">Use PIN</string>
-    <string name="biometric_use_password">Use Password</string>
+    <string name="biometric_use_password">שימוש בסיסמה</string>
     <string name="biometric_use_pattern">Use Pattern</string>
     <!-- Verify credential -->
     <string name="verify_pin_prompt">Enter your current PIN to change security</string>
