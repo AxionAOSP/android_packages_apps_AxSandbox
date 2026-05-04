@@ -36,7 +36,7 @@
     <string name="setup_private_apps_title">Set Up Private Apps</string>
     <string name="setup_private_apps_description">Create a PIN, password, or pattern to lock and hide apps</string>
     <!-- App detail / quick actions -->
-    <string name="action_lock">Lock</string>
+    <string name="action_lock">נעילה</string>
     <string name="action_hide">Hide</string>
     <string name="action_isolate">Isolate</string>
     <string name="lock_app_title">Lock App</string>
@@ -60,7 +60,7 @@
     <string name="spoof_dev_settings_description">Hide developer options, ADB, and USB debugging status from this app</string>
     <string name="spoof_adb_enabled">ADB</string>
     <string name="spoof_adb_enabled_description">Report ADB as disabled</string>
-    <string name="spoof_dev_settings_enabled">Developer Options</string>
+    <string name="spoof_dev_settings_enabled">אפשרויות למפתחים</string>
     <string name="spoof_dev_settings_enabled_description">Report developer options as disabled</string>
     <string name="spoof_adb_wifi_enabled">Wireless Debugging</string>
     <string name="spoof_adb_wifi_enabled_description">Report wireless debugging as disabled</string>
