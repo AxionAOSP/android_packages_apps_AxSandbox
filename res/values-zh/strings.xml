@@ -219,9 +219,9 @@
     <!-- Timeout options -->
     <string name="timeout_15s">15 seconds</string>
     <string name="timeout_30s">30 seconds</string>
-    <string name="timeout_60s">1 minute</string>
+    <string name="timeout_60s">1 分鐘</string>
     <string name="timeout_120s">2 minutes</string>
-    <string name="timeout_300s">5 minutes</string>
+    <string name="timeout_300s">5 分鐘</string>
     <!-- Authenticate activity -->
     <string name="auth_title_unlock">Unlock %s</string>
     <string name="auth_prompt">Enter your Sandbox credential to unlock %s</string>
