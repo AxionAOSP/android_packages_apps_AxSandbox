@@ -32,6 +32,7 @@
     <string name="section_private_apps">אפליקציות פרטיות</string>
     <string name="section_isolated_apps">Isolated Apps</string>
     <string name="section_all_apps">כל האפליקציות</string>
+    <string name="show_system_apps">Show System Apps</string>
     <!-- Setup private apps card -->
     <string name="setup_private_apps_title">Set Up Private Apps</string>
     <string name="setup_private_apps_description">Create a PIN, password, or pattern to lock and hide apps</string>
