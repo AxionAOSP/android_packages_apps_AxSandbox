@@ -32,6 +32,7 @@
     <string name="section_private_apps">Ứng dụng riêng tư</string>
     <string name="section_isolated_apps">Isolated Apps</string>
     <string name="section_all_apps">Tất cả ứng dụng</string>
+    <string name="show_system_apps">Hiển thị ứng dụng hệ thống</string>
     <!-- Setup private apps card -->
     <string name="setup_private_apps_title">Đặt những ứng dụng riêng tư</string>
     <string name="setup_private_apps_description">Tạo một mã PIN, mật khẩu, hoặc hình mở khoá để khoá và ẩn các ứng dụng</string>
