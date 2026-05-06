@@ -32,6 +32,7 @@
     <string name="section_private_apps">Личные приложения</string>
     <string name="section_isolated_apps">Isolated Apps</string>
     <string name="section_all_apps">Все приложения</string>
+    <string name="show_system_apps">Показать системные приложения</string>
     <!-- Setup private apps card -->
     <string name="setup_private_apps_title">Настройка личных приложений</string>
     <string name="setup_private_apps_description">Создайте PIN-код, пароль или графический ключ для блокировки и скрытия приложений</string>
