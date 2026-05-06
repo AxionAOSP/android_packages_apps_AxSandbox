@@ -20,24 +20,24 @@
     <string name="sandbox_title">Sandbox</string>
     <string name="search_hint">Search apps\u2026</string>
     <string name="tab_apps">Apps</string>
-    <string name="tab_notifications">Notifications</string>
+    <string name="tab_notifications">Notificações</string>
     <string name="tab_vault">Vault</string>
     <string name="no_apps_found">No apps found</string>
-    <string name="action_search">Search</string>
-    <string name="action_settings">Settings</string>
-    <string name="action_notifications">Notifications</string>
-    <string name="action_back">Back</string>
+    <string name="action_search">Pesquisa</string>
+    <string name="action_settings">Configurações</string>
+    <string name="action_notifications">Notificações</string>
+    <string name="action_back">Voltar</string>
     <string name="action_launch">Launch</string>
     <!-- App sections -->
     <string name="section_private_apps">Private Apps</string>
     <string name="section_isolated_apps">Isolated Apps</string>
     <string name="section_all_apps">All Apps</string>
-    <string name="show_system_apps">Show System Apps</string>
+    <string name="show_system_apps">Mostrar aplicativos do sistema</string>
     <!-- Setup private apps card -->
     <string name="setup_private_apps_title">Set Up Private Apps</string>
     <string name="setup_private_apps_description">Create a PIN, password, or pattern to lock and hide apps</string>
     <!-- App detail / quick actions -->
-    <string name="action_lock">Lock</string>
+    <string name="action_lock">Bloqueio</string>
     <string name="action_hide">Hide</string>
     <string name="action_isolate">Isolate</string>
     <string name="lock_app_title">Lock App</string>
@@ -61,7 +61,7 @@
     <string name="spoof_dev_settings_description">Hide developer options, ADB, and USB debugging status from this app</string>
     <string name="spoof_adb_enabled">ADB</string>
     <string name="spoof_adb_enabled_description">Report ADB as disabled</string>
-    <string name="spoof_dev_settings_enabled">Developer Options</string>
+    <string name="spoof_dev_settings_enabled">Opções do desenvolvedor</string>
     <string name="spoof_dev_settings_enabled_description">Report developer options as disabled</string>
     <string name="spoof_adb_wifi_enabled">Wireless Debugging</string>
     <string name="spoof_adb_wifi_enabled_description">Report wireless debugging as disabled</string>
@@ -78,7 +78,7 @@
     <string name="action_unlock">Unlock</string>
     <string name="no_private_notifications_title">No private notifications</string>
     <string name="no_private_notifications_description">Notifications from hidden apps will appear here</string>
-    <string name="action_dismiss">Dismiss</string>
+    <string name="action_dismiss">Dispensar</string>
     <string name="action_open">Open</string>
     <!-- Vault tab -->
     <string name="vault_locked_title">Vault Locked</string>
@@ -87,7 +87,7 @@
     <string name="vault_empty_description">Files you import will be moved here and hidden from other apps</string>
     <string name="action_import_vault">Import to Vault</string>
     <string name="action_export">Export</string>
-    <string name="action_delete">Delete</string>
+    <string name="action_delete">Deletar</string>
     <string name="vault_import_success">%d files added to vault</string>
     <string name="vault_import_error">Failed to import some files</string>
     <string name="export_success">File restored from vault</string>
@@ -148,7 +148,7 @@
     <string name="recovery_question_placeholder">Select a question</string>
     <string name="recovery_answer_label">Your Answer</string>
     <string name="recovery_question_picker_title">Select a Question</string>
-    <string name="action_cancel">Cancel</string>
+    <string name="action_cancel">Cancelar</string>
     <!-- Security questions -->
     <string name="question_pet_name">What is your pet\u0027s name?</string>
     <string name="question_birth_city">What city were you born in?</string>
@@ -162,9 +162,9 @@
     <string name="forgot_password_error">Incorrect answer. Please try again.</string>
     <string name="forgot_password_reset_title">Reset Password?</string>
     <string name="forgot_password_reset_message">This will clear your current password and you\u0027ll need to set up a new one. All private app data will remain intact.</string>
-    <string name="action_reset">Reset</string>
+    <string name="action_reset">Redefinir</string>
     <!-- Settings screen -->
-    <string name="settings_title">Settings</string>
+    <string name="settings_title">Configurações</string>
     <string name="settings_security_title">PRIVATE APPS SECURITY</string>
     <string name="settings_current_lock_type">Current Lock Type</string>
     <string name="settings_lock_type_pin">PIN (4 digits)</string>
