@@ -32,6 +32,7 @@
     <string name="section_private_apps">プライベートアプリ</string>
     <string name="section_isolated_apps">Isolated Apps</string>
     <string name="section_all_apps">すべてのアプリ</string>
+    <string name="show_system_apps">システムアプリを表示</string>
     <!-- Setup private apps card -->
     <string name="setup_private_apps_title">プライベートアプリをセットアップ</string>
     <string name="setup_private_apps_description">Create a PIN, password, or pattern to lock and hide apps</string>
