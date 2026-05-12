@@ -21,7 +21,7 @@
     <string name="search_hint">Поиск приложений\u2026</string>
     <string name="tab_apps">Приложения</string>
     <string name="tab_notifications">Уведомления</string>
-    <string name="tab_vault">Vault</string>
+    <string name="tab_vault">Хранилище</string>
     <string name="no_apps_found">Приложения не найдены</string>
     <string name="action_search">Поиск</string>
     <string name="action_settings">Настройки</string>
@@ -30,7 +30,7 @@
     <string name="action_launch">Запустить</string>
     <!-- App sections -->
     <string name="section_private_apps">Личные приложения</string>
-    <string name="section_isolated_apps">Isolated Apps</string>
+    <string name="section_isolated_apps">Изолированные приложения</string>
     <string name="section_all_apps">Все приложения</string>
     <string name="show_system_apps">Показать системные приложения</string>
     <!-- Setup private apps card -->
@@ -39,39 +39,39 @@
     <!-- App detail / quick actions -->
     <string name="action_lock">Блокировка</string>
     <string name="action_hide">Спрятать</string>
-    <string name="action_isolate">Isolate</string>
+    <string name="action_isolate">Изолировать</string>
     <string name="lock_app_title">Заблокировать приложение</string>
     <string name="lock_app_description">Требовать аутентификацию для открытия этого приложения</string>
     <string name="hide_app_title">Скрыть приложение</string>
-    <string name="hide_app_description_off">Hide from launcher, other apps, and spoof install source</string>
-    <string name="hide_app_description_on">Hidden from all apps, install source spoofed, activity launches blocked</string>
-    <string name="isolate_app_title">Isolate App</string>
-    <string name="isolate_app_description">Isolate from other apps, restrict permissions and settings</string>
+    <string name="hide_app_description_off">Скрыть с главного экрана, других приложений и подделывать источник установки</string>
+    <string name="hide_app_description_on">Скрыто от всех приложений, источник установки подделан, операции запуска заблокированы</string>
+    <string name="isolate_app_title">Изолировать приложение</string>
+    <string name="isolate_app_description">Изолировать от других приложений, ограничить права доступа и настройки</string>
     <!-- Sandbox sub-settings -->
-    <string name="sandbox_options_title">Sandbox Options</string>
-    <string name="restrict_internet_title">Restrict Internet</string>
-    <string name="restrict_internet_description">Strip network access from this app</string>
-    <string name="restrict_storage_title">Restrict Storage</string>
-    <string name="restrict_storage_description">Strip external storage access</string>
-    <string name="data_isolation_title">Force Data Isolation</string>
-    <string name="data_isolation_description">Prevent access to other apps\u0027 data</string>
+    <string name="sandbox_options_title">Настройки песочницы</string>
+    <string name="restrict_internet_title">Ограничить доступ в интернет</string>
+    <string name="restrict_internet_description">Запретить доступ к сети из этого приложения</string>
+    <string name="restrict_storage_title">Ограничить хранилище</string>
+    <string name="restrict_storage_description">Запретить доступ к внешнему хранилищу</string>
+    <string name="data_isolation_title">Принудительная изоляция данных</string>
+    <string name="data_isolation_description">Запретить доступ к данным других приложений\u0027</string>
     <!-- Spoof settings -->
-    <string name="spoof_settings_title">Spoof Settings</string>
-    <string name="spoof_dev_settings_title">Spoof Developer Settings</string>
-    <string name="spoof_dev_settings_description">Hide developer options, ADB, and USB debugging status from this app</string>
+    <string name="spoof_settings_title">Настройки подмены</string>
+    <string name="spoof_dev_settings_title">Подмена настроек для разработчика</string>
+    <string name="spoof_dev_settings_description">Скрыть параметры разработчика, статус отладки ADB и USB для этого приложения</string>
     <string name="spoof_adb_enabled">ADB</string>
-    <string name="spoof_adb_enabled_description">Report ADB as disabled</string>
+    <string name="spoof_adb_enabled_description">Сообщать, что ADB отключен</string>
     <string name="spoof_dev_settings_enabled">Параметры разработчика</string>
-    <string name="spoof_dev_settings_enabled_description">Report developer options as disabled</string>
-    <string name="spoof_adb_wifi_enabled">Wireless Debugging</string>
-    <string name="spoof_adb_wifi_enabled_description">Report wireless debugging as disabled</string>
-    <string name="spoof_package_verifier">Package Verifier</string>
-    <string name="spoof_package_verifier_description">Report package verifier consent as denied</string>
-    <string name="spoof_verify_apps_usb">USB App Verification</string>
-    <string name="spoof_verify_apps_usb_description">Report app verification over USB as disabled</string>
-    <string name="spoof_accessibility">Accessibility</string>
-    <string name="spoof_accessibility_description">Report accessibility services as disabled</string>
-    <string name="spoof_count_format">%d settings spoofed</string>
+    <string name="spoof_dev_settings_enabled_description">Сообщать, что параметры разработчика отключены</string>
+    <string name="spoof_adb_wifi_enabled">Отладка по Wi-Fi</string>
+    <string name="spoof_adb_wifi_enabled_description">Сообщать, что отладка по Wi-Fi отключена</string>
+    <string name="spoof_package_verifier">Проверка приложения</string>
+    <string name="spoof_package_verifier_description">Сообщать об отказе проверки приложения</string>
+    <string name="spoof_verify_apps_usb">Проверка приложения по USB</string>
+    <string name="spoof_verify_apps_usb_description">Сообщать, что проверка приложения, при установке по USB, отключена</string>
+    <string name="spoof_accessibility">Специальные возможности</string>
+    <string name="spoof_accessibility_description">Сообщать, что специальные возможности отключены</string>
+    <string name="spoof_count_format">%d настроек подменены</string>
     <!-- Notifications tab -->
     <string name="notifications_locked_title">Приватные уведомления</string>
     <string name="notifications_locked_description">Разблокируйте приватную область для просмотра уведомлений</string>
@@ -81,19 +81,19 @@
     <string name="action_dismiss">Закрыть</string>
     <string name="action_open">Открыть</string>
     <!-- Vault tab -->
-    <string name="vault_locked_title">Vault Locked</string>
-    <string name="vault_locked_description">Unlock the private area to access your secure vault</string>
-    <string name="vault_empty_title">Vault is empty</string>
-    <string name="vault_empty_description">Files you import will be moved here and hidden from other apps</string>
-    <string name="action_import_vault">Import to Vault</string>
-    <string name="action_export">Export</string>
+    <string name="vault_locked_title">Хранилище заблокировано</string>
+    <string name="vault_locked_description">Разблокируйте приватную область, чтобы получить доступ к вашему защищённому хранилищу</string>
+    <string name="vault_empty_title">Хранилище пусто</string>
+    <string name="vault_empty_description">Импортируемые вами файлы будут перемещены сюда и скрыты от других приложений</string>
+    <string name="action_import_vault">Импорт в хранилище</string>
+    <string name="action_export">Экспорт</string>
     <string name="action_delete">Удалить</string>
-    <string name="vault_import_success">%d files added to vault</string>
-    <string name="vault_import_error">Failed to import some files</string>
-    <string name="export_success">File restored from vault</string>
-    <string name="export_error">Failed to export file</string>
-    <string name="delete_confirm_title">Delete File?</string>
-    <string name="delete_confirm_message">This will permanently delete the file from your device.</string>
+    <string name="vault_import_success">Добавлено в хранилище файлов - %d</string>
+    <string name="vault_import_error">Не удалось импортировать некоторые файлы</string>
+    <string name="export_success">Файл восстановлен из хранилища</string>
+    <string name="export_error">Не удалось экспортировать файл</string>
+    <string name="delete_confirm_title">Удалить файл?</string>
+    <string name="delete_confirm_message">Это приведёт к безвозвратному удалению файла с вашего устройства.</string>
     <!-- Lock screen (PIN) -->
     <string name="pin_title_create">Создать PIN-код</string>
     <string name="pin_title_confirm">Подтвердите PIN-код</string>
@@ -128,14 +128,14 @@
     <string name="pattern_prompt_create">Соедините как минимум 4 точки</string>
     <string name="pattern_prompt_confirm">Введите графический ключ снова</string>
     <string name="pattern_prompt_unlock">Введите графический ключ для разблокировки личных приложений</string>
-    <string name="pattern_error_mismatch">Patterns don\u0027t match</string>
+    <string name="pattern_error_mismatch">Графические ключи не совпадают</string>
     <string name="pattern_error_incorrect">Неверный графический ключ</string>
     <string name="pattern_error_too_short">Соедините как минимум 4 точки</string>
     <!-- Security setup screen -->
     <string name="setup_title">Защитите свои личные приложения</string>
     <string name="setup_description">Выберите способ защиты личных приложений</string>
     <string name="setup_pin_title">PIN-код</string>
-    <string name="setup_pin_description">4-digit code</string>
+    <string name="setup_pin_description">4-значный код</string>
     <string name="setup_password_title">Пароль</string>
     <string name="setup_password_description">Буквенно-цифровой пароль</string>
     <string name="setup_pattern_title">Графический ключ</string>
@@ -147,13 +147,13 @@
     <string name="recovery_question_label">Секретный вопрос</string>
     <string name="recovery_question_placeholder">Выберете вопрос</string>
     <string name="recovery_answer_label">Ваш ответ</string>
-    <string name="recovery_question_picker_title">Select a Question</string>
+    <string name="recovery_question_picker_title">Выберите вопрос</string>
     <string name="action_cancel">Отмена</string>
     <!-- Security questions -->
-    <string name="question_pet_name">What is your pet\u0027s name?</string>
+    <string name="question_pet_name">Как зовут вашего питомца?</string>
     <string name="question_birth_city">В каком городе Вы родились?</string>
     <string name="question_favorite_movie">Какой у Вас любимый фильм?</string>
-    <string name="question_mother_maiden">What is your mother\u0027s maiden name?</string>
+    <string name="question_mother_maiden">Какая девичья фамилия вашей матери?</string>
     <string name="question_first_car">Ваш первый автомобиль?</string>
     <!-- Forgot password screen -->
     <string name="forgot_password_title">Забыли пароль</string>
@@ -161,38 +161,38 @@
     <string name="forgot_password_verify">Подтвердите ответ</string>
     <string name="forgot_password_error">Неверный ответ. Попробуйте снова.</string>
     <string name="forgot_password_reset_title">Сбросить пароль?</string>
-    <string name="forgot_password_reset_message">This will clear your current password and you\u0027ll need to set up a new one. All private app data will remain intact.</string>
+    <string name="forgot_password_reset_message">Это приведёт к удалению вашего текущего пароля, и вам нужно будет установить новый. Все личные данные приложения останутся нетронутыми.</string>
     <string name="action_reset">Сброс</string>
     <!-- Settings screen -->
     <string name="settings_title">Настройки</string>
-    <string name="settings_security_title">PRIVATE APPS SECURITY</string>
+    <string name="settings_security_title">БЕЗОПАСНОСТЬ ПРИВАТНЫХ ПРИЛОЖЕНИЙ</string>
     <string name="settings_current_lock_type">Текущий тип блокировки</string>
-    <string name="settings_lock_type_pin">PIN (4 digits)</string>
+    <string name="settings_lock_type_pin">PIN (4 знака)</string>
     <string name="settings_lock_type_password">Пароль</string>
     <string name="settings_lock_type_pattern">Графический ключ</string>
     <string name="settings_lock_type_none">Не задан</string>
     <string name="settings_use_pin">Использовать PIN</string>
-    <string name="settings_use_pin_summary">4-digit code</string>
+    <string name="settings_use_pin_summary">4-значный код</string>
     <string name="settings_use_password">Использовать пароль</string>
     <string name="settings_use_password_summary">Буквенно-цифровой пароль</string>
     <string name="settings_use_pattern">Использовать графический ключ</string>
     <string name="settings_use_pattern_summary">Введите графический ключ</string>
-    <string name="settings_biometrics_title">BIOMETRICS</string>
+    <string name="settings_biometrics_title">БИОМЕТРИЯ</string>
     <string name="settings_biometric_unlock">Разблокировать с помощью биометрии</string>
     <string name="settings_biometric_unlock_summary">Использовать отпечаток пальца или разблокировку по лицу</string>
     <string name="settings_auto_biometric">Автоматически показывать запрос биометрии</string>
     <string name="settings_auto_biometric_summary">Автоматически показывать запрос биометрии при открытии заблокированных приложений</string>
-    <string name="settings_recovery_title">RECOVERY</string>
+    <string name="settings_recovery_title">ВОССТАНОВЛЕНИЕ</string>
     <string name="settings_forgot_password">Забыли пароль</string>
     <string name="settings_forgot_password_summary">Сброс пароля с помощью секретного вопроса</string>
     <string name="settings_setup_question">Настроить секретный вопрос</string>
     <string name="settings_setup_question_summary">Требуется для восстановления пароля</string>
-    <string name="settings_locked_behavior_title">LOCKED APP BEHAVIOR</string>
+    <string name="settings_locked_behavior_title">ПОВЕДЕНИЕ ЗАБЛОКИРОВАННОГО ПРИЛОЖЕНИЯ</string>
     <string name="settings_locked_behavior_summary">Поведение разблокировки приложений</string>
     <string name="settings_behavior_on_leave">Повторно заблокировать при выходе из приложения</string>
     <string name="settings_behavior_on_leave_summary">Блокировать сразу после покидания приложения</string>
     <string name="settings_behavior_timeout">Повторная блокировка после таймаута</string>
-    <string name="settings_behavior_timeout_summary">Re-lock after %ds of inactivity</string>
+    <string name="settings_behavior_timeout_summary">Блокировка после бездействия %dсек.</string>
     <string name="settings_behavior_screen_off">Блокировать при отключении экрана</string>
     <string name="settings_behavior_screen_off_summary">Оставлять открытыми приложения при смене приложений и при выключенном экране</string>
     <string name="settings_behavior_on_kill">Блокировка только при остановке</string>
