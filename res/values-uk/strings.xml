@@ -199,7 +199,7 @@
     <string name="settings_behavior_on_kill_summary">Тримати розблокованим, доки Sandbox не буде примусово закрито</string>
     <string name="settings_private_behavior_title">PRIVATE SECTION BEHAVIOR</string>
     <string name="settings_private_behavior_summary">Controls when the private apps section locks</string>
-    <string name="settings_private_on_leave">Collapse when leaving</string>
+    <string name="settings_private_on_leave">Згортати під час виходу</string>
     <string name="settings_private_on_leave_summary">Collapse and lock when leaving Sandbox app</string>
     <string name="settings_private_timeout">Collapse after timeout</string>
     <string name="settings_private_timeout_summary">Collapse after %ds of leaving the app</string>
