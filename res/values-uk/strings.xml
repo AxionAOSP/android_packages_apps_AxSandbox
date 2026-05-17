@@ -40,7 +40,7 @@
     <string name="action_lock">Заблокувати</string>
     <string name="action_hide">Сховати</string>
     <string name="action_isolate">Isolate</string>
-    <string name="lock_app_title">Lock App</string>
+    <string name="lock_app_title">Блокування додатка</string>
     <string name="lock_app_description">Потрібна автентифікація, щоб відкрити цей додаток</string>
     <string name="hide_app_title">Приховати додаток</string>
     <string name="hide_app_description_off">Hide from launcher, other apps, and spoof install source</string>
@@ -200,10 +200,10 @@
     <string name="settings_private_behavior_title">PRIVATE SECTION BEHAVIOR</string>
     <string name="settings_private_behavior_summary">Controls when the private apps section locks</string>
     <string name="settings_private_on_leave">Згортати під час виходу</string>
-    <string name="settings_private_on_leave_summary">Collapse and lock when leaving Sandbox app</string>
-    <string name="settings_private_timeout">Collapse after timeout</string>
+    <string name="settings_private_on_leave_summary">Згорнути та заблокувати після виходу з програми Sandbox</string>
+    <string name="settings_private_timeout">Згорнути після тайм-ауту</string>
     <string name="settings_private_timeout_summary">Collapse after %ds of leaving the app</string>
-    <string name="settings_timeout_title">Lock Timeout</string>
+    <string name="settings_timeout_title">Час очікування блокування</string>
     <string name="settings_about_title">ABOUT</string>
     <string name="settings_version">Версія</string>
     <string name="settings_version_value">2.0.0</string>
