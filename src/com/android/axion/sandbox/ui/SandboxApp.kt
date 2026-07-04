@@ -110,9 +110,11 @@ import androidx.compose.ui.graphics.painter.BitmapPainter
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalLifecycleOwner
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.core.graphics.drawable.toBitmap
 import androidx.lifecycle.Lifecycle
@@ -143,6 +145,15 @@ import kotlinx.coroutines.withContext
 private const val TAG = "SandboxApp"
 private const val SANDBOX_CONFIG_KEY = "sandbox_config"
 private const val SHEET_HEIGHT_FRACTION = 0.75f
+
+@Composable
+private fun rememberAppIconBitmap(icon: Drawable, packageName: String, size: Dp) =
+    with(LocalDensity.current) {
+        val sizePx = size.roundToPx()
+        remember(icon, packageName, sizePx) {
+            icon.toBitmap(sizePx, sizePx).asImageBitmap()
+        }
+    }
 
 data class AppInfo(
     val packageName: String,
@@ -719,9 +730,7 @@ fun AppDetailScreen(
     onLaunch: (AppInfo) -> Unit,
     isSecuritySetup: Boolean = false
 ) {
-    val bitmap = remember(app.packageName) {
-        app.icon.toBitmap(128, 128)
-    }
+    val bitmap = rememberAppIconBitmap(app.icon, app.packageName, 80.dp)
     val scrollBehavior = TopAppBarDefaults.exitUntilCollapsedScrollBehavior(rememberTopAppBarState())
 
     Scaffold(
@@ -763,7 +772,7 @@ fun AppDetailScreen(
                     contentAlignment = Alignment.Center
                 ) {
                     Image(
-                        painter = BitmapPainter(bitmap.asImageBitmap()),
+                        painter = BitmapPainter(bitmap),
                         contentDescription = app.label,
                         modifier = Modifier.size(80.dp)
                     )
@@ -1344,9 +1353,7 @@ private fun AppGridItem(
     )
     val hasAnyProtection = protectionStates.isNotEmpty()
 
-    val bitmap = remember(app.packageName) {
-        app.icon.toBitmap(64, 64)
-    }
+    val bitmap = rememberAppIconBitmap(app.icon, app.packageName, 52.dp)
 
     Column(
         modifier = Modifier
@@ -1358,7 +1365,7 @@ private fun AppGridItem(
     ) {
         Box {
             Image(
-                painter = BitmapPainter(bitmap.asImageBitmap()),
+                painter = BitmapPainter(bitmap),
                 contentDescription = app.label,
                 modifier = Modifier
                     .size(52.dp)
@@ -1439,9 +1446,7 @@ private fun AppQuickActionsSheet(
     onLaunch: (AppInfo) -> Unit,
     onDismiss: () -> Unit
 ) {
-    val bitmap = remember(app.packageName) {
-        app.icon.toBitmap(80, 80)
-    }
+    val bitmap = rememberAppIconBitmap(app.icon, app.packageName, 48.dp)
     val context = LocalContext.current
     val sandboxManager = remember {
         context.getSystemService(android.app.AxSandboxManager::class.java)
@@ -1465,7 +1470,7 @@ private fun AppQuickActionsSheet(
                     verticalAlignment = Alignment.CenterVertically,
                 ) {
                     Image(
-                        painter = BitmapPainter(bitmap.asImageBitmap()),
+                        painter = BitmapPainter(bitmap),
                         contentDescription = app.label,
                         modifier = Modifier
                             .size(48.dp)
