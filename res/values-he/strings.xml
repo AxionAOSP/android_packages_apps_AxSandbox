@@ -32,7 +32,7 @@
     <string name="section_private_apps">אפליקציות פרטיות</string>
     <string name="section_isolated_apps">Isolated Apps</string>
     <string name="section_all_apps">כל האפליקציות</string>
-    <string name="show_system_apps">Show System Apps</string>
+    <string name="show_system_apps">הצגת אפליקציות מערכת</string>
     <!-- Setup private apps card -->
     <string name="setup_private_apps_title">Set Up Private Apps</string>
     <string name="setup_private_apps_description">Create a PIN, password, or pattern to lock and hide apps</string>
@@ -78,7 +78,7 @@
     <string name="action_unlock">שחרור</string>
     <string name="no_private_notifications_title">No private notifications</string>
     <string name="no_private_notifications_description">Notifications from hidden apps will appear here</string>
-    <string name="action_dismiss">Dismiss</string>
+    <string name="action_dismiss">התעלמות</string>
     <string name="action_open">פתיחה</string>
     <!-- Vault tab -->
     <string name="vault_locked_title">Vault Locked</string>
@@ -87,7 +87,7 @@
     <string name="vault_empty_description">Files you import will be moved here and hidden from other apps</string>
     <string name="action_import_vault">Import to Vault</string>
     <string name="action_export">Export</string>
-    <string name="action_delete">Delete</string>
+    <string name="action_delete">מחיקה</string>
     <string name="vault_import_success">%d files added to vault</string>
     <string name="vault_import_error">Failed to import some files</string>
     <string name="export_success">File restored from vault</string>
