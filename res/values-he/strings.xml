@@ -23,7 +23,7 @@
     <string name="tab_notifications">התראות</string>
     <string name="tab_vault">Vault</string>
     <string name="no_apps_found">No apps found</string>
-    <string name="action_search">Search</string>
+    <string name="action_search">חיפוש</string>
     <string name="action_settings">הגדרות</string>
     <string name="action_notifications">התראות</string>
     <string name="action_back">חזרה</string>
@@ -75,7 +75,7 @@
     <!-- Notifications tab -->
     <string name="notifications_locked_title">Notifications Locked</string>
     <string name="notifications_locked_description">Unlock the private area to view notifications</string>
-    <string name="action_unlock">Unlock</string>
+    <string name="action_unlock">שחרור</string>
     <string name="no_private_notifications_title">No private notifications</string>
     <string name="no_private_notifications_description">Notifications from hidden apps will appear here</string>
     <string name="action_dismiss">Dismiss</string>
@@ -105,7 +105,7 @@
     <string name="pin_error_incorrect">Incorrect PIN</string>
     <string name="action_biometric_unlock">Biometric Unlock</string>
     <string name="action_backspace">Backspace</string>
-    <string name="action_forgot_password">Forgot Password?</string>
+    <string name="action_forgot_password">שכחת את הסיסמה?</string>
     <!-- Password screen -->
     <string name="password_title_create">Create Password</string>
     <string name="password_title_confirm">Confirm Password</string>
@@ -115,8 +115,8 @@
     <string name="password_prompt_unlock">Enter your password to unlock private apps</string>
     <string name="password_error_mismatch">Passwords mismatched. Try again or go back.</string>
     <string name="password_error_incorrect">סיסמא שגויה</string>
-    <string name="password_label">Password</string>
-    <string name="password_placeholder">Enter password</string>
+    <string name="password_label">סיסמה</string>
+    <string name="password_placeholder">נא להקליד את הסיסמה</string>
     <string name="action_continue">המשך</string>
     <string name="action_set_password">Set Password</string>
     <string name="action_show_password">הצגה</string>
@@ -136,17 +136,17 @@
     <string name="setup_description">Choose how you want to protect your hidden apps</string>
     <string name="setup_pin_title">PIN</string>
     <string name="setup_pin_description">4-digit code</string>
-    <string name="setup_password_title">Password</string>
+    <string name="setup_password_title">סיסמה</string>
     <string name="setup_password_description">Alphanumeric password</string>
-    <string name="setup_pattern_title">Pattern</string>
+    <string name="setup_pattern_title">דפוס</string>
     <string name="setup_pattern_description">Draw pattern to unlock</string>
     <string name="action_skip">לדלג בינתיים</string>
     <!-- Security question setup -->
     <string name="recovery_title">Recovery Option</string>
     <string name="recovery_description">Set up a security question in case you forget your password</string>
-    <string name="recovery_question_label">Security Question</string>
-    <string name="recovery_question_placeholder">Select a question</string>
-    <string name="recovery_answer_label">Your Answer</string>
+    <string name="recovery_question_label">שאלת אבטחה</string>
+    <string name="recovery_question_placeholder">נא לבחור שאלה</string>
+    <string name="recovery_answer_label">התשובה שלך</string>
     <string name="recovery_question_picker_title">Select a Question</string>
     <string name="action_cancel">ביטול</string>
     <!-- Security questions -->
@@ -156,20 +156,20 @@
     <string name="question_mother_maiden">What is your mother\u0027s maiden name?</string>
     <string name="question_first_car">מה היה דגם המכונית הראשונה שלך?</string>
     <!-- Forgot password screen -->
-    <string name="forgot_password_title">Forgot Password</string>
+    <string name="forgot_password_title">שכחתי את הסיסמה</string>
     <string name="forgot_password_description">Answer your security question to reset your password</string>
-    <string name="forgot_password_verify">Verify Answer</string>
+    <string name="forgot_password_verify">אימות התשובה</string>
     <string name="forgot_password_error">Incorrect answer. Please try again.</string>
-    <string name="forgot_password_reset_title">Reset Password?</string>
+    <string name="forgot_password_reset_title">לאפס את הסיסמה?</string>
     <string name="forgot_password_reset_message">This will clear your current password and you\u0027ll need to set up a new one. All private app data will remain intact.</string>
     <string name="action_reset">איפוס</string>
     <!-- Settings screen -->
     <string name="settings_title">הגדרות</string>
     <string name="settings_security_title">PRIVATE APPS SECURITY</string>
-    <string name="settings_current_lock_type">Current Lock Type</string>
+    <string name="settings_current_lock_type">סוג נעילה נוכחי</string>
     <string name="settings_lock_type_pin">PIN (4 digits)</string>
-    <string name="settings_lock_type_password">Password</string>
-    <string name="settings_lock_type_pattern">Pattern</string>
+    <string name="settings_lock_type_password">סיסמה</string>
+    <string name="settings_lock_type_pattern">דפוס</string>
     <string name="settings_lock_type_none">Not set</string>
     <string name="settings_use_pin">Use PIN</string>
     <string name="settings_use_pin_summary">4-digit code</string>
@@ -183,13 +183,13 @@
     <string name="settings_auto_biometric">Auto-show Biometric Prompt</string>
     <string name="settings_auto_biometric_summary">Automatically show biometric prompt when opening locked apps</string>
     <string name="settings_recovery_title">RECOVERY</string>
-    <string name="settings_forgot_password">Forgot Password</string>
+    <string name="settings_forgot_password">שכחתי את הסיסמה</string>
     <string name="settings_forgot_password_summary">Reset your password using security question</string>
     <string name="settings_setup_question">הגדרת שאלת אבטחה</string>
     <string name="settings_setup_question_summary">Required for password recovery</string>
     <string name="settings_locked_behavior_title">LOCKED APP BEHAVIOR</string>
     <string name="settings_locked_behavior_summary">Controls when unlocked apps re-lock</string>
-    <string name="settings_behavior_on_leave">Re-lock when leaving app</string>
+    <string name="settings_behavior_on_leave">נעילה מחדש בעת יציאה מהאפליקציה</string>
     <string name="settings_behavior_on_leave_summary">Re-lock immediately when leaving the unlocked app</string>
     <string name="settings_behavior_timeout">נעילה מחדש לאחר פרק זמן</string>
     <string name="settings_behavior_timeout_summary">Re-lock after %ds of inactivity</string>
