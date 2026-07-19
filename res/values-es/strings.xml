@@ -165,7 +165,7 @@
     <string name="action_reset">Restablecer</string>
     <!-- Settings screen -->
     <string name="settings_title">Ajustes</string>
-    <string name="settings_security_title">PRIVATE APPS SECURITY</string>
+    <string name="settings_security_title">Private Apps Security</string>
     <string name="settings_current_lock_type">Tipo de bloqueo actual</string>
     <string name="settings_lock_type_pin">PIN (4 digits)</string>
     <string name="settings_lock_type_password">Contraseña</string>
@@ -177,17 +177,17 @@
     <string name="settings_use_password_summary">Contraseña alfanumérica</string>
     <string name="settings_use_pattern">Usar patrón</string>
     <string name="settings_use_pattern_summary">Dibuja el patrón para desbloquear</string>
-    <string name="settings_biometrics_title">BIOMETRICS</string>
+    <string name="settings_biometrics_title">Biometrics</string>
     <string name="settings_biometric_unlock">Desbloquear usando datos biométricos</string>
     <string name="settings_biometric_unlock_summary">Usar huella digital o desbloqueo facial</string>
     <string name="settings_auto_biometric">Automostrar Prompt Biométrico</string>
     <string name="settings_auto_biometric_summary">Mostrar automáticamente el indicador biométrico al abrir aplicaciones bloqueadas</string>
-    <string name="settings_recovery_title">RECOVERY</string>
+    <string name="settings_recovery_title">Recovery</string>
     <string name="settings_forgot_password">¿Ha olvidado su contraseña?</string>
     <string name="settings_forgot_password_summary">Restablecer su contraseña usando la pregunta de seguridad</string>
     <string name="settings_setup_question">Configurar Pregunta de Seguridad</string>
     <string name="settings_setup_question_summary">Requerido para ingresar a las Opciones de Recuperación</string>
-    <string name="settings_locked_behavior_title">LOCKED APP BEHAVIOR</string>
+    <string name="settings_locked_behavior_title">Locked App Behavior</string>
     <string name="settings_locked_behavior_summary">Configura cuándo se vuelven a bloquear las aplicaciones desbloqueadas.</string>
     <string name="settings_behavior_on_leave">Volver a bloquear al salir de la aplicación</string>
     <string name="settings_behavior_on_leave_summary">Volver a bloquear inmediatamente al salir de la aplicación desbloqueada</string>
@@ -197,18 +197,18 @@
     <string name="settings_behavior_screen_off_summary">Mantener desbloqueado al cambiar aplicaciones, bloquear al apagar la pantalla</string>
     <string name="settings_behavior_on_kill">Volver a bloquear sólo cuando se cierre</string>
     <string name="settings_behavior_on_kill_summary">Mantener desbloqueado hasta que Sandbox se cierre</string>
-    <string name="settings_private_behavior_title">PRIVATE SECTION BEHAVIOR</string>
+    <string name="settings_private_behavior_title">Private Section Behavior</string>
     <string name="settings_private_behavior_summary">Controls when the private apps section locks</string>
     <string name="settings_private_on_leave">Cerrar al salir</string>
     <string name="settings_private_on_leave_summary">Cerrar y Bloquear al salir del Entorno Aislado</string>
     <string name="settings_private_timeout">Cerrar después del tiempo de espera</string>
     <string name="settings_private_timeout_summary">Collapse after %ds of leaving the app</string>
     <string name="settings_timeout_title">Tiempo de bloqueo</string>
-    <string name="settings_about_title">ABOUT</string>
+    <string name="settings_about_title">About</string>
     <string name="settings_version">Versión</string>
     <string name="settings_version_value">2.0.0</string>
     <!-- Backup and Restore -->
-    <string name="settings_backup_title">DATA &amp; BACKUP</string>
+    <string name="settings_backup_title">Data &amp; Backup</string>
     <string name="settings_backup_applist">Back up Applist Configuration</string>
     <string name="settings_backup_applist_summary">Export your locked, hidden, and isolated app settings to a file</string>
     <string name="settings_restore_applist">Restore Applist Configuration</string>
