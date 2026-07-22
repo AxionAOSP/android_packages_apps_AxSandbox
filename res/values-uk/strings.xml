@@ -21,7 +21,7 @@
     <string name="search_hint">Пошук додатків\u2026</string>
     <string name="tab_apps">Додатки</string>
     <string name="tab_notifications">Сповіщення</string>
-    <string name="tab_vault">Vault</string>
+    <string name="tab_vault">Сховище</string>
     <string name="no_apps_found">Додатків не знайдено</string>
     <string name="action_search">Пошук</string>
     <string name="action_settings">Налаштування</string>
@@ -30,7 +30,7 @@
     <string name="action_launch">Запустити</string>
     <!-- App sections -->
     <string name="section_private_apps">Приватні додатки</string>
-    <string name="section_isolated_apps">Isolated Apps</string>
+    <string name="section_isolated_apps">Ізольовані застосунки</string>
     <string name="section_all_apps">Усі додатки</string>
     <string name="show_system_apps">Показати системні додатки</string>
     <!-- Setup private apps card -->
@@ -39,7 +39,7 @@
     <!-- App detail / quick actions -->
     <string name="action_lock">Заблокувати</string>
     <string name="action_hide">Сховати</string>
-    <string name="action_isolate">Isolate</string>
+    <string name="action_isolate">Ізолювати</string>
     <string name="lock_app_title">Блокування додатка</string>
     <string name="lock_app_description">Потрібна автентифікація, щоб відкрити цей додаток</string>
     <string name="hide_app_title">Приховати додаток</string>
@@ -220,9 +220,9 @@
     <!-- Timeout options -->
     <string name="timeout_15s">15 seconds</string>
     <string name="timeout_30s">30 seconds</string>
-    <string name="timeout_60s">1 minute</string>
+    <string name="timeout_60s">1 хвилина</string>
     <string name="timeout_120s">2 minutes</string>
-    <string name="timeout_300s">5 minutes</string>
+    <string name="timeout_300s">5 хвилин</string>
     <!-- Authenticate activity -->
     <string name="auth_title_unlock">Unlock %s</string>
     <string name="auth_prompt">Enter your Sandbox credential to unlock %s</string>
