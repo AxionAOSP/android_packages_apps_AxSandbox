@@ -43,8 +43,12 @@
     <string name="lock_app_title">Блокування додатка</string>
     <string name="lock_app_description">Потрібна автентифікація, щоб відкрити цей додаток</string>
     <string name="hide_app_title">Приховати додаток</string>
-    <string name="hide_app_description_off">Приховати з лаунчера, інших застосунків та підмінити джерело встановлення</string>
-    <string name="hide_app_description_on">Приховано від усіх застосунків, джерело встановлення підроблено, запуск активностей заблоковано</string>
+    <string name="hide_app_description_off">Hide from launcher, other apps, block activity launches, and silence notifications</string>
+    <string name="hide_app_description_on">Hidden from launcher and all other apps, activity launches blocked, and notifications completely silenced</string>
+    <string name="hide_from_launcher_title">Hide from Launcher</string>
+    <string name="hide_from_launcher_description_off">Hide this app icon from the home screen and app drawer</string>
+    <string name="hide_from_launcher_description_on">Hidden from home screen app drawer (launches and notifications remain open)</string>
+    <string name="hide_settings_title">App Hiding Options</string>
     <string name="isolate_app_title">Ізолювати застосунок</string>
     <string name="isolate_app_description">Ізолює від інших застосунків, обмежує дозволи та налаштування</string>
     <!-- Sandbox sub-settings -->
