@@ -43,8 +43,12 @@
     <string name="lock_app_title">Заблокировать приложение</string>
     <string name="lock_app_description">Требовать аутентификацию для открытия этого приложения</string>
     <string name="hide_app_title">Скрыть приложение</string>
-    <string name="hide_app_description_off">Скрыть с главного экрана, других приложений и подделывать источник установки</string>
-    <string name="hide_app_description_on">Скрыто от всех приложений, источник установки подделан, операции запуска заблокированы</string>
+    <string name="hide_app_description_off">Hide from launcher, other apps, block activity launches, and silence notifications</string>
+    <string name="hide_app_description_on">Hidden from launcher and all other apps, activity launches blocked, and notifications completely silenced</string>
+    <string name="hide_from_launcher_title">Hide from Launcher</string>
+    <string name="hide_from_launcher_description_off">Hide this app icon from the home screen and app drawer</string>
+    <string name="hide_from_launcher_description_on">Hidden from home screen app drawer (launches and notifications remain open)</string>
+    <string name="hide_settings_title">App Hiding Options</string>
     <string name="isolate_app_title">Изолировать приложение</string>
     <string name="isolate_app_description">Изолировать от других приложений, ограничить права доступа и настройки</string>
     <!-- Sandbox sub-settings -->
