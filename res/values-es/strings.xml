@@ -43,8 +43,12 @@
     <string name="lock_app_title">Bloquear aplicación</string>
     <string name="lock_app_description">Requiere autenticación para abrir esta aplicación</string>
     <string name="hide_app_title">Ocultar aplicación</string>
-    <string name="hide_app_description_off">Hide from launcher, other apps, and spoof install source</string>
-    <string name="hide_app_description_on">Hidden from all apps, install source spoofed, activity launches blocked</string>
+    <string name="hide_app_description_off">Hide from launcher, other apps, block activity launches, and silence notifications</string>
+    <string name="hide_app_description_on">Hidden from launcher and all other apps, activity launches blocked, and notifications completely silenced</string>
+    <string name="hide_from_launcher_title">Hide from Launcher</string>
+    <string name="hide_from_launcher_description_off">Hide this app icon from the home screen and app drawer</string>
+    <string name="hide_from_launcher_description_on">Hidden from home screen app drawer (launches and notifications remain open)</string>
+    <string name="hide_settings_title">App Hiding Options</string>
     <string name="isolate_app_title">Isolate App</string>
     <string name="isolate_app_description">Isolate from other apps, restrict permissions and settings</string>
     <!-- Sandbox sub-settings -->
