@@ -43,12 +43,12 @@
     <string name="lock_app_title">锁定应用</string>
     <string name="lock_app_description">需要认证以打开此应用</string>
     <string name="hide_app_title">隐藏应用</string>
-    <string name="hide_app_description_off">Hide from launcher, other apps, block activity launches, and silence notifications</string>
-    <string name="hide_app_description_on">Hidden from launcher and all other apps, activity launches blocked, and notifications completely silenced</string>
-    <string name="hide_from_launcher_title">Hide from Launcher</string>
-    <string name="hide_from_launcher_description_off">Hide this app icon from the home screen and app drawer</string>
-    <string name="hide_from_launcher_description_on">Hidden from home screen app drawer (launches and notifications remain open)</string>
-    <string name="hide_settings_title">App Hiding Options</string>
+    <string name="hide_app_description_off">隐藏应用，使其不出现在启动器和其他应用中，阻止活动启动，并静音通知</string>
+    <string name="hide_app_description_on">隐藏应用，使其不出现在启动器和任何其他应用中，阻止活动启动，并完全静音通知</string>
+    <string name="hide_from_launcher_title">从启动器中隐藏</string>
+    <string name="hide_from_launcher_description_off">从主屏幕和应用抽屉中隐藏此应用图标</string>
+    <string name="hide_from_launcher_description_on">已从主屏幕和应用抽屉中隐藏（应用启动和通知仍保持开启。）</string>
+    <string name="hide_settings_title">应用隐藏选项</string>
     <string name="isolate_app_title">隔离应用</string>
     <string name="isolate_app_description">与其他应用程序隔离，限制权限和设置</string>
     <!-- Sandbox sub-settings -->
