@@ -224,7 +224,7 @@
     <!-- Timeout options -->
     <string name="timeout_15s">15 秒</string>
     <string name="timeout_30s">30 秒</string>
-    <string name="timeout_60s">1 minute</string>
+    <string name="timeout_60s">1分钟</string>
     <string name="timeout_120s">2 分钟</string>
     <string name="timeout_300s">5 分钟</string>
     <!-- Authenticate activity -->
