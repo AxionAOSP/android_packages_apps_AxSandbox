@@ -22,7 +22,7 @@
     <string name="tab_apps">אפליקציות</string>
     <string name="tab_notifications">התראות</string>
     <string name="tab_vault">Vault</string>
-    <string name="no_apps_found">No apps found</string>
+    <string name="no_apps_found">לא נמצאו אפליקציות</string>
     <string name="action_search">חיפוש</string>
     <string name="action_settings">הגדרות</string>
     <string name="action_notifications">התראות</string>
@@ -111,8 +111,8 @@
     <string name="action_backspace">Backspace</string>
     <string name="action_forgot_password">שכחת את הסיסמה?</string>
     <!-- Password screen -->
-    <string name="password_title_create">Create Password</string>
-    <string name="password_title_confirm">Confirm Password</string>
+    <string name="password_title_create">יצירת סיסמה</string>
+    <string name="password_title_confirm">אישור הסיסמה</string>
     <string name="password_title_enter">Enter Password</string>
     <string name="password_prompt_create">Choose a secure password</string>
     <string name="password_prompt_confirm">Re-enter your password</string>
