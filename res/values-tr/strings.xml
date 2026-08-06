@@ -165,7 +165,7 @@
     <string name="action_reset">Sıfırla</string>
     <!-- Settings screen -->
     <string name="settings_title">Ayarlar</string>
-    <string name="settings_security_title">PRIVATE APPS SECURITY</string>
+    <string name="settings_security_title">Private Apps Security</string>
     <string name="settings_current_lock_type">Mevcut Kilit Türü</string>
     <string name="settings_lock_type_pin">PIN (4 digits)</string>
     <string name="settings_lock_type_password">Şifre</string>
@@ -177,17 +177,17 @@
     <string name="settings_use_password_summary">Harf ve rakam içeren şifre girin</string>
     <string name="settings_use_pattern">Desen Kullan</string>
     <string name="settings_use_pattern_summary">Kilidi açmak için desen çizin</string>
-    <string name="settings_biometrics_title">BIOMETRICS</string>
+    <string name="settings_biometrics_title">Biometrics</string>
     <string name="settings_biometric_unlock">Kilidi biyometri ile aç</string>
     <string name="settings_biometric_unlock_summary">Parmak izi veya yüz tanıma kullan</string>
     <string name="settings_auto_biometric">Biyometrik istemi otomatik göster</string>
     <string name="settings_auto_biometric_summary">Kilitli uygulamaları açarken biyometrik istemi otomatik göster</string>
-    <string name="settings_recovery_title">RECOVERY</string>
+    <string name="settings_recovery_title">Recovery</string>
     <string name="settings_forgot_password">Şifreyi Unuttum</string>
     <string name="settings_forgot_password_summary">Şifreyi güvenlik sorusu ile sıfırlayın</string>
     <string name="settings_setup_question">Güvenlik Sorusu Belirle</string>
     <string name="settings_setup_question_summary">Şifre kurtarma için gerekli</string>
-    <string name="settings_locked_behavior_title">LOCKED APP BEHAVIOR</string>
+    <string name="settings_locked_behavior_title">Locked App Behavior</string>
     <string name="settings_locked_behavior_summary">Kilitli uygulamaların tekrar kilitlenme davranışını belirler</string>
     <string name="settings_behavior_on_leave">Uygulamadan çıkarken tekrar kilitle</string>
     <string name="settings_behavior_on_leave_summary">Kilidi açılmış uygulamadan çıkarken derhal tekrar kilitle</string>
@@ -197,18 +197,18 @@
     <string name="settings_behavior_screen_off_summary">Uygulamalar arasında geçişte açık tut, ekran kapanınca kilitle</string>
     <string name="settings_behavior_on_kill">Yalnızca kapatıldığında kilitle</string>
     <string name="settings_behavior_on_kill_summary">Sandbox zorla kapatılana kadar açık tut</string>
-    <string name="settings_private_behavior_title">PRIVATE SECTION BEHAVIOR</string>
+    <string name="settings_private_behavior_title">Private Section Behavior</string>
     <string name="settings_private_behavior_summary">Controls when the private apps section locks</string>
     <string name="settings_private_on_leave">Ayrılınca daralt</string>
     <string name="settings_private_on_leave_summary">Sandbox uygulamasından çıkınca daralt ve kilitle</string>
     <string name="settings_private_timeout">Zaman aşımından sonra daralt</string>
     <string name="settings_private_timeout_summary">Collapse after %ds of leaving the app</string>
     <string name="settings_timeout_title">Kilit Zaman Aşımı</string>
-    <string name="settings_about_title">ABOUT</string>
+    <string name="settings_about_title">About</string>
     <string name="settings_version">Sürüm</string>
     <string name="settings_version_value">2.0.0</string>
     <!-- Backup and Restore -->
-    <string name="settings_backup_title">DATA &amp; BACKUP</string>
+    <string name="settings_backup_title">Data &amp; Backup</string>
     <string name="settings_backup_applist">Back up Applist Configuration</string>
     <string name="settings_backup_applist_summary">Export your locked, hidden, and isolated app settings to a file</string>
     <string name="settings_restore_applist">Restore Applist Configuration</string>

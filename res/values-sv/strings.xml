@@ -165,7 +165,7 @@
     <string name="action_reset">Reset</string>
     <!-- Settings screen -->
     <string name="settings_title">Inställningar</string>
-    <string name="settings_security_title">PRIVATE APPS SECURITY</string>
+    <string name="settings_security_title">Private Apps Security</string>
     <string name="settings_current_lock_type">Current Lock Type</string>
     <string name="settings_lock_type_pin">PIN (4 digits)</string>
     <string name="settings_lock_type_password">Password</string>
@@ -177,17 +177,17 @@
     <string name="settings_use_password_summary">Alphanumeric password</string>
     <string name="settings_use_pattern">Use Pattern</string>
     <string name="settings_use_pattern_summary">Draw pattern to unlock</string>
-    <string name="settings_biometrics_title">BIOMETRICS</string>
+    <string name="settings_biometrics_title">Biometrics</string>
     <string name="settings_biometric_unlock">Unlock with Biometrics</string>
     <string name="settings_biometric_unlock_summary">Use fingerprint or face unlock</string>
     <string name="settings_auto_biometric">Auto-show Biometric Prompt</string>
     <string name="settings_auto_biometric_summary">Automatically show biometric prompt when opening locked apps</string>
-    <string name="settings_recovery_title">RECOVERY</string>
+    <string name="settings_recovery_title">Recovery</string>
     <string name="settings_forgot_password">Forgot Password</string>
     <string name="settings_forgot_password_summary">Reset your password using security question</string>
     <string name="settings_setup_question">Set Up Security Question</string>
     <string name="settings_setup_question_summary">Required for password recovery</string>
-    <string name="settings_locked_behavior_title">LOCKED APP BEHAVIOR</string>
+    <string name="settings_locked_behavior_title">Locked App Behavior</string>
     <string name="settings_locked_behavior_summary">Controls when unlocked apps re-lock</string>
     <string name="settings_behavior_on_leave">Re-lock when leaving app</string>
     <string name="settings_behavior_on_leave_summary">Re-lock immediately when leaving the unlocked app</string>
@@ -197,18 +197,18 @@
     <string name="settings_behavior_screen_off_summary">Keep unlocked when switching apps, lock on screen off</string>
     <string name="settings_behavior_on_kill">Re-lock only when killed</string>
     <string name="settings_behavior_on_kill_summary">Keep unlocked until Sandbox is force closed</string>
-    <string name="settings_private_behavior_title">PRIVATE SECTION BEHAVIOR</string>
+    <string name="settings_private_behavior_title">Private Section Behavior</string>
     <string name="settings_private_behavior_summary">Controls when the private apps section locks</string>
     <string name="settings_private_on_leave">Collapse when leaving</string>
     <string name="settings_private_on_leave_summary">Collapse and lock when leaving Sandbox app</string>
     <string name="settings_private_timeout">Collapse after timeout</string>
     <string name="settings_private_timeout_summary">Collapse after %ds of leaving the app</string>
     <string name="settings_timeout_title">Lock Timeout</string>
-    <string name="settings_about_title">ABOUT</string>
+    <string name="settings_about_title">About</string>
     <string name="settings_version">Version</string>
     <string name="settings_version_value">2.0.0</string>
     <!-- Backup and Restore -->
-    <string name="settings_backup_title">DATA &amp; BACKUP</string>
+    <string name="settings_backup_title">Data &amp; Backup</string>
     <string name="settings_backup_applist">Back up Applist Configuration</string>
     <string name="settings_backup_applist_summary">Export your locked, hidden, and isolated app settings to a file</string>
     <string name="settings_restore_applist">Restore Applist Configuration</string>

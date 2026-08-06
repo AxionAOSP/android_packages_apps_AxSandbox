@@ -165,7 +165,7 @@
     <string name="action_reset">Atur ulang</string>
     <!-- Settings screen -->
     <string name="settings_title">Setelan</string>
-    <string name="settings_security_title">PRIVATE APPS SECURITY</string>
+    <string name="settings_security_title">Private Apps Security</string>
     <string name="settings_current_lock_type">Tipe kunci saat ini</string>
     <string name="settings_lock_type_pin">PIN (4 digits)</string>
     <string name="settings_lock_type_password">Kata Sandi</string>
@@ -177,17 +177,17 @@
     <string name="settings_use_password_summary">Kata Sandi Alfanumerik</string>
     <string name="settings_use_pattern">Gunakan Pola</string>
     <string name="settings_use_pattern_summary">Gambar pola untuk membuka kunci</string>
-    <string name="settings_biometrics_title">BIOMETRICS</string>
+    <string name="settings_biometrics_title">Biometrics</string>
     <string name="settings_biometric_unlock">Buka kunci dengan Biometrik</string>
     <string name="settings_biometric_unlock_summary">Gunakan sidik jari atau buka kunci wajah</string>
     <string name="settings_auto_biometric">Tampilkan Otomatis Perintah Biometrik</string>
     <string name="settings_auto_biometric_summary">Secara otomatis menampilkan permintaan biometrik saat membuka aplikasi yang terkunci</string>
-    <string name="settings_recovery_title">RECOVERY</string>
+    <string name="settings_recovery_title">Recovery</string>
     <string name="settings_forgot_password">Lupa Kata Sandi</string>
     <string name="settings_forgot_password_summary">Atur ulang kata sandi Anda menggunakan pertanyaan keamanan</string>
     <string name="settings_setup_question">Mengatur Pertanyaan Keamanan</string>
     <string name="settings_setup_question_summary">Diperlukan untuk pemulihan kata sandi</string>
-    <string name="settings_locked_behavior_title">LOCKED APP BEHAVIOR</string>
+    <string name="settings_locked_behavior_title">Locked App Behavior</string>
     <string name="settings_locked_behavior_summary">Kontrol kapan aplikasi yang tidak terkunci akan terkunci kembali</string>
     <string name="settings_behavior_on_leave">Kunci kembali saat keluar dari aplikasi</string>
     <string name="settings_behavior_on_leave_summary">Kunci kembali segera saat meninggalkan aplikasi yang tidak terkunci</string>
@@ -197,18 +197,18 @@
     <string name="settings_behavior_screen_off_summary">Biarkan tidak terkunci saat beralih aplikasi, kunci saat layar mati</string>
     <string name="settings_behavior_on_kill">Kunci kembali hanya saat ditutup</string>
     <string name="settings_behavior_on_kill_summary">Biarkan tidak terkunci hingga Sandbox ditutup paksa</string>
-    <string name="settings_private_behavior_title">PRIVATE SECTION BEHAVIOR</string>
+    <string name="settings_private_behavior_title">Private Section Behavior</string>
     <string name="settings_private_behavior_summary">Controls when the private apps section locks</string>
     <string name="settings_private_on_leave">Tutup saat keluar</string>
     <string name="settings_private_on_leave_summary">Tutup dan kunci saat keluar dari aplikasi Sandbox</string>
     <string name="settings_private_timeout">Tutup setelah waktu habis</string>
     <string name="settings_private_timeout_summary">Collapse after %ds of leaving the app</string>
     <string name="settings_timeout_title">Batas Waktu Penguncian</string>
-    <string name="settings_about_title">ABOUT</string>
+    <string name="settings_about_title">About</string>
     <string name="settings_version">Versi</string>
     <string name="settings_version_value">2.0.0</string>
     <!-- Backup and Restore -->
-    <string name="settings_backup_title">DATA &amp; BACKUP</string>
+    <string name="settings_backup_title">Data &amp; Backup</string>
     <string name="settings_backup_applist">Back up Applist Configuration</string>
     <string name="settings_backup_applist_summary">Export your locked, hidden, and isolated app settings to a file</string>
     <string name="settings_restore_applist">Restore Applist Configuration</string>
