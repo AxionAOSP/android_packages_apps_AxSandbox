@@ -22,27 +22,27 @@
     <string name="tab_apps">Aplicativos</string>
     <string name="tab_notifications">Notificações</string>
     <string name="tab_vault">Cofre</string>
-    <string name="no_apps_found">No apps found</string>
+    <string name="no_apps_found">Nenhum aplicativo encontrado</string>
     <string name="action_search">Pesquisa</string>
     <string name="action_settings">Configurações</string>
     <string name="action_notifications">Notificações</string>
     <string name="action_back">Voltar</string>
     <string name="action_launch">Abrir</string>
     <!-- App sections -->
-    <string name="section_private_apps">Private Apps</string>
+    <string name="section_private_apps">Apps privados</string>
     <string name="section_isolated_apps">Apps isolados</string>
-    <string name="section_all_apps">All Apps</string>
+    <string name="section_all_apps">Todos os apps</string>
     <string name="show_system_apps">Mostrar aplicativos do sistema</string>
     <!-- Setup private apps card -->
-    <string name="setup_private_apps_title">Set Up Private Apps</string>
-    <string name="setup_private_apps_description">Create a PIN, password, or pattern to lock and hide apps</string>
+    <string name="setup_private_apps_title">Configurar Apps Privados</string>
+    <string name="setup_private_apps_description">Crie um PIN, senha ou padrão para bloquear e ocultar apps</string>
     <!-- App detail / quick actions -->
     <string name="action_lock">Bloqueio</string>
     <string name="action_hide">Ocultar</string>
     <string name="action_isolate">Isolado</string>
-    <string name="lock_app_title">Lock App</string>
-    <string name="lock_app_description">Require authentication to open this app</string>
-    <string name="hide_app_title">Hide App</string>
+    <string name="lock_app_title">Bloquear aplicativo</string>
+    <string name="lock_app_description">Exigir autenticação para abrir este aplicativo</string>
+    <string name="hide_app_title">Esconder Aplicativo</string>
     <string name="hide_app_description_off">Esconder do launcher, outros aplicativos, iniciar atividades e silenciar notificações</string>
     <string name="hide_app_description_on">Oculto do launcher e de todos os outros aplicativos, a atividade inicia bloqueada e as notificações silenciadas</string>
     <string name="hide_from_launcher_title">Ocultar do launcher</string>
@@ -77,11 +77,11 @@
     <string name="spoof_accessibility_description">Reportar serviços de acessibilidade como desativado</string>
     <string name="spoof_count_format">Configurações de %d ocultas</string>
     <!-- Notifications tab -->
-    <string name="notifications_locked_title">Notifications Locked</string>
-    <string name="notifications_locked_description">Unlock the private area to view notifications</string>
+    <string name="notifications_locked_title">Notificações bloqueadas</string>
+    <string name="notifications_locked_description">Desbloqueie a área privada para ver as notificações</string>
     <string name="action_unlock">Desbloquear</string>
-    <string name="no_private_notifications_title">No private notifications</string>
-    <string name="no_private_notifications_description">Notifications from hidden apps will appear here</string>
+    <string name="no_private_notifications_title">Sem notificações privadas</string>
+    <string name="no_private_notifications_description">Notificações de aplicativos ocultos aparecerão aqui</string>
     <string name="action_dismiss">Dispensar</string>
     <string name="action_open">Abrir</string>
     <!-- Vault tab -->
@@ -189,25 +189,25 @@
     <string name="settings_recovery_title">RECUPERAR</string>
     <string name="settings_forgot_password">Esqueceu sua senha</string>
     <string name="settings_forgot_password_summary">Redefinir sua senha usando a pergunta de segurança</string>
-    <string name="settings_setup_question">Set Up Security Question</string>
-    <string name="settings_setup_question_summary">Required for password recovery</string>
+    <string name="settings_setup_question">Configurar pergunta de segurança</string>
+    <string name="settings_setup_question_summary">Necessário para recuperação de senha</string>
     <string name="settings_locked_behavior_title">COMPORTAMENTO DE APLICATIVO BLOQUEADO</string>
-    <string name="settings_locked_behavior_summary">Controls when unlocked apps re-lock</string>
-    <string name="settings_behavior_on_leave">Re-lock when leaving app</string>
-    <string name="settings_behavior_on_leave_summary">Re-lock immediately when leaving the unlocked app</string>
-    <string name="settings_behavior_timeout">Re-lock after timeout</string>
+    <string name="settings_locked_behavior_summary">Controla quando apps desbloqueados rebloqueiam</string>
+    <string name="settings_behavior_on_leave">Bloquear quando sair do app</string>
+    <string name="settings_behavior_on_leave_summary">Rebloquear imediatamente ao sair do aplicativo desbloqueado</string>
+    <string name="settings_behavior_timeout">Bloquear novamente após o tempo limite</string>
     <string name="settings_behavior_timeout_summary">Bloquear novamente após %ds de inatividade</string>
-    <string name="settings_behavior_screen_off">Re-lock on screen off</string>
-    <string name="settings_behavior_screen_off_summary">Keep unlocked when switching apps, lock on screen off</string>
-    <string name="settings_behavior_on_kill">Re-lock only when killed</string>
-    <string name="settings_behavior_on_kill_summary">Keep unlocked until Sandbox is force closed</string>
+    <string name="settings_behavior_screen_off">Bloquear ao desligar a tela</string>
+    <string name="settings_behavior_screen_off_summary">Manter desbloqueado ao alternar entre apps, bloquear a tela</string>
+    <string name="settings_behavior_on_kill">Bloquear apenas quando morto</string>
+    <string name="settings_behavior_on_kill_summary">Manter desbloqueado até que a sandbox seja fechada</string>
     <string name="settings_private_behavior_title">SEÇÃO PRIVADA ANTES</string>
     <string name="settings_private_behavior_summary">Controla quando a seção de apps privados é bloqueada</string>
-    <string name="settings_private_on_leave">Collapse when leaving</string>
-    <string name="settings_private_on_leave_summary">Collapse and lock when leaving Sandbox app</string>
-    <string name="settings_private_timeout">Collapse after timeout</string>
+    <string name="settings_private_on_leave">Fechar quando sair</string>
+    <string name="settings_private_on_leave_summary">Fechar e bloquear ao sair do aplicativo Sandbox</string>
+    <string name="settings_private_timeout">Fechar após tempo limite</string>
     <string name="settings_private_timeout_summary">Recolher após %dde deixar o aplicativo</string>
-    <string name="settings_timeout_title">Lock Timeout</string>
+    <string name="settings_timeout_title">Tempo limite</string>
     <string name="settings_about_title">SOBRE</string>
     <string name="settings_version">Versão</string>
     <string name="settings_version_value">2.0.0</string>
@@ -224,13 +224,13 @@
     <!-- Timeout options -->
     <string name="timeout_15s">15 segundos</string>
     <string name="timeout_30s">30 segundos</string>
-    <string name="timeout_60s">1 minute</string>
+    <string name="timeout_60s">1 minuto</string>
     <string name="timeout_120s">2 minutos</string>
-    <string name="timeout_300s">5 minutes</string>
+    <string name="timeout_300s">5 minutos</string>
     <!-- Authenticate activity -->
     <string name="auth_title_unlock">Desbloquear %s</string>
     <string name="auth_prompt">Digite sua credencial Sandbox para desbloquear %s</string>
-    <string name="biometric_title">Unlock Private Apps</string>
+    <string name="biometric_title">Desbloquear Apps Privados</string>
     <string name="biometric_use_pin">Usar PIN</string>
     <string name="biometric_use_password">Usar senha</string>
     <string name="biometric_use_pattern">Usar Padrão</string>
