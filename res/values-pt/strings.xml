@@ -155,10 +155,10 @@
     <string name="action_cancel">Cancelar</string>
     <!-- Security questions -->
     <string name="question_pet_name">Qual é o nome do seu mascote\u0027s?</string>
-    <string name="question_birth_city">What city were you born in?</string>
-    <string name="question_favorite_movie">What is your favorite movie?</string>
+    <string name="question_birth_city">Em qual cidade você nasceu?</string>
+    <string name="question_favorite_movie">Qual é o seu filme favorito?</string>
     <string name="question_mother_maiden">Qual é o nome de sua mãe\u0027s solteira?</string>
-    <string name="question_first_car">What was your first car?</string>
+    <string name="question_first_car">Qual foi o seu primeiro carro?</string>
     <!-- Forgot password screen -->
     <string name="forgot_password_title">Esqueceu sua senha</string>
     <string name="forgot_password_description">Responda à sua pergunta de segurança para redefinir sua senha</string>
@@ -235,7 +235,7 @@
     <string name="biometric_use_password">Usar senha</string>
     <string name="biometric_use_pattern">Usar Padrão</string>
     <!-- Verify credential -->
-    <string name="verify_pin_prompt">Enter your current PIN to change security</string>
-    <string name="verify_password_prompt">Enter your current password to change security</string>
-    <string name="verify_pattern_prompt">Draw your current pattern to change security</string>
+    <string name="verify_pin_prompt">Digite o seu PIN atual para alterar a segurança</string>
+    <string name="verify_password_prompt">Digite sua senha atual para mudar a segurança</string>
+    <string name="verify_pattern_prompt">Desenhe o seu padrão atual para mudar a segurança</string>
 </resources>
