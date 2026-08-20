@@ -58,9 +58,9 @@
     <string name="restrict_storage_title">Обмежити сховище</string>
     <string name="restrict_storage_description">Позбавити доступу до зовнішнього сховища</string>
     <string name="data_isolation_title">Примусова ізоляція даних</string>
-    <string name="data_isolation_description">Запобігати доступу до даних інших застосунків</string>
+    <string name="data_isolation_description">Заборона доступу до даних інших застосунків</string>
     <!-- Spoof settings -->
-    <string name="spoof_settings_title">Підробити налаштування</string>
+    <string name="spoof_settings_title">Налаштування підміни</string>
     <string name="spoof_dev_settings_title">Підмінити налаштування розробника</string>
     <string name="spoof_dev_settings_description">Сховати від цього застосунку стан налагодження по USB, ADB та меню розробника</string>
     <string name="spoof_adb_enabled">ADB</string>
@@ -144,7 +144,7 @@
     <string name="setup_password_description">Буквено-цифровий пароль</string>
     <string name="setup_pattern_title">Графічний ключ</string>
     <string name="setup_pattern_description">Намалюйте ключ для розблокування</string>
-    <string name="action_skip">Пропустити поки що</string>
+    <string name="action_skip">Наразі пропустити</string>
     <!-- Security question setup -->
     <string name="recovery_title">Варіант відновлення</string>
     <string name="recovery_description">Налаштуйте контрольне питання на випадок, якщо ви забудете пароль</string>
@@ -216,20 +216,20 @@
     <string name="settings_backup_applist">Резервне копіювання налаштувань списку застосунків</string>
     <string name="settings_backup_applist_summary">Експорт налаштувань заблокованих, прихованих та ізольованих застосунків у файл</string>
     <string name="settings_restore_applist">Відновлення налаштувань списку застосунків</string>
-    <string name="settings_restore_applist_summary">Import app settings from a previously exported backup</string>
-    <string name="backup_success">Configuration backed up successfully</string>
-    <string name="backup_error">Failed to back up configuration</string>
-    <string name="restore_success">Configuration restored successfully</string>
-    <string name="restore_error">Failed to restore configuration</string>
+    <string name="settings_restore_applist_summary">Імпорт налаштувань застосунків із раніше створеної резервної копії</string>
+    <string name="backup_success">Резервну копію налаштувань успішно створено</string>
+    <string name="backup_error">Не вдалося створити резервну копію налаштувань</string>
+    <string name="restore_success">Налаштування успішно відновлено</string>
+    <string name="restore_error">Не вдалося відновити налаштування</string>
     <!-- Timeout options -->
-    <string name="timeout_15s">15 seconds</string>
-    <string name="timeout_30s">30 seconds</string>
+    <string name="timeout_15s">15 секунд</string>
+    <string name="timeout_30s">30 секунд</string>
     <string name="timeout_60s">1 хвилина</string>
-    <string name="timeout_120s">2 minutes</string>
+    <string name="timeout_120s">2 хвилини</string>
     <string name="timeout_300s">5 хвилин</string>
     <!-- Authenticate activity -->
-    <string name="auth_title_unlock">Unlock %s</string>
-    <string name="auth_prompt">Enter your Sandbox credential to unlock %s</string>
+    <string name="auth_title_unlock">Розблокувати %s</string>
+    <string name="auth_prompt">Введіть облікові дані пісочниці, щоб розблокувати %s</string>
     <string name="biometric_title">Розблокувати приватні додатки</string>
     <string name="biometric_use_pin">Використати PIN</string>
     <string name="biometric_use_password">Використати пароль</string>
