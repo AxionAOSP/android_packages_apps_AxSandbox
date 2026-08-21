@@ -15,9 +15,9 @@
      limitations under the License.
 -->
 <resources>
-    <string name="app_name">Sandbox</string>
+    <string name="app_name">Пісочниця</string>
     <!-- Main screen -->
-    <string name="sandbox_title">Sandbox</string>
+    <string name="sandbox_title">Пісочниця</string>
     <string name="search_hint">Пошук додатків\u2026</string>
     <string name="tab_apps">Додатки</string>
     <string name="tab_notifications">Сповіщення</string>
@@ -107,7 +107,7 @@
     <string name="pin_prompt_unlock">Введіть PIN-код, щоб розблокувати приватні додатки</string>
     <string name="pin_error_mismatch">PIN-коди не збігаються. Спробуйте ще раз або поверніться.</string>
     <string name="pin_error_incorrect">Неправильний PIN-код</string>
-    <string name="action_biometric_unlock">Біометричне розблокування</string>
+    <string name="action_biometric_unlock">Розблокування біометрією</string>
     <string name="action_backspace">Назад</string>
     <string name="action_forgot_password">Забули пароль?</string>
     <!-- Password screen -->
@@ -147,8 +147,8 @@
     <string name="action_skip">Наразі пропустити</string>
     <!-- Security question setup -->
     <string name="recovery_title">Варіант відновлення</string>
-    <string name="recovery_description">Налаштуйте контрольне питання на випадок, якщо ви забудете пароль</string>
-    <string name="recovery_question_label">Контрольне питання</string>
+    <string name="recovery_description">Налаштуйте секретне запитання на випадок, якщо забудете пароль</string>
+    <string name="recovery_question_label">Секретне питання</string>
     <string name="recovery_question_placeholder">Виберіть питання</string>
     <string name="recovery_answer_label">Ваша відповідь</string>
     <string name="recovery_question_picker_title">Виберіть запитання</string>
@@ -158,7 +158,7 @@
     <string name="question_birth_city">У якому місті ви народилися?</string>
     <string name="question_favorite_movie">Який ваш улюблений фільм?</string>
     <string name="question_mother_maiden">Яке дівоче прізвище вашої матері?</string>
-    <string name="question_first_car">Яке дівоче прізвище вашої матері?</string>
+    <string name="question_first_car">Яким був ваш перший автомобіль?</string>
     <!-- Forgot password screen -->
     <string name="forgot_password_title">Забули пароль</string>
     <string name="forgot_password_description">Дайте відповідь на ваше секретне питання для скидання пароля</string>
@@ -199,12 +199,12 @@
     <string name="settings_behavior_timeout_summary">Повторно заблокувати після %d бездіяльності</string>
     <string name="settings_behavior_screen_off">Повторне блокування при вимкненому екрані</string>
     <string name="settings_behavior_screen_off_summary">Тримати розблокованим під час перемикання програм, блокування екрана вимкнено</string>
-    <string name="settings_behavior_on_kill">Повторно блокувати лише після вбиття</string>
-    <string name="settings_behavior_on_kill_summary">Тримати розблокованим, доки Sandbox не буде примусово закрито</string>
+    <string name="settings_behavior_on_kill">Повторно блокувати після примусового завершення</string>
+    <string name="settings_behavior_on_kill_summary">Тримати розблокованим, доки Пісочницю не буде примусово закрито</string>
     <string name="settings_private_behavior_title">Поведінка приватного розділу</string>
     <string name="settings_private_behavior_summary">Визначає, коли блокується приватний простір</string>
     <string name="settings_private_on_leave">Згортати під час виходу</string>
-    <string name="settings_private_on_leave_summary">Згорнути та заблокувати після виходу з програми Sandbox</string>
+    <string name="settings_private_on_leave_summary">Згортати та блокувати додаток при виході з Пісочниці</string>
     <string name="settings_private_timeout">Згорнути після тайм-ауту</string>
     <string name="settings_private_timeout_summary">Згортати через %dс після виходу із застосунку</string>
     <string name="settings_timeout_title">Час очікування блокування</string>
@@ -212,7 +212,7 @@
     <string name="settings_version">Версія</string>
     <string name="settings_version_value">2.0.0</string>
     <!-- Backup and Restore -->
-    <string name="settings_backup_title">Дані &amp; Бекап</string>
+    <string name="settings_backup_title">Дані та резервне копіювання</string>
     <string name="settings_backup_applist">Резервне копіювання налаштувань списку застосунків</string>
     <string name="settings_backup_applist_summary">Експорт налаштувань заблокованих, прихованих та ізольованих застосунків у файл</string>
     <string name="settings_restore_applist">Відновлення налаштувань списку застосунків</string>
@@ -229,7 +229,7 @@
     <string name="timeout_300s">5 хвилин</string>
     <!-- Authenticate activity -->
     <string name="auth_title_unlock">Розблокувати %s</string>
-    <string name="auth_prompt">Введіть облікові дані пісочниці, щоб розблокувати %s</string>
+    <string name="auth_prompt">Введіть облікові дані Пісочниці, щоб розблокувати %s</string>
     <string name="biometric_title">Розблокувати приватні додатки</string>
     <string name="biometric_use_pin">Використати PIN</string>
     <string name="biometric_use_password">Використати пароль</string>
