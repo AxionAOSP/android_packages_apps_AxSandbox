@@ -18,7 +18,7 @@
     <string name="app_name">Sandbox</string>
     <!-- Main screen -->
     <string name="sandbox_title">Sandbox</string>
-    <string name="search_hint">Search apps\u2026</string>
+    <string name="search_hint">Cari aplikasi\u2026</string>
     <string name="tab_apps">Aplikasi</string>
     <string name="tab_notifications">Notifikasi</string>
     <string name="tab_vault">Vault</string>
@@ -30,7 +30,7 @@
     <string name="action_launch">Luncurkan</string>
     <!-- App sections -->
     <string name="section_private_apps">Aplikasi Pribadi</string>
-    <string name="section_isolated_apps">Isolated Apps</string>
+    <string name="section_isolated_apps">Aplikasi terisolasi</string>
     <string name="section_all_apps">Semua Aplikasi</string>
     <string name="show_system_apps">Tampilkan aplikasi sistem</string>
     <!-- Setup private apps card -->
@@ -43,39 +43,39 @@
     <string name="lock_app_title">Kunci Aplikasi</string>
     <string name="lock_app_description">Diperlukan otentikasi untuk membuka aplikasi ini</string>
     <string name="hide_app_title">Sembunyikan Aplikasi</string>
-    <string name="hide_app_description_off">Hide from launcher, other apps, block activity launches, and silence notifications</string>
-    <string name="hide_app_description_on">Hidden from launcher and all other apps, activity launches blocked, and notifications completely silenced</string>
-    <string name="hide_from_launcher_title">Hide from Launcher</string>
-    <string name="hide_from_launcher_description_off">Hide this app icon from the home screen and app drawer</string>
-    <string name="hide_from_launcher_description_on">Hidden from home screen app drawer (launches and notifications remain open)</string>
-    <string name="hide_settings_title">App Hiding Options</string>
-    <string name="isolate_app_title">Isolate App</string>
-    <string name="isolate_app_description">Isolate from other apps, restrict permissions and settings</string>
+    <string name="hide_app_description_off">Sembunyikan dari peluncur, aplikasi lain, blokir peluncuran aktivitas dan nonaktifkan notifikasi</string>
+    <string name="hide_app_description_on">Tersembunyi dari peluncur dan semua aplikasi lain, peluncuran aktivitas diblokir dan notifikasi dibisukan sepenuhnya</string>
+    <string name="hide_from_launcher_title">Sembunyikan dari peluncur</string>
+    <string name="hide_from_launcher_description_off">Sembunyikan ikon aplikasi ini dari layar beranda dan laci aplikasi</string>
+    <string name="hide_from_launcher_description_on">Disembunyikan dari laci aplikasi layar utama (peluncuran dan notifikasi tetap terbuka)</string>
+    <string name="hide_settings_title">Opsi Menyembunyikan Aplikasi</string>
+    <string name="isolate_app_title">Isolasi Aplikasi</string>
+    <string name="isolate_app_description">Pisahkan dari aplikasi lain, batasi izin dan pengaturan</string>
     <!-- Sandbox sub-settings -->
-    <string name="sandbox_options_title">Sandbox Options</string>
-    <string name="restrict_internet_title">Restrict Internet</string>
-    <string name="restrict_internet_description">Strip network access from this app</string>
-    <string name="restrict_storage_title">Restrict Storage</string>
-    <string name="restrict_storage_description">Strip external storage access</string>
-    <string name="data_isolation_title">Force Data Isolation</string>
-    <string name="data_isolation_description">Prevent access to other apps\u0027 data</string>
+    <string name="sandbox_options_title">Opsi Sandbox</string>
+    <string name="restrict_internet_title">Batasi Internet</string>
+    <string name="restrict_internet_description">Cabut akses jaringan dari aplikasi ini</string>
+    <string name="restrict_storage_title">Batasi Penyimpanan</string>
+    <string name="restrict_storage_description">Hapus akses penyimpanan eksternal</string>
+    <string name="data_isolation_title">Isolasi Data Paksa</string>
+    <string name="data_isolation_description">Mencegah akses ke aplikasi lain\u0027 data</string>
     <!-- Spoof settings -->
-    <string name="spoof_settings_title">Spoof Settings</string>
-    <string name="spoof_dev_settings_title">Spoof Developer Settings</string>
-    <string name="spoof_dev_settings_description">Hide developer options, ADB, and USB debugging status from this app</string>
+    <string name="spoof_settings_title">Pengaturan Palsu</string>
+    <string name="spoof_dev_settings_title">Memalsukan Pengaturan Pengembang</string>
+    <string name="spoof_dev_settings_description">Sembunyikan opsi pengembang, ADB dan status debugging USB dari aplikasi ini</string>
     <string name="spoof_adb_enabled">ADB</string>
-    <string name="spoof_adb_enabled_description">Report ADB as disabled</string>
-    <string name="spoof_dev_settings_enabled">Pengembang Opsi</string>
-    <string name="spoof_dev_settings_enabled_description">Report developer options as disabled</string>
-    <string name="spoof_adb_wifi_enabled">Wireless Debugging</string>
-    <string name="spoof_adb_wifi_enabled_description">Report wireless debugging as disabled</string>
-    <string name="spoof_package_verifier">Package Verifier</string>
-    <string name="spoof_package_verifier_description">Report package verifier consent as denied</string>
-    <string name="spoof_verify_apps_usb">USB App Verification</string>
-    <string name="spoof_verify_apps_usb_description">Report app verification over USB as disabled</string>
-    <string name="spoof_accessibility">Accessibility</string>
-    <string name="spoof_accessibility_description">Report accessibility services as disabled</string>
-    <string name="spoof_count_format">%d settings spoofed</string>
+    <string name="spoof_adb_enabled_description">Laporkan ADB sebagai dinonaktifkan</string>
+    <string name="spoof_dev_settings_enabled">Opsi Pengembang</string>
+    <string name="spoof_dev_settings_enabled_description">Laporkan opsi pengembang sebagai dinonaktifkan</string>
+    <string name="spoof_adb_wifi_enabled">Debugging Nirkabel</string>
+    <string name="spoof_adb_wifi_enabled_description">Laporkan bahwa debugging nirkabel dinonaktifkan</string>
+    <string name="spoof_package_verifier">Pemeriksa Paket</string>
+    <string name="spoof_package_verifier_description">Persetujuan verifikator paket laporan ditolak</string>
+    <string name="spoof_verify_apps_usb">Verifikasi Aplikasi USB</string>
+    <string name="spoof_verify_apps_usb_description">Laporkan verifikasi aplikasi melalui USB sebagai dinonaktifkan</string>
+    <string name="spoof_accessibility">Aksesibilitas</string>
+    <string name="spoof_accessibility_description">Laporkan layanan aksesibilitas sebagai dinonaktifkan</string>
+    <string name="spoof_count_format">%d pengaturan dipalsukan</string>
     <!-- Notifications tab -->
     <string name="notifications_locked_title">Notifikasi Terkunci</string>
     <string name="notifications_locked_description">Buka kunci area pribadi untuk melihat notifikasi</string>
@@ -85,19 +85,19 @@
     <string name="action_dismiss">Abaikan</string>
     <string name="action_open">Buka</string>
     <!-- Vault tab -->
-    <string name="vault_locked_title">Vault Locked</string>
-    <string name="vault_locked_description">Unlock the private area to access your secure vault</string>
-    <string name="vault_empty_title">Vault is empty</string>
-    <string name="vault_empty_description">Files you import will be moved here and hidden from other apps</string>
-    <string name="action_import_vault">Import to Vault</string>
-    <string name="action_export">Export</string>
+    <string name="vault_locked_title">Brankas Terkunci</string>
+    <string name="vault_locked_description">Buka kunci area pribadi untuk mengakses brankas aman Anda</string>
+    <string name="vault_empty_title">Brankas Kosong</string>
+    <string name="vault_empty_description">File yang Anda impor akan dipindahkan ke sini dan disembunyikan dari aplikasi lain</string>
+    <string name="action_import_vault">Impor ke Brankas</string>
+    <string name="action_export">Ekspor</string>
     <string name="action_delete">Hapus</string>
-    <string name="vault_import_success">%d files added to vault</string>
-    <string name="vault_import_error">Failed to import some files</string>
-    <string name="export_success">File restored from vault</string>
-    <string name="export_error">Failed to export file</string>
-    <string name="delete_confirm_title">Delete File?</string>
-    <string name="delete_confirm_message">This will permanently delete the file from your device.</string>
+    <string name="vault_import_success">%d file ditambahkan ke brankas</string>
+    <string name="vault_import_error">Gagal mengimpor beberapa file</string>
+    <string name="export_success">Berkas dipulihkan dari brankas</string>
+    <string name="export_error">Gagal mengekspor file</string>
+    <string name="delete_confirm_title">Hapus File?</string>
+    <string name="delete_confirm_message">Ini akan menghapus file tersebut secara permanen dari perangkat Anda</string>
     <!-- Lock screen (PIN) -->
     <string name="pin_title_create">Buat PIN</string>
     <string name="pin_title_confirm">Konfirmasi PIN</string>
@@ -105,7 +105,7 @@
     <string name="pin_prompt_create">Pilih PIN 4 digit</string>
     <string name="pin_prompt_confirm">Masukkan kembali PIN Anda</string>
     <string name="pin_prompt_unlock">Masukkan PIN Anda untuk membuka kunci aplikasi pribadi</string>
-    <string name="pin_error_mismatch">PIN tidak cocok. Coba lagi atau kembali.</string>
+    <string name="pin_error_mismatch">PIN tidak cocok. Coba lagi atau kembali</string>
     <string name="pin_error_incorrect">PIN salah</string>
     <string name="action_biometric_unlock">Buka Kunci Biometrik</string>
     <string name="action_backspace">Hapus</string>
@@ -117,7 +117,7 @@
     <string name="password_prompt_create">Pilih kata sandi yang aman</string>
     <string name="password_prompt_confirm">Masukkan ulang kata sandi Anda</string>
     <string name="password_prompt_unlock">Masukkan kata sandi Anda untuk membuka kunci aplikasi pribadi</string>
-    <string name="password_error_mismatch">Kata sandi tidak cocok. Coba lagi atau kembali.</string>
+    <string name="password_error_mismatch">Kata sandi tidak cocok. Coba lagi atau kembali</string>
     <string name="password_error_incorrect">Kata Sandi salah</string>
     <string name="password_label">Kata Sandi</string>
     <string name="password_placeholder">Masukkan kata sandi</string>
@@ -132,7 +132,7 @@
     <string name="pattern_prompt_create">Hubungkan setidaknya 4 titik</string>
     <string name="pattern_prompt_confirm">Gambar kembali pola Anda</string>
     <string name="pattern_prompt_unlock">Gambar pola Anda untuk membuka kunci aplikasi pribadi</string>
-    <string name="pattern_error_mismatch">Patterns don\u0027t match</string>
+    <string name="pattern_error_mismatch">Pola tidak cocok</string>
     <string name="pattern_error_incorrect">Pola salah</string>
     <string name="pattern_error_too_short">Hubungkan setidaknya 4 titik</string>
     <!-- Security setup screen -->
@@ -151,13 +151,13 @@
     <string name="recovery_question_label">Pertanyaan Keamanan</string>
     <string name="recovery_question_placeholder">Pilih pertanyaan</string>
     <string name="recovery_answer_label">Jawaban Anda</string>
-    <string name="recovery_question_picker_title">Select a Question</string>
+    <string name="recovery_question_picker_title">Pilih Pertanyaan</string>
     <string name="action_cancel">Batal</string>
     <!-- Security questions -->
-    <string name="question_pet_name">What is your pet\u0027s name?</string>
+    <string name="question_pet_name">Apa nama hewan peliharaanmu?</string>
     <string name="question_birth_city">Di kota mana Anda lahir?</string>
     <string name="question_favorite_movie">Apa film favorit Anda?</string>
-    <string name="question_mother_maiden">What is your mother\u0027s maiden name?</string>
+    <string name="question_mother_maiden">Apa nama gadis ibumu?</string>
     <string name="question_first_car">Apa mobil pertama Anda?</string>
     <!-- Forgot password screen -->
     <string name="forgot_password_title">Lupa Kata Sandi</string>
@@ -165,11 +165,11 @@
     <string name="forgot_password_verify">Verifikasi Jawaban</string>
     <string name="forgot_password_error">Jawaban salah. Silakan coba lagi.</string>
     <string name="forgot_password_reset_title">Setel ulang Kata Sandi?</string>
-    <string name="forgot_password_reset_message">This will clear your current password and you\u0027ll need to set up a new one. All private app data will remain intact.</string>
+    <string name="forgot_password_reset_message">Ini akan menghapus kata sandi Anda saat ini dan Anda perlu mengatur kata sandi baru. Semua data aplikasi pribadi akan tetap utuh.</string>
     <string name="action_reset">Atur ulang</string>
     <!-- Settings screen -->
     <string name="settings_title">Setelan</string>
-    <string name="settings_security_title">PRIVATE APPS SECURITY</string>
+    <string name="settings_security_title">KEAMANAN APLIKASI PRIVAT</string>
     <string name="settings_current_lock_type">Tipe kunci saat ini</string>
     <string name="settings_lock_type_pin">PIN (4 digits)</string>
     <string name="settings_lock_type_password">Kata Sandi</string>
@@ -181,55 +181,55 @@
     <string name="settings_use_password_summary">Kata Sandi Alfanumerik</string>
     <string name="settings_use_pattern">Gunakan Pola</string>
     <string name="settings_use_pattern_summary">Gambar pola untuk membuka kunci</string>
-    <string name="settings_biometrics_title">BIOMETRICS</string>
+    <string name="settings_biometrics_title">BIOMETRIK</string>
     <string name="settings_biometric_unlock">Buka kunci dengan Biometrik</string>
     <string name="settings_biometric_unlock_summary">Gunakan sidik jari atau buka kunci wajah</string>
     <string name="settings_auto_biometric">Tampilkan Otomatis Perintah Biometrik</string>
     <string name="settings_auto_biometric_summary">Secara otomatis menampilkan permintaan biometrik saat membuka aplikasi yang terkunci</string>
-    <string name="settings_recovery_title">RECOVERY</string>
+    <string name="settings_recovery_title">PEMULIHAN</string>
     <string name="settings_forgot_password">Lupa Kata Sandi</string>
     <string name="settings_forgot_password_summary">Atur ulang kata sandi Anda menggunakan pertanyaan keamanan</string>
     <string name="settings_setup_question">Mengatur Pertanyaan Keamanan</string>
     <string name="settings_setup_question_summary">Diperlukan untuk pemulihan kata sandi</string>
-    <string name="settings_locked_behavior_title">LOCKED APP BEHAVIOR</string>
+    <string name="settings_locked_behavior_title">PERILAKU APLIKASI TERKUNCI</string>
     <string name="settings_locked_behavior_summary">Kontrol kapan aplikasi yang tidak terkunci akan terkunci kembali</string>
     <string name="settings_behavior_on_leave">Kunci kembali saat keluar dari aplikasi</string>
     <string name="settings_behavior_on_leave_summary">Kunci kembali segera saat meninggalkan aplikasi yang tidak terkunci</string>
     <string name="settings_behavior_timeout">Kunci kembali setelah waktu habis</string>
-    <string name="settings_behavior_timeout_summary">Re-lock after %ds of inactivity</string>
+    <string name="settings_behavior_timeout_summary">Kunci kembali setelah %ds tidak ada aktivitas</string>
     <string name="settings_behavior_screen_off">Kunci kembali saat layar mati</string>
     <string name="settings_behavior_screen_off_summary">Biarkan tidak terkunci saat beralih aplikasi, kunci saat layar mati</string>
     <string name="settings_behavior_on_kill">Kunci kembali hanya saat ditutup</string>
     <string name="settings_behavior_on_kill_summary">Biarkan tidak terkunci hingga Sandbox ditutup paksa</string>
-    <string name="settings_private_behavior_title">PRIVATE SECTION BEHAVIOR</string>
-    <string name="settings_private_behavior_summary">Controls when the private apps section locks</string>
+    <string name="settings_private_behavior_title">PERILAKU DI BAGIAN PRIVAT</string>
+    <string name="settings_private_behavior_summary">Mengontrol kapan bagian aplikasi pribadi terkunci</string>
     <string name="settings_private_on_leave">Tutup saat keluar</string>
     <string name="settings_private_on_leave_summary">Tutup dan kunci saat keluar dari aplikasi Sandbox</string>
     <string name="settings_private_timeout">Tutup setelah waktu habis</string>
-    <string name="settings_private_timeout_summary">Collapse after %ds of leaving the app</string>
+    <string name="settings_private_timeout_summary">Aplikasi akan tertutup setelah %ds waktu meninggalkan aplikasi</string>
     <string name="settings_timeout_title">Batas Waktu Penguncian</string>
-    <string name="settings_about_title">ABOUT</string>
+    <string name="settings_about_title">TENTANG</string>
     <string name="settings_version">Versi</string>
     <string name="settings_version_value">2.0.0</string>
     <!-- Backup and Restore -->
-    <string name="settings_backup_title">DATA &amp; BACKUP</string>
-    <string name="settings_backup_applist">Back up Applist Configuration</string>
-    <string name="settings_backup_applist_summary">Export your locked, hidden, and isolated app settings to a file</string>
-    <string name="settings_restore_applist">Restore Applist Configuration</string>
-    <string name="settings_restore_applist_summary">Import app settings from a previously exported backup</string>
-    <string name="backup_success">Configuration backed up successfully</string>
-    <string name="backup_error">Failed to back up configuration</string>
-    <string name="restore_success">Configuration restored successfully</string>
-    <string name="restore_error">Failed to restore configuration</string>
+    <string name="settings_backup_title">DATA &amp; CADANGAN</string>
+    <string name="settings_backup_applist">Cadangkan Konfigurasi Applist</string>
+    <string name="settings_backup_applist_summary">Ekspor pengaturan aplikasi Anda yang terkunci, tersembunyi dan terisolasi ke dalam sebuah file</string>
+    <string name="settings_restore_applist">Pulihkan Konfigurasi Applist</string>
+    <string name="settings_restore_applist_summary">Impor pengaturan aplikasi dari cadangan yang sebelumnya diekspor</string>
+    <string name="backup_success">Konfigurasi berhasil dicadangkan</string>
+    <string name="backup_error">Gagal mencadangkan konfigurasi</string>
+    <string name="restore_success">Konfigurasi berhasil dipulihkan</string>
+    <string name="restore_error">Gagal memulihkan konfigurasi</string>
     <!-- Timeout options -->
-    <string name="timeout_15s">15 seconds</string>
-    <string name="timeout_30s">30 seconds</string>
-    <string name="timeout_60s">1 minute</string>
-    <string name="timeout_120s">2 minutes</string>
-    <string name="timeout_300s">5 minutes</string>
+    <string name="timeout_15s">15 detik</string>
+    <string name="timeout_30s">30 detik</string>
+    <string name="timeout_60s">1 menit</string>
+    <string name="timeout_120s">2 menit</string>
+    <string name="timeout_300s">5 menit</string>
     <!-- Authenticate activity -->
-    <string name="auth_title_unlock">Unlock %s</string>
-    <string name="auth_prompt">Enter your Sandbox credential to unlock %s</string>
+    <string name="auth_title_unlock">Buka kunci %s</string>
+    <string name="auth_prompt">Masukkan kredensial Sandbox Anda untuk membuka kunci %s</string>
     <string name="biometric_title">Buka Kunci Aplikasi Pribadi</string>
     <string name="biometric_use_pin">Gunakan PIN</string>
     <string name="biometric_use_password">Gunakan Kata Sandi</string>
