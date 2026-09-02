@@ -21,7 +21,7 @@
     <string name="search_hint">Search apps\u2026</string>
     <string name="tab_apps">Aplikasi</string>
     <string name="tab_notifications">Notifikasi</string>
-    <string name="tab_vault">Vault</string>
+    <string name="tab_vault">Brankas</string>
     <string name="no_apps_found">Tidak ada aplikasi ditemukan</string>
     <string name="action_search">Pencarian</string>
     <string name="action_settings">Setelan</string>
@@ -30,7 +30,7 @@
     <string name="action_launch">Luncurkan</string>
     <!-- App sections -->
     <string name="section_private_apps">Aplikasi Pribadi</string>
-    <string name="section_isolated_apps">Isolated Apps</string>
+    <string name="section_isolated_apps">Aplikasi Terisolasi</string>
     <string name="section_all_apps">Semua Aplikasi</string>
     <string name="show_system_apps">Tampilkan aplikasi sistem</string>
     <!-- Setup private apps card -->
@@ -39,30 +39,30 @@
     <!-- App detail / quick actions -->
     <string name="action_lock">Kunci</string>
     <string name="action_hide">Sembunyikan</string>
-    <string name="action_isolate">Isolate</string>
+    <string name="action_isolate">Isolasi</string>
     <string name="lock_app_title">Kunci Aplikasi</string>
     <string name="lock_app_description">Diperlukan otentikasi untuk membuka aplikasi ini</string>
     <string name="hide_app_title">Sembunyikan Aplikasi</string>
-    <string name="hide_app_description_off">Hide from launcher, other apps, block activity launches, and silence notifications</string>
-    <string name="hide_app_description_on">Hidden from launcher and all other apps, activity launches blocked, and notifications completely silenced</string>
-    <string name="hide_from_launcher_title">Hide from Launcher</string>
-    <string name="hide_from_launcher_description_off">Hide this app icon from the home screen and app drawer</string>
-    <string name="hide_from_launcher_description_on">Hidden from home screen app drawer (launches and notifications remain open)</string>
-    <string name="hide_settings_title">App Hiding Options</string>
-    <string name="isolate_app_title">Isolate App</string>
-    <string name="isolate_app_description">Isolate from other apps, restrict permissions and settings</string>
+    <string name="hide_app_description_off">Sembunyikan dari peluncur dan aplikasi lain, blokir peluncuran aktivitas, serta senyapkan notifikasi</string>
+    <string name="hide_app_description_on">Disembunyikan dari peluncur dan semua aplikasi lain, peluncuran aktivitas diblokir, dan notifikasi dibungkam sepenuhnya</string>
+    <string name="hide_from_launcher_title">Sembunyikan dari Peluncur</string>
+    <string name="hide_from_launcher_description_off">Sembunyikan ikon aplikasi ini dari layar utama dan laci aplikasi</string>
+    <string name="hide_from_launcher_description_on">Disembunyikan dari laci aplikasi layar beranda (peluncuran dan notifikasi tetap aktif)</string>
+    <string name="hide_settings_title">Opsi Penyembunyian Aplikasi</string>
+    <string name="isolate_app_title">Isolasi Aplikasi</string>
+    <string name="isolate_app_description">Isolasi dari aplikasi lain, batasi izin dan pengaturan</string>
     <!-- Sandbox sub-settings -->
-    <string name="sandbox_options_title">Sandbox Options</string>
-    <string name="restrict_internet_title">Restrict Internet</string>
-    <string name="restrict_internet_description">Strip network access from this app</string>
-    <string name="restrict_storage_title">Restrict Storage</string>
-    <string name="restrict_storage_description">Strip external storage access</string>
-    <string name="data_isolation_title">Force Data Isolation</string>
-    <string name="data_isolation_description">Prevent access to other apps\u0027 data</string>
+    <string name="sandbox_options_title">Opsi Sandbox</string>
+    <string name="restrict_internet_title">Batasi Internet</string>
+    <string name="restrict_internet_description">Cabut akses jaringan dari aplikasi ini</string>
+    <string name="restrict_storage_title">Batasi Penyimpanan</string>
+    <string name="restrict_storage_description">Hapus akses penyimpanan eksternal</string>
+    <string name="data_isolation_title">Paksakan Isolasi Data</string>
+    <string name="data_isolation_description">Cegah akses ke data aplikasi lain</string>
     <!-- Spoof settings -->
-    <string name="spoof_settings_title">Spoof Settings</string>
-    <string name="spoof_dev_settings_title">Spoof Developer Settings</string>
-    <string name="spoof_dev_settings_description">Hide developer options, ADB, and USB debugging status from this app</string>
+    <string name="spoof_settings_title">Pengaturan Tipuan</string>
+    <string name="spoof_dev_settings_title">Palsukan Pengaturan Pengembang</string>
+    <string name="spoof_dev_settings_description">Sembunyikan status opsi pengembang, ADB, dan debugging USB dari aplikasi ini</string>
     <string name="spoof_adb_enabled">ADB</string>
     <string name="spoof_adb_enabled_description">Report ADB as disabled</string>
     <string name="spoof_dev_settings_enabled">Pengembang Opsi</string>
