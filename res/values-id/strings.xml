@@ -21,7 +21,7 @@
     <string name="search_hint">Search apps\u2026</string>
     <string name="tab_apps">Aplikasi</string>
     <string name="tab_notifications">Notifikasi</string>
-    <string name="tab_vault">Vault</string>
+    <string name="tab_vault">Brankas</string>
     <string name="no_apps_found">Tidak ada aplikasi ditemukan</string>
     <string name="action_search">Pencarian</string>
     <string name="action_settings">Setelan</string>
@@ -30,7 +30,7 @@
     <string name="action_launch">Luncurkan</string>
     <!-- App sections -->
     <string name="section_private_apps">Aplikasi Pribadi</string>
-    <string name="section_isolated_apps">Isolated Apps</string>
+    <string name="section_isolated_apps">Aplikasi Terisolasi</string>
     <string name="section_all_apps">Semua Aplikasi</string>
     <string name="show_system_apps">Tampilkan aplikasi sistem</string>
     <!-- Setup private apps card -->
@@ -39,43 +39,43 @@
     <!-- App detail / quick actions -->
     <string name="action_lock">Kunci</string>
     <string name="action_hide">Sembunyikan</string>
-    <string name="action_isolate">Isolate</string>
+    <string name="action_isolate">Isolasi</string>
     <string name="lock_app_title">Kunci Aplikasi</string>
     <string name="lock_app_description">Diperlukan otentikasi untuk membuka aplikasi ini</string>
     <string name="hide_app_title">Sembunyikan Aplikasi</string>
-    <string name="hide_app_description_off">Hide from launcher, other apps, block activity launches, and silence notifications</string>
-    <string name="hide_app_description_on">Hidden from launcher and all other apps, activity launches blocked, and notifications completely silenced</string>
-    <string name="hide_from_launcher_title">Hide from Launcher</string>
-    <string name="hide_from_launcher_description_off">Hide this app icon from the home screen and app drawer</string>
-    <string name="hide_from_launcher_description_on">Hidden from home screen app drawer (launches and notifications remain open)</string>
-    <string name="hide_settings_title">App Hiding Options</string>
-    <string name="isolate_app_title">Isolate App</string>
-    <string name="isolate_app_description">Isolate from other apps, restrict permissions and settings</string>
+    <string name="hide_app_description_off">Sembunyikan dari peluncur dan aplikasi lain, blokir peluncuran aktivitas, serta senyapkan notifikasi</string>
+    <string name="hide_app_description_on">Disembunyikan dari peluncur dan semua aplikasi lain, peluncuran aktivitas diblokir, dan notifikasi dibungkam sepenuhnya</string>
+    <string name="hide_from_launcher_title">Sembunyikan dari Peluncur</string>
+    <string name="hide_from_launcher_description_off">Sembunyikan ikon aplikasi ini dari layar utama dan laci aplikasi</string>
+    <string name="hide_from_launcher_description_on">Disembunyikan dari laci aplikasi layar beranda (peluncuran dan notifikasi tetap aktif)</string>
+    <string name="hide_settings_title">Opsi Penyembunyian Aplikasi</string>
+    <string name="isolate_app_title">Isolasi Aplikasi</string>
+    <string name="isolate_app_description">Isolasi dari aplikasi lain, batasi izin dan pengaturan</string>
     <!-- Sandbox sub-settings -->
-    <string name="sandbox_options_title">Sandbox Options</string>
-    <string name="restrict_internet_title">Restrict Internet</string>
-    <string name="restrict_internet_description">Strip network access from this app</string>
-    <string name="restrict_storage_title">Restrict Storage</string>
-    <string name="restrict_storage_description">Strip external storage access</string>
-    <string name="data_isolation_title">Force Data Isolation</string>
-    <string name="data_isolation_description">Prevent access to other apps\u0027 data</string>
+    <string name="sandbox_options_title">Opsi Sandbox</string>
+    <string name="restrict_internet_title">Batasi Internet</string>
+    <string name="restrict_internet_description">Cabut akses jaringan dari aplikasi ini</string>
+    <string name="restrict_storage_title">Batasi Penyimpanan</string>
+    <string name="restrict_storage_description">Hapus akses penyimpanan eksternal</string>
+    <string name="data_isolation_title">Paksakan Isolasi Data</string>
+    <string name="data_isolation_description">Cegah akses ke data aplikasi lain</string>
     <!-- Spoof settings -->
-    <string name="spoof_settings_title">Spoof Settings</string>
-    <string name="spoof_dev_settings_title">Spoof Developer Settings</string>
-    <string name="spoof_dev_settings_description">Hide developer options, ADB, and USB debugging status from this app</string>
+    <string name="spoof_settings_title">Pengaturan Tipuan</string>
+    <string name="spoof_dev_settings_title">Palsukan Pengaturan Pengembang</string>
+    <string name="spoof_dev_settings_description">Sembunyikan status opsi pengembang, ADB, dan debugging USB dari aplikasi ini</string>
     <string name="spoof_adb_enabled">ADB</string>
-    <string name="spoof_adb_enabled_description">Report ADB as disabled</string>
+    <string name="spoof_adb_enabled_description">Laporkan ADB sebagai dinonaktifkan</string>
     <string name="spoof_dev_settings_enabled">Pengembang Opsi</string>
-    <string name="spoof_dev_settings_enabled_description">Report developer options as disabled</string>
-    <string name="spoof_adb_wifi_enabled">Wireless Debugging</string>
-    <string name="spoof_adb_wifi_enabled_description">Report wireless debugging as disabled</string>
-    <string name="spoof_package_verifier">Package Verifier</string>
-    <string name="spoof_package_verifier_description">Report package verifier consent as denied</string>
-    <string name="spoof_verify_apps_usb">USB App Verification</string>
-    <string name="spoof_verify_apps_usb_description">Report app verification over USB as disabled</string>
-    <string name="spoof_accessibility">Accessibility</string>
-    <string name="spoof_accessibility_description">Report accessibility services as disabled</string>
-    <string name="spoof_count_format">%d settings spoofed</string>
+    <string name="spoof_dev_settings_enabled_description">Laporkan opsi pengembang sebagai dinonaktifkan</string>
+    <string name="spoof_adb_wifi_enabled">Debugging Nirkabel</string>
+    <string name="spoof_adb_wifi_enabled_description">Laporkan debugging nirkabel sebagai dinonaktifkan</string>
+    <string name="spoof_package_verifier">Verifikator Paket</string>
+    <string name="spoof_package_verifier_description">Laporkan persetujuan verifikator paket sebagai ditolak</string>
+    <string name="spoof_verify_apps_usb">Verifikasi Aplikasi USB</string>
+    <string name="spoof_verify_apps_usb_description">Laporkan verifikasi aplikasi melalui USB sebagai dinonaktifkan</string>
+    <string name="spoof_accessibility">Aksesibilitas</string>
+    <string name="spoof_accessibility_description">Laporkan layanan aksesibilitas sebagai dinonaktifkan</string>
+    <string name="spoof_count_format">%d pengaturan dipalsukan</string>
     <!-- Notifications tab -->
     <string name="notifications_locked_title">Notifikasi Terkunci</string>
     <string name="notifications_locked_description">Buka kunci area pribadi untuk melihat notifikasi</string>
@@ -85,19 +85,19 @@
     <string name="action_dismiss">Abaikan</string>
     <string name="action_open">Buka</string>
     <!-- Vault tab -->
-    <string name="vault_locked_title">Vault Locked</string>
-    <string name="vault_locked_description">Unlock the private area to access your secure vault</string>
-    <string name="vault_empty_title">Vault is empty</string>
-    <string name="vault_empty_description">Files you import will be moved here and hidden from other apps</string>
-    <string name="action_import_vault">Import to Vault</string>
-    <string name="action_export">Export</string>
+    <string name="vault_locked_title">Brankas Terkunci</string>
+    <string name="vault_locked_description">Buka area pribadi untuk mengakses brankas aman Anda</string>
+    <string name="vault_empty_title">Brankas kosong</string>
+    <string name="vault_empty_description">File yang Anda impor akan dipindahkan ke sini dan disembunyikan dari aplikasi lain</string>
+    <string name="action_import_vault">Impor ke Brankas</string>
+    <string name="action_export">Ekspor</string>
     <string name="action_delete">Hapus</string>
-    <string name="vault_import_success">%d files added to vault</string>
-    <string name="vault_import_error">Failed to import some files</string>
-    <string name="export_success">File restored from vault</string>
-    <string name="export_error">Failed to export file</string>
-    <string name="delete_confirm_title">Delete File?</string>
-    <string name="delete_confirm_message">This will permanently delete the file from your device.</string>
+    <string name="vault_import_success">%d file ditambahkan ke brankas</string>
+    <string name="vault_import_error">Gagal mengimpor beberapa file</string>
+    <string name="export_success">File dipulihkan dari brankas</string>
+    <string name="export_error">Gagal mengekspor berkas</string>
+    <string name="delete_confirm_title">Hapus berkas?</string>
+    <string name="delete_confirm_message">Ini akan menghapus file tersebut secara permanen dari perangkat Anda.</string>
     <!-- Lock screen (PIN) -->
     <string name="pin_title_create">Buat PIN</string>
     <string name="pin_title_confirm">Konfirmasi PIN</string>
@@ -132,14 +132,14 @@
     <string name="pattern_prompt_create">Hubungkan setidaknya 4 titik</string>
     <string name="pattern_prompt_confirm">Gambar kembali pola Anda</string>
     <string name="pattern_prompt_unlock">Gambar pola Anda untuk membuka kunci aplikasi pribadi</string>
-    <string name="pattern_error_mismatch">Patterns don\u0027t match</string>
+    <string name="pattern_error_mismatch">Pola tidak cocok</string>
     <string name="pattern_error_incorrect">Pola salah</string>
     <string name="pattern_error_too_short">Hubungkan setidaknya 4 titik</string>
     <!-- Security setup screen -->
     <string name="setup_title">Amankan Aplikasi Privasi Anda</string>
     <string name="setup_description">Pilih cara Anda ingin melindungi aplikasi tersembunyi Anda</string>
     <string name="setup_pin_title">PIN</string>
-    <string name="setup_pin_description">4-digit code</string>
+    <string name="setup_pin_description">Kode 4- digit</string>
     <string name="setup_password_title">Kata Sandi</string>
     <string name="setup_password_description">Kata Sandi Alfanumerik</string>
     <string name="setup_pattern_title">Pola</string>
@@ -151,13 +151,13 @@
     <string name="recovery_question_label">Pertanyaan Keamanan</string>
     <string name="recovery_question_placeholder">Pilih pertanyaan</string>
     <string name="recovery_answer_label">Jawaban Anda</string>
-    <string name="recovery_question_picker_title">Select a Question</string>
+    <string name="recovery_question_picker_title">Pilih Pertanyaan</string>
     <string name="action_cancel">Batal</string>
     <!-- Security questions -->
-    <string name="question_pet_name">What is your pet\u0027s name?</string>
+    <string name="question_pet_name">Siapa nama hewan peliharaan Anda?</string>
     <string name="question_birth_city">Di kota mana Anda lahir?</string>
     <string name="question_favorite_movie">Apa film favorit Anda?</string>
-    <string name="question_mother_maiden">What is your mother\u0027s maiden name?</string>
+    <string name="question_mother_maiden">Apa nama gadis ibu kandung Anda?</string>
     <string name="question_first_car">Apa mobil pertama Anda?</string>
     <!-- Forgot password screen -->
     <string name="forgot_password_title">Lupa Kata Sandi</string>
@@ -176,7 +176,7 @@
     <string name="settings_lock_type_pattern">Pola</string>
     <string name="settings_lock_type_none">Belum diatur</string>
     <string name="settings_use_pin">Gunakan PIN</string>
-    <string name="settings_use_pin_summary">4-digit code</string>
+    <string name="settings_use_pin_summary">Kode 4- digit</string>
     <string name="settings_use_password">Gunakan Kata Sandi</string>
     <string name="settings_use_password_summary">Kata Sandi Alfanumerik</string>
     <string name="settings_use_pattern">Gunakan Pola</string>
