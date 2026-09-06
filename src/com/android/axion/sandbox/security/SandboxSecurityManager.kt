@@ -4,6 +4,8 @@ import android.content.Context
 import android.hardware.biometrics.BiometricManager
 import android.provider.Settings
 import android.util.Base64
+import androidx.compose.ui.res.stringResource
+import com.android.axion.sandbox.R
 import java.security.MessageDigest
 import java.security.SecureRandom
 import javax.crypto.SecretKeyFactory
@@ -318,12 +320,8 @@ class SandboxSecurityManager(private val context: Context) {
         const val MIN_PATTERN_LENGTH = 4
         const val DEFAULT_TIMEOUT_SECONDS = 30
         
-        val SECURITY_QUESTIONS = listOf(
-            "What is your pet's name?",
-            "What city were you born in?",
-            "What is your favorite movie?",
-            "What is your mother's maiden name?",
-            "What was your first car?"
-        )
+        fun getSecurityQuestions(context: Context): List<String> {
+            return context.resources.getStringArray(R.array.security_questions).toList()
+        }
     }
 }

@@ -46,6 +46,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.android.axion.compose.scaffold.AxionScaffold
@@ -59,6 +60,8 @@ fun SecurityQuestionSetupScreen(
     onSkip: (() -> Unit)? = null,
     onBack: () -> Unit
 ) {
+    val context = LocalContext.current
+    val questions = remember { SandboxSecurityManager.getSecurityQuestions(context) }
     var selectedQuestion by remember { mutableStateOf<String?>(null) }
     var answer by remember { mutableStateOf("") }
     var showQuestionPicker by remember { mutableStateOf(false) }
@@ -165,7 +168,7 @@ fun SecurityQuestionSetupScreen(
             title = { Text(stringResource(R.string.recovery_question_picker_title)) },
             text = {
                 Column {
-                    SandboxSecurityManager.SECURITY_QUESTIONS.forEach { question ->
+                   for (question in questions) {
                         Row(
                             modifier = Modifier
                                 .fillMaxWidth()
