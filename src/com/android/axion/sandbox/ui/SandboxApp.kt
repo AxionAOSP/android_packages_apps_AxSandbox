@@ -15,11 +15,13 @@
  */
 package com.android.axion.sandbox.ui
 
+import android.app.AxSandboxManager
+import android.app.PendingIntent
 import android.content.Context
-import android.content.pm.PackageManager
+import android.content.pm.LauncherApps
 import android.graphics.drawable.Drawable
+import android.os.UserHandle
 import android.util.Log
-import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
@@ -51,6 +53,7 @@ import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Apps
+import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.ExpandMore
 import androidx.compose.material.icons.filled.FolderOpen
 import androidx.compose.material.icons.filled.Lock
@@ -73,8 +76,9 @@ import androidx.compose.material3.FilledIconButton
 import androidx.compose.material3.FilledIconToggleButton
 import androidx.compose.material3.FilledTonalButton
 import androidx.compose.material3.FilledTonalIconButton
+import androidx.compose.material3.FilterChip
+import androidx.compose.material3.FilterChipDefaults
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.IconButtonDefaults
 import androidx.compose.material3.LoadingIndicator
 import androidx.compose.material3.MaterialTheme
@@ -85,7 +89,6 @@ import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
-import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.material3.rememberTopAppBarState
@@ -117,25 +120,24 @@ import androidx.compose.ui.unit.dp
 import androidx.core.graphics.drawable.toBitmap
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
+import com.android.axion.compose.applist.AppFilter
+import com.android.axion.compose.applist.rememberAppList
+import com.android.axion.compose.preferences.BasePreference
+import com.android.axion.compose.preferences.ClickablePreference
 import com.android.axion.compose.preferences.PreferenceGroup
 import com.android.axion.compose.preferences.SettingsType
 import com.android.axion.compose.preferences.SwitchPreference
 import com.android.axion.compose.preferences.rememberSettingsFlow
-import com.android.axion.compose.sheet.BottomSheetDialog
-import com.android.axion.compose.applist.AppFilter
-import com.android.axion.compose.applist.rememberAppList
-import androidx.compose.material3.FilterChip
-import androidx.compose.material3.FilterChipDefaults
-import androidx.compose.material.icons.filled.Check
-import androidx.compose.material.icons.filled.FilterList
 import com.android.axion.compose.scaffold.AxionLargeTopAppBar
-import com.android.axion.compose.scaffold.ExpressiveBackButton
+import com.android.axion.compose.scaffold.AxionScaffold
+import com.android.axion.compose.sheet.BottomSheetDialog
 import com.android.axion.sandbox.R
 import com.android.internal.app.IHiddenNotificationListener
 import com.android.internal.app.HiddenNotificationInfo
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
+import kotlin.OptIn
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -153,8 +155,30 @@ data class AppInfo(
     val isHidden: Boolean,
     val isLauncherHidden: Boolean,
     val isSandboxed: Boolean,
-    val isSystem: Boolean = false
+    val isSystem: Boolean = false,
+    val userId: Int = 0,
+    val isClone: Boolean = false
 )
+
+private data class UserSandboxPackages(
+    val locked: Set<String> = emptySet(),
+    val hidden: Set<String> = emptySet(),
+    val launcherHidden: Set<String> = emptySet(),
+    val sandboxed: Set<String> = emptySet()
+)
+
+private fun AxSandboxManager?.getUserPackages(userId: Int): UserSandboxPackages {
+    if (this == null) return UserSandboxPackages()
+    try {
+        val locked = getLockedPackages(userId)?.toSet() ?: emptySet()
+        val hidden = getHiddenPackages(userId)?.toSet() ?: emptySet()
+        val launcherHidden = getHiddenFromLauncherPackages(userId)?.toSet() ?: emptySet()
+        val sandboxed = getSandboxedPackages(userId)?.toSet() ?: emptySet()
+        return UserSandboxPackages(locked, hidden, launcherHidden, sandboxed)
+    } catch (e: Exception) {
+        return UserSandboxPackages()
+    }
+}
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalFoundationApi::class, ExperimentalMaterial3ExpressiveApi::class)
 @Composable
@@ -178,28 +202,31 @@ fun SandboxApp(
     val lifecycleOwner = LocalLifecycleOwner.current
     val motionScheme = MaterialTheme.motionScheme
 
-    val appsState = rememberAppList(AppFilter.ALL, AppFilter.NO_OVERLAYS)
+    val appsState = rememberAppList(AppFilter.ALL, AppFilter.NO_OVERLAYS, AppFilter.INCLUDE_DUAL_APPS)
     var refreshKey by remember { mutableStateOf(0) }
-    val sandboxManager = remember { context.getSystemService(Context.AX_SANDBOX_SERVICE) as? android.app.AxSandboxManager }
+    val sandboxManager = remember { context.getSystemService(Context.AX_SANDBOX_SERVICE) as? AxSandboxManager }
 
     val apps by remember(appsState.value, refreshKey) {
         derivedStateOf {
-            appsState.value.map { entry ->
-                val isLocked = try { sandboxManager?.getAppLockState(entry.packageName)?.hasAppLock() ?: false } catch (e: Exception) { false }
-                val isHidden = try { sandboxManager?.isPackageHidden(entry.packageName) ?: false } catch (e: Exception) { false }
-                val isLauncherHidden = try { sandboxManager?.isPackageHiddenFromLauncher(entry.packageName) ?: false } catch (e: Exception) { false }
-                val isSandboxed = try { sandboxManager?.isPackageSandboxed(entry.packageName) ?: false } catch (e: Exception) { false }
+            val userPackagesMap = appsState.value
+                .map { it.userId }
+                .distinct()
+                .associateWith { userId -> sandboxManager.getUserPackages(userId) }
 
+            appsState.value.map { entry ->
+                val userPkgs = userPackagesMap[entry.userId] ?: UserSandboxPackages()
                 AppInfo(
                     packageName = entry.packageName,
                     label = entry.label,
                     icon = entry.icon,
                     uid = 0,
-                    isLocked = isLocked,
-                    isHidden = isHidden,
-                    isLauncherHidden = isLauncherHidden,
-                    isSandboxed = isSandboxed,
-                    isSystem = entry.isSystem
+                    isLocked = userPkgs.locked.contains(entry.packageName),
+                    isHidden = userPkgs.hidden.contains(entry.packageName),
+                    isLauncherHidden = userPkgs.launcherHidden.contains(entry.packageName),
+                    isSandboxed = userPkgs.sandboxed.contains(entry.packageName),
+                    isSystem = entry.isSystem,
+                    userId = entry.userId,
+                    isClone = entry.isClone
                 )
             }
         }
@@ -220,7 +247,7 @@ fun SandboxApp(
     val reloadApps: () -> Unit = {
         refreshKey++
         selectedApp?.let { selected ->
-            selectedApp = apps.find { it.packageName == selected.packageName }
+            selectedApp = apps.find { it.packageName == selected.packageName && it.userId == selected.userId }
         }
     }
 
@@ -297,16 +324,16 @@ fun SandboxApp(
             onBackClick = { selectedApp = null },
             onLockToggle = { app ->
                 scope.launch {
-                    toggleAppLock(context, app.packageName, !app.isLocked)
+                    toggleAppLock(context, app.packageName, app.userId, !app.isLocked)
                     reloadApps()
                 }
             },
             onHideToggle = { app ->
                 scope.launch {
                     val nextHideState = !app.isHidden
-                    toggleAppHidden(context, app.packageName, nextHideState)
+                    toggleAppHidden(context, app.packageName, app.userId, nextHideState)
                     if (nextHideState) {
-                        toggleAppLauncherHidden(context, app.packageName, false)
+                        toggleAppLauncherHidden(context, app.packageName, app.userId, false)
                         selectedApp = app.copy(isHidden = true, isLauncherHidden = false)
                     } else {
                         selectedApp = app.copy(isHidden = false)
@@ -317,9 +344,9 @@ fun SandboxApp(
             onLauncherHideToggle = { app ->
                 scope.launch {
                     val nextLauncherHideState = !app.isLauncherHidden
-                    toggleAppLauncherHidden(context, app.packageName, nextLauncherHideState)
+                    toggleAppLauncherHidden(context, app.packageName, app.userId, nextLauncherHideState)
                     if (nextLauncherHideState) {
-                        toggleAppHidden(context, app.packageName, false)
+                        toggleAppHidden(context, app.packageName, app.userId, false)
                         selectedApp = app.copy(isLauncherHidden = true, isHidden = false)
                     } else {
                         selectedApp = app.copy(isLauncherHidden = false)
@@ -329,12 +356,12 @@ fun SandboxApp(
             },
             onSandboxToggle = { app ->
                 scope.launch {
-                    toggleAppSandboxed(context, app.packageName, !app.isSandboxed)
+                    toggleAppSandboxed(context, app.packageName, app.userId, !app.isSandboxed)
                     reloadApps()
                 }
             },
             onLaunch = { app ->
-                launchApp(context, app.packageName)
+                launchApp(context, app.packageName, app.userId)
             },
             isSecuritySetup = isSecuritySetup
         )
@@ -535,26 +562,26 @@ fun SandboxApp(
 @Composable
 private fun SandboxOptionsDropdown(
     app: AppInfo,
-    sandboxManager: android.app.AxSandboxManager?,
+    sandboxManager: AxSandboxManager?,
     onSandboxToggle: (AppInfo) -> Unit
 ) {
     val scope = rememberCoroutineScope()
     val accentColor = MaterialTheme.colorScheme.secondary
     var expanded by rememberSaveable { mutableStateOf(app.isSandboxed) }
 
-    var restrictInternet by remember(app.packageName) {
-        val gids = sandboxManager?.getRestrictedGids(app.packageName)
-        mutableStateOf(gids != null && gids.contains(android.app.AxSandboxManager.GID_INET))
+    var restrictInternet by remember(app.packageName, app.userId) {
+        val gids = sandboxManager?.getRestrictedGids(app.packageName, app.userId)
+        mutableStateOf(gids != null && gids.contains(AxSandboxManager.GID_INET))
     }
 
-    var restrictStorage by remember(app.packageName) {
-        val gids = sandboxManager?.getRestrictedGids(app.packageName)
-        val storageGids = android.app.AxSandboxManager.STORAGE_GIDS
+    var restrictStorage by remember(app.packageName, app.userId) {
+        val gids = sandboxManager?.getRestrictedGids(app.packageName, app.userId)
+        val storageGids = AxSandboxManager.STORAGE_GIDS
         mutableStateOf(gids != null && storageGids.any { gids.contains(it) })
     }
 
-    var dataIsolation by remember(app.packageName) {
-        mutableStateOf(sandboxManager?.isSandboxDataIsolationEnabled(app.packageName) == true)
+    var dataIsolation by remember(app.packageName, app.userId) {
+        mutableStateOf(sandboxManager?.isSandboxDataIsolationEnabled(app.packageName, app.userId) == true)
     }
 
     PreferenceGroup(
@@ -579,16 +606,16 @@ private fun SandboxOptionsDropdown(
                     if (sandboxManager == null) return@SwitchPreference
                     restrictInternet = !restrictInternet
                     scope.launch(Dispatchers.IO) {
-                        val current = sandboxManager.getRestrictedGids(app.packageName)
+                        val current = sandboxManager.getRestrictedGids(app.packageName, app.userId)
                                 ?.toMutableList() ?: mutableListOf()
                         if (restrictInternet) {
-                            if (!current.contains(android.app.AxSandboxManager.GID_INET))
-                                current.add(android.app.AxSandboxManager.GID_INET)
+                            if (!current.contains(AxSandboxManager.GID_INET))
+                                current.add(AxSandboxManager.GID_INET)
                         } else {
-                            current.remove(android.app.AxSandboxManager.GID_INET)
+                            current.remove(AxSandboxManager.GID_INET)
                         }
                         sandboxManager.setRestrictedGids(app.packageName,
-                                current.toIntArray())
+                                current.toIntArray(), app.userId)
                     }
                 },
             )
@@ -602,9 +629,9 @@ private fun SandboxOptionsDropdown(
                     if (sandboxManager == null) return@SwitchPreference
                     restrictStorage = !restrictStorage
                     scope.launch(Dispatchers.IO) {
-                        val current = sandboxManager.getRestrictedGids(app.packageName)
+                        val current = sandboxManager.getRestrictedGids(app.packageName, app.userId)
                                 ?.toMutableList() ?: mutableListOf()
-                        val storageGids = android.app.AxSandboxManager.STORAGE_GIDS
+                        val storageGids = AxSandboxManager.STORAGE_GIDS
                         if (restrictStorage) {
                             for (gid in storageGids) {
                                 if (!current.contains(gid)) current.add(gid)
@@ -613,7 +640,7 @@ private fun SandboxOptionsDropdown(
                             current.removeAll(storageGids.toSet())
                         }
                         sandboxManager.setRestrictedGids(app.packageName,
-                                current.toIntArray())
+                                current.toIntArray(), app.userId)
                     }
                 },
             )
@@ -628,7 +655,7 @@ private fun SandboxOptionsDropdown(
                     dataIsolation = !dataIsolation
                     scope.launch(Dispatchers.IO) {
                         sandboxManager.setSandboxDataIsolationEnabled(
-                                app.packageName, dataIsolation)
+                                app.packageName, dataIsolation, app.userId)
                     }
                 },
             )
@@ -665,7 +692,7 @@ private val SPOOF_ACCESSIBILITY_KEYS = listOf(
 @Composable
 private fun SpoofSettingsDropdown(
     app: AppInfo,
-    sandboxManager: android.app.AxSandboxManager?
+    sandboxManager: AxSandboxManager?
 ) {
     if (sandboxManager == null) return
 
@@ -673,14 +700,14 @@ private fun SpoofSettingsDropdown(
     val accentColor = MaterialTheme.colorScheme.tertiary
     var expanded by rememberSaveable { mutableStateOf(false) }
 
-    val enabledSettings = remember(app.packageName) {
+    val enabledSettings = remember(app.packageName, app.userId) {
         mutableStateMapOf<String, Boolean>().apply {
             SPOOF_SETTINGS.forEach { entry ->
                 put(entry.key, sandboxManager.isSpoofSettingEnabled(
-                        app.packageName, entry.key))
+                        app.packageName, entry.key, app.userId))
             }
             put("accessibility_spoof", SPOOF_ACCESSIBILITY_KEYS.all { key ->
-                sandboxManager.isSpoofSettingEnabled(app.packageName, key)
+                sandboxManager.isSpoofSettingEnabled(app.packageName, key, app.userId)
             })
         }
     }
@@ -704,7 +731,7 @@ private fun SpoofSettingsDropdown(
                         enabledSettings[entry.key] = newValue
                         scope.launch(Dispatchers.IO) {
                             sandboxManager.setSpoofSettingEnabled(
-                                    app.packageName, entry.key, newValue)
+                                    app.packageName, entry.key, newValue, app.userId)
                         }
                     },
                 )
@@ -722,7 +749,7 @@ private fun SpoofSettingsDropdown(
                     scope.launch(Dispatchers.IO) {
                         SPOOF_ACCESSIBILITY_KEYS.forEach { key ->
                             sandboxManager.setSpoofSettingEnabled(
-                                    app.packageName, key, newValue)
+                                    app.packageName, key, newValue, app.userId)
                         }
                     }
                 },
@@ -738,7 +765,7 @@ private fun HideSettingsDropdown(
     onHideToggle: (AppInfo) -> Unit,
     onLauncherHideToggle: (AppInfo) -> Unit
 ) {
-    val expanded = remember(app.packageName) { app.isHidden || app.isLauncherHidden }
+    val expanded = remember(app.packageName, app.userId) { app.isHidden || app.isLauncherHidden }
 
     PreferenceGroup(
         title = stringResource(R.string.hide_settings_title),
@@ -781,36 +808,26 @@ fun AppDetailScreen(
     val bitmap = remember(app.packageName) {
         app.icon.toBitmap(128, 128)
     }
-    val scrollBehavior = TopAppBarDefaults.exitUntilCollapsedScrollBehavior(rememberTopAppBarState())
 
-    Scaffold(
-        modifier = Modifier.nestedScroll(scrollBehavior.nestedScrollConnection),
-        containerColor = MaterialTheme.colorScheme.surfaceContainer,
-        topBar = {
-            AxionLargeTopAppBar(
-                title = app.label,
-                scrollBehavior = scrollBehavior,
-                containerColor = MaterialTheme.colorScheme.surfaceContainer,
-                navigationIcon = {
-                    ExpressiveBackButton(onClick = onBackClick)
-                },
-                actions = {
-                    FilledTonalIconButton(onClick = { onLaunch(app) }) {
-                        Icon(
-                            imageVector = Icons.Default.OpenInNew,
-                            contentDescription = stringResource(R.string.action_launch)
-                        )
-                    }
-                },
-            )
-        }
+    AxionScaffold(
+        title = app.label,
+        onBackClick = onBackClick,
+        collapsedByDefault = false,
+        actions = {
+            FilledTonalIconButton(onClick = { onLaunch(app) }) {
+                Icon(
+                    imageVector = Icons.Default.OpenInNew,
+                    contentDescription = stringResource(R.string.action_launch)
+                )
+            }
+        },
     ) { paddingValues ->
         LazyColumn(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(paddingValues),
             contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp),
-            verticalArrangement = Arrangement.spacedBy(8.dp),
+            verticalArrangement = Arrangement.spacedBy(12.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             item {
@@ -841,15 +858,17 @@ fun AppDetailScreen(
 
             if (isSecuritySetup) {
                 item {
-                    SettingsCard(
-                        icon = Icons.Outlined.Lock,
-                        activeIcon = Icons.Filled.Lock,
-                        title = stringResource(R.string.lock_app_title),
-                        description = stringResource(R.string.lock_app_description),
-                        isEnabled = app.isLocked,
-                        onToggle = { onLockToggle(app) },
-                        accentColor = MaterialTheme.colorScheme.primary
-                    )
+                    PreferenceGroup {
+                        item {
+                            SwitchPreference(
+                                title = stringResource(R.string.lock_app_title),
+                                summary = stringResource(R.string.lock_app_description),
+                                checked = app.isLocked,
+                                onCheckedChange = { onLockToggle(app) },
+                                icon = if (app.isLocked) Icons.Filled.Lock else Icons.Outlined.Lock,
+                            )
+                        }
+                    }
                 }
 
                 item {
@@ -884,90 +903,7 @@ fun AppDetailScreen(
                 )
             }
 
-            item { Spacer(modifier = Modifier.height(24.dp)) }
-        }
-    }
-}
-
-@OptIn(ExperimentalMaterial3ExpressiveApi::class)
-@Composable
-private fun SettingsCard(
-    icon: ImageVector,
-    activeIcon: ImageVector,
-    title: String,
-    description: String,
-    isEnabled: Boolean,
-    onToggle: () -> Unit,
-    accentColor: Color
-) {
-    val motionScheme = MaterialTheme.motionScheme
-
-    val cardColor by animateColorAsState(
-        targetValue = if (isEnabled) accentColor.copy(alpha = 0.12f)
-        else MaterialTheme.colorScheme.surfaceBright,
-        animationSpec = motionScheme.defaultEffectsSpec(),
-        label = "cardColor"
-    )
-
-    val iconColor by animateColorAsState(
-        targetValue = if (isEnabled) accentColor else MaterialTheme.colorScheme.onSurfaceVariant,
-        animationSpec = motionScheme.defaultEffectsSpec(),
-        label = "iconColor"
-    )
-
-    Surface(
-        modifier = Modifier.fillMaxWidth(),
-        shape = MaterialTheme.shapes.extraLarge,
-        color = cardColor,
-        tonalElevation = 0.dp
-    ) {
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .clickable(onClick = onToggle)
-                .padding(20.dp),
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            Box(
-                modifier = Modifier
-                    .size(48.dp)
-                    .clip(MaterialTheme.shapes.large)
-                    .background(
-                        if (isEnabled) accentColor.copy(alpha = 0.2f)
-                        else MaterialTheme.colorScheme.surfaceContainerHigh
-                    ),
-                contentAlignment = Alignment.Center
-            ) {
-                Icon(
-                    imageVector = if (isEnabled) activeIcon else icon,
-                    contentDescription = null,
-                    tint = iconColor,
-                    modifier = Modifier.size(24.dp)
-                )
-            }
-
-            Spacer(modifier = Modifier.width(16.dp))
-
-            Column(modifier = Modifier.weight(1f)) {
-                Text(
-                    text = title,
-                    style = MaterialTheme.typography.titleMedium,
-                    color = MaterialTheme.colorScheme.onSurface
-                )
-                Spacer(modifier = Modifier.height(4.dp))
-                Text(
-                    text = description,
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
-            }
-
-            Spacer(modifier = Modifier.width(12.dp))
-
-            Switch(
-                checked = isEnabled,
-                onCheckedChange = { onToggle() }
-            )
+            item { Spacer(modifier = Modifier.height(32.dp)) }
         }
     }
 }
@@ -1000,7 +936,7 @@ fun AppsTab(
 
     val onLockToggle: (AppInfo) -> Unit = { app ->
         scope.launch {
-            toggleAppLock(context, app.packageName, !app.isLocked)
+            toggleAppLock(context, app.packageName, app.userId, !app.isLocked)
             selectedApp = app.copy(isLocked = !app.isLocked)
         }
     }
@@ -1008,9 +944,9 @@ fun AppsTab(
     val onHideToggle: (AppInfo) -> Unit = { app ->
         scope.launch {
             val nextHideState = !app.isHidden
-            toggleAppHidden(context, app.packageName, nextHideState)
+            toggleAppHidden(context, app.packageName, app.userId, nextHideState)
             if (nextHideState) {
-                toggleAppLauncherHidden(context, app.packageName, false)
+                toggleAppLauncherHidden(context, app.packageName, app.userId, false)
                 selectedApp = app.copy(isHidden = true, isLauncherHidden = false)
             } else {
                 selectedApp = app.copy(isHidden = false)
@@ -1021,9 +957,9 @@ fun AppsTab(
     val onLauncherHideToggle: (AppInfo) -> Unit = { app ->
         scope.launch {
             val nextLauncherHideState = !app.isLauncherHidden
-            toggleAppLauncherHidden(context, app.packageName, nextLauncherHideState)
+            toggleAppLauncherHidden(context, app.packageName, app.userId, nextLauncherHideState)
             if (nextLauncherHideState) {
-                toggleAppHidden(context, app.packageName, false)
+                toggleAppHidden(context, app.packageName, app.userId, false)
                 selectedApp = app.copy(isLauncherHidden = true, isHidden = false)
             } else {
                 selectedApp = app.copy(isLauncherHidden = false)
@@ -1033,7 +969,7 @@ fun AppsTab(
 
     val onSandboxToggle: (AppInfo) -> Unit = { app ->
         scope.launch {
-            toggleAppSandboxed(context, app.packageName, !app.isSandboxed)
+            toggleAppSandboxed(context, app.packageName, app.userId, !app.isSandboxed)
             selectedApp = app.copy(isSandboxed = !app.isSandboxed)
         }
     }
@@ -1054,7 +990,7 @@ fun AppsTab(
                 onHideToggle = onHideToggle,
                 onLauncherHideToggle = onLauncherHideToggle,
                 onSandboxToggle = onSandboxToggle,
-                onLaunch = { app -> launchApp(context, app.packageName) },
+                onLaunch = { app -> launchApp(context, app.packageName, app.userId) },
                 onDismiss = onSheetDismiss,
             )
         }
@@ -1097,7 +1033,20 @@ fun AppsTab(
         ) {
             item(span = { GridItemSpan(4) }) {
                 if (!isSecuritySetup) {
-                    SetupPrivateAppsCard(onSetupClick = onSetupSecurity)
+                    PreferenceGroup(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(vertical = 8.dp)
+                    ) {
+                        item {
+                            ClickablePreference(
+                                title = stringResource(R.string.setup_private_apps_title),
+                                summary = stringResource(R.string.setup_private_apps_description),
+                                icon = Icons.Filled.Lock,
+                                onClick = onSetupSecurity
+                            )
+                        }
+                    }
                 } else if (privateApps.isNotEmpty()) {
                     CollapsibleSectionHeader(
                         icon = if (effectiveExpanded) Icons.Filled.LockOpen else Icons.Filled.Lock,
@@ -1234,60 +1183,6 @@ fun AppsTab(
     }
 }
 
-@Composable
-private fun SetupPrivateAppsCard(onSetupClick: () -> Unit) {
-    Surface(
-        onClick = onSetupClick,
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(vertical = 8.dp),
-        shape = MaterialTheme.shapes.extraLarge,
-        color = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.4f)
-    ) {
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(16.dp),
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            Box(
-                modifier = Modifier
-                    .size(48.dp)
-                    .clip(MaterialTheme.shapes.large)
-                    .background(MaterialTheme.colorScheme.primary.copy(alpha = 0.2f)),
-                contentAlignment = Alignment.Center
-            ) {
-                Icon(
-                    imageVector = Icons.Filled.Lock,
-                    contentDescription = null,
-                    tint = MaterialTheme.colorScheme.primary,
-                    modifier = Modifier.size(24.dp)
-                )
-            }
-            Spacer(modifier = Modifier.width(16.dp))
-            Column(modifier = Modifier.weight(1f)) {
-                Text(
-                    text = stringResource(R.string.setup_private_apps_title),
-                    style = MaterialTheme.typography.titleMedium,
-                    color = MaterialTheme.colorScheme.onSurface
-                )
-                Spacer(modifier = Modifier.height(4.dp))
-                Text(
-                    text = stringResource(R.string.setup_private_apps_description),
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
-            }
-            Icon(
-                imageVector = Icons.Default.ExpandMore,
-                contentDescription = null,
-                tint = MaterialTheme.colorScheme.primary,
-                modifier = Modifier.size(20.dp)
-            )
-        }
-    }
-}
-
 @OptIn(ExperimentalMaterial3ExpressiveApi::class)
 @Composable
 private fun SectionHeader(
@@ -1418,7 +1313,7 @@ private fun AppGridItem(
     )
     val hasAnyProtection = protectionStates.isNotEmpty()
 
-    val bitmap = remember(app.packageName) {
+    val bitmap = remember(app.packageName, app.userId) {
         app.icon.toBitmap(64, 64)
     }
 
@@ -1514,12 +1409,12 @@ private fun AppQuickActionsSheet(
     onLaunch: (AppInfo) -> Unit,
     onDismiss: () -> Unit
 ) {
-    val bitmap = remember(app.packageName) {
+    val bitmap = remember(app.packageName, app.userId) {
         app.icon.toBitmap(80, 80)
     }
     val context = LocalContext.current
     val sandboxManager = remember {
-        context.getSystemService(android.app.AxSandboxManager::class.java)
+        context.getSystemService(AxSandboxManager::class.java)
     }
 
     LazyColumn(
@@ -1528,64 +1423,45 @@ private fun AppQuickActionsSheet(
         verticalArrangement = Arrangement.spacedBy(8.dp),
     ) {
         item {
-            Surface(
-                modifier = Modifier.fillMaxWidth(),
-                color = MaterialTheme.colorScheme.surfaceBright,
-                shape = MaterialTheme.shapes.extraLarge,
-            ) {
-                Row(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(horizontal = 16.dp, vertical = 14.dp),
-                    verticalAlignment = Alignment.CenterVertically,
-                ) {
-                    Image(
-                        painter = BitmapPainter(bitmap.asImageBitmap()),
-                        contentDescription = app.label,
-                        modifier = Modifier
-                            .size(48.dp)
-                            .clip(MaterialTheme.shapes.large)
+            PreferenceGroup {
+                item {
+                    BasePreference(
+                        title = app.label,
+                        summary = app.packageName,
+                        customIcon = {
+                            Image(
+                                painter = BitmapPainter(bitmap.asImageBitmap()),
+                                contentDescription = app.label,
+                                modifier = Modifier
+                                    .size(40.dp)
+                                    .clip(MaterialTheme.shapes.medium)
+                            )
+                        },
+                        widget = {
+                            FilledTonalIconButton(onClick = { onLaunch(app) }) {
+                                Icon(
+                                    imageVector = Icons.Default.OpenInNew,
+                                    contentDescription = stringResource(R.string.action_launch)
+                                )
+                            }
+                        }
                     )
-
-                    Spacer(modifier = Modifier.width(16.dp))
-
-                    Column(modifier = Modifier.weight(1f)) {
-                        Text(
-                            text = app.label,
-                            style = MaterialTheme.typography.titleMedium,
-                            color = MaterialTheme.colorScheme.onSurface
-                        )
-                        Text(
-                            text = app.packageName,
-                            style = MaterialTheme.typography.bodySmall,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant,
-                            maxLines = 1,
-                            overflow = TextOverflow.Ellipsis
-                        )
-                    }
-
-                    FilledTonalIconButton(onClick = { onLaunch(app) }) {
-                        Icon(
-                            imageVector = Icons.Default.OpenInNew,
-                            contentDescription = stringResource(R.string.action_launch)
-                        )
-                    }
                 }
             }
         }
 
         item {
-                PreferenceGroup {
-                    item {
-                        SwitchPreference(
-                            title = stringResource(R.string.action_lock),
-                            checked = app.isLocked,
-                            onCheckedChange = { onLockToggle(app) },
-                            icon = if (app.isLocked) Icons.Filled.Lock else Icons.Outlined.Lock,
-                        )
-                    }
+            PreferenceGroup {
+                item {
+                    SwitchPreference(
+                        title = stringResource(R.string.action_lock),
+                        checked = app.isLocked,
+                        onCheckedChange = { onLockToggle(app) },
+                        icon = if (app.isLocked) Icons.Filled.Lock else Icons.Outlined.Lock,
+                    )
                 }
             }
+        }
 
         item {
             HideSettingsDropdown(
@@ -1619,7 +1495,8 @@ data class HiddenNotification(
     val text: String?,
     val timestamp: Long,
     val icon: Drawable? = null,
-    val contentIntent: android.app.PendingIntent? = null
+    val contentIntent: PendingIntent? = null,
+    val userId: Int = 0
 )
 
 @OptIn(ExperimentalMaterial3ExpressiveApi::class)
@@ -1710,7 +1587,8 @@ fun NotificationsTab(
                         text = info.text?.toString(),
                         timestamp = info.postTime,
                         icon = icon,
-                        contentIntent = info.contentIntent
+                        contentIntent = info.contentIntent,
+                        userId = info.userId
                     )
                     notifications = (listOf(notif) + notifications.filter { it.key != info.key })
                 }
@@ -1741,7 +1619,8 @@ fun NotificationsTab(
                             text = info.text?.toString(),
                             timestamp = info.postTime,
                             icon = icon,
-                            contentIntent = info.contentIntent
+                            contentIntent = info.contentIntent,
+                            userId = info.userId
                         )
                     }.sortedByDescending { it.timestamp }
                 }
@@ -1813,9 +1692,9 @@ fun NotificationsTab(
                     onLaunch = {
                         try {
                             notification.contentIntent?.send()
-                                ?: launchApp(context, notification.packageName)
+                                ?: launchApp(context, notification.packageName, notification.userId)
                         } catch (e: Exception) {
-                            launchApp(context, notification.packageName)
+                            launchApp(context, notification.packageName, notification.userId)
                         }
                     },
                     onDismiss = {
@@ -1942,44 +1821,52 @@ private fun NotificationItem(
     }
 }
 
-private suspend fun toggleAppLock(context: Context, packageName: String, lock: Boolean) = withContext(Dispatchers.IO) {
+private suspend fun toggleAppLock(context: Context, packageName: String, userId: Int, lock: Boolean) = withContext(Dispatchers.IO) {
     try {
-        val sandboxManager = context.getSystemService(Context.AX_SANDBOX_SERVICE) as? android.app.AxSandboxManager ?: return@withContext
-        if (lock) sandboxManager.addLockedApp(packageName) else sandboxManager.removeLockedApp(packageName)
+        val sandboxManager = context.getSystemService(Context.AX_SANDBOX_SERVICE) as? AxSandboxManager ?: return@withContext
+        if (lock) sandboxManager.addLockedApp(packageName, userId) else sandboxManager.removeLockedApp(packageName, userId)
     } catch (e: Exception) {
         Log.e(TAG, "Error toggling app lock for $packageName", e)
     }
 }
 
-private suspend fun toggleAppHidden(context: Context, packageName: String, hidden: Boolean) = withContext(Dispatchers.IO) {
+private suspend fun toggleAppHidden(context: Context, packageName: String, userId: Int, hidden: Boolean) = withContext(Dispatchers.IO) {
     try {
-        val sandboxManager = context.getSystemService(Context.AX_SANDBOX_SERVICE) as? android.app.AxSandboxManager ?: return@withContext
-        sandboxManager.setPackageHidden(packageName, hidden)
+        val sandboxManager = context.getSystemService(Context.AX_SANDBOX_SERVICE) as? AxSandboxManager ?: return@withContext
+        sandboxManager.setPackageHidden(packageName, hidden, userId)
     } catch (e: Exception) {
         Log.e(TAG, "Error toggling app hidden for $packageName", e)
     }
 }
 
-private suspend fun toggleAppLauncherHidden(context: Context, packageName: String, hidden: Boolean) = withContext(Dispatchers.IO) {
+private suspend fun toggleAppLauncherHidden(context: Context, packageName: String, userId: Int, hidden: Boolean) = withContext(Dispatchers.IO) {
     try {
-        val sandboxManager = context.getSystemService(Context.AX_SANDBOX_SERVICE) as? android.app.AxSandboxManager ?: return@withContext
-        sandboxManager.setPackageHiddenFromLauncher(packageName, hidden)
+        val sandboxManager = context.getSystemService(Context.AX_SANDBOX_SERVICE) as? AxSandboxManager ?: return@withContext
+        sandboxManager.setPackageHiddenFromLauncher(packageName, hidden, userId)
     } catch (e: Exception) {
         Log.e(TAG, "Error toggling app launcher hidden for $packageName", e)
     }
 }
 
-private suspend fun toggleAppSandboxed(context: Context, packageName: String, sandboxed: Boolean) = withContext(Dispatchers.IO) {
+private suspend fun toggleAppSandboxed(context: Context, packageName: String, userId: Int, sandboxed: Boolean) = withContext(Dispatchers.IO) {
     try {
-        val sandboxManager = context.getSystemService(Context.AX_SANDBOX_SERVICE) as? android.app.AxSandboxManager ?: return@withContext
-        if (sandboxed) sandboxManager.addSandboxedPackage(packageName) else sandboxManager.removeSandboxedPackage(packageName)
+        val sandboxManager = context.getSystemService(Context.AX_SANDBOX_SERVICE) as? AxSandboxManager ?: return@withContext
+        if (sandboxed) sandboxManager.addSandboxedPackage(packageName, userId) else sandboxManager.removeSandboxedPackage(packageName, userId)
     } catch (e: Exception) {
         Log.e(TAG, "Error toggling app sandboxed for $packageName", e)
     }
 }
 
-private fun launchApp(context: Context, packageName: String) {
+private fun launchApp(context: Context, packageName: String, userId: Int = 0) {
     try {
+        if (userId != 0) {
+            val launcherApps = context.getSystemService(LauncherApps::class.java)
+            val activities = launcherApps?.getActivityList(packageName, UserHandle.of(userId))
+            if (!activities.isNullOrEmpty()) {
+                launcherApps.startMainActivity(activities[0].componentName, UserHandle.of(userId), null, null)
+                return
+            }
+        }
         val intent = context.packageManager.getLaunchIntentForPackage(packageName)
         if (intent != null) {
             intent.addFlags(android.content.Intent.FLAG_ACTIVITY_NEW_TASK)

@@ -169,7 +169,7 @@
     <string name="action_reset">Redefinir</string>
     <!-- Settings screen -->
     <string name="settings_title">Configurações</string>
-    <string name="settings_security_title">SEGURANÇA PRIVADA DE APPS</string>
+    <string name="settings_security_title">Segurança privada de apps</string>
     <string name="settings_current_lock_type">Tipo de bloqueio atual</string>
     <string name="settings_lock_type_pin">PIN (4 dígitos)</string>
     <string name="settings_lock_type_password">Senha</string>
@@ -181,17 +181,17 @@
     <string name="settings_use_password_summary">Senha Alfanumérica</string>
     <string name="settings_use_pattern">Usar Padrão</string>
     <string name="settings_use_pattern_summary">Desenhe o padrão para desbloquear</string>
-    <string name="settings_biometrics_title">BIOMÉTRICAS</string>
+    <string name="settings_biometrics_title">Biométricas</string>
     <string name="settings_biometric_unlock">Desbloquear com biometria</string>
     <string name="settings_biometric_unlock_summary">Usar impressão digital ou desbloqueio facial</string>
     <string name="settings_auto_biometric">Exibir automaticamente o prompt biométrico</string>
     <string name="settings_auto_biometric_summary">Mostrar automaticamente aviso de biométrica ao abrir apps bloqueados</string>
-    <string name="settings_recovery_title">RECUPERAR</string>
+    <string name="settings_recovery_title">Recuperar</string>
     <string name="settings_forgot_password">Esqueceu sua senha</string>
     <string name="settings_forgot_password_summary">Redefinir sua senha usando a pergunta de segurança</string>
     <string name="settings_setup_question">Configurar pergunta de segurança</string>
     <string name="settings_setup_question_summary">Necessário para recuperação de senha</string>
-    <string name="settings_locked_behavior_title">COMPORTAMENTO DE APLICATIVO BLOQUEADO</string>
+    <string name="settings_locked_behavior_title">Comportamento de aplicativo bloqueado</string>
     <string name="settings_locked_behavior_summary">Controla quando apps desbloqueados rebloqueiam</string>
     <string name="settings_behavior_on_leave">Bloquear quando sair do app</string>
     <string name="settings_behavior_on_leave_summary">Rebloquear imediatamente ao sair do aplicativo desbloqueado</string>
@@ -201,18 +201,18 @@
     <string name="settings_behavior_screen_off_summary">Manter desbloqueado ao alternar entre apps, bloquear a tela</string>
     <string name="settings_behavior_on_kill">Bloquear apenas quando morto</string>
     <string name="settings_behavior_on_kill_summary">Manter desbloqueado até que a sandbox seja fechada</string>
-    <string name="settings_private_behavior_title">SEÇÃO PRIVADA ANTES</string>
+    <string name="settings_private_behavior_title">Seção privada antes</string>
     <string name="settings_private_behavior_summary">Controla quando a seção de apps privados é bloqueada</string>
     <string name="settings_private_on_leave">Fechar quando sair</string>
     <string name="settings_private_on_leave_summary">Fechar e bloquear ao sair do aplicativo Sandbox</string>
     <string name="settings_private_timeout">Fechar após tempo limite</string>
     <string name="settings_private_timeout_summary">Recolher após %dde deixar o aplicativo</string>
     <string name="settings_timeout_title">Tempo limite</string>
-    <string name="settings_about_title">SOBRE</string>
+    <string name="settings_about_title">Sobre</string>
     <string name="settings_version">Versão</string>
     <string name="settings_version_value">2.0.0</string>
     <!-- Backup and Restore -->
-    <string name="settings_backup_title">DADOS &amp; BACKUP</string>
+    <string name="settings_backup_title">Dados &amp; backup</string>
     <string name="settings_backup_applist">Fazer backup da configuração do Applist</string>
     <string name="settings_backup_applist_summary">Exporte suas configurações de apps bloqueados, ocultos e isolados para um arquivo</string>
     <string name="settings_restore_applist">Restaurar configuração do Applist</string>

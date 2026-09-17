@@ -29,6 +29,7 @@ android_app {
 
     static_libs: [
         "ax_compose",
+        "ax_sandbox_shared",
         "androidx.activity_activity-compose",
         "androidx.core_core-ktx",
         "androidx.appcompat_appcompat",

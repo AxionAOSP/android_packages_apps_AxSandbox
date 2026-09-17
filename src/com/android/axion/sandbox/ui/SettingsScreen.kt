@@ -17,9 +17,10 @@ package com.android.axion.sandbox.ui
 
 import android.content.Intent
 import android.net.Uri
-import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.AutoMode
@@ -39,6 +40,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import com.android.axion.compose.preferences.BasePreference
 import com.android.axion.compose.preferences.ClickablePreference
 import com.android.axion.compose.preferences.ListPreference
 import com.android.axion.compose.preferences.PreferenceGroup
@@ -87,7 +89,10 @@ fun SettingsScreen(
         onBackClick = onBackClick
     ) { paddingValues ->
         LazyColumn(
-            modifier = Modifier.padding(paddingValues)
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(paddingValues)
+                .padding(horizontal = 16.dp)
         ) {
             item {
                 Spacer(modifier = Modifier.height(8.dp))
@@ -99,7 +104,7 @@ fun SettingsScreen(
 
             if (isBiometricAvailable) {
                 item {
-                    Spacer(modifier = Modifier.height(24.dp))
+                    Spacer(modifier = Modifier.height(12.dp))
                     BiometricsSection(
                         isBiometricEnabled = isBiometricEnabled,
                         isPreferBiometric = isPreferBiometric,
@@ -111,7 +116,7 @@ fun SettingsScreen(
 
             if (currentSecurityType != SecurityType.NONE) {
                 item {
-                    Spacer(modifier = Modifier.height(24.dp))
+                    Spacer(modifier = Modifier.height(12.dp))
                     RecoverySection(
                         hasSecurityQuestion = hasSecurityQuestion,
                         onSetupRecovery = onSetupRecovery,
@@ -121,7 +126,7 @@ fun SettingsScreen(
             }
 
             item {
-                Spacer(modifier = Modifier.height(24.dp))
+                Spacer(modifier = Modifier.height(12.dp))
                 LockedAppBehaviorSection(
                     currentBehavior = currentLockedAppBehavior,
                     currentTimeout = currentLockedAppTimeout,
@@ -132,7 +137,7 @@ fun SettingsScreen(
             }
 
             item {
-                Spacer(modifier = Modifier.height(24.dp))
+                Spacer(modifier = Modifier.height(12.dp))
                 PrivateSectionBehaviorSection(
                     currentBehavior = currentPrivateBehavior,
                     currentTimeout = currentPrivateTimeout,
@@ -143,7 +148,7 @@ fun SettingsScreen(
             }
 
             item {
-                Spacer(modifier = Modifier.height(24.dp))
+                Spacer(modifier = Modifier.height(12.dp))
                 BackupRestoreSection(
                     onBackup = onBackupAppList,
                     onRestore = onRestoreAppList
@@ -151,7 +156,7 @@ fun SettingsScreen(
             }
 
             item {
-                Spacer(modifier = Modifier.height(24.dp))
+                Spacer(modifier = Modifier.height(12.dp))
                 AboutSection()
                 Spacer(modifier = Modifier.height(32.dp))
             }
@@ -205,11 +210,10 @@ private fun SecuritySection(
 
     PreferenceGroup(title = stringResource(R.string.settings_security_title)) {
         item {
-            ClickablePreference(
+            BasePreference(
                 title = stringResource(R.string.settings_current_lock_type),
                 summary = lockTypeSummary,
                 icon = lockTypeIcon,
-                onClick = {}
             )
         }
         item {
@@ -386,6 +390,7 @@ private fun AboutSection() {
                 title = stringResource(R.string.settings_version),
                 summary = stringResource(R.string.settings_version_value),
                 icon = Icons.Outlined.Info,
+                showExternalIcon = true,
                 onClick = {
                     val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/AxionAOSP/android_packages_apps_AxSandbox"))
                     context.startActivity(intent)
