@@ -169,7 +169,7 @@
     <string name="action_reset">Сброс</string>
     <!-- Settings screen -->
     <string name="settings_title">Настройки</string>
-    <string name="settings_security_title">БЕЗОПАСНОСТЬ ПРИВАТНЫХ ПРИЛОЖЕНИЙ</string>
+    <string name="settings_security_title">Безопасность приватных приложений</string>
     <string name="settings_current_lock_type">Текущий тип блокировки</string>
     <string name="settings_lock_type_pin">PIN (4 знака)</string>
     <string name="settings_lock_type_password">Пароль</string>
@@ -181,17 +181,17 @@
     <string name="settings_use_password_summary">Буквенно-цифровой пароль</string>
     <string name="settings_use_pattern">Использовать графический ключ</string>
     <string name="settings_use_pattern_summary">Введите графический ключ</string>
-    <string name="settings_biometrics_title">БИОМЕТРИЯ</string>
+    <string name="settings_biometrics_title">Биометрия</string>
     <string name="settings_biometric_unlock">Разблокировать с помощью биометрии</string>
     <string name="settings_biometric_unlock_summary">Использовать отпечаток пальца или разблокировку по лицу</string>
     <string name="settings_auto_biometric">Автоматически показывать запрос биометрии</string>
     <string name="settings_auto_biometric_summary">Автоматически показывать запрос биометрии при открытии заблокированных приложений</string>
-    <string name="settings_recovery_title">ВОССТАНОВЛЕНИЕ</string>
+    <string name="settings_recovery_title">Восстановление</string>
     <string name="settings_forgot_password">Забыли пароль</string>
     <string name="settings_forgot_password_summary">Сброс пароля с помощью секретного вопроса</string>
     <string name="settings_setup_question">Настроить секретный вопрос</string>
     <string name="settings_setup_question_summary">Требуется для восстановления пароля</string>
-    <string name="settings_locked_behavior_title">ПОВЕДЕНИЕ ЗАБЛОКИРОВАННОГО ПРИЛОЖЕНИЯ</string>
+    <string name="settings_locked_behavior_title">Поведение заблокированного приложения</string>
     <string name="settings_locked_behavior_summary">Поведение разблокировки приложений</string>
     <string name="settings_behavior_on_leave">Повторно заблокировать при выходе из приложения</string>
     <string name="settings_behavior_on_leave_summary">Блокировать сразу после покидания приложения</string>
@@ -201,18 +201,18 @@
     <string name="settings_behavior_screen_off_summary">Оставлять открытыми приложения при смене приложений и при выключенном экране</string>
     <string name="settings_behavior_on_kill">Блокировка только при остановке</string>
     <string name="settings_behavior_on_kill_summary">Оставлять открытым пока песочницы не остановлена</string>
-    <string name="settings_private_behavior_title">ПОВЕДЕНИЕ В ПРИВАТНОМ РАЗДЕЛЕ</string>
+    <string name="settings_private_behavior_title">Поведение в приватном разделе</string>
     <string name="settings_private_behavior_summary">Управление блокировкой раздела приватных приложений</string>
     <string name="settings_private_on_leave">Свернуть при выходе</string>
     <string name="settings_private_on_leave_summary">Свернуть и заблокировать при выходе из песочницы</string>
     <string name="settings_private_timeout">Свернуть после заданного времени</string>
     <string name="settings_private_timeout_summary">Сворачивание через %d сек. после выхода из приложения</string>
     <string name="settings_timeout_title">Тайм-аут блокировки</string>
-    <string name="settings_about_title">О ПРОГРАММЕ</string>
+    <string name="settings_about_title">О программе</string>
     <string name="settings_version">Версия</string>
     <string name="settings_version_value">2.0.0</string>
     <!-- Backup and Restore -->
-    <string name="settings_backup_title">ДАННЫЕ И РЕЗЕРВНОЕ КОПИРОВАНИЕ</string>
+    <string name="settings_backup_title">Данные и резервное копирование</string>
     <string name="settings_backup_applist">Копия конфигурации списка приложений</string>
     <string name="settings_backup_applist_summary">Экспорт в файл настроек заблокированных, скрытых и изолированных приложений</string>
     <string name="settings_restore_applist">Восстановление конфигурации списка приложений</string>
