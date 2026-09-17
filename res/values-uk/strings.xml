@@ -169,7 +169,7 @@
     <string name="action_reset">Скинути</string>
     <!-- Settings screen -->
     <string name="settings_title">Налаштування</string>
-    <string name="settings_security_title">Захист приватних застосунків</string>
+    <string name="settings_security_title">Private apps security</string>
     <string name="settings_current_lock_type">Поточний тип блокування</string>
     <string name="settings_lock_type_pin">PIN-код (4 цифри)</string>
     <string name="settings_lock_type_password">Пароль</string>
@@ -186,12 +186,12 @@
     <string name="settings_biometric_unlock_summary">Використовувати відбиток пальця або розблокування обличчям</string>
     <string name="settings_auto_biometric">Автоматичне показування біометричного запиту</string>
     <string name="settings_auto_biometric_summary">Автоматично показувати біометричний запит під час відкриття заблокованих програм</string>
-    <string name="settings_recovery_title">Відновлення</string>
+    <string name="settings_recovery_title">Recovery</string>
     <string name="settings_forgot_password">Забули пароль</string>
     <string name="settings_forgot_password_summary">Скинути пароль за допомогою секретного питання</string>
     <string name="settings_setup_question">Налаштувати секретне питання</string>
     <string name="settings_setup_question_summary">Потрібно для відновлення пароля</string>
-    <string name="settings_locked_behavior_title">Поведінка заблокованих застосунків</string>
+    <string name="settings_locked_behavior_title">Locked app behavior</string>
     <string name="settings_locked_behavior_summary">Контролює, коли розблоковані програми повторно блокуються</string>
     <string name="settings_behavior_on_leave">Повторно блокувати після виходу з програми</string>
     <string name="settings_behavior_on_leave_summary">Негайно повторно блокувати після виходу з розблокованого застосунку</string>
@@ -201,18 +201,18 @@
     <string name="settings_behavior_screen_off_summary">Тримати розблокованим під час перемикання програм, блокування екрана вимкнено</string>
     <string name="settings_behavior_on_kill">Повторно блокувати після примусового завершення</string>
     <string name="settings_behavior_on_kill_summary">Тримати розблокованим, доки Пісочницю не буде примусово закрито</string>
-    <string name="settings_private_behavior_title">Поведінка приватного розділу</string>
+    <string name="settings_private_behavior_title">Private section behavior</string>
     <string name="settings_private_behavior_summary">Визначає, коли блокується приватний простір</string>
     <string name="settings_private_on_leave">Згортати під час виходу</string>
     <string name="settings_private_on_leave_summary">Згортати та блокувати додаток при виході з Пісочниці</string>
     <string name="settings_private_timeout">Згорнути після тайм-ауту</string>
     <string name="settings_private_timeout_summary">Згортати через %dс після виходу із застосунку</string>
     <string name="settings_timeout_title">Час очікування блокування</string>
-    <string name="settings_about_title">ПРО</string>
+    <string name="settings_about_title">Про додаток</string>
     <string name="settings_version">Версія</string>
     <string name="settings_version_value">2.0.0</string>
     <!-- Backup and Restore -->
-    <string name="settings_backup_title">Дані та резервне копіювання</string>
+    <string name="settings_backup_title">Data &amp; backup</string>
     <string name="settings_backup_applist">Резервне копіювання налаштувань списку застосунків</string>
     <string name="settings_backup_applist_summary">Експорт налаштувань заблокованих, прихованих та ізольованих застосунків у файл</string>
     <string name="settings_restore_applist">Відновлення налаштувань списку застосунків</string>
