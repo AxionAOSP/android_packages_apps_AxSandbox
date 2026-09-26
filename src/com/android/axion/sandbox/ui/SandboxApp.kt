@@ -22,7 +22,9 @@ import android.content.pm.LauncherApps
 import android.graphics.drawable.Drawable
 import android.os.UserHandle
 import android.util.Log
+import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.animation.core.spring
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -66,10 +68,12 @@ import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.VisibilityOff
 import androidx.compose.material.icons.outlined.Apps
 import androidx.compose.material.icons.outlined.FolderOpen
+import androidx.compose.material.icons.outlined.Help
 import androidx.compose.material.icons.outlined.Lock
 import androidx.compose.material.icons.outlined.Notifications
 import androidx.compose.material.icons.outlined.Security
 import androidx.compose.material.icons.outlined.VisibilityOff
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExperimentalMaterial3ExpressiveApi
 import androidx.compose.material3.FilledIconButton
@@ -92,11 +96,14 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.material3.rememberTopAppBarState
+import androidx.compose.foundation.lazy.grid.rememberLazyGridState
+import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.mutableStateMapOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -106,16 +113,23 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.graphics.painter.BitmapPainter
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.input.nestedscroll.NestedScrollConnection
+import androidx.compose.ui.input.nestedscroll.NestedScrollSource
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.platform.LocalLifecycleOwner
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.unit.Velocity
 import androidx.compose.ui.unit.dp
 import androidx.core.graphics.drawable.toBitmap
 import androidx.lifecycle.Lifecycle
@@ -234,6 +248,7 @@ fun SandboxApp(
     val isLoading = appsState.value.isEmpty()
     var searchQuery by rememberSaveable { mutableStateOf("") }
     var selectedApp by remember { mutableStateOf<AppInfo?>(null) }
+    var showTutorialDialog by rememberSaveable { mutableStateOf(false) }
 
     val pagerState = rememberPagerState(
         initialPage = selectedTabIndex,
@@ -460,6 +475,19 @@ fun SandboxApp(
                         }
 
                         FilledIconButton(
+                            onClick = { showTutorialDialog = true },
+                            shape = CircleShape,
+                            colors = IconButtonDefaults.filledIconButtonColors(
+                                containerColor = MaterialTheme.colorScheme.surfaceBright
+                            )
+                        ) {
+                            Icon(
+                                imageVector = Icons.Outlined.Help,
+                                contentDescription = stringResource(R.string.settings_tutorial_title)
+                            )
+                        }
+
+                        FilledIconButton(
                             onClick = onSettingsClick,
                             shape = CircleShape,
                             colors = IconButtonDefaults.filledIconButtonColors(
@@ -553,6 +581,10 @@ fun SandboxApp(
                         onPickingFilesChange = onPickingFilesChange
                     )
                 }
+            }
+
+            if (showTutorialDialog) {
+                PrivateAppsTutorialDialog(onDismiss = { showTutorialDialog = false })
             }
         }
     }
@@ -923,6 +955,9 @@ fun AppsTab(
 ) {
     val context = LocalContext.current
     val scope = rememberCoroutineScope()
+    val density = LocalDensity.current
+    val haptic = LocalHapticFeedback.current
+
     var selectedApp by remember { mutableStateOf<AppInfo?>(null) }
     var showBottomSheet by remember { mutableStateOf(false) }
     var showSystemApps by rememberSaveable { mutableStateOf(false) }
@@ -933,6 +968,80 @@ fun AppsTab(
     val systemApps = remember(apps) { apps.filter { !it.isLocked && !it.isHidden && !it.isSandboxed && it.isSystem } }
 
     val effectiveExpanded = isPrivateUnlocked && isPrivateAreaExpanded
+
+    val gridState = rememberLazyGridState()
+    val pullThreshold = with(density) { 90.dp.toPx() }
+    var pullOffset by remember { mutableFloatStateOf(0f) }
+
+    val animatedPullOffset by animateFloatAsState(
+        targetValue = pullOffset,
+        animationSpec = spring(stiffness = Spring.StiffnessMediumLow),
+        label = "pullOffset"
+    )
+
+    val nestedScrollConnection = remember(effectiveExpanded, isSecuritySetup, privateApps.isNotEmpty()) {
+        object : NestedScrollConnection {
+            override fun onPreScroll(available: Offset, source: NestedScrollSource): Offset {
+                if (!effectiveExpanded && isSecuritySetup && privateApps.isNotEmpty()) {
+                    val isAtTop = gridState.firstVisibleItemIndex == 0 && gridState.firstVisibleItemScrollOffset == 0
+                    if (isAtTop && available.y > 0) {
+                        val newOffset = (pullOffset + available.y * 0.5f).coerceAtMost(pullThreshold * 1.5f)
+                        pullOffset = newOffset
+                        if (newOffset >= pullThreshold) {
+                            haptic.performHapticFeedback(HapticFeedbackType.LongPress)
+                            pullOffset = 0f
+                            if (!isPrivateUnlocked) {
+                                onUnlockRequest()
+                            } else {
+                                onPrivateAreaExpandChange(true)
+                            }
+                        }
+                        return Offset(0f, available.y)
+                    } else if (pullOffset > 0 && available.y < 0) {
+                        val newOffset = (pullOffset + available.y).coerceAtLeast(0f)
+                        pullOffset = newOffset
+                        return Offset(0f, available.y)
+                    }
+                }
+                return Offset.Zero
+            }
+
+            override fun onPostScroll(
+                consumed: Offset,
+                available: Offset,
+                source: NestedScrollSource
+            ): Offset {
+                if (!effectiveExpanded && isSecuritySetup && privateApps.isNotEmpty()) {
+                    val isAtTop = gridState.firstVisibleItemIndex == 0 && gridState.firstVisibleItemScrollOffset == 0
+                    if (isAtTop && available.y > 0) {
+                        val newOffset = (pullOffset + available.y * 0.5f).coerceAtMost(pullThreshold * 1.5f)
+                        pullOffset = newOffset
+                        if (newOffset >= pullThreshold) {
+                            haptic.performHapticFeedback(HapticFeedbackType.LongPress)
+                            pullOffset = 0f
+                            if (!isPrivateUnlocked) {
+                                onUnlockRequest()
+                            } else {
+                                onPrivateAreaExpandChange(true)
+                            }
+                        }
+                        return Offset(0f, available.y)
+                    }
+                }
+                return Offset.Zero
+            }
+
+            override suspend fun onPreFling(available: Velocity): Velocity {
+                pullOffset = 0f
+                return Velocity.Zero
+            }
+
+            override suspend fun onPostFling(consumed: Velocity, available: Velocity): Velocity {
+                pullOffset = 0f
+                return Velocity.Zero
+            }
+        }
+    }
 
     val onLockToggle: (AppInfo) -> Unit = { app ->
         scope.launch {
@@ -1025,14 +1134,17 @@ fun AppsTab(
         }
     } else {
         LazyVerticalGrid(
+            state = gridState,
             columns = GridCells.Fixed(4),
-            modifier = Modifier.fillMaxSize(),
+            modifier = Modifier
+                .fillMaxSize()
+                .nestedScroll(nestedScrollConnection),
             contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp),
             horizontalArrangement = Arrangement.spacedBy(4.dp),
             verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
-            item(span = { GridItemSpan(4) }) {
-                if (!isSecuritySetup) {
+            if (!isSecuritySetup) {
+                item(span = { GridItemSpan(4) }) {
                     PreferenceGroup(
                         modifier = Modifier
                             .fillMaxWidth()
@@ -1047,39 +1159,70 @@ fun AppsTab(
                             )
                         }
                     }
-                } else if (privateApps.isNotEmpty()) {
-                    CollapsibleSectionHeader(
-                        icon = if (effectiveExpanded) Icons.Filled.LockOpen else Icons.Filled.Lock,
-                        title = stringResource(R.string.section_private_apps),
-                        count = privateApps.size,
-                        color = MaterialTheme.colorScheme.primary,
-                        isExpanded = effectiveExpanded,
-                        onExpandChange = { wantExpand ->
-                            if (wantExpand && !isPrivateUnlocked) {
-                                onUnlockRequest()
-                            } else {
+                }
+            } else if (privateApps.isNotEmpty()) {
+                if (effectiveExpanded) {
+                    item(span = { GridItemSpan(4) }) {
+                        CollapsibleSectionHeader(
+                            icon = Icons.Filled.LockOpen,
+                            title = stringResource(R.string.section_private_apps),
+                            count = privateApps.size,
+                            color = MaterialTheme.colorScheme.primary,
+                            isExpanded = true,
+                            onExpandChange = { wantExpand ->
                                 onPrivateAreaExpandChange(wantExpand)
                             }
-                        }
-                    )
-                }
-            }
+                        )
+                    }
 
-            if (isSecuritySetup && privateApps.isNotEmpty() && effectiveExpanded) {
-                items(privateApps, key = { "private_${it.packageName}" }) { app ->
-                    AppGridItem(
-                        app = app,
-                        onClick = {
-                            selectedApp = app
-                            showBottomSheet = true
-                        }
-                    )
-                }
-            }
+                    items(privateApps, key = { "private_${it.packageName}" }) { app ->
+                        AppGridItem(
+                            app = app,
+                            onClick = {
+                                selectedApp = app
+                                showBottomSheet = true
+                            }
+                        )
+                    }
 
-            if (isSecuritySetup && privateApps.isNotEmpty()) {
-                item(span = { GridItemSpan(4) }) {
-                    Spacer(modifier = Modifier.height(8.dp))
+                    item(span = { GridItemSpan(4) }) {
+                        Spacer(modifier = Modifier.height(8.dp))
+                    }
+                } else if (animatedPullOffset > 0f) {
+                    item(span = { GridItemSpan(4) }) {
+                        val progress = (animatedPullOffset / pullThreshold).coerceIn(0f, 1f)
+                        Box(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .height(with(density) { animatedPullOffset.toDp() })
+                                .clip(MaterialTheme.shapes.medium)
+                                .background(MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.2f * progress)),
+                            contentAlignment = Alignment.Center
+                        ) {
+                            Row(
+                                verticalAlignment = Alignment.CenterVertically,
+                                horizontalArrangement = Arrangement.Center
+                            ) {
+                                Icon(
+                                    imageVector = if (progress >= 0.8f) Icons.Filled.LockOpen else Icons.Filled.Lock,
+                                    contentDescription = null,
+                                    tint = MaterialTheme.colorScheme.primary,
+                                    modifier = Modifier
+                                        .size(24.dp)
+                                        .graphicsLayer {
+                                            scaleX = 0.8f + 0.4f * progress
+                                            scaleY = 0.8f + 0.4f * progress
+                                        }
+                                )
+                                Spacer(modifier = Modifier.width(8.dp))
+                                Text(
+                                    text = stringResource(R.string.swipe_down_private_apps),
+                                    style = MaterialTheme.typography.labelMedium,
+                                    color = MaterialTheme.colorScheme.primary.copy(alpha = progress)
+                                )
+                            }
+                        }
+                    }
                 }
             }
 
@@ -1875,4 +2018,122 @@ private fun launchApp(context: Context, packageName: String, userId: Int = 0) {
     } catch (e: Exception) {
         Log.e(TAG, "Error launching $packageName", e)
     }
+}
+
+@OptIn(ExperimentalMaterial3ExpressiveApi::class)
+@Composable
+fun PrivateAppsTutorialDialog(
+    onDismiss: () -> Unit
+) {
+    AlertDialog(
+        onDismissRequest = onDismiss,
+        icon = {
+            Box(
+                modifier = Modifier
+                    .size(56.dp)
+                    .clip(CircleShape)
+                    .background(MaterialTheme.colorScheme.primaryContainer),
+                contentAlignment = Alignment.Center
+            ) {
+                Icon(
+                    imageVector = Icons.Default.Lock,
+                    contentDescription = null,
+                    tint = MaterialTheme.colorScheme.onPrimaryContainer,
+                    modifier = Modifier.size(28.dp)
+                )
+            }
+        },
+        title = {
+            Text(
+                text = stringResource(R.string.tutorial_title),
+                style = MaterialTheme.typography.titleLargeEmphasized,
+                textAlign = TextAlign.Center,
+                modifier = Modifier.fillMaxWidth()
+            )
+        },
+        text = {
+            Column(
+                modifier = Modifier.fillMaxWidth(),
+                verticalArrangement = Arrangement.spacedBy(16.dp)
+            ) {
+                Surface(
+                    shape = MaterialTheme.shapes.medium,
+                    color = MaterialTheme.colorScheme.surfaceBright,
+                    tonalElevation = 2.dp,
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(16.dp),
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.Center
+                    ) {
+                        Icon(
+                            imageVector = Icons.Default.ExpandMore,
+                            contentDescription = null,
+                            tint = MaterialTheme.colorScheme.primary,
+                            modifier = Modifier.size(32.dp)
+                        )
+                        Spacer(modifier = Modifier.width(12.dp))
+                        Text(
+                            text = stringResource(R.string.swipe_down_private_apps),
+                            style = MaterialTheme.typography.labelLargeEmphasized,
+                            color = MaterialTheme.colorScheme.primary
+                        )
+                    }
+                }
+
+                Column {
+                    Text(
+                        text = stringResource(R.string.tutorial_step1_title),
+                        style = MaterialTheme.typography.titleMedium,
+                        color = MaterialTheme.colorScheme.onSurface
+                    )
+                    Spacer(modifier = Modifier.height(2.dp))
+                    Text(
+                        text = stringResource(R.string.tutorial_step1_summary),
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                }
+
+                Column {
+                    Text(
+                        text = stringResource(R.string.tutorial_step2_title),
+                        style = MaterialTheme.typography.titleMedium,
+                        color = MaterialTheme.colorScheme.onSurface
+                    )
+                    Spacer(modifier = Modifier.height(2.dp))
+                    Text(
+                        text = stringResource(R.string.tutorial_step2_summary),
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                }
+
+                Column {
+                    Text(
+                        text = stringResource(R.string.tutorial_step3_title),
+                        style = MaterialTheme.typography.titleMedium,
+                        color = MaterialTheme.colorScheme.onSurface
+                    )
+                    Spacer(modifier = Modifier.height(2.dp))
+                    Text(
+                        text = stringResource(R.string.tutorial_step3_summary),
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                }
+            }
+        },
+        confirmButton = {
+            FilledTonalButton(
+                onClick = onDismiss,
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Text(stringResource(R.string.tutorial_got_it))
+            }
+        }
+    )
 }

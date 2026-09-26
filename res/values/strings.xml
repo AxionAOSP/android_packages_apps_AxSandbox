@@ -263,4 +263,16 @@
     <string name="verify_pin_prompt">Enter your current PIN to change security</string>
     <string name="verify_password_prompt">Enter your current password to change security</string>
     <string name="verify_pattern_prompt">Draw your current pattern to change security</string>
+
+    <!-- Tutorial strings -->
+    <string name="tutorial_title">How to Access Private Apps</string>
+    <string name="tutorial_step1_title">1. Swipe Down</string>
+    <string name="tutorial_step1_summary">Pull down at the top of the Apps tab to trigger the Private Apps gesture.</string>
+    <string name="tutorial_step2_title">2. Unlock &amp; Reveal</string>
+    <string name="tutorial_step2_summary">Enter your PIN, Pattern, Password, or Biometrics to open Private Apps.</string>
+    <string name="tutorial_step3_title">3. Hide Anytime</string>
+    <string name="tutorial_step3_summary">Tap the Private Apps header bar to collapse and hide it from view whenever you wish.</string>
+    <string name="tutorial_got_it">Got it</string>
+    <string name="settings_tutorial_title">How to Access Private Apps</string>
+    <string name="settings_tutorial_summary">View tutorial on using the swipe down gesture to reveal hidden apps</string>
 </resources>
