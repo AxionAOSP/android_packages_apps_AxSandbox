@@ -36,6 +36,10 @@ import androidx.compose.material.icons.outlined.Pin
 import androidx.compose.material.icons.outlined.SettingsBackupRestore
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
@@ -83,6 +87,7 @@ fun SettingsScreen(
         "120" to stringResource(R.string.timeout_120s),
         "300" to stringResource(R.string.timeout_300s)
     )
+    var showTutorialDialog by rememberSaveable { mutableStateOf(false) }
 
     AxionScaffold(
         title = stringResource(R.string.settings_title),
@@ -157,9 +162,18 @@ fun SettingsScreen(
 
             item {
                 Spacer(modifier = Modifier.height(12.dp))
+                HelpSection(onShowTutorial = { showTutorialDialog = true })
+            }
+
+            item {
+                Spacer(modifier = Modifier.height(12.dp))
                 AboutSection()
                 Spacer(modifier = Modifier.height(32.dp))
             }
+        }
+
+        if (showTutorialDialog) {
+            PrivateAppsTutorialDialog(onDismiss = { showTutorialDialog = false })
         }
     }
 }
@@ -377,6 +391,22 @@ private fun PrivateSectionBehaviorSection(
                     onValueChange = { value -> onChangeTimeout(value.toInt()) }
                 )
             }
+        }
+    }
+}
+
+@Composable
+private fun HelpSection(
+    onShowTutorial: () -> Unit
+) {
+    PreferenceGroup(title = stringResource(R.string.settings_tutorial_title)) {
+        item {
+            ClickablePreference(
+                title = stringResource(R.string.settings_tutorial_title),
+                summary = stringResource(R.string.settings_tutorial_summary),
+                icon = Icons.Outlined.Help,
+                onClick = onShowTutorial
+            )
         }
     }
 }
