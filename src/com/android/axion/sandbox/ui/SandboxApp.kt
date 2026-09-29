@@ -33,7 +33,12 @@ import android.util.IconDrawableFactory
 import android.util.Log
 import android.util.LruCache
 import android.view.View
+import androidx.compose.animation.animateColorAsState
+import androidx.compose.animation.core.CubicBezierEasing
+import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.animation.core.spring
+import androidx.compose.animation.core.tween
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -93,9 +98,6 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButtonDefaults
 import androidx.compose.material3.LoadingIndicator
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.NavigationBar
-import androidx.compose.material3.NavigationBarItem
-import androidx.compose.material3.NavigationBarItemDefaults
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Scaffold
@@ -141,6 +143,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.core.graphics.drawable.toBitmap
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
@@ -500,84 +503,186 @@ fun SandboxApp(
                         }
                     },
                 )
-            },
-            bottomBar = {
-                NavigationBar(
-                    containerColor = MaterialTheme.colorScheme.surfaceBright,
-                    tonalElevation = 0.dp,
-                    modifier = Modifier.navigationBarsPadding()
-                ) {
-                    NavigationBarItem(
-                        selected = pagerState.currentPage == 0,
-                        onClick = { scope.launch { pagerState.animateScrollToPage(0) } },
-                        icon = {
-                            Icon(
-                                imageVector = if (pagerState.currentPage == 0) Icons.Filled.Apps else Icons.Outlined.Apps,
-                                contentDescription = stringResource(R.string.tab_apps)
-                            )
-                        },
-                        label = { Text(stringResource(R.string.tab_apps)) },
-                        colors = NavigationBarItemDefaults.colors(
-                            indicatorColor = MaterialTheme.colorScheme.primaryContainer
-                        )
-                    )
-                    NavigationBarItem(
-                        selected = pagerState.currentPage == 1,
-                        onClick = { scope.launch { pagerState.animateScrollToPage(1) } },
-                        icon = {
-                            Icon(
-                                imageVector = if (pagerState.currentPage == 1) Icons.Filled.Notifications else Icons.Outlined.Notifications,
-                                contentDescription = stringResource(R.string.tab_notifications)
-                            )
-                        },
-                        label = { Text(stringResource(R.string.tab_notifications)) },
-                        colors = NavigationBarItemDefaults.colors(
-                            indicatorColor = MaterialTheme.colorScheme.primaryContainer
-                        )
-                    )
-                    NavigationBarItem(
-                        selected = pagerState.currentPage == 2,
-                        onClick = { scope.launch { pagerState.animateScrollToPage(2) } },
-                        icon = {
-                            Icon(
-                                imageVector = if (pagerState.currentPage == 2) Icons.Filled.FolderOpen else Icons.Outlined.FolderOpen,
-                                contentDescription = stringResource(R.string.tab_vault)
-                            )
-                        },
-                        label = { Text(stringResource(R.string.tab_vault)) },
-                        colors = NavigationBarItemDefaults.colors(
-                            indicatorColor = MaterialTheme.colorScheme.primaryContainer
-                        )
-                    )
-                }
             }
         ) { paddingValues ->
-            HorizontalPager(
-                state = pagerState,
+            Box(
                 modifier = Modifier
                     .fillMaxSize()
-                    .padding(paddingValues)
-            ) { page ->
-                when (page) {
-                    0 -> AppsTab(
-                        apps = filteredApps,
-                        isLoading = isLoading,
-                        onAppClick = { app -> selectedApp = app },
-                        isPrivateAreaExpanded = isPrivateAreaExpanded,
-                        onPrivateAreaExpandChange = onPrivateAreaExpandChange,
-                        onUnlockRequest = onUnlockRequest,
-                        isPrivateUnlocked = isPrivateUnlocked,
-                        isSecuritySetup = isSecuritySetup,
-                        onSetupSecurity = onSetupSecurity
-                    )
-                    1 -> NotificationsTab(
-                        isUnlocked = isPrivateUnlocked,
-                        onUnlockRequest = onUnlockRequest
-                    )
-                    2 -> VaultTab(
-                        isUnlocked = isPrivateUnlocked,
-                        onUnlockRequest = onUnlockRequest,
-                        onPickingFilesChange = onPickingFilesChange
+                    .padding(top = paddingValues.calculateTopPadding())
+            ) {
+                HorizontalPager(
+                    state = pagerState,
+                    modifier = Modifier.fillMaxSize()
+                ) { page ->
+                    when (page) {
+                        0 -> AppsTab(
+                            apps = filteredApps,
+                            isLoading = isLoading,
+                            onAppClick = { app -> selectedApp = app },
+                            isPrivateAreaExpanded = isPrivateAreaExpanded,
+                            onPrivateAreaExpandChange = onPrivateAreaExpandChange,
+                            onUnlockRequest = onUnlockRequest,
+                            isPrivateUnlocked = isPrivateUnlocked,
+                            isSecuritySetup = isSecuritySetup,
+                            onSetupSecurity = onSetupSecurity
+                        )
+                        1 -> NotificationsTab(
+                            isUnlocked = isPrivateUnlocked,
+                            onUnlockRequest = onUnlockRequest
+                        )
+                        2 -> VaultTab(
+                            isUnlocked = isPrivateUnlocked,
+                            onUnlockRequest = onUnlockRequest,
+                            onPickingFilesChange = onPickingFilesChange
+                        )
+                    }
+                }
+
+                M3EFloatingToolbar(
+                    selectedTab = pagerState.currentPage,
+                    onTabSelected = { index ->
+                        scope.launch { pagerState.animateScrollToPage(index) }
+                    },
+                    notificationCount = notificationCount,
+                    modifier = Modifier
+                        .align(Alignment.BottomCenter)
+                        .navigationBarsPadding()
+                        .padding(bottom = 16.dp)
+                )
+            }
+        }
+    }
+}
+
+@Composable
+private fun M3EFloatingToolbar(
+    selectedTab: Int,
+    onTabSelected: (Int) -> Unit,
+    notificationCount: Int,
+    modifier: Modifier = Modifier
+) {
+    val visibleState = remember { mutableStateOf(false) }
+    LaunchedEffect(Unit) {
+        visibleState.value = true
+    }
+
+    val offsetY by animateFloatAsState(
+        targetValue = if (visibleState.value) 0f else 120f,
+        animationSpec = tween(
+            durationMillis = 500,
+            easing = CubicBezierEasing(0.34f, 1.56f, 0.64f, 1f)
+        ),
+        label = "m3eToolbarSlideUp"
+    )
+    val alpha by animateFloatAsState(
+        targetValue = if (visibleState.value) 1f else 0f,
+        animationSpec = tween(durationMillis = 350),
+        label = "m3eToolbarFadeIn"
+    )
+
+    Surface(
+        shape = CircleShape,
+        color = MaterialTheme.colorScheme.surfaceBright,
+        shadowElevation = 2.dp,
+        modifier = modifier
+            .graphicsLayer {
+                translationY = offsetY
+                this.alpha = alpha
+            }
+            .height(64.dp)
+    ) {
+        Row(
+            modifier = Modifier
+                .padding(horizontal = 8.dp, vertical = 8.dp),
+            horizontalArrangement = Arrangement.spacedBy(8.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            M3EFloatingToolbarItem(
+                selected = selectedTab == 0,
+                onClick = { onTabSelected(0) },
+                icon = if (selectedTab == 0) Icons.Filled.Apps else Icons.Outlined.Apps,
+                contentDescription = stringResource(R.string.tab_apps)
+            )
+            M3EFloatingToolbarItem(
+                selected = selectedTab == 1,
+                onClick = { onTabSelected(1) },
+                icon = if (selectedTab == 1) Icons.Filled.Notifications else Icons.Outlined.Notifications,
+                contentDescription = stringResource(R.string.tab_notifications),
+                badgeCount = notificationCount
+            )
+            M3EFloatingToolbarItem(
+                selected = selectedTab == 2,
+                onClick = { onTabSelected(2) },
+                icon = if (selectedTab == 2) Icons.Filled.FolderOpen else Icons.Outlined.FolderOpen,
+                contentDescription = stringResource(R.string.tab_vault)
+            )
+        }
+    }
+}
+
+@Composable
+private fun M3EFloatingToolbarItem(
+    selected: Boolean,
+    onClick: () -> Unit,
+    icon: ImageVector,
+    contentDescription: String,
+    badgeCount: Int = 0
+) {
+    val scale by animateFloatAsState(
+        targetValue = if (selected) 1.08f else 1.0f,
+        animationSpec = spring(
+            dampingRatio = Spring.DampingRatioMediumBouncy,
+            stiffness = Spring.StiffnessMedium
+        ),
+        label = "m3eButtonScale"
+    )
+
+    val containerColor by animateColorAsState(
+        targetValue = if (selected) MaterialTheme.colorScheme.primary else Color.Transparent,
+        animationSpec = spring(stiffness = Spring.StiffnessMedium),
+        label = "m3eButtonContainerColor"
+    )
+
+    val contentColor by animateColorAsState(
+        targetValue = if (selected) MaterialTheme.colorScheme.onPrimary else MaterialTheme.colorScheme.onSurfaceVariant,
+        animationSpec = spring(stiffness = Spring.StiffnessMedium),
+        label = "m3eButtonContentColor"
+    )
+
+    Box(
+        modifier = Modifier
+            .size(48.dp)
+            .graphicsLayer {
+                scaleX = scale
+                scaleY = scale
+            }
+            .clip(CircleShape)
+            .background(containerColor)
+            .clickable(onClick = onClick),
+        contentAlignment = Alignment.Center
+    ) {
+        Box {
+            Icon(
+                imageVector = icon,
+                contentDescription = contentDescription,
+                tint = contentColor,
+                modifier = Modifier.size(24.dp)
+            )
+
+            if (badgeCount > 0) {
+                Box(
+                    modifier = Modifier
+                        .align(Alignment.TopEnd)
+                        .offset(x = 6.dp, y = (-4).dp)
+                        .size(if (badgeCount > 9) 16.dp else 14.dp)
+                        .clip(CircleShape)
+                        .background(if (selected) MaterialTheme.colorScheme.onPrimary else MaterialTheme.colorScheme.error),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Text(
+                        text = if (badgeCount > 9) "9+" else badgeCount.toString(),
+                        style = MaterialTheme.typography.labelSmall.copy(fontSize = 9.sp),
+                        color = if (selected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onError
                     )
                 }
             }
@@ -1216,7 +1321,7 @@ fun AppsTab(
             }
 
             item(span = { GridItemSpan(4) }) {
-                Spacer(modifier = Modifier.height(80.dp))
+                Spacer(modifier = Modifier.height(100.dp))
             }
         }
     }
@@ -1716,7 +1821,7 @@ fun NotificationsTab(
     } else {
         LazyColumn(
             modifier = Modifier.fillMaxSize(),
-            contentPadding = PaddingValues(16.dp),
+            contentPadding = PaddingValues(start = 16.dp, end = 16.dp, top = 16.dp, bottom = 100.dp),
             verticalArrangement = Arrangement.spacedBy(12.dp)
         ) {
             items(notifications, key = { it.key }) { notification ->
