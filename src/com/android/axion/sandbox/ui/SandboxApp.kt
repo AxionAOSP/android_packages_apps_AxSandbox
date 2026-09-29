@@ -19,9 +19,20 @@ import android.app.AxSandboxManager
 import android.app.PendingIntent
 import android.content.Context
 import android.content.pm.LauncherApps
+import android.content.pm.PackageManager
+import android.graphics.Bitmap
+import android.graphics.drawable.Animatable
+import android.graphics.drawable.BitmapDrawable
+import android.graphics.drawable.ColorDrawable
 import android.graphics.drawable.Drawable
+import android.os.Build
+import android.os.Handler
+import android.os.Looper
 import android.os.UserHandle
+import android.util.IconDrawableFactory
 import android.util.Log
+import android.util.LruCache
+import android.view.View
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
@@ -95,6 +106,7 @@ import androidx.compose.material3.rememberTopAppBarState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.RememberObserver
 import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateMapOf
@@ -106,16 +118,28 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.ColorFilter
+import androidx.compose.ui.graphics.FilterQuality
+import androidx.compose.ui.graphics.asAndroidColorFilter
 import androidx.compose.ui.graphics.asImageBitmap
+import androidx.compose.ui.graphics.drawscope.DrawScope
+import androidx.compose.ui.graphics.drawscope.drawIntoCanvas
 import androidx.compose.ui.graphics.graphicsLayer
+import androidx.compose.ui.graphics.nativeCanvas
 import androidx.compose.ui.graphics.painter.BitmapPainter
+import androidx.compose.ui.graphics.painter.ColorPainter
+import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.withSave
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalLifecycleOwner
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import androidx.core.graphics.drawable.toBitmap
 import androidx.lifecycle.Lifecycle
@@ -132,12 +156,13 @@ import com.android.axion.compose.scaffold.AxionLargeTopAppBar
 import com.android.axion.compose.scaffold.AxionScaffold
 import com.android.axion.compose.sheet.BottomSheetDialog
 import com.android.axion.sandbox.R
-import com.android.internal.app.IHiddenNotificationListener
 import com.android.internal.app.HiddenNotificationInfo
+import com.android.internal.app.IHiddenNotificationListener
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 import kotlin.OptIn
+import kotlin.math.roundToInt
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -807,10 +832,6 @@ fun AppDetailScreen(
     onLaunch: (AppInfo) -> Unit,
     isSecuritySetup: Boolean = false
 ) {
-    val bitmap = remember(app.packageName, app.userId) {
-        app.icon.toBitmap(128, 128)
-    }
-
     AxionScaffold(
         title = app.label,
         onBackClick = onBackClick,
@@ -841,7 +862,7 @@ fun AppDetailScreen(
                     contentAlignment = Alignment.Center
                 ) {
                     Image(
-                        painter = BitmapPainter(bitmap.asImageBitmap()),
+                        painter = rememberAppIconPainter(app),
                         contentDescription = app.label,
                         modifier = Modifier.size(80.dp)
                     )
@@ -1068,7 +1089,11 @@ fun AppsTab(
             }
 
             if (isSecuritySetup && privateApps.isNotEmpty() && effectiveExpanded) {
-                items(privateApps, key = { "private_${it.key}" }) { app ->
+                items(
+                    items = privateApps,
+                    key = { "private_${it.key}" },
+                    contentType = { "app_item" }
+                ) { app ->
                     AppGridItem(
                         app = app,
                         onClick = {
@@ -1095,7 +1120,11 @@ fun AppsTab(
                     )
                 }
 
-                items(sandboxedApps, key = { "sandboxed_${it.key}" }) { app ->
+                items(
+                    items = sandboxedApps,
+                    key = { "sandboxed_${it.key}" },
+                    contentType = { "app_item" }
+                ) { app ->
                     AppGridItem(
                         app = app,
                         onClick = {
@@ -1146,7 +1175,11 @@ fun AppsTab(
                 )
             }
 
-            items(regularApps, key = { "regular_${it.key}" }) { app ->
+            items(
+                items = regularApps,
+                key = { "regular_${it.key}" },
+                contentType = { "app_item" }
+            ) { app ->
                 AppGridItem(
                     app = app,
                     onClick = {
@@ -1167,7 +1200,11 @@ fun AppsTab(
                     )
                 }
 
-                items(systemApps, key = { "system_${it.key}" }) { app ->
+                items(
+                    items = systemApps,
+                    key = { "system_${it.key}" },
+                    contentType = { "app_item" }
+                ) { app ->
                     AppGridItem(
                         app = app,
                         onClick = {
@@ -1308,16 +1345,17 @@ private fun AppGridItem(
     app: AppInfo,
     onClick: () -> Unit
 ) {
-    val protectionStates = listOfNotNull(
-        if (app.isLocked) Pair(Icons.Filled.Lock, MaterialTheme.colorScheme.primary) else null,
-        if (app.isHidden) Pair(Icons.Filled.VisibilityOff, MaterialTheme.colorScheme.tertiary) else null,
-        if (app.isSandboxed) Pair(Icons.Filled.Security, MaterialTheme.colorScheme.secondary) else null
-    )
-    val hasAnyProtection = protectionStates.isNotEmpty()
-
-    val bitmap = remember(app.packageName, app.userId) {
-        app.icon.toBitmap(64, 64)
+    val primaryColor = MaterialTheme.colorScheme.primary
+    val tertiaryColor = MaterialTheme.colorScheme.tertiary
+    val secondaryColor = MaterialTheme.colorScheme.secondary
+    val protectionStates = remember(app.isLocked, app.isHidden, app.isSandboxed, primaryColor, tertiaryColor, secondaryColor) {
+        listOfNotNull(
+            if (app.isLocked) Pair(Icons.Filled.Lock, primaryColor) else null,
+            if (app.isHidden) Pair(Icons.Filled.VisibilityOff, tertiaryColor) else null,
+            if (app.isSandboxed) Pair(Icons.Filled.Security, secondaryColor) else null
+        )
     }
+    val hasAnyProtection = protectionStates.isNotEmpty()
 
     Column(
         modifier = Modifier
@@ -1329,11 +1367,9 @@ private fun AppGridItem(
     ) {
         Box {
             Image(
-                painter = BitmapPainter(bitmap.asImageBitmap()),
+                painter = rememberAppIconPainter(app),
                 contentDescription = app.label,
-                modifier = Modifier
-                    .size(52.dp)
-                    .clip(MaterialTheme.shapes.large)
+                modifier = Modifier.size(52.dp)
             )
 
             if (hasAnyProtection) {
@@ -1411,9 +1447,6 @@ private fun AppQuickActionsSheet(
     onLaunch: (AppInfo) -> Unit,
     onDismiss: () -> Unit
 ) {
-    val bitmap = remember(app.packageName, app.userId) {
-        app.icon.toBitmap(80, 80)
-    }
     val context = LocalContext.current
     val sandboxManager = remember {
         context.getSystemService(AxSandboxManager::class.java)
@@ -1432,11 +1465,9 @@ private fun AppQuickActionsSheet(
                         summary = app.packageName,
                         customIcon = {
                             Image(
-                                painter = BitmapPainter(bitmap.asImageBitmap()),
+                                painter = rememberAppIconPainter(app),
                                 contentDescription = app.label,
-                                modifier = Modifier
-                                    .size(40.dp)
-                                    .clip(MaterialTheme.shapes.medium)
+                                modifier = Modifier.size(40.dp)
                             )
                         },
                         widget = {
@@ -1739,7 +1770,7 @@ private fun NotificationItem(
                         contentAlignment = Alignment.Center
                     ) {
                         Icon(
-                            painter = BitmapPainter(notification.icon.toBitmap().asImageBitmap()),
+                            painter = rememberDrawablePainter(notification.icon),
                             contentDescription = null,
                             tint = MaterialTheme.colorScheme.primary,
                             modifier = Modifier.size(24.dp)
@@ -1877,4 +1908,151 @@ private fun launchApp(context: Context, packageName: String, userId: Int = 0) {
     } catch (e: Exception) {
         Log.e(TAG, "Error launching $packageName", e)
     }
+}
+
+private object AppIconCache {
+    private val cache = LruCache<String, Painter>(256)
+
+    fun get(key: String): Painter? = cache.get(key)
+    fun put(key: String, painter: Painter) {
+        cache.put(key, painter)
+    }
+}
+
+@Composable
+internal fun rememberAppIconPainter(app: AppInfo): Painter {
+    val cached = AppIconCache.get(app.key)
+    if (cached != null) {
+        return cached
+    }
+
+    val context = LocalContext.current
+    val density = LocalDensity.current
+
+    return remember(app.key) {
+        val iconDrawableFactory = IconDrawableFactory.newInstance(context)
+        val shadowedDrawable = try {
+            iconDrawableFactory.getShadowedIcon(app.icon)
+        } catch (e: Exception) {
+            app.icon
+        }
+
+        val targetPx = with(density) { 52.dp.roundToPx() }
+        val bitmapWidth = if (shadowedDrawable.intrinsicWidth > 0) shadowedDrawable.intrinsicWidth else targetPx * 2
+        val bitmapHeight = if (shadowedDrawable.intrinsicHeight > 0) shadowedDrawable.intrinsicHeight else targetPx * 2
+        val bitmap = shadowedDrawable.toBitmap(bitmapWidth, bitmapHeight, Bitmap.Config.ARGB_8888)
+        val painter = BitmapPainter(bitmap.asImageBitmap(), filterQuality = FilterQuality.High)
+        AppIconCache.put(app.key, painter)
+        painter
+    }
+}
+
+@Composable
+internal fun rememberDrawablePainter(drawable: Drawable?): Painter = remember(drawable) {
+    when (drawable) {
+        null -> EmptyPainter
+        is BitmapDrawable -> {
+            drawable.isFilterBitmap = true
+            BitmapPainter(drawable.bitmap.asImageBitmap(), filterQuality = FilterQuality.High)
+        }
+        is ColorDrawable -> ColorPainter(Color(drawable.color))
+        else -> DrawablePainter(drawable.mutate())
+    }
+}
+
+internal class DrawablePainter(
+    val drawable: Drawable
+) : Painter(), RememberObserver {
+    private val drawInvalidateTick = mutableStateOf(0)
+    private val drawableIntrinsicSize = mutableStateOf(drawable.intrinsicSize)
+
+    private val callback: Drawable.Callback by lazy {
+        object : Drawable.Callback {
+            override fun invalidateDrawable(d: Drawable) {
+                drawInvalidateTick.value++
+                drawableIntrinsicSize.value = drawable.intrinsicSize
+            }
+
+            override fun scheduleDrawable(d: Drawable, what: Runnable, time: Long) {
+                MAIN_HANDLER.postAtTime(what, time)
+            }
+
+            override fun unscheduleDrawable(d: Drawable, what: Runnable) {
+                MAIN_HANDLER.removeCallbacks(what)
+            }
+        }
+    }
+
+    init {
+        if (drawable.intrinsicWidth >= 0 && drawable.intrinsicHeight >= 0) {
+            drawable.setBounds(0, 0, drawable.intrinsicWidth, drawable.intrinsicHeight)
+        }
+    }
+
+    override fun onRemembered() {
+        drawable.callback = callback
+        drawable.setVisible(true, true)
+        if (drawable is Animatable) drawable.start()
+    }
+
+    override fun onAbandoned() = onForgotten()
+
+    override fun onForgotten() {
+        if (drawable is Animatable) drawable.stop()
+        drawable.setVisible(false, false)
+        drawable.callback = null
+    }
+
+    override fun applyAlpha(alpha: Float): Boolean {
+        drawable.alpha = (alpha * 255).roundToInt().coerceIn(0, 255)
+        return true
+    }
+
+    override fun applyColorFilter(colorFilter: ColorFilter?): Boolean {
+        drawable.colorFilter = colorFilter?.asAndroidColorFilter()
+        return true
+    }
+
+    override fun applyLayoutDirection(layoutDirection: LayoutDirection): Boolean {
+        if (Build.VERSION.SDK_INT >= 23) {
+            return drawable.setLayoutDirection(
+                when (layoutDirection) {
+                    LayoutDirection.Ltr -> View.LAYOUT_DIRECTION_LTR
+                    LayoutDirection.Rtl -> View.LAYOUT_DIRECTION_RTL
+                }
+            )
+        }
+        return false
+    }
+
+    override val intrinsicSize: Size get() = drawableIntrinsicSize.value
+
+    override fun DrawScope.onDraw() {
+        drawIntoCanvas { canvas ->
+            drawInvalidateTick.value
+
+            drawable.setBounds(0, 0, size.width.roundToInt(), size.height.roundToInt())
+
+            canvas.withSave {
+                drawable.draw(canvas.nativeCanvas)
+            }
+        }
+    }
+}
+
+private val MAIN_HANDLER by lazy(LazyThreadSafetyMode.NONE) {
+    Handler(Looper.getMainLooper())
+}
+
+private val Drawable.intrinsicSize: Size
+    get() = when {
+        intrinsicWidth >= 0 && intrinsicHeight >= 0 -> {
+            Size(width = intrinsicWidth.toFloat(), height = intrinsicHeight.toFloat())
+        }
+        else -> Size.Unspecified
+    }
+
+internal object EmptyPainter : Painter() {
+    override val intrinsicSize: Size get() = Size.Unspecified
+    override fun DrawScope.onDraw() {}
 }
