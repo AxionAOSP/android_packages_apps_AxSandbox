@@ -59,14 +59,12 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.grid.GridCells
-import androidx.compose.foundation.lazy.grid.GridItemSpan
-import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
-import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.rememberPagerState
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Apps
 import androidx.compose.material.icons.filled.Check
@@ -111,8 +109,10 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.RememberObserver
 import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableStateMapOf
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.produceState
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.saveable.rememberSaveable
@@ -141,12 +141,14 @@ import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalLifecycleOwner
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.core.graphics.drawable.toBitmap
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
+import com.android.axion.compose.applist.AppEntry
 import com.android.axion.compose.applist.AppFilter
 import com.android.axion.compose.applist.rememberAppList
 import com.android.axion.compose.preferences.BasePreference
@@ -164,9 +166,17 @@ import com.android.internal.app.IHiddenNotificationListener
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
+import java.util.concurrent.atomic.AtomicReference
 import kotlin.OptIn
 import kotlin.math.roundToInt
+import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.SupervisorJob
+import kotlinx.coroutines.async
+import kotlinx.coroutines.awaitAll
+import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
@@ -178,6 +188,7 @@ data class AppInfo(
     val packageName: String,
     val label: String,
     val icon: Drawable,
+    val iconPainter: Painter = EmptyPainter,
     val uid: Int,
     val isLocked: Boolean,
     val isHidden: Boolean,
@@ -236,32 +247,64 @@ fun SandboxApp(
     var refreshKey by remember { mutableStateOf(0) }
     val sandboxManager = remember { context.getSystemService(Context.AX_SANDBOX_SERVICE) as? AxSandboxManager }
 
-    val apps by remember(appsState.value, refreshKey) {
-        derivedStateOf {
+    val density = LocalDensity.current
+    val iconTargetPx = remember(density) { with(density) { 52.dp.roundToPx() } }
+
+    val apps by produceState<List<AppInfo>>(initialValue = emptyList(), appsState.value, refreshKey) {
+        if (appsState.value.isEmpty()) {
+            value = emptyList()
+            return@produceState
+        }
+        withContext(Dispatchers.Default) {
             val userPackagesMap = appsState.value
                 .map { it.userId }
                 .distinct()
                 .associateWith { userId -> sandboxManager.getUserPackages(userId) }
 
-            appsState.value.map { entry ->
-                val userPkgs = userPackagesMap[entry.userId] ?: UserSandboxPackages()
-                AppInfo(
-                    packageName = entry.packageName,
-                    label = entry.label,
-                    icon = entry.icon,
-                    uid = 0,
-                    isLocked = userPkgs.locked.contains(entry.packageName),
-                    isHidden = userPkgs.hidden.contains(entry.packageName),
-                    isLauncherHidden = userPkgs.launcherHidden.contains(entry.packageName),
-                    isSandboxed = userPkgs.sandboxed.contains(entry.packageName),
-                    isSystem = entry.isSystem,
-                    userId = entry.userId,
-                    isClone = entry.isClone
-                )
+            val iconDrawableFactory = IconDrawableFactory.newInstance(context)
+
+            suspend fun processEntries(entries: List<AppEntry>): List<AppInfo> = coroutineScope {
+                val parallelism = Runtime.getRuntime().availableProcessors().coerceIn(2, 6)
+                val chunkSize = (entries.size + parallelism - 1) / parallelism
+                entries.chunked(chunkSize).map { chunk ->
+                    async(Dispatchers.Default) {
+                        chunk.map { entry ->
+                            val userPkgs = userPackagesMap[entry.userId] ?: UserSandboxPackages()
+                            val painter = AppIconCache.loadIconPainter(
+                                packageName = entry.packageName,
+                                userId = entry.userId,
+                                icon = entry.icon,
+                                iconDrawableFactory = iconDrawableFactory,
+                                targetPx = iconTargetPx
+                            )
+                            AppInfo(
+                                packageName = entry.packageName,
+                                label = entry.label,
+                                icon = entry.icon,
+                                iconPainter = painter,
+                                uid = 0,
+                                isLocked = userPkgs.locked.contains(entry.packageName),
+                                isHidden = userPkgs.hidden.contains(entry.packageName),
+                                isLauncherHidden = userPkgs.launcherHidden.contains(entry.packageName),
+                                isSandboxed = userPkgs.sandboxed.contains(entry.packageName),
+                                isSystem = entry.isSystem,
+                                userId = entry.userId,
+                                isClone = entry.isClone
+                            )
+                        }
+                    }
+                }.awaitAll().flatten()
             }
+
+            val (regularEntries, systemEntries) = appsState.value.partition { !it.isSystem }
+            val regularApps = processEntries(regularEntries)
+            value = regularApps
+
+            val systemApps = processEntries(systemEntries)
+            value = (regularApps + systemApps).sortedBy { it.label.lowercase() }
         }
     }
-    val isLoading = appsState.value.isEmpty()
+    val isLoading = apps.isEmpty()
     var searchQuery by rememberSaveable { mutableStateOf("") }
     var selectedApp by remember { mutableStateOf<AppInfo?>(null) }
 
@@ -967,7 +1010,7 @@ fun AppDetailScreen(
                     contentAlignment = Alignment.Center
                 ) {
                     Image(
-                        painter = rememberAppIconPainter(app),
+                        painter = app.iconPainter,
                         contentDescription = app.label,
                         modifier = Modifier.size(80.dp)
                     )
@@ -1152,176 +1195,182 @@ fun AppsTab(
             }
         }
     } else {
-        LazyVerticalGrid(
-            columns = GridCells.Fixed(4),
-            modifier = Modifier.fillMaxSize(),
-            contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp),
-            horizontalArrangement = Arrangement.spacedBy(4.dp),
+        val scrollState = rememberScrollState()
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .verticalScroll(scrollState)
+                .padding(horizontal = 16.dp, vertical = 8.dp),
             verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
-            item(span = { GridItemSpan(4) }) {
-                if (!isSecuritySetup) {
-                    PreferenceGroup(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(vertical = 8.dp)
-                    ) {
-                        item {
-                            ClickablePreference(
-                                title = stringResource(R.string.setup_private_apps_title),
-                                summary = stringResource(R.string.setup_private_apps_description),
-                                icon = Icons.Filled.Lock,
-                                onClick = onSetupSecurity
-                            )
+            if (!isSecuritySetup) {
+                PreferenceGroup(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(vertical = 8.dp)
+                ) {
+                    item {
+                        ClickablePreference(
+                            title = stringResource(R.string.setup_private_apps_title),
+                            summary = stringResource(R.string.setup_private_apps_description),
+                            icon = Icons.Filled.Lock,
+                            onClick = onSetupSecurity
+                        )
+                    }
+                }
+            } else if (privateApps.isNotEmpty()) {
+                CollapsibleSectionHeader(
+                    icon = if (effectiveExpanded) Icons.Filled.LockOpen else Icons.Filled.Lock,
+                    title = stringResource(R.string.section_private_apps),
+                    count = privateApps.size,
+                    color = MaterialTheme.colorScheme.primary,
+                    isExpanded = effectiveExpanded,
+                    onExpandChange = { wantExpand ->
+                        if (wantExpand && !isPrivateUnlocked) {
+                            onUnlockRequest()
+                        } else {
+                            onPrivateAreaExpandChange(wantExpand)
                         }
                     }
-                } else if (privateApps.isNotEmpty()) {
-                    CollapsibleSectionHeader(
-                        icon = if (effectiveExpanded) Icons.Filled.LockOpen else Icons.Filled.Lock,
-                        title = stringResource(R.string.section_private_apps),
-                        count = privateApps.size,
-                        color = MaterialTheme.colorScheme.primary,
-                        isExpanded = effectiveExpanded,
-                        onExpandChange = { wantExpand ->
-                            if (wantExpand && !isPrivateUnlocked) {
-                                onUnlockRequest()
-                            } else {
-                                onPrivateAreaExpandChange(wantExpand)
-                            }
-                        }
-                    )
-                }
-            }
+                )
 
-            if (isSecuritySetup && privateApps.isNotEmpty() && effectiveExpanded) {
-                items(
-                    items = privateApps,
-                    key = { "private_${it.key}" },
-                    contentType = { "app_item" }
-                ) { app ->
-                    AppGridItem(
-                        app = app,
-                        onClick = {
+                if (effectiveExpanded) {
+                    NonLazyAppGrid(
+                        apps = privateApps,
+                        keyPrefix = "private",
+                        onAppClick = { app ->
                             selectedApp = app
                             showBottomSheet = true
                         }
                     )
                 }
-            }
 
-            if (isSecuritySetup && privateApps.isNotEmpty()) {
-                item(span = { GridItemSpan(4) }) {
-                    Spacer(modifier = Modifier.height(8.dp))
-                }
+                Spacer(modifier = Modifier.height(8.dp))
             }
 
             if (sandboxedApps.isNotEmpty()) {
-                item(span = { GridItemSpan(4) }) {
-                    SectionHeader(
-                        icon = Icons.Filled.Security,
-                        title = stringResource(R.string.section_isolated_apps),
-                        count = sandboxedApps.size,
-                        color = MaterialTheme.colorScheme.secondary
-                    )
-                }
-
-                items(
-                    items = sandboxedApps,
-                    key = { "sandboxed_${it.key}" },
-                    contentType = { "app_item" }
-                ) { app ->
-                    AppGridItem(
-                        app = app,
-                        onClick = {
-                            selectedApp = app
-                            showBottomSheet = true
-                        }
-                    )
-                }
-
-                item(span = { GridItemSpan(4) }) {
-                    Spacer(modifier = Modifier.height(8.dp))
-                }
-            }
-
-            item(span = { GridItemSpan(4) }) {
                 SectionHeader(
-                    icon = Icons.Filled.Apps,
-                    title = stringResource(R.string.section_all_apps),
-                    count = regularApps.size,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    trailing = {
-                        FilterChip(
-                            selected = showSystemApps,
-                            onClick = { showSystemApps = !showSystemApps },
-                            label = {
-                                Text(
-                                    text = stringResource(R.string.show_system_apps),
-                                    style = MaterialTheme.typography.labelSmall
-                                )
-                            },
-                            leadingIcon = if (showSystemApps) {
-                                {
-                                    Icon(
-                                        imageVector = Icons.Default.Check,
-                                        contentDescription = null,
-                                        modifier = Modifier.size(14.dp)
-                                    )
-                                }
-                            } else null,
-                            colors = FilterChipDefaults.filterChipColors(
-                                selectedContainerColor = MaterialTheme.colorScheme.primaryContainer,
-                                selectedLabelColor = MaterialTheme.colorScheme.onPrimaryContainer,
-                                selectedLeadingIconColor = MaterialTheme.colorScheme.onPrimaryContainer
-                            ),
-                            modifier = Modifier.height(28.dp)
-                        )
+                    icon = Icons.Filled.Security,
+                    title = stringResource(R.string.section_isolated_apps),
+                    count = sandboxedApps.size,
+                    color = MaterialTheme.colorScheme.secondary
+                )
+
+                NonLazyAppGrid(
+                    apps = sandboxedApps,
+                    keyPrefix = "sandboxed",
+                    onAppClick = { app ->
+                        selectedApp = app
+                        showBottomSheet = true
                     }
                 )
+
+                Spacer(modifier = Modifier.height(8.dp))
             }
 
-            items(
-                items = regularApps,
-                key = { "regular_${it.key}" },
-                contentType = { "app_item" }
-            ) { app ->
-                AppGridItem(
-                    app = app,
-                    onClick = {
+            SectionHeader(
+                icon = Icons.Filled.Apps,
+                title = stringResource(R.string.section_all_apps),
+                count = regularApps.size,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                trailing = {
+                    FilterChip(
+                        selected = showSystemApps,
+                        onClick = { showSystemApps = !showSystemApps },
+                        label = {
+                            Text(
+                                text = stringResource(R.string.show_system_apps),
+                                style = MaterialTheme.typography.labelSmall
+                            )
+                        },
+                        leadingIcon = if (showSystemApps) {
+                            {
+                                Icon(
+                                    imageVector = Icons.Default.Check,
+                                    contentDescription = null,
+                                    modifier = Modifier.size(14.dp)
+                                )
+                            }
+                        } else null,
+                        colors = FilterChipDefaults.filterChipColors(
+                            selectedContainerColor = MaterialTheme.colorScheme.primaryContainer,
+                            selectedLabelColor = MaterialTheme.colorScheme.onPrimaryContainer,
+                            selectedLeadingIconColor = MaterialTheme.colorScheme.onPrimaryContainer
+                        ),
+                        modifier = Modifier.height(28.dp)
+                    )
+                }
+            )
+
+            NonLazyAppGrid(
+                apps = regularApps,
+                keyPrefix = "regular",
+                onAppClick = { app ->
+                    selectedApp = app
+                    showBottomSheet = true
+                }
+            )
+
+            if (showSystemApps && systemApps.isNotEmpty()) {
+                Spacer(modifier = Modifier.height(16.dp))
+                SectionHeader(
+                    icon = Icons.Default.Security,
+                    title = stringResource(R.string.show_system_apps),
+                    count = systemApps.size,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.6f)
+                )
+
+                NonLazyAppGrid(
+                    apps = systemApps,
+                    keyPrefix = "system",
+                    onAppClick = { app ->
                         selectedApp = app
                         showBottomSheet = true
                     }
                 )
             }
 
-            if (showSystemApps && systemApps.isNotEmpty()) {
-                item(span = { GridItemSpan(4) }) {
-                    Spacer(modifier = Modifier.height(16.dp))
-                    SectionHeader(
-                        icon = Icons.Default.Security,
-                        title = stringResource(R.string.show_system_apps),
-                        count = systemApps.size,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.6f)
-                    )
-                }
+            Spacer(modifier = Modifier.height(100.dp))
+        }
+    }
+}
 
-                items(
-                    items = systemApps,
-                    key = { "system_${it.key}" },
-                    contentType = { "app_item" }
-                ) { app ->
-                    AppGridItem(
-                        app = app,
-                        onClick = {
-                            selectedApp = app
-                            showBottomSheet = true
+@Composable
+private fun NonLazyAppGrid(
+    apps: List<AppInfo>,
+    modifier: Modifier = Modifier,
+    columns: Int = 4,
+    horizontalSpacing: Dp = 4.dp,
+    verticalSpacing: Dp = 8.dp,
+    keyPrefix: String = "",
+    onAppClick: (AppInfo) -> Unit
+) {
+    val chunkedApps = remember(apps, columns) { apps.chunked(columns) }
+    Column(
+        modifier = modifier.fillMaxWidth(),
+        verticalArrangement = Arrangement.spacedBy(verticalSpacing)
+    ) {
+        for (row in chunkedApps) {
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.spacedBy(horizontalSpacing)
+            ) {
+                for (app in row) {
+                    Box(modifier = Modifier.weight(1f)) {
+                        key("${keyPrefix}_${app.key}") {
+                            AppGridItem(
+                                app = app,
+                                onClick = { onAppClick(app) }
+                            )
                         }
-                    )
+                    }
                 }
-            }
-
-            item(span = { GridItemSpan(4) }) {
-                Spacer(modifier = Modifier.height(100.dp))
+                val remainder = columns - row.size
+                if (remainder > 0) {
+                    repeat(remainder) {
+                        Spacer(modifier = Modifier.weight(1f))
+                    }
+                }
             }
         }
     }
@@ -1472,7 +1521,7 @@ private fun AppGridItem(
     ) {
         Box {
             Image(
-                painter = rememberAppIconPainter(app),
+                painter = app.iconPainter,
                 contentDescription = app.label,
                 modifier = Modifier.size(52.dp)
             )
@@ -1570,7 +1619,7 @@ private fun AppQuickActionsSheet(
                         summary = app.packageName,
                         customIcon = {
                             Image(
-                                painter = rememberAppIconPainter(app),
+                                painter = app.iconPainter,
                                 contentDescription = app.label,
                                 modifier = Modifier.size(40.dp)
                             )
@@ -2016,41 +2065,41 @@ private fun launchApp(context: Context, packageName: String, userId: Int = 0) {
 }
 
 private object AppIconCache {
-    private val cache = LruCache<String, Painter>(256)
+    private val cache = LruCache<String, Painter>(1024)
 
     fun get(key: String): Painter? = cache.get(key)
     fun put(key: String, painter: Painter) {
         cache.put(key, painter)
     }
-}
 
-@Composable
-internal fun rememberAppIconPainter(app: AppInfo): Painter {
-    val cached = AppIconCache.get(app.key)
-    if (cached != null) {
-        return cached
-    }
+    fun loadIconPainter(
+        packageName: String,
+        userId: Int,
+        icon: Drawable,
+        iconDrawableFactory: IconDrawableFactory,
+        targetPx: Int
+    ): Painter {
+        val key = "${packageName}_$userId"
+        val cached = cache.get(key)
+        if (cached != null) return cached
 
-    val context = LocalContext.current
-    val density = LocalDensity.current
-
-    return remember(app.key) {
-        val iconDrawableFactory = IconDrawableFactory.newInstance(context)
         val shadowedDrawable = try {
-            iconDrawableFactory.getShadowedIcon(app.icon)
+            iconDrawableFactory.getShadowedIcon(icon)
         } catch (e: Exception) {
-            app.icon
+            icon
         }
 
-        val targetPx = with(density) { 52.dp.roundToPx() }
         val bitmapWidth = if (shadowedDrawable.intrinsicWidth > 0) shadowedDrawable.intrinsicWidth else targetPx * 2
         val bitmapHeight = if (shadowedDrawable.intrinsicHeight > 0) shadowedDrawable.intrinsicHeight else targetPx * 2
         val bitmap = shadowedDrawable.toBitmap(bitmapWidth, bitmapHeight, Bitmap.Config.ARGB_8888)
         val painter = BitmapPainter(bitmap.asImageBitmap(), filterQuality = FilterQuality.High)
-        AppIconCache.put(app.key, painter)
-        painter
+        cache.put(key, painter)
+        return painter
     }
 }
+
+@Composable
+internal fun rememberAppIconPainter(app: AppInfo): Painter = app.iconPainter
 
 @Composable
 internal fun rememberDrawablePainter(drawable: Drawable?): Painter = remember(drawable) {
