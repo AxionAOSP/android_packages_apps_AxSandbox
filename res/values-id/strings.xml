@@ -18,7 +18,7 @@
     <string name="app_name">Sandbox</string>
     <!-- Main screen -->
     <string name="sandbox_title">Sandbox</string>
-    <string name="search_hint">Search apps\u2026</string>
+    <string name="search_hint">\u2026</string>
     <string name="tab_apps">Aplikasi</string>
     <string name="tab_notifications">Notifikasi</string>
     <string name="tab_vault">Brankas</string>
