@@ -264,6 +264,8 @@ fun SandboxApp(
             val iconDrawableFactory = IconDrawableFactory.newInstance(context)
 
             suspend fun processEntries(entries: List<AppEntry>): List<AppInfo> = coroutineScope {
+                // chunked(0) throws; a list with no user (or no system) apps is valid.
+                if (entries.isEmpty()) return@coroutineScope emptyList()
                 val parallelism = Runtime.getRuntime().availableProcessors().coerceIn(2, 6)
                 val chunkSize = (entries.size + parallelism - 1) / parallelism
                 entries.chunked(chunkSize).map { chunk ->
